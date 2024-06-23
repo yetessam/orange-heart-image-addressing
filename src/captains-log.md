@@ -6,10 +6,18 @@ Getting a Fleek account.  I chose to authenticate through Ethereum, specifically
 
 Then once that went through, my Metamask extension in Firefox popped up to ask me to verify that I want to sign into the Fleek app via Ethereum.  
 
-Set up a deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory 
+Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory 
 Published at 10:01 AM to https://delicate-glitter-6121.on.fleek.co/
 
-Locally, checked developer console and made adjustments until we had zero errors in the console.
+Locally ran  python -m http.server 8000 so that we can verify that the markdown is loaded locally,  checked developer console and made adjustments until we had zero errors in the console.
+
+Pushed changes to design branch. 
+
+Compare http://localhost:8000/index.html
+
+.   
+
+
 
 
 
