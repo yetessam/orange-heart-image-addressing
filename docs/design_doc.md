@@ -58,36 +58,11 @@ Content addressing interests me. Moving from art that's got a physical location 
 - Property KGs: Create property knowledge graphs to illustrate relationships between physical and digital addresses.
 
 ### Responsive CSS
-- Find and simply link in an existing grid layout CSS.
-- Responsiveness: Utilize CSS Grid for layout structure and uses Implement media queries for responsive design across devices.
-- Accessibility: Ensure all my HTML pages are accessible. Use tags like `<menu>`, `<nav>`, `<form>`, and `<main>` that don’t need not use ARIA landmarks, as their purpose is already established with their names. Review that the content has enough metadata and includes ARIA roles and labels where necessary.
+- Link in an existing grid layout CSS: https://bulma.io/
+- Responsive
+- Uses CSS variable, Flexbox and Grid
+- Uses media queries for responsive design across devices
 
-## Captain's Log
-
-### TBD 
-
-🔲 Seek out a volunteer where we are putting in hearts to intentionally hide  identifying metadata. 
-🔲 Upload 3 orange heart images to IPFS and get the CIDs
-🔲 Insert references in ipfs.html file to use those IPFS URLs
-🔲 Test updated HTML locally to ensure that the images load correctly from IPFS
-
-### Friday June 20th, 2024
-
-Prepping with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Made in Canada. 
-
-
-
-### Wed June 19th, 2024
-
-Create mockups for physical layout for gallery wall space.    Took first draft photographs of the art pieces and then loaded them into a new Miro board to create a 2D diagram of the physical gallery space.   Scaling the images down to onto the Miro grid to result in a maximum wall width of 3 feet.  Will need to pad everything by several inches to accommodate frames. 
-
-Design branch on Git holds the current set of draft images.   
-
-### Tuesday June 18th, 2024
-Updates to design doc. 
-
-### Monday June 17th, 2024
-
-Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/xml. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.
-
-✅ Created a Github Repo https://github.com/yetessam/orange-heart-image-addressing
+### Accessibility
+- Accessibility: Ensure all my HTML pages are accessible. Use tags like `<menu>`, `<nav>`, `<form>`, and `<main>` that don’t need not use ARIA landmarks, as their purpose is already established with their names. Review that the content has enough metadata and includes ARIA roles and labels where necessary.  
+- Bulma uses a lot of divs, that's one concern 
