@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain's Log</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Polyfill for fetch -->
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch/dist/fetch.umd.js"></script>
+    <!-- Polyfill for Promise -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill/dist/polyfill.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+
+</head>
+<body>
+    <div id="content">Loading...</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed');
+            // Check if marked is defined and is a function
+            console.log('Marked:', marked);
+
+            if (typeof marked !== 'function' && typeof marked.marked !== 'function') {
+                console.error('Marked library is not loaded');
+                document.getElementById('content').innerHTML = 'Error: Marked library is not loaded';
+                return;
+            }
+
+            // Use marked object if available
+            const parseMarkdown = typeof marked === 'function' ? marked : marked.marked;
+
+            // Get the current file name
+            const currentFileName = location.pathname.split('/').pop().replace('.html', '.md');
+            console.log('Fetching:', currentFileName);
+
+            // Fetch the Markdown file
+            fetch(currentFileName)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(markdownText => {
+                    // Convert Markdown to HTML
+                    document.getElementById('content').innerHTML = parseMarkdown(markdownText);
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = 'Error loading Markdown file: ' + error.message;
+                });
+        });
+    </script>
+</body>
+</html>
