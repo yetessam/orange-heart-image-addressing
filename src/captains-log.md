@@ -2,24 +2,19 @@
 
 ### Sunday June 23, 2024
 
-Getting a Fleek account.  I chose to authenticate through Ethereum, specifically with Metamask.  Metamask gives you some contextual warning about being careful with Web 3 dapps, but  I consented plus my wallet is pretty empty.   
-
-Then once that went through, my Metamask extension in Firefox popped up to ask me to verify that I want to sign into the Fleek app via Ethereum.  
+Getting a Fleek account.  I chose to authenticate through Ethereum, specifically with Metamask.  Metamask gives you some contextual warning about being careful with Web 3 dapps.
 
 Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory 
 Published at 10:01 AM to https://delicate-glitter-6121.on.fleek.co/
 
 Locally ran  python -m http.server 8000 so that we can verify that the markdown is loaded locally,  checked developer console and made adjustments until we had zero errors in the console.
 
-Pushed changes to design branch. 
+Pushed changes to design branch.  Currently using javascript to load markdownas unformatted HTML, although I could also use the python code.  
 
-Compare http://localhost:8000/index.html
-
-.   
+Compare http://localhost:8000/index.html   
 
 
-
-
+🧡🧡🧡🧡
 
 ### Friday June 21st, 2024
 
@@ -27,6 +22,7 @@ Prepped with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Ma
 
 Selected a Bulma for a modern CSS framework
 
+🧡🧡🧡🧡
 
 ### Wed June 19th, 2024
 
@@ -34,8 +30,12 @@ Create mockups for physical layout for gallery wall space.    Took first draft p
 
 Design branch on Git holds the current set of draft images.   
 
+🧡🧡🧡🧡
+
 ### Tuesday June 18th, 2024
 Updates to design doc. 
+
+🧡🧡🧡🧡
 
 ### Monday June 17th, 2024
 
