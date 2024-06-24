@@ -1,0 +1,40 @@
+name: Publish DITA Content to html5
+
+'on':
+  push:
+    branches:
+      - content
+
+jobs:
+  build-dita:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Delete out folder
+        run: |
+          echo "Deleting out folder"
+          rm -rf out
+
+      - name: Build HTML5 
+        uses: dita-ot/dita-ot-action@master
+        with:
+          input: dita/orange-heart.ditamap
+          transtype: html5
+          output-path: out
+
+     
+      - name: Push to content branch
+        run: |
+          git config --global user.email "yasisay@gmail.com"
+          git config --global user.name "Yas Etessam"
+          echo "Adding out folder to git"
+          git add out
+          echo "Committing changes"
+          git commit -m "Build DITA sample content"
+          echo "Pushing to content branch"
+          git push origin content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
