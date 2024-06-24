@@ -3,7 +3,7 @@ name: Build DITA files
 'on':
   push:
     branches:
-      - content
+      - dita
 
 jobs:
   build-dita:
