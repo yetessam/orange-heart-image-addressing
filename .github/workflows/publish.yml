@@ -1,4 +1,4 @@
-name: Publish DITA Samples
+name: Build DITA files
 
 'on':
   push:
@@ -33,5 +33,5 @@ jobs:
       - name: Commit and push changes
         run: |
           git add out
-          git commit -m "Build DITA sample content"
+          git commit -m "Build DITA files"
           git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
