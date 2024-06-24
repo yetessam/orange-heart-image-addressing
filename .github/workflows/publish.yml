@@ -3,7 +3,7 @@ name: Publish DITA Content to html5
 'on':
   push:
     branches:
-      - content
+      - dita
 
 jobs:
   build-dita:
@@ -26,7 +26,7 @@ jobs:
           output-path: out
 
      
-      - name: Push to content branch
+      - name: Push to dita branch
         run: |
           git config --global user.email "yasisay@gmail.com"
           git config --global user.name "Yas Etessam"
