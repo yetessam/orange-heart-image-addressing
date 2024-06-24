@@ -24,7 +24,7 @@ jobs:
           input: dita/orange-heart.ditamap
           transtype: html5
           output-path: out
-          args-file: dita/html5-args.properties
+          properties: dita/html5-args.properties
 
       - name: List build output
         run: ls -R out
