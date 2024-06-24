@@ -1,9 +1,9 @@
-name: Publish DITA Content to html5
+name: Publish DITA Samples
 
 'on':
   push:
     branches:
-      - dita
+      - content
 
 jobs:
   build-dita:
@@ -25,16 +25,13 @@ jobs:
           transtype: html5
           output-path: out
 
-     
-      - name: Push to dita branch
+      - name: Configure git
         run: |
           git config --global user.email "yasisay@gmail.com"
           git config --global user.name "Yas Etessam"
-          echo "Adding out folder to git"
+
+      - name: Commit and push changes
+        run: |
           git add out
-          echo "Committing changes"
           git commit -m "Build DITA sample content"
-          echo "Pushing to dita branch"
-          git push origin dita
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
