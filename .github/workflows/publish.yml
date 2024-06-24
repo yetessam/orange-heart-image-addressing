@@ -34,7 +34,7 @@ jobs:
           git add out
           echo "Committing changes"
           git commit -m "Build DITA sample content"
-          echo "Pushing to content branch"
-          git push origin content
+          echo "Pushing to dita branch"
+          git push origin dita
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
