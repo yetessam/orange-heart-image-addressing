@@ -25,13 +25,22 @@ jobs:
           transtype: html5
           output-path: out
 
+      - name: List build output
+        run: ls -R out
+
       - name: Configure git
         run: |
           git config --global user.email "yasisay@gmail.com"
           git config --global user.name "Yas Etessam"
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git add out
-          git commit -m "Build DITA files"
-          git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "Build DITA files"
+            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
+          fi
