@@ -21,7 +21,6 @@ jobs:
         uses: dita-ot/dita-ot-action@master
         with:
           plugins : |
-            https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             org.jung.xmltask
             com.oxygenxml.json.dita
           input: dita/orange-heart.ditamap

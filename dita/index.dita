@@ -15,15 +15,14 @@
 
     <note>Under construction
     
-      <xref href="https://getdweb.net/principles/" role="link">DWeb Principles</xref>.</note>
+      <xref href="https://getdweb.net/principles/" role="link" scope="external">DWeb Principles</xref>.</note>
 
     <section>
       <title>Section title</title>
       <p>Content</p>
       <ul outputclass="list-group mb-5">
-        <li outputclass="list-group-item list-group-item-action">See the
-          <xref keyref="release-notes" outputclass="stretched-link"/> for information on the changes in the current
-          release.</li>
+        <li outputclass="list-group-item list-group-item-action">
+         List item.</li>
           </ul>
 
     </section>
