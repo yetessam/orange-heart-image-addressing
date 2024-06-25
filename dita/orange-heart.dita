@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart-ipfs">
-    <title>Orange Heart stored on IPFS</title>
-    <body>
-        <p>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.
-        This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.</p>
-    </body>
+    <title>Orange Heart</title>
+    <conbody>
+        <note>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.
+        This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.</note>
+    </conbody>
 </concept>
 
