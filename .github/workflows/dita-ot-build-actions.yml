@@ -21,12 +21,18 @@ jobs:
         uses: dita-ot/dita-ot-action@master
         with:
           build: |
-            dita --input=dita/orange-heart.ditamap --format=html5 --propertyfile=dita/html5.properties
+            dita --input=dita/orange-heart.ditamap --format=html5 --propertyfile=dita/html5.properties > dita-output.log 2>&1
+
+      - name: Upload log file as an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: DITA OT log
+          path: dita-output.log
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dita-artifact
+          name: Build Output 
           path: 'out' # The folder the action should upload.
           
       - name: List build output
