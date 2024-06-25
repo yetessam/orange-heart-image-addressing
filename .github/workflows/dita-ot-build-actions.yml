@@ -43,4 +43,8 @@ jobs:
         run: |
           git add out
           if git diff-index --quiet HEAD; then
-            echo "No
+            echo "No changes to commit"
+          else
+            git commit -m "Build DITA files"
+            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
+          fi
