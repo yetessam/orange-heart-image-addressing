@@ -19,8 +19,8 @@ jobs:
 
       - name: Build HTML5 
         uses: dita-ot/dita-ot-action@master
-	build: 
-		dita --inut=dita/orange-heart.ditamap --format=html5 -- propertyfile=dita/html5.properties	
+	build: | 
+          dita --inut=dita/orange-heart.ditamap --format=html5 -- propertyfile=dita/html5.properties	
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
