@@ -19,8 +19,9 @@ jobs:
 
       - name: Build HTML5 
         uses: dita-ot/dita-ot-action@master
-	build: | 
-          dita --inut=dita/orange-heart.ditamap --format=html5 -- propertyfile=dita/html5.properties	
+        with:
+          build: |
+            dita --input=dita/orange-heart.ditamap --format=html5 --propertyfile=dita/html5.properties
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -42,8 +43,4 @@ jobs:
         run: |
           git add out
           if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
-          else
-            git commit -m "Build DITA files"
-            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
-          fi
+            echo "No
