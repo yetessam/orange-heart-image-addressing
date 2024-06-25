@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="orange-heart-ipfs">
+<concept id="orange-heart">
     <title>Orange Heart</title>
     <conbody>
         <note>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.

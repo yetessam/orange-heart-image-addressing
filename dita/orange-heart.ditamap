@@ -2,8 +2,8 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart Project</title>
-    <topicref keyref="index.dita"/>
+    <topicref href="index.dita"/>
     <topicref href="orange-heart.dita"/>
-  <!--   <topicref href="captains_log.md" **format="markdown"**/> -->
+  <!--  <topicref href="captains_log.md" **format="markdown"**/> -->
 </map>
 
