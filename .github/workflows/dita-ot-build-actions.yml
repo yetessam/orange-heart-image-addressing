@@ -29,13 +29,17 @@ jobs:
           name: DITA OT log
           path: log.txt
 
-      - name: Modify HTML head while preserving the title
+      - name: Change file ownership
+        run: sudo chown -R $(whoami) out/
+
+      - name: Inject HTML head while preserving the title
         run: |
           for file in out/*.html; do
             title=$(sed -n 's/.*<title>\(.*\)<\/title>.*/\1/p' "$file")
             sed "/<head>/,/<\/head>/c\<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>$title<\/title>\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css\">\n<\/head>" "$file" > temp.html
             mv temp.html "$file"
           done
+  
 
 
       - name: Upload build artifacts
