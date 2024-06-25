@@ -54,3 +54,8 @@ jobs:
             git commit -m "Build DITA files"
             git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
           fi
+
+      - name: Summarize build
+        run: |
+          echo "### Summary " >> $GITHUB_STEP_SUMMARY
+          echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY
