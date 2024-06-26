@@ -31,11 +31,15 @@ jobs:
                   
       - name: List build output
         run: ls -R out
+        
+      - name: Fetch User Email
+        run: |
+          EMAIL=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/users/${{ github.actor }}/emails | jq -r '.[0].email')
 
       - name: Configure git
         run: |
-          git config --global user.email "yasisay@gmail.com"
-          git config --global user.name "Yas Etessam"
+          git config --global user.email "$EMAIL"
+          git config --global user.name "${{ github.actor }}"
 
       - name: Commit and push changes
         env:
