@@ -29,7 +29,7 @@ jobs:
       - name: Run Python script to modify files in the 'out' folder
         run: |
           source venv/bin/activate
-          python .github/python/modify_files.py
+          python python/modify_files.py
 
       - name: Archive the 'out' folder
         run: |
@@ -44,9 +44,12 @@ jobs:
         run: |
           tar -xzf out.tar.gz
 
-      - name: Copy most files (excluding *.css) from 'out' to 'public'
+      - name: Create public folder if it doesn't exist
         run: |
           mkdir -p public
+
+      - name: Copy most files (excluding *.css) from 'out' to 'public'
+        run: |
           find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
 
       - name: Commit and push changes to dev branch
