@@ -29,15 +29,7 @@ jobs:
       - name: Run Python script to modify files in the 'out' folder
         run: |
           source venv/bin/activate
-          python python/modify_files.py
-
-      - name: Commit changes
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add out/
-          git commit -m "Modify files in 'out' folder"
-          git push origin dita
+          python .github/python/modify_files.py
 
       - name: Check out the dev branch
         uses: actions/checkout@v2
@@ -56,4 +48,3 @@ jobs:
           git add public/
           git commit -m "Copy files from 'out' to 'public' excluding *.css"
           git push origin dev
-
