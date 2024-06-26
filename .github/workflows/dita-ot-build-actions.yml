@@ -1,55 +1,59 @@
-name: Build DITA files
-'on':
+name: DITA Workflow
+
+on:
   push:
     branches:
       - dita
 
 jobs:
-  build-dita:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      - name: Delete out folder
-        run: |
-          echo "Deleting out folder"
-          rm -rf out
-
-      - name: Build HTML5 
-        uses: dita-ot/dita-ot-action@master
+      - name: Check out the repository
+        uses: actions/checkout@v2
         with:
-          build: |
-            dita --input=dita/orange-heart.ditamap --format=html5 --verbose  --propertyfile=dita/html5.properties 2>&1 | tee log.txt
+          ref: dita
 
-      - name: Upload log file as an artifact
-        uses: actions/upload-artifact@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          name: DITA OT log
-          path: log.txt
-                  
-      - name: List build output
-        run: ls -R out
-        
-      - name: Configure git
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
+          python-version: '3.x'
 
-      - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Install dependencies
         run: |
-          git add out
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
-          else
-            git commit -m "Build DITA files"
-            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
-          fi
+          python -m venv venv
+          source venv/bin/activate
+          pip install beautifulsoup4
 
-      - name: Summarize build
+      - name: Run Python script to modify files in the 'out' folder
         run: |
-          echo "### Summary " >> $GITHUB_STEP_SUMMARY
-          echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY
+          source venv/bin/activate
+          python python/modify_files.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add out/
+          git commit -m "Modify files in 'out' folder"
+          git push origin dita
+
+      - name: Check out the dev branch
+        uses: actions/checkout@v2
+        with:
+          ref: dev
+
+      - name: Copy most files (excluding *.css) from 'out' to 'public'
+        run: |
+          mkdir -p public
+          find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
+
+      - name: Commit and push changes to dev branch
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add public/
+          git commit -m "Copy files from 'out' to 'public' excluding *.css"
+          git push origin dev
+
