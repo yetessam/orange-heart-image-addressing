@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the repository
+      - name: Check out the dita branch
         uses: actions/checkout@v2
         with:
           ref: dita
@@ -29,16 +29,27 @@ jobs:
       - name: Run Python script to modify files in the 'out' folder
         run: |
           source venv/bin/activate
-          python .github/python/modify_files.py
+          python python/modify_files.py
+
+      - name: Archive the 'out' folder
+        run: |
+          tar -czf out.tar.gz out
 
       - name: Check out the dev branch
         uses: actions/checkout@v2
         with:
           ref: dev
 
-      - name: Copy most files (excluding *.css) from 'out' to 'public'
+      - name: Extract the 'out' folder
+        run: |
+          tar -xzf out.tar.gz
+
+      - name: Create public folder if it doesn't exist
         run: |
           mkdir -p public
+
+      - name: Copy most files (excluding *.css) from 'out' to 'public'
+        run: |
           find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
 
       - name: Commit and push changes to dev branch
@@ -48,3 +59,7 @@ jobs:
           git add public/
           git commit -m "Copy files from 'out' to 'public' excluding *.css"
           git push origin dev
+
+      - name: Clean up tar file
+        run: |
+          rm -f out.tar.gz
