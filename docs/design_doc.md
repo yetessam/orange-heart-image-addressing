@@ -1,4 +1,3 @@
-@ -1,93 +0,0 @@
 # Orange Heart Content Addressing Design Document
 
 ## Overview
@@ -66,3 +65,7 @@ Content addressing interests me. Moving from art that's got a physical location 
 ### Accessibility
 - Accessibility: Ensure all my HTML pages are accessible. Use tags like `<menu>`, `<nav>`, `<form>`, and `<main>` that don’t need not use ARIA landmarks, as their purpose is already established with their names. Review that the content has enough metadata and includes ARIA roles and labels where necessary.  
 - Bulma uses a lot of divs, that's one concern 
+
+
+### DWeb Tech to Investigate, Consider Out of Scope
+- Nextcloud which is decentralized Google Drive
