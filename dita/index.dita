@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="orange-heartprojecthome">
+<topic id="orange-heart-project-home">
   <title>Orange Heart Project</title>
-  <shortdesc><term>Orange Heart Project</term> present spray-painted hearts and musings on birchwood panel and incorporates  dweb technologies.  
-  </shortdesc>
+  <shortdesc>
+  The Orange Heart Project features spray-painted hearts and musings on birchwood panels with descriptive text that incorporates different forms of addressing.
+  The project experimented with integrating DWeb components into a typical content creation life-cycle. 
+   </shortdesc>
    <prolog>
     <metadata>
       <keywords>
@@ -12,21 +14,9 @@
     </metadata>
   </prolog>
   <body>
-    <p>Para content</p>
-
-    <note>Under construction
-    
-      <xref href="https://getdweb.net/principles/" format="html" scope="external">DWeb Principles</xref>.</note>
-
-    <section>
-      <title>Section title</title>
-      <p>Content</p>
-      <ul outputclass="list-group mb-5">
-        <li outputclass="list-group-item list-group-item-action">
-         List item.</li>
-          </ul>
-
-    </section>
+  <div>
+    <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
+    </div>
   </body>
 </topic>
 
