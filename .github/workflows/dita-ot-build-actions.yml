@@ -31,14 +31,31 @@ jobs:
           source venv/bin/activate
           python python/modify_files.py
 
+      - name: Debug - List directory contents after running Python script
+        run: |
+          echo "Listing contents of $(pwd):"
+          ls -l
+          echo "Listing contents of $(pwd)/out:"
+          ls -l out
+
       - name: Archive the 'out' folder
         run: |
           tar -czf out.tar.gz out
+
+      - name: Debug - Print absolute paths of the tar file and contents
+        run: |
+          echo "Tar file absolute path: $(pwd)/out.tar.gz"
+          ls -l $(pwd)/out.tar.gz
 
       - name: Check out the dev branch
         uses: actions/checkout@v2
         with:
           ref: dev
+
+      - name: Debug - List directory contents after checking out dev branch
+        run: |
+          echo "Listing contents of $(pwd) after checking out dev branch:"
+          ls -l
 
       - name: Extract the 'out' folder
         run: |
