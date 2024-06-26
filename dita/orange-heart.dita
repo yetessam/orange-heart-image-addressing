@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
-    <title>Orange Heart</title>
+    <title>Orange Heart Project</title>
     <conbody>
+        <p>Moving content from the physical world to the digital realm has a lot of steps and a lot of decisions that need to be made.  To simplify this process, I'm reusing the same stencil so that we've got some continuity.
+        </p>
+        
         <note>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.
         This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.</note>
     </conbody>
