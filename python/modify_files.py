@@ -111,7 +111,7 @@ for filename in os.listdir(out_dir):
 
         print(f"Modified and saved HTML file: {filepath}")
 
-# Function to copy files and directories excluding .css files
+# Copy the file
 def copy_files(src, dst):
     if os.path.isdir(src):
         if not os.path.exists(dst):
@@ -121,10 +121,10 @@ def copy_files(src, dst):
             d = os.path.join(dst, item)
             if os.path.isdir(s):
                 copy_files(s, d)
-            elif not s.endswith('.css'):
+            else:
                 shutil.copy2(s, d)
-    elif not src.endswith('.css'):
+    else:
         shutil.copy2(src, dst)
 
-# Copy all files and directories except *.css to src
+# Copy all files and directories to src
 copy_files(out_dir, src_dir)
