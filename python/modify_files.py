@@ -90,8 +90,6 @@ def update_head_and_body(html_content):
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
-    
-print(f"Copied {source_file} to {destination_file}")
 
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
