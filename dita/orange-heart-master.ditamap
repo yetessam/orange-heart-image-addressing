@@ -2,11 +2,43 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart - DWeb Project</title>
-    <topicref href="index.dita" format="dita" type="topic"/>
+    <topicref href="index.html.dita" format="dita" type="topic"/>
+    <topicref href="landing-page" format="dita" type="concept" toc="no" print="no"/> 
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
-  <topicref href="captains-log.dita" format="dita" type="concept"/> 
-  <topicref href="about.dita" format="dita" type="concept"/> 
+    <topicref href="captains-log.dita" format="dita" type="concept"/> 
+    <topicref href="about.dita" format="dita" type="concept"/> 
+   
+<reltable>
+    <title>Source and target: Links that apply only to HTML version of distribution documentation</title>
+    <!-- Links common to all output formats are defined in nested submaps   -->
+    <relheader>
+      <relcolspec linking="sourceonly"/>
+      <relcolspec linking="targetonly"/>
+    </relheader>
+    <relrow>
+      <relcell>
+          <topicref href="about.dita" format="data" type="concept"/>
+      </relcell>
+      <relcell>
+      
+        <topicref href="https://getdweb.net/principles/" format="html" scope="external">DWeb Principles</xref> 
+
+      </relcell>
+    </relrow>
+    <relrow>
+      <relcell>
+	<!-- 
+        <topicref href="source.dita"/>
+        -->
+      </relcell>
+      <relcell>
+        <!-- 
+		 <topicref href="target.dita"/>
+         -->
+      </relcell>
+    </relrow>
+  </reltable>
   
 </map>
 
