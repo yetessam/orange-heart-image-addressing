@@ -1,4 +1,3 @@
-# modify_files.py, written by ChatGPT
 from bs4 import BeautifulSoup
 import os
 import shutil
@@ -9,12 +8,11 @@ src_dir = 'src'
 
 print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
-
 def update_head(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     
     # Create new meta tag
-    meta_tag = soup.new_tag('meta', name='viewport', content='width=device-width, initial-scale=1.0')
+    meta_tag = soup.new_tag('meta', **{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'})
     
     # Create new link tag
     link_tag = soup.new_tag('link', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css')
@@ -25,8 +23,8 @@ def update_head(html_content):
     # Insert meta tag right after the first title or meta charset if present
     if head.title:
         head.title.insert_after(meta_tag)
-    elif head.meta:
-        head.meta.insert_after(meta_tag)
+    elif head.find('meta', charset=True):
+        head.find('meta', charset=True).insert_after(meta_tag)
     else:
         head.insert(0, meta_tag)
     
@@ -53,16 +51,13 @@ for filename in os.listdir(out_dir):
     
     if os.path.isfile(filepath) and filename.endswith('.html'):
         print(f"Processing HTML file: {filepath}")
-  
-    if os.path.isfile(filepath) and filename.endswith('.html'):
+        
         # Read the file content
         with open(filepath, 'r', encoding='utf-8') as file:
             content = file.read()
         
-        # Parse the HTML content with Beautiful Soup
-        soup = BeautifulSoup(content, 'html.parser')
+        # Parse the HTML content with BeautifulSoup
         modified_content = update_head(content)
-        
         
         # Write the modified content back to the file
         with open(filepath, 'w', encoding='utf-8') as file:
@@ -84,7 +79,6 @@ def copy_files(src, dst):
                 shutil.copy2(s, d)
     elif not src.endswith('.css'):
         shutil.copy2(src, dst)
-
 
 # Copy all files and directories except *.css to ../src
 print(f"Starting to copy files from {out_dir} to {src_dir}, excluding .css files")
