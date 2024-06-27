@@ -2,11 +2,11 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart - DWeb Project</title>
-    <topicref href="index.dita" format="dita" type="topic"/>
+    <topicref href="landing-page" format="dita" type="topic"/>
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
-<!--  Removing markdown from src and storing it in DITA, by the time it gets to prod it should be HTML 
-  <topicref href="captains_log.md" format="markdown" type="markdown"/> -->
+<!--  Removing markdown from src and storing it in DITA, by the time it gets to prod it should be HTML -->
+  <topicref href="captains_log.md" format="markdown" type="markdown"/> 
   <topicref href="about.dita" format="dita" type="concept"/> 
   
 </map>
