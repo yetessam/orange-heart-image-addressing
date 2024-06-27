@@ -133,8 +133,9 @@ jobs:
           ls -la src
 
 
-      - name: Remove tar file and out folder
+      - name: Remove venv, tar file and out folder
         run: |
+          rm -f venv/
           rm -f out.tar.gz
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
