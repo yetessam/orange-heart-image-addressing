@@ -149,9 +149,8 @@ jobs:
       
       - name: Commit and push changes to dev branch
         run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
-          git add src/
+          git add --verbose --force src
+          git add -verbose --force out
           git commit -m "Copy files from build to src excluding *.css"
           git push origin dev
           
