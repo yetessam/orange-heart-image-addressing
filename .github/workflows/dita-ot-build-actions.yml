@@ -149,14 +149,17 @@ jobs:
       
       - name: Commit and push changes to dev branch
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add src/
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
-          else
-            git commit -m "Copy files from 'out' to 'src' excluding *.css"
-            git push origin dev
-          fi
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+
+          # git config --global user.name 'github-actions'
+          # git config --global user.email 'github-actions@github.com'
+          # git add src/
+          # if git diff-index --quiet HEAD; then
+          #  echo "No changes to commit"
+          #else
+          git commit -m "Copy files from 'out' to 'src' excluding *.css"
+          git push origin dev
+          #fi
         
      
