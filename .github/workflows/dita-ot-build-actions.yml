@@ -26,7 +26,7 @@ jobs:
         with:
           build: |
             set -e
-            dita --input=dita/orange-heart.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
+            dita --input=dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
