@@ -57,6 +57,12 @@ jobs:
         run: |
           echo "Listing contents of $(pwd):"
           ls -l
+
+      - name: Traverse up one folder and touch myfile.txt
+        run: |
+          cd ..
+          touch myfile.txt
+      
       - name: Summarize build
         run: |
           echo "### Summary " >> $GITHUB_STEP_SUMMARY

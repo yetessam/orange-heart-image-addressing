@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title>Orange Heart Project</title>
+    <title>Welcome to my Orange Heart Project</title>
     <topicref href="index.dita" format="dita" type="topic"/>
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
@@ -9,7 +9,7 @@
   <topicref href="captains_log.md" format="markdown"/>   
   -->
   
-  <topicref href="about.dita" format="dita" type="concept"/> 
+  <topicref href="about.dita" format="dita" type="concept" navtitle="About"/> 
   
 </map>
 
