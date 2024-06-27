@@ -1,0 +1,144 @@
+name: DITA Workflow
+
+on:
+  push:
+    branches:
+      - dita
+
+jobs:
+  build-html:
+    name: Generate html5 with latest DITA Open Toolkit  # Human-readable name for the job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the dita branch
+        uses: actions/checkout@v4
+        with:
+          ref: dita
+
+      - name: Delete out folder
+        run: |
+          echo "Deleting out folder"
+          rm -rf out
+
+      - name: Build HTML5
+        uses: dita-ot/dita-ot-action@master
+        with:
+          build: |
+            set -e
+            dita --input=dita/orange-heart.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
+
+      - name: Upload log file as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DITA OT log
+          path: log.txt
+
+      - name: Archive the 'out' folder
+        run: |
+          set -e
+          tar -czf out.tar.gz out
+
+      - name: Upload 'out' folder archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-html5-archive
+          path: out.tar.gz
+    
+      - name: List build output
+        run: ls -R out
+
+      - name: Configure git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git add out
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "Build DITA to html5 "
+            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
+          fi
+
+      - name: Summarize build
+        run: |
+          echo "### Summary " >> $GITHUB_STEP_SUMMARY
+          echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY
+
+  switch-branch:
+    name: Switch to Dev Branch and Configure HTML # Human-readable name for the job
+    runs-on: ubuntu-latest
+    needs: build-html  # Indicates that this job depends on the build-html job
+
+    steps:
+      - name: Check out the dev branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Download 'out-html5-archive' artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: out-html5-archive
+          path: .
+
+      - name: Extract the 'out' folder
+        run: |
+          tar -xzf out.tar.gz
+
+      - name: Create public folder if it doesn't exist
+        run: |
+          mkdir -p public
+
+      - name: Copy most files (excluding *.css) from 'out' to 'public'
+        run: |
+          find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
+
+      - name: Python 
+        run:  | # Come back here
+          echo "Installing Python and dependencies"
+           
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          set -e
+          python -m venv venv
+          source venv/bin/activate
+          pip install beautifulsoup4
+
+      - name: Run Python script to modify files in the 'out' folder
+        run: |
+          set -e
+          source venv/bin/activate
+          python python/modify_files.py
+
+      - name: Debug - List directory contents after running Python script
+        run: |
+          set -e
+          echo "Listing contents of $(pwd):"
+          ls -l
+
+
+      
+ #     - name: Commit and push changes to dev branch
+ #       run: |
+ #         git config --global user.name 'github-actions'
+ #         git config --global user.email 'github-actions@github.com'
+ #         git add public/
+ #         git commit -m "Copy files from 'out' to 'public' excluding *.css"
+ #         git push origin dev
+
+ #     - name: Clean up tar file
+ #       run: |
+ #         rm -f out.tar.gz
+
