@@ -28,11 +28,22 @@ jobs:
             dita --input=dita/orange-heart.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
 
       - name: Upload log file as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: DITA OT log
           path: log.txt
 
+      - name: Archive the 'out' folder
+        run: |
+          set -e
+          tar -czf out.tar.gz out
+
+      - name: Upload 'out' folder archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-html5-archive
+          path: out.tar.gz
+    
       - name: List build output
         run: ls -R out
 
@@ -53,21 +64,6 @@ jobs:
             git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
           fi
 
-      - name: Debug - Print working directory and contents after html5 commit
-        run: |
-          echo "Listing contents of $(pwd):"
-          ls -l
-
-      - name: Traverse up one folder and touch myfile.txt
-        run: |
-          cd ..
-          touch myfile.txt
-
-      - name: Debug - Print working directory and contents after html5 commit
-        run: |
-          echo "Listing contents of $(pwd):"
-          ls -l
-      
       - name: Summarize build
         run: |
           echo "### Summary " >> $GITHUB_STEP_SUMMARY
