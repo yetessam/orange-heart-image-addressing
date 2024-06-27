@@ -5,7 +5,7 @@
     <topicref href="landing-page.dita" format="dita" type="topic"/>
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
-  <topicref href="captains_log.dita" format="dita" type="concept"/> 
+  <topicref href="captains-log.dita" format="dita" type="concept"/> 
   <topicref href="about.dita" format="dita" type="concept"/> 
   
 </map>
