@@ -12,10 +12,14 @@ def update_head(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     
     # Create new meta tag
-    meta_tag = soup.new_tag('meta', **{'name': 'viewport', 'content': 'width=device-width, initial-scale=1.0'})
+    meta_tag = soup.new_tag('meta')
+    meta_tag.attrs['name'] = 'viewport'
+    meta_tag.attrs['content'] = 'width=device-width, initial-scale=1.0'
     
     # Create new link tag
-    link_tag = soup.new_tag('link', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css')
+    link_tag = soup.new_tag('link')
+    link_tag.attrs['rel'] = 'stylesheet'
+    link_tag.attrs['href'] = 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css'
     
     # Find the head element
     head = soup.head
@@ -23,10 +27,12 @@ def update_head(html_content):
     # Insert meta tag right after the first title or meta charset if present
     if head.title:
         head.title.insert_after(meta_tag)
-    elif head.find('meta', charset=True):
-        head.find('meta', charset=True).insert_after(meta_tag)
     else:
-        head.insert(0, meta_tag)
+        charset_meta = head.find('meta', attrs={'charset': True})
+        if charset_meta:
+            charset_meta.insert_after(meta_tag)
+        else:
+            head.insert(0, meta_tag)
     
     # Append link tag before any existing script tags, or at the end of head if no scripts are present
     first_script = head.find('script')
@@ -41,9 +47,7 @@ def update_head(html_content):
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
-    print(f"Created directory: {src_dir}")
-else:
-    print(f"Directory already exists: {src_dir}")
+    
 
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
@@ -80,7 +84,6 @@ def copy_files(src, dst):
     elif not src.endswith('.css'):
         shutil.copy2(src, dst)
 
-# Copy all files and directories except *.css to ../src
-print(f"Starting to copy files from {out_dir} to {src_dir}, excluding .css files")
+# Copy all files and directories except *.css to src
 copy_files(out_dir, src_dir)
-print("Finished copying files")
+
