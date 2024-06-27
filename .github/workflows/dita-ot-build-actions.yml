@@ -49,10 +49,14 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
-            git commit -m "Build DITA files"
+            git commit -m "Build DITA to html5 "
             git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
           fi
 
+      - name: Debug - Print working directory and contents after html5 commit
+        run: |
+          echo "Listing contents of $(pwd):"
+          ls -l
       - name: Summarize build
         run: |
           echo "### Summary " >> $GITHUB_STEP_SUMMARY
