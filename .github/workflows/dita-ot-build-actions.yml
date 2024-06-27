@@ -20,18 +20,15 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
-
-      - name: Set up DITA-OT
-        uses: dita-ot/dita-ot-action@v3
-
-      - name: Install org.lwdita plugin
-        run: dita install https://github.com/jelovirt/org.lwdita
-
-      - name: Build HTML5
-        run: |
-          set -e
-          dita --input=dita/orange-heart.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
   
+      - name: Build HTML5
+        uses: dita-ot/dita-ot-action@master
+        with:
+          build: |
+            set -e
+            dita --input=dita/orange-heart.ditamap --format=html5 --verbose --propertyfile=dita/html5.properties 2>&1 | tee log.txt
+
+
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
         with:
