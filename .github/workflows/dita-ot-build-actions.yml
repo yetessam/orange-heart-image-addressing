@@ -131,6 +131,10 @@ jobs:
           set -e
           echo "Listing contents of $(pwd):"
           ls -l
+          echo "Contents of src directory:"
+          ls -la ../src
+          echo "Contents of venv directory:"
+          ls -la venv
 
 
       - name: Remove tar file and out folder
