@@ -14,12 +14,9 @@
     </metadata>
   </prolog>
   <body>
-  <section class="hero is-danger is-fullheight">
+  <section outputclass="hero is-danger is-fullheight">
   <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
-  <div> Test 2
-    <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
-    </div>
     </section>
   </body>
 </topic>
