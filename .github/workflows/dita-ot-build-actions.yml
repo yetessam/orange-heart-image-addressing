@@ -150,7 +150,7 @@ jobs:
       - name: Commit and push changes to dev branch
         run: |
           git add --verbose --force src
-          git add -verbose --force out
+          git add --verbose --force out
           git commit -m "Copy files from build to src excluding *.css"
           git push origin dev
           
