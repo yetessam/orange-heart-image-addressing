@@ -105,7 +105,7 @@ jobs:
            
 
       - name: Install Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
@@ -128,17 +128,18 @@ jobs:
           echo "Listing contents of $(pwd):"
           ls -l
 
-
       
- #     - name: Commit and push changes to dev branch
- #       run: |
- #         git config --global user.name 'github-actions'
- #         git config --global user.email 'github-actions@github.com'
- #         git add public/
- #         git commit -m "Copy files from 'out' to 'public' excluding *.css"
- #         git push origin dev
+      - name: Commit and push changes to dev branch
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add public/
+          git commit -m "Copy files from 'out' to 'public' excluding *.css"
+          git push origin dev
 
- #     - name: Clean up tar file
- #       run: |
- #         rm -f out.tar.gz
+      - name: Clean up tar file
+        run: |
+          rm -f out.tar.gz
+          rm -rf out/
+          echo "out folder and out.tar.gz file deleted"
 
