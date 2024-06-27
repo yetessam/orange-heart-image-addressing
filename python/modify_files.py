@@ -7,14 +7,22 @@ import shutil
 out_dir = 'out'
 src_dir = '../src'
 
+print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
+
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
+    print(f"Created directory: {src_dir}")
+else:
+    print(f"Directory already exists: {src_dir}")
 
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
     filepath = os.path.join(out_dir, filename)
     
+    if os.path.isfile(filepath) and filename.endswith('.html'):
+        print(f"Processing HTML file: {filepath}")
+  
     if os.path.isfile(filepath) and filename.endswith('.html'):
         # Read the file content
         with open(filepath, 'r', encoding='utf-8') as file:
@@ -33,6 +41,8 @@ for filename in os.listdir(out_dir):
         with open(filepath, 'w', encoding='utf-8') as file:
             file.write(str(soup))
 
+        print(f"Modified and saved HTML file: {filepath}")
+
 # Function to copy files and directories excluding .css files
 def copy_files(src, dst):
     if os.path.isdir(src):
@@ -49,4 +59,6 @@ def copy_files(src, dst):
         shutil.copy2(src, dst)
 
 # Copy all files and directories except *.css to ../src
+print(f"Starting to copy files from {out_dir} to {src_dir}, excluding .css files")
 copy_files(out_dir, src_dir)
+print("Finished copying files")
