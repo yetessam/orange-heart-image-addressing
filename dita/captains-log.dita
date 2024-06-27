@@ -52,7 +52,7 @@
         <section>
             <title>Monday June 11th, 2024</title>
             <p>Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/xml. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.</p>
-            <p>✅ Created a Github Repo <xref href="https://github.com/yetessam/orange-heart-image-addressing"/>.</p>
+            <p>✅ Created a Github Repo <xref href="https://github.com/yetessam/orange-heart-image-addressing" scope="external"/>.</p>
         </section>
     </conbody>
 </concept>
