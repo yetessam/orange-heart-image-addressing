@@ -90,21 +90,7 @@ def update_head_and_body(html_content):
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
-
-# Define the paths to the source and destination files
-source_file = os.path.join(src_dir, 'landing-page.html')
-destination_file = os.path.join(out_dir, 'index.html')
-
-# Seemed to have found a problem with the landing page, clobber index.html with landing-page.html
-# Check if the landing-page file exists
-if os.path.exists(source_file):
-    # Copy the file
-    shutil.copy(source_file, destination_file)
-    print(f"Copied {source_file} to {destination_file}")
-else:
-    print(f"Source file {source_file} does not exist.")
-
-
+    
 print(f"Copied {source_file} to {destination_file}")
 
 # Iterate over all files in the out directory
@@ -141,6 +127,20 @@ def copy_files(src, dst):
                 shutil.copy2(s, d)
     else:
         shutil.copy2(src, dst)
+
+# Define the paths to the source and destination files
+source_file = os.path.join(out_dir, 'landing-page.html')
+destination_file = os.path.join(out_dir, 'index.html')
+
+# Seemed to have found a problem with the landing page, clobber index.html with landing-page.html
+# Check if the landing-page file exists
+if os.path.exists(source_file):
+    # Copy the file
+    shutil.copy(source_file, destination_file)
+    print(f"Copied {source_file} to {destination_file}")
+else:
+    print(f"Source file {source_file} does not exist.")
+
 
 # Copy all files and directories to src
 copy_files(out_dir, src_dir)
