@@ -99,10 +99,12 @@ jobs:
           find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
 
       - name: Install Python
-        run:  # Come back here
-      
+        run:  | # Come back here
+          echo "Installing Python and dependencies"
+
       - name: Update HTML
         run:   # Come back here
+          echo "Updating HTML"
       
       - name: Commit and push changes to dev branch
         run: |
