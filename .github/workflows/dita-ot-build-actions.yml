@@ -94,7 +94,8 @@ jobs:
 
       - name: Create src folder if it doesn't exist
         run: |
-          mkdir -p src
+          mkdir -p ./src
+          ls -la
    
       - name: Python 
         run:  | # Come back here
