@@ -6,10 +6,8 @@
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
 <!--  Removing markdown from src and storing it in DITA, by the time it gets to prod it should be HTML -->
-  <topicref href="captains_log.md" format="markdown"/>   
-  -->
-  
-  <topicref href="about.dita" format="dita" type="concept" navtitle="About"/> 
+  <topicref href="captains_log.md" format="markdown" type="concept"/>     
+  <topicref href="about.dita" format="dita" type="concept"/> 
   
 </map>
 

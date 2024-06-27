@@ -62,6 +62,11 @@ jobs:
         run: |
           cd ..
           touch myfile.txt
+
+      - name: Debug - Print working directory and contents after html5 commit
+        run: |
+          echo "Listing contents of $(pwd):"
+          ls -l
       
       - name: Summarize build
         run: |
