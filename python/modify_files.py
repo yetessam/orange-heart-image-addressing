@@ -8,23 +8,65 @@ src_dir = 'src'
 
 print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
-def update_head(html_content):
+# Define the mapping of HTML elements to Bulma class attributes
+bulma_classes = {
+    'h1': 'title is-1',
+    'h2': 'title is-2',
+    'h3': 'title is-3',
+    'p': 'content',
+    'div': 'box',
+    'a': 'button is-primary',
+    'button': 'button is-link',
+    'ul': 'list is-hoverable',
+    'ol': 'list is-hoverable',
+    'li': 'list-item'
+}
+
+def apply_bulma_classes(soup):
+    for tag, class_attr in bulma_classes.items():
+        for element in soup.find_all(tag):
+            element['class'] = class_attr
+
+    # Specific handling for navigation
+    nav = soup.find('nav')
+    if nav:
+        nav['class'] = 'navbar'
+        nav['role'] = 'navigation'
+        nav['aria-label'] = 'main navigation'
+        
+        # Create new navbar menu div
+        navbar_menu = soup.new_tag('div', **{'class': 'navbar-menu'})
+        navbar_start = soup.new_tag('div', **{'class': 'navbar-start'})
+        
+        # Move list items to the new structure
+        ul = nav.find('ul')
+        if ul:
+            for li in ul.find_all('li'):
+                a = li.find('a')
+                a['class'] = 'navbar-item'
+                navbar_start.append(a)
+        
+        # Assemble the new navbar structure
+        navbar_menu.append(navbar_start)
+        nav.clear()
+        nav.append(navbar_menu)
+
+    return soup
+
+def update_head_and_body(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # Create new meta tag
+    # Update the head section
     meta_tag = soup.new_tag('meta')
     meta_tag.attrs['name'] = 'viewport'
     meta_tag.attrs['content'] = 'width=device-width, initial-scale=1.0'
     
-    # Create new link tag
     link_tag = soup.new_tag('link')
     link_tag.attrs['rel'] = 'stylesheet'
     link_tag.attrs['href'] = 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css'
     
-    # Find the head element
     head = soup.head
     
-    # Insert meta tag right after the first title or meta charset if present
     if head.title:
         head.title.insert_after(meta_tag)
     else:
@@ -34,20 +76,20 @@ def update_head(html_content):
         else:
             head.insert(0, meta_tag)
     
-    # Append link tag before any existing script tags, or at the end of head if no scripts are present
     first_script = head.find('script')
     if first_script:
         first_script.insert_before(link_tag)
     else:
         head.append(link_tag)
     
+    # Update the body section
+    soup = apply_bulma_classes(soup)
+    
     return str(soup)
-
 
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
-    
 
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
@@ -60,8 +102,8 @@ for filename in os.listdir(out_dir):
         with open(filepath, 'r', encoding='utf-8') as file:
             content = file.read()
         
-        # Parse the HTML content with BeautifulSoup
-        modified_content = update_head(content)
+        # Parse and modify the HTML content with BeautifulSoup
+        modified_content = update_head_and_body(content)
         
         # Write the modified content back to the file
         with open(filepath, 'w', encoding='utf-8') as file:
@@ -86,4 +128,3 @@ def copy_files(src, dst):
 
 # Copy all files and directories except *.css to src
 copy_files(out_dir, src_dir)
-
