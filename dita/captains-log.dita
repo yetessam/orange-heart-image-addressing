@@ -1,0 +1,58 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="captains-log">
+    <title>Captain's Log</title>
+    <conbody>
+        <section>
+            <title>Tuesday June 25th, 2024</title>
+            <!-- Content for June 25th -->
+        </section>
+        <section>
+            <title>Monday June 24th, 2024</title>
+            <p>Directed the contents of the DITA OT logs to the Summary box in Github Actions.</p>
+            <p>Testing with DITA properties and trying to get the CSS auto-applied to the external CDN.</p>
+        </section>
+        <section>
+            <title>Sunday June 23rd</title>
+            <p>Github Actions and priming and testing 5x5s.</p>
+        </section>
+        <section>
+            <title>Sat June 22, 2024</title>
+            <p>I've been getting these wooden birchwood boxes to do real-life art. Having to prime them and pull together supplies.</p>
+            <p>I've done a few prototypes which didn't work out and then I primed again. Currently, still concerned that the Krylon matte fixative makes inks bleed including the Sharpie black oil ink. Went back to 'regular' Sharpie and still need to test the fixative. Finished the background for the 16 x 20 piece.</p>
+            <p>Working on Github to source the content in DITA XML so that we can leverage DITA's link management. Created a dita branch on Github that takes the XML files, pushes them through the HTML5 transform in the latest version of the DITA Open Toolkit and then checks in the content to the out folder.</p>
+            <p>Seems like its going to be more efficient to generate this HTML here.</p>
+            <p>To do: push the HTML5 to a dev branch where I could have Beautiful Soup run through and make any other changes that are needed. Then when that's done, move to staging and then move to prod.</p>
+        </section>
+        <section>
+            <title>Sunday June 16, 2024</title>
+            <p>Getting a Fleek account. I chose to authenticate through Ethereum, specifically with Metamask. Metamask gives you some contextual warning about being careful with Web 3 dapps.</p>
+            <p>Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to <xref href="https://delicate-glitter-6121.on.fleek.co/"/>.</p>
+            <p>Locally ran python -m http.server 8000 so that we can verify that the markdown is loaded locally, checked developer console and made adjustments until we had zero errors in the console.</p>
+            <p>Pushed changes to design branch.</p>
+          
+            
+        </section>
+        <section>
+            <title>Friday June 15st, 2024</title>
+            <p>Prepped with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Made in Canada.</p>
+            <p>Selected a Bulma for a modern CSS framework.</p>
+           
+        </section>
+        <section>
+            <title>Wed June 13th, 2024</title>
+            <p>Create mockups for physical layout for gallery wall space. Took first draft photographs of the art pieces and then loaded them into a new Miro board to create a 2D diagram of the physical gallery space. Scaling the images down to onto the Miro grid to result in a maximum wall width of 3 feet. Will need to pad everything by several inches to accommodate frames.</p>
+            <p>Design branch on Git holds the current set of draft images.</p>
+          
+        </section>
+        <section>
+            <title>Tuesday June 12th, 2024</title>
+            <p>Updates to design doc.</p>
+            
+        </section>
+        <section>
+            <title>Monday June 11th, 2024</title>
+            <p>Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/xml. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.</p>
+            <p>✅ Created a Github Repo <xref href="https://github.com/yetessam/orange-heart-image-addressing"/>.</p>
+        </section>
+    </conbody>
+</concept>
