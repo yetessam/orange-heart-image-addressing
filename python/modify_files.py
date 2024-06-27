@@ -30,16 +30,12 @@ for filename in os.listdir(out_dir):
         
         # Parse the HTML content with Beautiful Soup
         soup = BeautifulSoup(content, 'html.parser')
+        modified_content = update_head(content):
         
-        # Make modifications to the HTML content
-        # For example, adding a new paragraph
-        new_paragraph = soup.new_tag('p')
-        new_paragraph.string = "This is a new paragraph added by Beautiful Soup."
-        soup.body.append(new_paragraph)
         
         # Write the modified content back to the file
         with open(filepath, 'w', encoding='utf-8') as file:
-            file.write(str(soup))
+            file.write(modified_content)
 
         print(f"Modified and saved HTML file: {filepath}")
 
@@ -57,6 +53,35 @@ def copy_files(src, dst):
                 shutil.copy2(s, d)
     elif not src.endswith('.css'):
         shutil.copy2(src, dst)
+
+def update_head(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Create new meta tag
+    meta_tag = soup.new_tag('meta', name='viewport', content='width=device-width, initial-scale=1.0')
+    
+    # Create new link tag
+    link_tag = soup.new_tag('link', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css')
+    
+    # Find the head element
+    head = soup.head
+    
+    # Insert meta tag right after the first title or meta charset if present
+    if head.title:
+        head.title.insert_after(meta_tag)
+    elif head.meta:
+        head.meta.insert_after(meta_tag)
+    else:
+        head.insert(0, meta_tag)
+    
+    # Append link tag before any existing script tags, or at the end of head if no scripts are present
+    first_script = head.find('script')
+    if first_script:
+        first_script.insert_before(link_tag)
+    else:
+        head.append(link_tag)
+    
+    return str(soup)
 
 # Copy all files and directories except *.css to ../src
 print(f"Starting to copy files from {out_dir} to {src_dir}, excluding .css files")
