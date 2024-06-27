@@ -9,50 +9,6 @@ src_dir = 'src'
 
 print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
-# Create the src directory if it doesn't exist
-if not os.path.exists(src_dir):
-    os.makedirs(src_dir)
-    print(f"Created directory: {src_dir}")
-else:
-    print(f"Directory already exists: {src_dir}")
-
-# Iterate over all files in the out directory
-for filename in os.listdir(out_dir):
-    filepath = os.path.join(out_dir, filename)
-    
-    if os.path.isfile(filepath) and filename.endswith('.html'):
-        print(f"Processing HTML file: {filepath}")
-  
-    if os.path.isfile(filepath) and filename.endswith('.html'):
-        # Read the file content
-        with open(filepath, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Parse the HTML content with Beautiful Soup
-        soup = BeautifulSoup(content, 'html.parser')
-        modified_content = update_head(content):
-        
-        
-        # Write the modified content back to the file
-        with open(filepath, 'w', encoding='utf-8') as file:
-            file.write(modified_content)
-
-        print(f"Modified and saved HTML file: {filepath}")
-
-# Function to copy files and directories excluding .css files
-def copy_files(src, dst):
-    if os.path.isdir(src):
-        if not os.path.exists(dst):
-            os.makedirs(dst)
-        for item in os.listdir(src):
-            s = os.path.join(src, item)
-            d = os.path.join(dst, item)
-            if os.path.isdir(s):
-                copy_files(s, d)
-            elif not s.endswith('.css'):
-                shutil.copy2(s, d)
-    elif not src.endswith('.css'):
-        shutil.copy2(src, dst)
 
 def update_head(html_content):
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -82,6 +38,53 @@ def update_head(html_content):
         head.append(link_tag)
     
     return str(soup)
+
+
+# Create the src directory if it doesn't exist
+if not os.path.exists(src_dir):
+    os.makedirs(src_dir)
+    print(f"Created directory: {src_dir}")
+else:
+    print(f"Directory already exists: {src_dir}")
+
+# Iterate over all files in the out directory
+for filename in os.listdir(out_dir):
+    filepath = os.path.join(out_dir, filename)
+    
+    if os.path.isfile(filepath) and filename.endswith('.html'):
+        print(f"Processing HTML file: {filepath}")
+  
+    if os.path.isfile(filepath) and filename.endswith('.html'):
+        # Read the file content
+        with open(filepath, 'r', encoding='utf-8') as file:
+            content = file.read()
+        
+        # Parse the HTML content with Beautiful Soup
+        soup = BeautifulSoup(content, 'html.parser')
+        modified_content = update_head(content)
+        
+        
+        # Write the modified content back to the file
+        with open(filepath, 'w', encoding='utf-8') as file:
+            file.write(modified_content)
+
+        print(f"Modified and saved HTML file: {filepath}")
+
+# Function to copy files and directories excluding .css files
+def copy_files(src, dst):
+    if os.path.isdir(src):
+        if not os.path.exists(dst):
+            os.makedirs(dst)
+        for item in os.listdir(src):
+            s = os.path.join(src, item)
+            d = os.path.join(dst, item)
+            if os.path.isdir(s):
+                copy_files(s, d)
+            elif not s.endswith('.css'):
+                shutil.copy2(s, d)
+    elif not src.endswith('.css'):
+        shutil.copy2(src, dst)
+
 
 # Copy all files and directories except *.css to ../src
 print(f"Starting to copy files from {out_dir} to {src_dir}, excluding .css files")
