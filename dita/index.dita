@@ -3,7 +3,7 @@
 <topic id="orange-heart-project-home">
   <title>Home</title>
   <shortdesc>
-  The Orange Heart Project features spray-painted hearts and musings on birchwood panels with descriptive text that incorporates different forms of addressing.
+  The Orange Heart Project presents a variety of ways that a series of painted orange hearts can be addressed.  
   The project experimented with integrating DWeb components into a typical content creation life-cycle. 
    </shortdesc>
    <prolog>
@@ -14,11 +14,11 @@
     </metadata>
   </prolog>
   <body>
-  <p> Outside div   <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
+  <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
-  <div> Inside div 
+  <p> Test 2
     <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
-    </div>
+    </p>
   </body>
 </topic>
 
