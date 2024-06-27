@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-html:
-    name: Generate html5 with latest DITA Open Toolkit  # Human-readable name for the job
+    name: Generate html5 with latest DITA Open Toolkit  # Human-readable job name
     runs-on: ubuntu-latest
 
     steps:
@@ -102,7 +102,7 @@ jobs:
            
 
       - name: Install Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: '3.x'
 
@@ -113,7 +113,7 @@ jobs:
           source venv/bin/activate
           pip install beautifulsoup4
 
-      - name: Run Python script to modify files in the 'out' folder
+      - name: Run Python script 
         run: |
           set -e
           source venv/bin/activate
@@ -132,9 +132,6 @@ jobs:
           echo "Listing contents of $(pwd):"
           ls -l
 
-      - name: Clean up tar file and the out folder 
-        run: |
-          rm -f out.tar.gz
 
       - name: Remove tar file and out folder
         run: |
