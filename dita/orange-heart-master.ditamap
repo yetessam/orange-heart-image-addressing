@@ -24,7 +24,7 @@
       
         <topicref href="https://getdweb.net/principles/" format="html" scope="external">
  		<topicmeta>
-      			<title>DWeb Principles</title>
+      			<navtitle>DWeb Principles</navtitle>
     		</topicmeta>
 	</topicref> 
       </relcell>
