@@ -91,6 +91,15 @@ def update_head_and_body(html_content):
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
 
+# Seemed to have found a problem with the landing page, clobber index.html with landing-page.html
+source_file = "{out_dir}/landing-page.html"
+destination_file = "{src_dir}/index.html"
+
+# Copy the file
+shutil.copy(source_file, destination_file)
+
+print(f"Copied {source_file} to {destination_file}")
+
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
     filepath = os.path.join(out_dir, filename)
