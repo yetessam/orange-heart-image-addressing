@@ -7,6 +7,7 @@ on:
 
 jobs:
   build-html:
+    name: Generate html5 with latest DITA Open Toolkit  # Human-readable name for the job
     runs-on: ubuntu-latest
 
     steps:
@@ -70,7 +71,7 @@ jobs:
           echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY
 
   switch-branch:
-    name: Switch to Dev Branch  # Human-readable name for the job
+    name: Switch to Dev Branch and Configure HTML # Human-readable name for the job
     runs-on: ubuntu-latest
     needs: build-html  # Indicates that this job depends on the build-html job
 
@@ -98,13 +99,36 @@ jobs:
         run: |
           find out -type f ! -name '*.css' -exec cp --parents \{\} public/ \;
 
-      - name: Install Python
+      - name: Python 
         run:  | # Come back here
           echo "Installing Python and dependencies"
+           
 
-      - name: Update HTML
-        run:   # Come back here
-          echo "Updating HTML"
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          set -e
+          python -m venv venv
+          source venv/bin/activate
+          pip install beautifulsoup4
+
+      - name: Run Python script to modify files in the 'out' folder
+        run: |
+          set -e
+          source venv/bin/activate
+          python python/modify_files.py
+
+      - name: Debug - List directory contents after running Python script
+        run: |
+          set -e
+          echo "Listing contents of $(pwd):"
+          ls -l
+
+
       
       - name: Commit and push changes to dev branch
         run: |
