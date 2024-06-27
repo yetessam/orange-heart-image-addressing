@@ -124,10 +124,7 @@ jobs:
        
   #  For now, see if we can have Python process everything in the out folder
   #  Copying HTML over should happen after the Python code runs 
-  #    - name: Copy most files (excluding *.css) from 'out' to 'src'
-  #      run: |
-  #        find out -type f ! -name '*.css' -exec cp --parents \{\} ../src/ \;
-
+ 
 
       - name: List directory contents after running Python script
         run: |
@@ -140,20 +137,18 @@ jobs:
           ls -la venv
 
 
-   #   - name: Remove tar file and out folder
-   #     run: |
-   #       rm -f out.tar.gz
-   #       rm -rf out/
-   #       echo "Deleting out folder and out.tar.gz file"
+      - name: Remove tar file and out folder
+        run: |
+          rm -f out.tar.gz
+          rm -rf out/
+          echo "Deleting out folder and out.tar.gz file"
 
-    
       
       - name: Commit and push changes to dev branch
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
           git add --verbose --force src
-          git add --verbose --force out
           git commit -m "Copy files from build to src excluding *.css"
           git push origin dev
           
