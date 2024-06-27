@@ -5,7 +5,7 @@ import shutil
 
 # Directory containing the files to modify
 out_dir = 'out'
-src_dir = '../src'
+src_dir = 'src'
 
 print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
