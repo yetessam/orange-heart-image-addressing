@@ -95,9 +95,7 @@ jobs:
       - name: Create src folder if it doesn't exist
         run: |
           mkdir -p ./src
-          git add src
-          touch src/new-file.txt
-          git add src/
+
    
       - name: Python 
         run:  | # Come back here
