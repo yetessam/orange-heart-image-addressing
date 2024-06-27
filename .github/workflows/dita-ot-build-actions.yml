@@ -139,6 +139,9 @@ jobs:
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
 
+      - name: Check git status before adding changes
+        run: |
+          git status
       
       - name: Commit and push changes to dev branch
         run: |
