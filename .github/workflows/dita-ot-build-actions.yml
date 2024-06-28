@@ -21,7 +21,7 @@ jobs:
           echo "Deleting out folder"
           rm -rf out
       - name: Define absolute paths
-      run: |
+        run: |
          export INPUT_PATH=$(pwd)/dita
          ls -l $INPUT_PATH/css
    
