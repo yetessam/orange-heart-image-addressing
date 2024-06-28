@@ -108,12 +108,19 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install dependencies and run Python script
         run: |
           set -e
+          echo "Listing contents of $(pwd):"
+          ls -laR
           python -m venv venv
           source venv/bin/activate
           pip install beautifulsoup4
+          python python/orchestrate_html.py
+          
+          echo "Listing contents of $(pwd):"
+          ls -laR
+      
 
       - name: Run Python script 
         run: |

@@ -5,7 +5,7 @@
     </shortdesc>
     <conbody>
         <dl outputclass="blog">
-            <dlentry>
+           <dlentry>
                  <dt>Friday June 28th, 2024</dt>
                 <dd>
                     <p> CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
