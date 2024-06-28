@@ -140,12 +140,12 @@ jobs:
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
 
-      
-      - name: Commit and push changes to dev branch
+      - name: Commit and push changes
         run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
+          # Add files with verbose output and force option
           git add --verbose --force src
+          
+          # Check for changes and commit if there are any
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
@@ -153,4 +153,5 @@ jobs:
             git push origin dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
+     
