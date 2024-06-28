@@ -2,6 +2,7 @@ from apply_bulma import apply_bulma_classes
 from update_head import update_head
 from file_operations import read_html_file, write_html_file, copy_files
 import os
+import sys
 from bs4 import BeautifulSoup
 
 # Directory containing the files to modify
