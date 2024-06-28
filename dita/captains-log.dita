@@ -4,11 +4,11 @@
     <shortdesc>This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
     </shortdesc>
     <conbody>
-        <dl class="blog">
+        <dl outputclass="blog">
             <dlentry>
-                 <dt class="dt dlterm">Friday June 28th, 2024</dt>
-                <dd class="dd">
-                    <p class="p"> CSS supports re-mapping!  Consider removing the python processing. 
+                 <dt>Friday June 28th, 2024</dt>
+                <dd>
+                    <p> CSS supports re-mapping!  Consider removing the python processing. 
                         <codeblock>
                         /* Remap .dt.dlterm to Bulma's has-text-weight-bold class */
                         .dt.dlterm {
