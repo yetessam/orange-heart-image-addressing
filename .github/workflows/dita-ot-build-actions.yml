@@ -20,13 +20,17 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
-  
+      - name: Define absolute paths
+      run: |
+         export INPUT_PATH=$(pwd)/dita
+         ls -l $INPUT_PATH/css
+   
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
         with:
           build: |
             set -e
-            dita --input=dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=dita/build.properties  -Dargs.input.dir=dita -Dargs.debug=yes  2>&1 | tee log.txt
+            dita --input=dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$INPUT_PATH/build.properties  -Dargs.input.dir=$INPUT_PATH -Dargs.debug=yes  2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
