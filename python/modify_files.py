@@ -61,10 +61,6 @@ def update_head_and_body(html_content):
     meta_tag.attrs['name'] = 'viewport'
     meta_tag.attrs['content'] = 'width=device-width, initial-scale=1.0'
     
-    link_tag = soup.new_tag('link')
-    link_tag.attrs['rel'] = 'stylesheet'
-    link_tag.attrs['href'] = 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css'
-    
     head = soup.head
     
     if head.title:
