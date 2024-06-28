@@ -62,7 +62,7 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
-            git commit -m "Build DITA to html5 "
+            git commit -m "Github workflow ran DITA OT and generated html5 to out folder"
             git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
           fi
 
@@ -96,6 +96,7 @@ jobs:
       - name: Create src folder if it doesn't exist
         run: |
           mkdir -p ./src
+          ls -la 
 
    
       - name: Python 
