@@ -9,7 +9,7 @@ jobs:
   build-html:
     name: Generate html5 with latest DITA Open Toolkit  # Human-readable job name
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Check out the dita branch
         uses: actions/checkout@v4
