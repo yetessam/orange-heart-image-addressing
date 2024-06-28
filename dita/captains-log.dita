@@ -8,7 +8,7 @@
             <dlentry>
                  <dt>Friday June 28th, 2024</dt>
                 <dd>
-                    <p> CSS supports re-mapping!  Consider removing the python processing. 
+                    <p> CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
                         <codeblock>
                         /* Remap .dt.dlterm to Bulma's has-text-weight-bold class */
                         .dt.dlterm {
