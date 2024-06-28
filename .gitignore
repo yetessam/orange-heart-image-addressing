@@ -1,5 +1,14 @@
-#Ignore Mac OS files
+
+# Ignore Mac OS files
 .DS_Store
 
 # Ignore Vim swap files
 *.swp
+
+# Ignore Python cache directories
+__pycache__/
+*.py[cod]
+
+# Ignore Python virtual environments
+venv/
+
