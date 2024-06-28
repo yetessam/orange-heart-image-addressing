@@ -6,8 +6,8 @@ import sys
 from bs4 import BeautifulSoup
 
 # Directory containing the files to modify
-out_dir = '../out'
-src_dir = '../src'
+out_dir = 'out'
+src_dir = 'src'
 
 def process_html_files():
     print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
