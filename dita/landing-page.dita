@@ -2,17 +2,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart-project-home">
   <title>Home</title>
-  <shortdesc>
-  The Orange Heart Project presents a variety of ways that a series of painted orange hearts can be addressed.  
-  The project experimented with integrating DWeb components into a typical content creation life-cycle. 
-   </shortdesc>
-   <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>dweb</indexterm>
-      </keywords>
-    </metadata>
-  </prolog>
   <conbody>
   <section outputclass="hero is-danger is-fullheight">
   <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
