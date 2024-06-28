@@ -149,6 +149,8 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
-            git commit -m "Copy files from DITA OT build to src "
-          git push origin dev
+            git commit -m "Copy files from DITA OT build to src"
+            git push origin dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
