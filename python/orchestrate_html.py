@@ -23,8 +23,7 @@ def process_html_files():
 
     # Check if there are HTML files to process
     if not any(fname.endswith('.html') for fname in os.listdir(out_dir)):
-        print(f"No HTML files found in {out_dir}. Exiting.")
-        return
+        raise FileNotFoundError(f"No HTML files found in the {out_dir}. Exiting.")
 
     # Iterate over all files in the out directory
     for filename in os.listdir(out_dir):
@@ -64,5 +63,10 @@ def process_html_files():
     print(f"Copied all files from {out_dir} to {src_dir}")
 
 if __name__ == "__main__":
-    process_html_files()
+    try:
+        process_html_files()
+    except Exception as e:
+        print(e)
+        sys.exit(1)
+    
 
