@@ -140,18 +140,12 @@ jobs:
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
 
-      - name: Commit and push changes
+      
+      - name: Commit and push changes to dev branch
         run: |
-          # Add files with verbose output and force option
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
           git add --verbose --force src
+          git commit -m "Copy files from DITA OT build to src "
+          git push origin dev
           
-          # Check for changes and commit if there are any
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
-          else
-            git commit -m "Copy files from DITA OT build to src"
-            git push origin dev
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-     
