@@ -71,12 +71,13 @@ def update_head_and_body(html_content):
             charset_meta.insert_after(meta_tag)
         else:
             head.insert(0, meta_tag)
-    
-    first_script = head.find('script')
-    if first_script:
-        first_script.insert_before(link_tag)
-    else:
-        head.append(link_tag)
+
+    # Certain content has to be inserted before script tags
+    #first_script = head.find('script')
+    #if first_script:
+    #    first_script.insert_before(link_tag)
+    #else:
+    #    head.append(link_tag)
     
     # Update the body section
     soup = apply_bulma_classes(soup)
