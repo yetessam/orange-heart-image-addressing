@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="orange-heart-project-home">
+<concept id="orange-heart-project-home" outputclass="hero is-danger is-fullheight" >
   <title>Home</title>
   <conbody>
-  <section outputclass="hero is-danger is-fullheight">
+  <section >
   <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
     </section>
