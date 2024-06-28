@@ -26,6 +26,7 @@ def apply_bulma_classes(soup):
     for tag, class_attr in bulma_classes.items():
         for element in soup.find_all(tag):
             element['class'] = class_attr
+            print(f"Applied Bulma class '{class_attr}' to <{tag}> tag.")
 
     # Specific handling for navigation
     nav = soup.find('nav')
@@ -33,11 +34,12 @@ def apply_bulma_classes(soup):
         nav['class'] = 'navbar'
         nav['role'] = 'navigation'
         nav['aria-label'] = 'main navigation'
-        
+        print("Applied Bulma classes to <nav> tag.")
+
         # Create new navbar menu div
         navbar_menu = soup.new_tag('div', **{'class': 'navbar-menu'})
         navbar_start = soup.new_tag('div', **{'class': 'navbar-start'})
-        
+
         # Move list items to the new structure
         ul = nav.find('ul')
         if ul:
@@ -45,7 +47,8 @@ def apply_bulma_classes(soup):
                 a = li.find('a')
                 a['class'] = 'navbar-item'
                 navbar_start.append(a)
-        
+                print("Reorganized <nav> structure with Bulma classes.")
+
         # Assemble the new navbar structure
         navbar_menu.append(navbar_start)
         nav.clear()
@@ -53,7 +56,7 @@ def apply_bulma_classes(soup):
 
     return soup
 
-def update_head_and_body(html_content):
+def update_head_and_body(html_content, filepath):
     soup = BeautifulSoup(html_content, 'html.parser')
     
     # Update the head section
@@ -62,24 +65,17 @@ def update_head_and_body(html_content):
     meta_tag.attrs['content'] = 'width=device-width, initial-scale=1.0'
     
     head = soup.head
-    
-    if head.title:
-        head.title.insert_after(meta_tag)
-    else:
-        charset_meta = head.find('meta', attrs={'charset': True})
-        if charset_meta:
-            charset_meta.insert_after(meta_tag)
+    if head:
+        if head.title:
+            head.title.insert_after(meta_tag)
         else:
-            head.insert(0, meta_tag)
-     
-    print(f"Adding viewport meta tag to HTML file: {filepath}")
-    # Certain content has to be inserted before script tags
-    #first_script = head.find('script')
-    #if first_script:
-    #    first_script.insert_before(link_tag)
-    #else:
-    #    head.append(link_tag)
-    
+            charset_meta = head.find('meta', attrs={'charset': True})
+            if charset_meta:
+                charset_meta.insert_after(meta_tag)
+            else:
+                head.insert(0, meta_tag)
+        print(f"Added viewport meta tag to {filepath}")
+
     # Update the body section
     soup = apply_bulma_classes(soup)
     
@@ -88,6 +84,7 @@ def update_head_and_body(html_content):
 # Create the src directory if it doesn't exist
 if not os.path.exists(src_dir):
     os.makedirs(src_dir)
+    print(f"Created destination directory: {src_dir}")
 
 # Iterate over all files in the out directory
 for filename in os.listdir(out_dir):
@@ -101,7 +98,7 @@ for filename in os.listdir(out_dir):
             content = file.read()
         
         # Parse and modify the HTML content with BeautifulSoup
-        modified_content = update_head_and_body(content)
+        modified_content = update_head_and_body(content, filepath)
         
         # Write the modified content back to the file
         with open(filepath, 'w', encoding='utf-8') as file:
@@ -137,6 +134,6 @@ if os.path.exists(source_file):
 else:
     print(f"Source file {source_file} does not exist.")
 
-
 # Copy all files and directories to src
 copy_files(out_dir, src_dir)
+print(f"Copied all files from {out_dir} to {src_dir}")
