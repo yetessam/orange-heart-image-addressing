@@ -1,27 +1,31 @@
 from bs4 import BeautifulSoup
 
-#  This module updates the meta tags in the HTML content 
-
-def update_head(html_content, filepath):
-    soup = BeautifulSoup(html_content, 'html.parser')
-    
-    # Update the head section
-    meta_tag = soup.new_tag('meta', attrs={
-        'name': 'viewport',
-        'content': 'width=device-width, initial-scale=1.0'
-    })
-    
-    head = soup.head
-    if head:
-        if head.title:
-            head.title.insert_after(meta_tag)
-        else:
-            charset_meta = head.find('meta', attrs={'charset': True})
-            if charset_meta:
-                charset_meta.insert_after(meta_tag)
+def update_head(soup, filepath):
+    # Check if a viewport meta tag already exists
+    viewport_meta = soup.find('meta', attrs={'name': 'viewport'})
+    if viewport_meta:
+        # Update the existing viewport meta tag
+        viewport_meta['content'] = 'width=device-width, initial-scale=1.0'
+        print(f"Updated viewport meta tag in {filepath}")
+    else:
+        # Create a new viewport meta tag if it doesn't exist
+        meta_tag = soup.new_tag('meta', attrs={
+            'name': 'viewport',
+            'content': 'width=device-width, initial-scale=1.0'
+        })
+        
+        head = soup.head
+        if head:
+            # Find all meta tags in the head
+            meta_tags = head.find_all('meta')
+            if meta_tags:
+                # Append the new meta tag after the last existing meta tag
+                last_meta = meta_tags[-1]
+                last_meta.insert_after(meta_tag)
             else:
-                head.insert(0, meta_tag)
-        print(f"Added viewport meta tag to {filepath}")
+                # Append the new meta tag to the head if no other meta tags exist
+                head.append(meta_tag)
+            print(f"Added viewport meta tag to {filepath}")
     
-    return str(soup)
+    return soup
 

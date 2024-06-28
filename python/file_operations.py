@@ -2,13 +2,19 @@ import os
 import shutil
 
 def read_html_file(filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        content = file.read()
-    return content
+    try:	
+        with open(filepath, 'r', encoding='utf-8') as file:
+            content = file.read()
+        return content
+    except Exception as e:
+        print(f"Error reading file {filepath}: {e}");
 
 def write_html_file(filepath, content):
-    with open(filepath, 'w', encoding='utf-8') as file:
-        file.write(content)
+    try:	
+        with open(filepath, 'w', encoding='utf-8') as file:
+            file.write(content)
+    except Exception as e:
+        print(f"Error writing file {filepath}: {e}");
 
 def copy_files(src, dst):
     if os.path.isdir(src):

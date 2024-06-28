@@ -2,6 +2,7 @@ from apply_bulma import apply_bulma_classes
 from update_head import update_head
 from file_operations import read_html_file, write_html_file, copy_files
 import os
+from bs4 import BeautifulSoup
 
 # Directory containing the files to modify
 out_dir = '../out'
@@ -14,6 +15,16 @@ def process_html_files():
     if not os.path.exists(src_dir):
         os.makedirs(src_dir)
         print(f"Created destination directory: {src_dir}")
+
+    # Create the out directory if it doesn't exist
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+        print(f"Created source directory: {out_dir}")
+
+    # Check if there are HTML files to process
+    if not any(fname.endswith('.html') for fname in os.listdir(out_dir)):
+        print(f"No HTML files found in {out_dir}. Exiting.")
+        return
 
     # Iterate over all files in the out directory
     for filename in os.listdir(out_dir):
@@ -28,7 +39,7 @@ def process_html_files():
             # Parse and modify the HTML content with BeautifulSoup
             soup = BeautifulSoup(content, 'html.parser')
             soup = update_head(soup, filepath)
-            # soup = apply_bulma_classes(soup)
+#            soup = apply_bulma_classes(soup)
             
             # Write the modified content back to the file
             write_html_file(filepath, soup.prettify())
