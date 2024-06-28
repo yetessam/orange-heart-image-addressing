@@ -71,7 +71,8 @@ def update_head_and_body(html_content):
             charset_meta.insert_after(meta_tag)
         else:
             head.insert(0, meta_tag)
-
+     
+    print(f"Adding viewport meta tag to HTML file: {filepath}")
     # Certain content has to be inserted before script tags
     #first_script = head.find('script')
     #if first_script:
@@ -127,7 +128,7 @@ def copy_files(src, dst):
 source_file = os.path.join(out_dir, 'landing-page.html')
 destination_file = os.path.join(out_dir, 'index.html')
 
-# Seemed to have found a problem with the landing page, clobber index.html with landing-page.html
+# Problem with the landing page, clobber index.html with landing-page.html
 # Check if the landing-page file exists
 if os.path.exists(source_file):
     # Copy the file
