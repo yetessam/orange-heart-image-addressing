@@ -4,12 +4,12 @@
     <shortdesc>This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
     </shortdesc>
     <conbody>
-        <dl outputclass="blog">
+        <dl outputclass="container">
            <dlentry>
                  <dt>Friday June 28th, 2024</dt>
                 <dd>
                     <p> CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
-                        <codeblock>
+                        <codeblock outputclass="language-html">
                         /* Remap .dt.dlterm to Bulma's has-text-weight-bold class */
                         .dt.dlterm {
                             @extend .has-text-weight-bold;
