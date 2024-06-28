@@ -24,13 +24,14 @@ jobs:
         run: |
          export INPUT_PATH=$(pwd)/dita
          ls -l $INPUT_PATH/css
+         echo "$INPUT_PATH"
    
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
         with:
           build: |
             set -e
-            dita --input=dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$INPUT_PATH/build.properties  -Dargs.input.dir=$INPUT_PATH -Dargs.debug=yes  2>&1 | tee log.txt
+            dita --input=$INPUT_PATH/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$INPUT_PATH/build.properties  -Dargs.input.dir=$INPUT_PATH  2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
