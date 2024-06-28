@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart-project-home"  >
   <title>Home</title>
-  <conbody outputclass="hero is-danger is-fullheight">
+  <conbody outputclass="hero is-danger is-full">
   <section >
   <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
