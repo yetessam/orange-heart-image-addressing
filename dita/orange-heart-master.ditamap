@@ -2,7 +2,7 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart - DWeb Project</title>
-    <topicref href="index.dita" format="dita" type="topic"/>
+    <topicref href="index.dita" format="dita" type="concept"/>
     <topicref href="landing-page.dita" format="dita" type="concept" toc="no" print="no"/> 
     <topicref href="orange-heart.dita" format="dita" type="concept"/>
     <topicref href="gallery.dita"  format="dita" type="concept"/> 
@@ -18,15 +18,14 @@
     </relheader>
     <relrow>
       <relcell>
-          <topicref href="about.dita" format="data" type="concept"/>
+          <topicref href="about.dita" format="dita" type="concept"/>
       </relcell>
       <relcell>
-      
-        <topicref href="https://getdweb.net/principles/" format="html" scope="external">
- 		<topicmeta>
+       <topicref href="https://getdweb.net/principles/" format="html" scope="external">
+ 		    <topicmeta>
       			<navtitle>DWeb Principles</navtitle>
-    		</topicmeta>
-	</topicref> 
+    		  </topicmeta>
+	    </topicref> 
       </relcell>
     </relrow>
     <relrow>

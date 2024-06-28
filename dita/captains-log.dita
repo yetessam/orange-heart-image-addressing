@@ -44,7 +44,7 @@
                 <dt>Sunday June 16, 2024</dt>
                 <dd>
                     <p>Getting a Fleek account. I chose to authenticate through Ethereum, specifically with Metamask. Metamask gives you some contextual warning about being careful with Web 3 dapps.</p>
-                    <p>Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to <xref href="https://delicate-glitter-6121.on.fleek.co/"/>.</p>
+                    <p>Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to <xref href="https://delicate-glitter-6121.on.fleek.co/" scope="external"/>.</p>
                     <p>Locally ran python -m http.server 8000 so that we can verify that the markdown is loaded locally, checked developer console and made adjustments until we had zero errors in the console.</p>
                     <p>Pushed changes to design branch.</p>
                 </dd>
