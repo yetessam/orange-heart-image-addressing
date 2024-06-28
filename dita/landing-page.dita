@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="orange-heart-project-home"  >
+<concept id="landing-page" outputclass="landing-page"  >
   <title>Home</title>
-  <conbody outputclass="hero is-danger is-full">
+  <conbody>
   <section >
   <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
