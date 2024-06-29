@@ -12,6 +12,12 @@ jobs:
     
     steps:
     
+  
+      - name: Check out the dita branch 
+        uses: actions/checkout@v4
+        with:
+          ref: dita
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -22,12 +28,6 @@ jobs:
         run: |
           node --version
           npm i
-    
-      - name: Check out the dita branch
-        uses: actions/checkout@v4
-        with:
-          ref: dita
-
       - name: Delete out folder
         run: |
           echo "Deleting out folder"
