@@ -27,6 +27,10 @@ jobs:
         run: |
           node --version
           npm --version
+          echo "PATH:"
+          echo $PATH
+          echo "Node.js location:"
+          which node
      
       - name: Delete out folder
         run: |
