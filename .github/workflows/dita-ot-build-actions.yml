@@ -29,7 +29,7 @@ jobs:
             dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
             dita install https://github.com/infotexture/dita-bootstrap.lunr/archive/master.zip
-            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita -Dargs.hdr=$(pwd)/header.xml 2>&1 | tee log.txt
+            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita -Dargs.hdr=$(pwd)/dita/header.xml 2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
