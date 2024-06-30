@@ -3,347 +3,208 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="(C) Copyright 2024" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
   <meta content="This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
    Captain's Log
   </title>
-  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
-  <script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-  </script>
   <link href="css/commonltr.css" rel="stylesheet" type="text/css"/>
-  <link href="./css/common-extended.css" rel="stylesheet" type="text/css"/>
   <link href="css/custom.css" rel="stylesheet" type="text/css"/>
-  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" rel="stylesheet"/>
  </head>
  <body id="captains-log">
-  <div class="visually-hidden-focusable overflow-hidden p-2 bg-body-tertiary">
-   <div class="container-xl">
-    <a class="d-inline-flex m-1 btn btn-outline-primary btn-sm" href="#ariaid-title1">
-     Skip to main content
-    </a>
-    <a class="d-none d-md-inline-flex m-1 btn btn-outline-primary btn-sm" href="#bs-sidebar-nav">
-     Skip to docs navigation
-    </a>
-   </div>
-  </div>
-  <header class="sticky-top" role="banner">
-   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-xxl">
-     <!-- This shows the menu on mobile -->
-     <div class="bd-navbar-toggle">
-      <button aria-controls="bdSidebar" aria-label="Toggle docs navigation" class="navbar-toggler p-2" data-bs-target="#bdSidebar" data-bs-toggle="offcanvas" type="button">
-       <i class="bi bi-list">
-       </i>
-      </button>
-     </div>
-     <a class="navbar-brand" href="/">
-      <svg class="bi bi-bootstrap" fill="currentColor" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-       <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z">
-       </path>
-       <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z">
-       </path>
-      </svg>
-      DITA Bootstrap
+  <nav class="toc" role="navigation">
+   <ul>
+    <li>
+     <a href="index.html">
+      Home
      </a>
-     <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler p-2" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-      <i class="bi bi-three-dots">
-      </i>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-       <li class="nav-item">
-        <a class="nav-link" href="#">
-         Link One
-        </a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#">
-         Link Two
-        </a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#">
-         Link Three
-        </a>
-       </li>
-      </ul>
-      <ul class="navbar-nav ms-auto">
-       <!--
-          This is a dark/light color theme toggler.
-          It requires JavaScript to function.
-        -->
-       <li class="nav-item dropdown">
-        <a aria-expanded="false" class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" data-bs-display="static" data-bs-toggle="dropdown" href="#" id="bd-color-mode">
-         <span class="d-light">
-          <i class="bi bi-brightness-high-fill">
-          </i>
-         </span>
-         <span class="d-dark">
-          <i class="bi bi-moon-stars-fill">
-          </i>
-         </span>
-         <span class="d-auto">
-          <i class="bi bi-circle-half">
-          </i>
-         </span>
-         <span class="d-lg-none ms-2">
-          Toggle Color Mode
-         </span>
-        </a>
-        <ul aria-labelledby="bd-color-mode" class="dropdown-menu dropdown-menu-end" data-bs-popper="static" style="--bs-dropdown-min-width: 6rem;">
-         <li>
-          <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button">
-           <i class="bi bi-brightness-high-fill">
-           </i>
-           <span class="ms-2">
-            Light
-           </span>
-          </button>
-         </li>
-         <li>
-          <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button">
-           <i class="bi bi-moon-stars-fill">
-           </i>
-           <span class="ms-2">
-            Dark
-           </span>
-          </button>
-         </li>
-         <li>
-          <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" type="button">
-           <i class="bi bi-circle-half">
-           </i>
-           <span class="ms-2">
-            Auto
-           </span>
-          </button>
-         </li>
-        </ul>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </nav>
-  </header>
-  <div class="bs-container container-xxl bd-gutter mt-3 my-md-4" id="content">
-   <div class="overflow-y-auto bs-sidebar">
-    <div aria-labelledby="bdSidebarOffcanvasLabel" aria-modal="true" class="offcanvas-lg offcanvas-start" id="bdSidebar" role="dialog" tabindex="-1">
-     <div class="offcanvas-header border-bottom">
-      <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">
-       Orange Heart - DWeb Project
-      </h5>
-      <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#bdSidebar" type="button">
-      </button>
-     </div>
-     <div class="offcanvas-body flex-column h-100">
-      <nav class="d-flex flex-align-start flex-column h-100 overflow-y-auto" id="bs-sidebar-nav" role="navigation">
-       <div class="overflow-y-auto">
-        <div>
-         <nav class="d-flex flex-align-start flex-column h-100 overflow-y-auto" id="bs-sidebar-nav" role="navigation">
-          <ul>
-           <li>
-            <a href="index.html">
-             Home
-            </a>
-           </li>
-           <li>
-            <a href="orange-heart.html">
-             Orange Heart Project
-            </a>
-           </li>
-           <li>
-            <a href="gallery.html">
-             Gallery
-            </a>
-           </li>
-           <li class="active">
-            <a href="captains-log.html">
-             Captain's Log
-            </a>
-           </li>
-           <li>
-            <a href="about.html">
-             About
-            </a>
-           </li>
-          </ul>
-         </nav>
-        </div>
-       </div>
-      </nav>
-     </div>
-    </div>
-   </div>
-   <main class="bs-main me-3" role="main">
-    <article aria-labelledby="ariaid-title1" class="bs-content" role="article">
-     <h1 class="title" id="ariaid-title1">
+    </li>
+    <li>
+     <a href="orange-heart.html">
+      Orange Heart Project
+     </a>
+    </li>
+    <li>
+     <a href="gallery.html">
+      Gallery
+     </a>
+    </li>
+    <li class="active">
+     <a href="captains-log.html">
       Captain's Log
-     </h1>
-     <div class="body conbody">
-      <p class="shortdesc text-body-secondary lead">
-       This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
-      </p>
-      <dl class="dl row container">
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Friday June 28th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <div class="p">
-         CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
-         <pre class="pre codeblock alert alert-secondary language-html"><code>
+     </a>
+    </li>
+    <li>
+     <a href="about.html">
+      About
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main role="main">
+   <article aria-labelledby="ariaid-title1" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Captain's Log
+    </h1>
+    <div class="body conbody">
+     <p class="shortdesc">
+      This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
+     </p>
+     <dl class="dl container">
+      <dt class="dt dlterm">
+       Friday June 28th, 2024
+      </dt>
+      <dd class="dd">
+       <div class="p">
+        CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
+        <pre class="pre codeblock language-html"><code>
                         /* Remap .dt.dlterm to Bulma's has-text-weight-bold class */
                         .dt.dlterm {
                             @extend .has-text-weight-bold;
                         }
                         </code></pre>
-        </div>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Thursday June 27th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Switched to local dev and testing to make sure that DITA OT builds work as expected locally, same thing with Python.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Wednesday June 27th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Met with the co-educators and our team. Very supportive environment and heaps of wow moments with the feedback sessions.
-        </p>
-        <p class="p">
-         Built a job to check out the dev branch and move the output from the DITA OT into dev after processing it with Python so that it contains sufficient CSS selectors for Bulma. Pondering extending the HTML or bootstrap DITA OT plug-ins.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Tuesday June 25th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Priming more birchwood and prototyped using Krylon clear spray on top of Sharpie Oil (fail), a regular Sharpie was fine! Smudging is an issue. Also prepared the background for the 16 x 20 piece, glued it down, waited 24 hours and then need to spray it with the fixative. Then wait another 24 hours to apply the stencil.
-        </p>
-        <p class="p">
-         Places where nobody will bother you about spray paint in Strathcona are filled with people living in cars.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Monday June 24th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Directed the contents of the DITA OT logs to the Summary box in Github Actions.
-        </p>
-        <p class="p">
-         Testing with DITA properties and trying to get the CSS auto-applied to the external CDN.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Sunday June 23rd, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Github Actions and priming and testing 5x5s.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Sat June 22, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         I've been getting these wooden birchwood boxes to do real-life art. Having to prime them and pull together supplies.
-        </p>
-        <p class="p">
-         I've done a few prototypes which didn't work out and then I primed again. Currently, still concerned that the Krylon matte fixative makes inks bleed including the Sharpie black oil ink. Went back to 'regular' Sharpie and still need to test the fixative. Finished the background for the 16 x 20 piece.
-        </p>
-        <p class="p">
-         Working on Github to source the content in DITA XML so that we can leverage DITA's link management. Created a dita branch on Github that takes the XML files, pushes them through the HTML5 transform in the latest version of the DITA Open Toolkit and then checks in the content to the out folder.
-        </p>
-        <p class="p">
-         Seems like it's going to be more efficient to generate this HTML here.
-        </p>
-        <p class="p">
-         To do: push the HTML5 to a dev branch where I could have Beautiful Soup run through and make any other changes that are needed. Then when that's done, move to staging and then move to prod.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Sunday June 16, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Getting a Fleek account. I chose to authenticate through Ethereum, specifically with Metamask. Metamask gives you some contextual warning about being careful with Web 3 dapps.
-        </p>
-        <p class="p">
-         Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to
-         <a class="xref" href="https://delicate-glitter-6121.on.fleek.co/" rel="external noopener" target="_blank">
-          https://delicate-glitter-6121.on.fleek.co/
-         </a>
-         .
-        </p>
-        <p class="p">
-         Locally ran python -m http.server 8000 so that we can verify that the markdown is loaded locally, checked developer console and made adjustments until we had zero errors in the console.
-        </p>
-        <p class="p">
-         Pushed changes to design branch.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Friday June 15th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Prepped with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Made in Canada.
-        </p>
-        <p class="p">
-         Selected a Bulma for a modern CSS framework.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Wed June 13th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Create mockups for physical layout for gallery wall space. Took first draft photographs of the art pieces and then loaded them into a new Miro board to create a 2D diagram of the physical gallery space. Scaling the images down to onto the Miro grid to result in a maximum wall width of 3 feet. Will need to pad everything by several inches to accommodate frames.
-        </p>
-        <p class="p">
-         Design branch on Git holds the current set of draft images.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Tuesday June 12th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Updates to design doc.
-        </p>
-       </dd>
-       <dt class="dt col-lg-3 text-truncate dlterm">
-        Monday June 11th, 2024
-       </dt>
-       <dd class="dd col-lg-9">
-        <p class="p">
-         Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/XML. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.
-        </p>
-        <p class="p">
-         Created a Github Repo
-         <a class="xref" href="https://github.com/yetessam/orange-heart-image-addressing" rel="external noopener" target="_blank">
-          https://github.com/yetessam/orange-heart-image-addressing
-         </a>
-         .
-        </p>
-       </dd>
-      </dl>
-     </div>
-    </article>
-   </main>
-  </div>
-  <script language="javascript" src="./js/popovers.js">
-  </script>
-  <script language="javascript" src="./js/dark-mode-toggler.js">
-  </script>
+       </div>
+      </dd>
+      <dt class="dt dlterm">
+       Thursday June 27th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Switched to local dev and testing to make sure that DITA OT builds work as expected locally, same thing with Python.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Wednesday June 27th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Met with the co-educators and our team. Very supportive environment and heaps of wow moments with the feedback sessions.
+       </p>
+       <p class="p">
+        Built a job to check out the dev branch and move the output from the DITA OT into dev after processing it with Python so that it contains sufficient CSS selectors for Bulma. Pondering extending the HTML or bootstrap DITA OT plug-ins.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Tuesday June 25th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Priming more birchwood and prototyped using Krylon clear spray on top of Sharpie Oil (fail), a regular Sharpie was fine! Smudging is an issue. Also prepared the background for the 16 x 20 piece, glued it down, waited 24 hours and then need to spray it with the fixative. Then wait another 24 hours to apply the stencil.
+       </p>
+       <p class="p">
+        Places where nobody will bother you about spray paint in Strathcona are filled with people living in cars.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Monday June 24th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Directed the contents of the DITA OT logs to the Summary box in Github Actions.
+       </p>
+       <p class="p">
+        Testing with DITA properties and trying to get the CSS auto-applied to the external CDN.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Sunday June 23rd, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Github Actions and priming and testing 5x5s.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Sat June 22, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        I've been getting these wooden birchwood boxes to do real-life art. Having to prime them and pull together supplies.
+       </p>
+       <p class="p">
+        I've done a few prototypes which didn't work out and then I primed again. Currently, still concerned that the Krylon matte fixative makes inks bleed including the Sharpie black oil ink. Went back to 'regular' Sharpie and still need to test the fixative. Finished the background for the 16 x 20 piece.
+       </p>
+       <p class="p">
+        Working on Github to source the content in DITA XML so that we can leverage DITA's link management. Created a dita branch on Github that takes the XML files, pushes them through the HTML5 transform in the latest version of the DITA Open Toolkit and then checks in the content to the out folder.
+       </p>
+       <p class="p">
+        Seems like it's going to be more efficient to generate this HTML here.
+       </p>
+       <p class="p">
+        To do: push the HTML5 to a dev branch where I could have Beautiful Soup run through and make any other changes that are needed. Then when that's done, move to staging and then move to prod.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Sunday June 16, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Getting a Fleek account. I chose to authenticate through Ethereum, specifically with Metamask. Metamask gives you some contextual warning about being careful with Web 3 dapps.
+       </p>
+       <p class="p">
+        Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to
+        <a class="xref" href="https://delicate-glitter-6121.on.fleek.co/" rel="external noopener" target="_blank">
+         https://delicate-glitter-6121.on.fleek.co/
+        </a>
+        .
+       </p>
+       <p class="p">
+        Locally ran python -m http.server 8000 so that we can verify that the markdown is loaded locally, checked developer console and made adjustments until we had zero errors in the console.
+       </p>
+       <p class="p">
+        Pushed changes to design branch.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Friday June 15th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Prepped with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Made in Canada.
+       </p>
+       <p class="p">
+        Selected a Bulma for a modern CSS framework.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Wed June 13th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Create mockups for physical layout for gallery wall space. Took first draft photographs of the art pieces and then loaded them into a new Miro board to create a 2D diagram of the physical gallery space. Scaling the images down to onto the Miro grid to result in a maximum wall width of 3 feet. Will need to pad everything by several inches to accommodate frames.
+       </p>
+       <p class="p">
+        Design branch on Git holds the current set of draft images.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Tuesday June 12th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Updates to design doc.
+       </p>
+      </dd>
+      <dt class="dt dlterm">
+       Monday June 11th, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/XML. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.
+       </p>
+       <p class="p">
+        Created a Github Repo
+        <a class="xref" href="https://github.com/yetessam/orange-heart-image-addressing" rel="external noopener" target="_blank">
+         https://github.com/yetessam/orange-heart-image-addressing
+        </a>
+        .
+       </p>
+      </dd>
+     </dl>
+    </div>
+   </article>
+  </main>
  </body>
 </html>
