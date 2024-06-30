@@ -25,7 +25,7 @@ jobs:
  
       - name: Verify Node.js installation
         run: |
-          echo "Current working directory: $(pwd)"
+          echo "1 Current working directory: $(pwd)"
           node --version
           npm --version
           
@@ -34,7 +34,7 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
-          echo "Current working directory: $(pwd)"
+          echo "2 Current working directory: $(pwd)"
           
    
       - name: Build HTML5
@@ -42,11 +42,11 @@ jobs:
         with:
           build: |
             set -e
-            echo "Current working directory: $(pwd)"
+            echo "3 Current working directory: $(pwd)"
             echo "pwd is $(pwd)"
             dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
-            echo "Current working directory: $(pwd)"
+            echo "4 Current working directory: $(pwd)"
             dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita  2>&1 | tee log.txt
 
 
