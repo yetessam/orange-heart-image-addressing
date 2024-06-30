@@ -27,21 +27,7 @@ jobs:
         run: |
           node --version
           npm --version
-          echo "PATH:"
-          echo $PATH
-          echo "Node.js location:"
-          which node
-
-      - name: Create symlink for Node.js  # The plugins were throwing errors because they expected node in /opt/app
-        run: |
-          mkdir -p /opt/app
-          ln -s $(which node) /opt/app/node
-          ln -s $(which npm) /opt/app/npm
-          ln -s $(which npx) /opt/app/npx
-          echo "Node.js version:"
-          /opt/app/node --version
-          echo "NPM version:"
-          /opt/app/npm --version
+          
           
       - name: Delete out folder
         run: |
