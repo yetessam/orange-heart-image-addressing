@@ -11,12 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    
-  
       - name: Check out the dita branch 
         uses: actions/checkout@v4
         with:
           ref: dita
+
     
       - name: Set up Node.js environment
         uses: actions/setup-node@v3
@@ -36,19 +35,40 @@ jobs:
           rm -rf out
           echo "2 Current working directory: $(pwd)"
           
-   
-      - name: Build HTML5
-        uses: dita-ot/dita-ot-action@master
-        with:
-          build: |
-            set -e
-            echo "3 Current working directory: $(pwd)"
-            echo "pwd is $(pwd)"
-            dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-            dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
-            echo "4 Current working directory: $(pwd)"
-            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita  2>&1 | tee log.txt
+      - name: Print directory structure for debugging
+        run: |
+          echo "Printing directory structure:"
+          ls -la
+          echo "Printing contents of the current directory:"
+          ls -la $(pwd)
 
+      - name: Install DITA plugins - Fox Jason Extend CSS
+        run: |
+          echo "3 Current working directory: $(pwd)"
+          echo "pwd is $(pwd)"
+          dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+
+      - name: Install DITA plugins - Bootstrap
+        run: |
+          echo "4 Current working directory: $(pwd)"
+          echo "pwd is $(pwd)"
+          dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
+
+      - name: Verify DITA installation
+        run: |
+          echo "Verifying DITA installation"
+          dita --version
+          echo "DITA installation complete"
+
+      - name: Build HTML5
+        run: |
+          echo "5 Current working directory: $(pwd)"
+          echo "Running DITA command:"
+          dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita 2>&1 | tee log.txt
+        env:
+          PATH: /opt/app:$PATH  # Ensure the PATH includes the Node.js symlink location
+
+  
 
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
