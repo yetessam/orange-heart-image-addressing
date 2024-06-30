@@ -15,8 +15,8 @@
   </prolog>
   <conbody>
   <section outputclass="hero is-danger is-fullheight">
-  <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
-   </p>
+  <p> Test 1 <!--<image href="../images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
+   --></p>
     </section>
   </conbody>
 </concept>

@@ -2,12 +2,12 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart - DWeb Project</title>
-    <topicref href="index.dita" format="dita" type="concept"/>
-    <topicref href="landing-page.dita" format="dita" type="concept" toc="no" print="no"/> 
-    <topicref href="orange-heart.dita" format="dita" type="concept"/>
-    <topicref href="gallery.dita"  format="dita" type="concept"/> 
-    <topicref href="captains-log.dita" format="dita" type="concept"/> 
-    <topicref href="about.dita" format="dita" type="concept"/> 
+    <topicref href="topics/index.dita" format="dita" type="concept"/>
+    <topicref href="topics/landing-page.dita" format="dita" type="concept" toc="no" print="no"/> 
+    <topicref href="topics/orange-heart.dita" format="dita" type="concept"/>
+    <topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
+    <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
+    <topicref href="topics/about.dita" format="dita" type="concept"/> 
    
 <reltable>
     <title>Source and target: Links that apply only to HTML version of distribution documentation</title>
@@ -18,9 +18,14 @@
     </relheader>
     <relrow>
       <relcell>
-          <topicref href="about.dita" format="dita" type="concept"/>
+          <topicref href="topics/about.dita" format="dita" type="concept"/>
       </relcell>
       <relcell>
+       <topicref href="https://getdweb.net/principles/" format="html" scope="external">
+ 		    <topicmeta>
+      			<navtitle>DWeb Principles</navtitle>
+    		  </topicmeta>
+	    </topicref> 
        <topicref href="https://getdweb.net/principles/" format="html" scope="external">
  		    <topicmeta>
       			<navtitle>DWeb Principles</navtitle>

@@ -4,7 +4,7 @@
   <title>Home</title>
   <conbody>
   <section >
-  <p> Test 1 <image href="images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
+  <p> Test 1 <image href="../images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
     </section>
   </conbody>

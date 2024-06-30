@@ -26,7 +26,7 @@ jobs:
         with:
           build: |
             set -e
-            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita 2>&1 | tee log.txt
+            dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd)/dita 2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
@@ -129,10 +129,6 @@ jobs:
           source venv/bin/activate
           python python/orchestrate_html.py
        
-  #  For now, see if we can have Python process everything in the out folder
-  #  Copying HTML over should happen after the Python code runs 
- 
-
       - name: List directory contents after running Python script
         run: |
           set -e
@@ -149,7 +145,6 @@ jobs:
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
 
-      
       - name: Commit and push changes to dev branch
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
