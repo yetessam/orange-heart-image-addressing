@@ -9,7 +9,7 @@ jobs:
   build-html:
     name: Generate html5 with latest DITA Open Toolkit  # Human-readable job name
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Check out the dita branch
         uses: actions/checkout@v4
@@ -20,19 +20,19 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
-  
+   
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
         with:
           build: |
             set -e
-            dita --input=dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=dita/build.properties  -Dargs.input.dir=dita 2>&1 | tee log.txt
+            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita 2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
         with:
-          name: DITA OT log
+          name: build-log-html5-txt
           path: log.txt
 
       - name: Archive the 'out' folder
@@ -62,7 +62,7 @@ jobs:
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
-            git commit -m "Build DITA to html5 "
+            git commit -m "Github workflow ran DITA OT and generated html5 to out folder"
             git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
           fi
 
@@ -91,10 +91,12 @@ jobs:
       - name: Extract the 'out' folder
         run: |
           tar -xzf out.tar.gz
+          ls -laR
 
       - name: Create src folder if it doesn't exist
         run: |
           mkdir -p ./src
+          ls -la 
 
    
       - name: Python 
@@ -105,20 +107,27 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: ''3.12''
 
-      - name: Install dependencies
+      - name: Install dependencies and run Python script
         run: |
           set -e
+          echo "Listing contents of $(pwd):"
+          ls -laR
           python -m venv venv
           source venv/bin/activate
           pip install beautifulsoup4
+          python python/orchestrate_html.py
+          
+          echo "Listing contents of $(pwd):"
+          ls -laR
+      
 
       - name: Run Python script 
         run: |
           set -e
           source venv/bin/activate
-          python python/modify_files.py
+          python python/orchestrate_html.py
        
   #  For now, see if we can have Python process everything in the out folder
   #  Copying HTML over should happen after the Python code runs 
