@@ -39,11 +39,10 @@ jobs:
         with:
           build: |
             set -e
+            pwd
+            echo "pwd is $(pwd)"
             dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
             dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
-            echo "pwd: $(pwd)"
-            echo "dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita  2>&1 | tee log.txt"
-
             dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5-bootstrap --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita  2>&1 | tee log.txt
 
 
