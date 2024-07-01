@@ -119,7 +119,6 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install beautifulsoup4
-          python python/orchestrate_html.py
           
           echo "Listing contents of $(pwd):"
           ls -laR
@@ -129,8 +128,7 @@ jobs:
         run: |
           set -e
           source venv/bin/activate
-          python python/main_script.py 
-          --out_dir= $(pwd)/out --src_dir=$(pwd)/src
+          python python/main_script.py --out_dir= $(pwd)/out --src_dir=$(pwd)/src
 
       - name: List directory contents after running Python script
         run: |
