@@ -1,32 +1,46 @@
-from apply_bulma import apply_bulma_classes
-from update_head import update_head
-from file_operations import read_html_file, write_html_file, copy_files
+from update_html.bulma_classes import bulma_classes
+from update_html.apply_bulma import apply_bulma_classes
+from update_html.file_operations import read_html_file, write_html_file, copy_files
+from update_html.update_head import update_head
+
+import argparse
 import os
 import sys
+
 from bs4 import BeautifulSoup
 
-# Get the current working directory
-current_working_directory = os.getcwd()
-    
-# Ensure the source and destination paths are absolute
-out_dir = os.path.join(current_working_directory, 'out')
-src_dir = os.path.join(current_working_directory, 'src')
+
+
+
+parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder and the target src folder')
+
+parser.add_argument('--out_dir', type=str, required=True, help="DITA OT folder where the HTML files are build, normally called 'out'")
+parser.add_argument('--src_dir', type=str, required=True, help='After processing, this folder contains the Bulma-ready HTML.')
+
+args = parser.parse_args()
+
+out_dir = args.out_dir
+src_dir = args.src_dir
+
+print(f"Output directory: {out_dir}")
+print(f"Web site source directory: {src_dir}")
 
 def process_html_files():
     print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
+
+    # Create the out directory if it doesn't exist
+    if not os.path.exists(out_dir):
+        raise FileNotFoundError(f"Could not find the html 5 out directory: {out_dir}. Exiting.")
 
     # Create the src directory if it doesn't exist
     if not os.path.exists(src_dir):
         os.makedirs(src_dir)
         print(f"Created destination directory: {src_dir}")
 
-    # Create the out directory if it doesn't exist
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
-        print(f"Created source directory: {out_dir}")
-
+    
     # Check if there are HTML files to process
-    if not any(fname.endswith('.html') for fname in os.listdir(out_dir)):
+    # Recursive
+    if not any(fname.endswith('.html') for fname in os.walk(out_dir)):
         raise FileNotFoundError(f"No HTML files found in the {out_dir}. Exiting.")
 
     # Iterate over all files in the out directory

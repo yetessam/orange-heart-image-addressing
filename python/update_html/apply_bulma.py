@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from bulma_classes import bulma_classes
+from update_html.bulma_classes import bulma_classes
 
 def apply_bulma_classes(soup):
     
