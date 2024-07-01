@@ -42,7 +42,7 @@ def process_html_files():
             # Parse and modify the HTML content with BeautifulSoup
             soup = BeautifulSoup(content, 'html.parser')
             soup = update_head(soup, filepath)
-#            soup = apply_bulma_classes(soup)
+            soup = apply_bulma_classes(soup)
             
             # Write the modified content back to the file
             write_html_file(filepath, soup.prettify())
@@ -50,7 +50,7 @@ def process_html_files():
             print(f"Modified and saved HTML file: {filepath}")
 
     # Define the paths to the source and destination files
-    source_file = os.path.join(out_dir, 'en/topics/landing-page.html')
+    source_file = os.path.join(out_dir, 'en/topics/landing-page.html=OFF')
     destination_file = os.path.join(out_dir, 'index.html')
 
     # Problem with the landing page, clobber index.html with landing-page.html

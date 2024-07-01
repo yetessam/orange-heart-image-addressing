@@ -1,14 +1,23 @@
 from bs4 import BeautifulSoup
 from bulma_classes import bulma_classes
 
-def apply_bulma_classes(html_content):
-    soup = BeautifulSoup(html_content, 'html.parser')
+def apply_bulma_classes(soup):
     
     for tag, class_attr in bulma_classes.items():
         for element in soup.find_all(tag):
-            element['class'] = class_attr
-            print(f"Applied Bulma class '{class_attr}' to <{tag}> tag.")
+            if 'class' not in element.attrs:
+                # If the element does not have a class attribute, add one
+                element['class'] = [class_attr]
+                print(f"Applied Bulma class '{class_attr}' to <{tag}> tag without existing classes.")
+            elif class_attr not in element['class']:
+                # If the element has a class attribute but does not contain the class_attr, add it
+                element['class'].append(class_attr)
+                print(f"Added Bulma class '{class_attr}' to existing classes of <{tag}> tag.")
+            else:
+                # If the element already has the class_attr, skip
+                print(f"Skipped <{tag}> tag as it already contains the Bulma class '{class_attr}'.")
 
+            
     # Specific handling for navigation
     nav = soup.find('nav')
     if nav:
@@ -53,5 +62,30 @@ def apply_bulma_classes(html_content):
         nav.clear()
         nav.append(navbar_menu)
 
-    return str(soup)
+    
+        # Add inline script after navbar
+        script_content = """
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+        
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+        """
+        script_tag = soup.new_tag('script', type='text/javascript')
+        script_tag.string = script_content
+        nav.insert_after(script_tag)
+        print("Added Bulma inline script after <nav> tag.")
+
+
+    return soup
 
