@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="landing-page" outputclass="landing-page"  >
+<concept id="landing-page" outputclass="landing-page" outputclass="hero is-primary" >
   <title>Home</title>
-  <conbody>
-  <section >
+  <conbody outputclass="hero-body">
+  <section>
   <p> Test 1 <image href="../images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
    </p>
     </section>
