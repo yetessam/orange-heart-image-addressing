@@ -129,8 +129,9 @@ jobs:
         run: |
           set -e
           source venv/bin/activate
-          python python/orchestrate_html.py
-       
+          python python/main_script.py 
+          --out_dir= $(pwd)/out --src_dir=$(pwd)/src
+
       - name: List directory contents after running Python script
         run: |
           set -e
