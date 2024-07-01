@@ -1,8 +1,8 @@
 bulma_classes = {
     'main': 'container',
-    'h1': 'is-1',
-    'h2': 'is-2',
-    'h3': 'is-3',
+    'h1': 'title',
+    'h2': 'title',
+    'h3': 'title',
     'p': 'content',
     'div': 'box',
     'a': 'button is-primary',

@@ -1,5 +1,7 @@
 from update_html.bulma_classes import bulma_classes
 from update_html.apply_bulma import apply_bulma_classes
+from update_html.modify_navbar import modify_navbar
+
 from update_html.file_operations import read_html_file, write_html_file, copy_files
 from update_html.update_head import update_head
 
@@ -8,9 +10,6 @@ import os
 import sys
 
 from bs4 import BeautifulSoup
-
-
-
 
 parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder and the target src folder')
 
@@ -25,6 +24,14 @@ src_dir = args.src_dir
 print(f"Output directory: {out_dir}")
 print(f"Web site source directory: {src_dir}")
 
+def find_html_files(out_dir):
+    html_files = []
+    for root, dirs, files in os.walk(out_dir):
+        for fname in files:
+            if fname.endswith('.html'):
+                html_files.append(os.path.join(root, fname))
+    return html_files
+
 def process_html_files():
     print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
@@ -37,48 +44,54 @@ def process_html_files():
         os.makedirs(src_dir)
         print(f"Created destination directory: {src_dir}")
 
-    
-    # Check if there are HTML files to process
-    # Recursive
-    if not any(fname.endswith('.html') for fname in os.walk(out_dir)):
-        raise FileNotFoundError(f"No HTML files found in the {out_dir}. Exiting.")
 
-    # Iterate over all files in the out directory
-    for filename in os.listdir(out_dir):
-        filepath = os.path.join(out_dir, filename)
-        
-        if os.path.isfile(filepath) and filename.endswith('.html'):
-            print(f"Processing HTML file: {filepath}")
-            
-            # Read the file content
+    # Check if any .html files exist in the directory and its subdirectories
+    # Find all .html files
+    html_files = find_html_files(out_dir)
+
+    if not html_files:
+        raise FileNotFoundError(f"No HTML files found in the {out_dir}. Exiting.")
+    else:
+        print(f"Found {len(html_files)} HTML files:")
+
+        for filepath in html_files:
+            print(" ")
+            print(filepath)
+
+            # Read the HTML content from the file
             content = read_html_file(filepath)
-            
+
             # Parse and modify the HTML content with BeautifulSoup
             soup = BeautifulSoup(content, 'html.parser')
+            # Pretty print fron the start to make debugging easier
+            soup.prettify()
+
             soup = update_head(soup, filepath)
             soup = apply_bulma_classes(soup)
+            soup = modify_navbar(soup)
             
             # Write the modified content back to the file
             write_html_file(filepath, soup.prettify())
 
             print(f"Modified and saved HTML file: {filepath}")
+        
+            
+        # Problem with the landing page, clobber index.html with landing-page.html
+        # Check if the landing-page file exists
+        # Define the paths to the source and destination files
+        source_file = os.path.join(out_dir, 'en/topics/landing-page.html')
+        destination_file = os.path.join(out_dir, 'en/topics/index.html')
 
-    # Define the paths to the source and destination files
-    source_file = os.path.join(out_dir, 'en/topics/landing-page.html=OFF')
-    destination_file = os.path.join(out_dir, 'index.html')
+        if os.path.exists(source_file):
+            # Copy the file
+            copy_files(source_file, destination_file)
+            print(f"Copied {source_file} to {destination_file}")
+        else:
+            print(f"Could not find a landing page to copy over to index.html {source_file} does not exist.")
 
-    # Problem with the landing page, clobber index.html with landing-page.html
-    # Check if the landing-page file exists
-    if os.path.exists(source_file):
-        # Copy the file
-        copy_files(source_file, destination_file)
-        print(f"Copied {source_file} to {destination_file}")
-    else:
-        print(f"Source file {source_file} does not exist.")
-
-    # Copy all files and directories to src
-    copy_files(out_dir, src_dir)
-    print(f"Copied all files from {out_dir} to {src_dir}")
+        # Copy all files and directories to src
+        copy_files(out_dir, src_dir)
+        print(f"Copied all files from {out_dir} to {src_dir}")
 
 if __name__ == "__main__":
     try:
