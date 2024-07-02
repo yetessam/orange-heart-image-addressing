@@ -9,6 +9,7 @@ bulma_classes = {
     'button': 'button is-link',
     'ul': 'list is-hoverable',
     'ol': 'list is-hoverable',
-    'li': 'list-item'
+    'li': 'list-item',
+    'note': 'notification is-primary',
 }
 
