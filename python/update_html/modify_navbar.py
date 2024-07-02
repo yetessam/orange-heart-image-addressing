@@ -54,25 +54,49 @@ def modify_navbar(soup):
 
         # Add inline script for Bulma navbar functionality
         script_content = """
-        document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        
-            if ($navbarBurgers.length > 0) {
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-        
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
 
-                        // Toggle aria-expanded and aria-hidden attributes
-                        el.setAttribute('aria-expanded', !isExpanded);
-                        $target.setAttribute('aria-hidden', isExpanded);
-                    });
+      document.addEventListener('DOMContentLoaded', () => {
+            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            const targetMenu = document.getElementById('navbarBasicExample');
+
+            const isDesktop = () => window.innerWidth >= 1024; // Adjust this breakpoint as needed
+
+            const setInitialMenuState = () => {
+                if (isDesktop() && localStorage.getItem('navbar-menu-state') === 'active') {
+                    targetMenu.classList.add('is-active');
+                    navbarBurgers.forEach(el => el.classList.add('is-active'));
+                } else {
+                    targetMenu.classList.remove('is-active');
+                    navbarBurgers.forEach(el => el.classList.remove('is-active'));
+                }
+            };
+
+            setInitialMenuState();
+
+            // Add click event to toggle state
+            navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    el.classList.toggle('is-active');
+                    targetMenu.classList.toggle('is-active');
+
+                    // Save the state to localStorage if on desktop
+                    if (isDesktop()) {
+                        if (targetMenu.classList.contains('is-active')) {
+                            localStorage.setItem('navbar-menu-state', 'active');
+                        } else {
+                            localStorage.removeItem('navbar-menu-state');
+                        }
+                    }
                 });
-            }
+            });
+
+            // Recheck the menu state on window resize
+            window.addEventListener('resize', () => {
+                setInitialMenuState();
+            });
         });
+  
+        
         """
         script_tag = soup.new_tag('script', type='text/javascript')
         script_tag.string = script_content
