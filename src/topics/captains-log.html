@@ -53,23 +53,44 @@
   </nav>
   <script type="text/javascript">
    document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        
-            if ($navbarBurgers.length > 0) {
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-        
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
+            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            const targetMenu = document.getElementById('navbarBasicExample');
 
-                        // Toggle aria-expanded and aria-hidden attributes
-                        el.setAttribute('aria-expanded', !isExpanded);
-                        $target.setAttribute('aria-hidden', isExpanded);
-                    });
+            const isDesktop = () => window.innerWidth >= 1024; // Adjust this breakpoint as needed
+
+            const setInitialMenuState = () => {
+                if (isDesktop() && localStorage.getItem('navbar-menu-state') === 'active') {
+                    targetMenu.classList.add('is-active');
+                    navbarBurgers.forEach(el => el.classList.add('is-active'));
+                } else {
+                    targetMenu.classList.remove('is-active');
+                    navbarBurgers.forEach(el => el.classList.remove('is-active'));
+                }
+            };
+
+            setInitialMenuState();
+
+            // Add click event to toggle state
+            navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    el.classList.toggle('is-active');
+                    targetMenu.classList.toggle('is-active');
+
+                    // Save the state to localStorage if on desktop
+                    if (isDesktop()) {
+                        if (targetMenu.classList.contains('is-active')) {
+                            localStorage.setItem('navbar-menu-state', 'active');
+                        } else {
+                            localStorage.removeItem('navbar-menu-state');
+                        }
+                    }
                 });
-            }
+            });
+
+            // Recheck the menu state on window resize
+            window.addEventListener('resize', () => {
+                setInitialMenuState();
+            });
         });
   </script>
   <main class="container" role="main">
@@ -82,6 +103,14 @@
       This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
      </p>
      <dl class="dl container">
+      <dt class="dt dlterm">
+       Thursday July 4, 2024
+      </dt>
+      <dd class="dd">
+       <p class="p content">
+        Saved the black heart hero image as SVG and added some basic Dublin Core metadata to the image.
+       </p>
+      </dd>
       <dt class="dt dlterm">
        Monday July 1, 2024
       </dt>
