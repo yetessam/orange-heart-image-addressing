@@ -6,12 +6,24 @@
     <conbody>
         <dl outputclass="container">
 
+           <dlentry>
+                 <dt>Thursday July 4, 2024</dt>
+                <dd>
+                    <p>Saved the black heart hero image as SVG and added some basic Dublin Core metadata to the image.
+                   
+
+                     </p>
+                </dd>
+            
+            </dlentry>
 
            <dlentry>
                  <dt>Monday July 1, 2024</dt>
                 <dd>
                     <p>CSS doesn't support remapping so I did end up using Python.  Setting up a data structure to remap by element name.
 It could also be easily extended to remap by class name.  For now, stick to element name remapping. 
+
+
                      </p>
                 </dd>
             
