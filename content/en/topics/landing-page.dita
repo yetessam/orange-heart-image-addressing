@@ -4,8 +4,10 @@
   <title>Home</title>
   <conbody outputclass="hero-body">
   <section>
-  <p> Test 1 <image href="../images/gallery/orange-black-heart.jpg" alt="Orange Image"/>
-   </p>
+  <p><image href="../images/gallery/black-heart-hero-cover-tablet.png" alt="Orange Stencil with Black Leather Background"/>
+   When creators start using Dweb components and technologies, what changes?  How do processes change? 
+   Do we need to change tools? Where do I store my content?   Does the underlying HTML, or images need to change?  How is a website deployed onto the blockchain?       
+</p>
     </section>
   </conbody>
 </concept>
