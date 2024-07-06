@@ -4,7 +4,7 @@
   <title>Home</title>
 <conbody>
     <!-- Hero Section -->
-    <section outputclass="hero is-danger is-fullheight">
+    <section outputclass="hero">
         <div outputclass="hero-body">
         <p><image href="../images/gallery/black-heart-hero-cover-tablet.png" alt="Orange Stencil with Black Leather Background"/>
    When creators start using Dweb components and technologies, what changes?  How do processes change? 
