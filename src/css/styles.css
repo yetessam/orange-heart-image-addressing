@@ -8,5 +8,13 @@
     margin-left: 1rem; /* 1rem is relative to the root font size */
 }
 
+/* Override Bulma's default background color variable */
+$background: violet !important;
+
+
+
+.navbar, .hero, .section, .footer {
+    background-color: violet !important;
+  }
 
 
