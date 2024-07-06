@@ -1,0 +1,131 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2024"><meta name="generator" content="DITA-OT"><meta name="description" content="This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective."><title>Captain's Log</title><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/styles.css"></head><body id="captains-log"><header role="banner"><!-- Header injection test --><meta name="author" content="Yas Etessam"></header><nav class="toc" role="navigation"><ul><li><a href="../topics/index.html">Home</a></li><li><a href="../topics/orange-heart.html">Orange Heart Project</a></li><li><a href="../topics/gallery.html">Gallery</a></li><li class="active"><a href="../topics/captains-log.html">Captain's Log</a></li><li><a href="../topics/about.html">About</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Captain's Log</h1>
+    
+    <div class="body conbody"><p class="shortdesc">This blog documents technical progress, challenges and solutions encountered as well as reflections from the artistic perspective.
+    </p>
+        <dl class="dl container">
+
+           
+                 <dt class="dt dlterm">Thursday July 4, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Saved the black heart hero image as SVG and added some basic Dublin Core metadata to the image.
+                   
+
+                     </p>
+                </dd>
+            
+            
+
+           
+                 <dt class="dt dlterm">Monday July 1, 2024</dt>
+                <dd class="dd">
+                    <p class="p">CSS doesn't support remapping so I did end up using Python.  Setting up a data structure to remap by element name.
+It could also be easily extended to remap by class name.  For now, stick to element name remapping. 
+
+
+                     </p>
+                </dd>
+            
+            
+
+           
+                 <dt class="dt dlterm">Friday June 28th, 2024</dt>
+                <dd class="dd">
+                    <div class="p"> CSS supports re-mapping!  Consider removing the python processing and doing class-based remapping in custom.css.
+                        <pre class="pre codeblock language-html"><code>
+                        /* Remap .dt.dlterm to Bulma's has-text-weight-bold class */
+                        .dt.dlterm {
+                            @extend .has-text-weight-bold;
+                        }
+                        </code></pre>
+                     </div>
+                </dd>
+            
+            
+    
+            
+                <dt class="dt dlterm">Thursday June 27th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Switched to local dev and testing to make sure that DITA OT builds work as expected locally, same thing with Python.
+                    </p>
+                </dd>
+            
+    
+            
+                <dt class="dt dlterm">Wednesday June 27th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Met with the co-educators and our team. Very supportive environment and heaps of wow moments with the feedback sessions.</p>
+                    <p class="p">Built a job to check out the dev branch and move the output from the DITA OT into dev after processing it with Python so that it contains sufficient CSS selectors for Bulma. Pondering extending the HTML or bootstrap DITA OT plug-ins.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Tuesday June 25th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Priming more birchwood and prototyped using Krylon clear spray on top of Sharpie Oil (fail), a regular Sharpie was fine! Smudging is an issue. Also prepared the background for the 16 x 20 piece, glued it down, waited 24 hours and then need to spray it with the fixative. Then wait another 24 hours to apply the stencil.</p>
+                    <p class="p">Places where nobody will bother you about spray paint in Strathcona are filled with people living in cars.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Monday June 24th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Directed the contents of the DITA OT logs to the Summary box in Github Actions.</p>
+                    <p class="p">Testing with DITA properties and trying to get the CSS auto-applied to the external CDN.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Sunday June 23rd, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Github Actions and priming and testing 5x5s.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Sat June 22, 2024</dt>
+                <dd class="dd">
+                    <p class="p">I've been getting these wooden birchwood boxes to do real-life art. Having to prime them and pull together supplies.</p>
+                    <p class="p">I've done a few prototypes which didn't work out and then I primed again. Currently, still concerned that the Krylon matte fixative makes inks bleed including the Sharpie black oil ink. Went back to 'regular' Sharpie and still need to test the fixative. Finished the background for the 16 x 20 piece.</p>
+                    <p class="p">Working on Github to source the content in DITA XML so that we can leverage DITA's link management. Created a dita branch on Github that takes the XML files, pushes them through the HTML5 transform in the latest version of the DITA Open Toolkit and then checks in the content to the out folder.</p>
+                    <p class="p">Seems like it's going to be more efficient to generate this HTML here.</p>
+                    <p class="p">To do: push the HTML5 to a dev branch where I could have Beautiful Soup run through and make any other changes that are needed. Then when that's done, move to staging and then move to prod.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Sunday June 16, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Getting a Fleek account. I chose to authenticate through Ethereum, specifically with Metamask. Metamask gives you some contextual warning about being careful with Web 3 dapps.</p>
+                    <p class="p">Set up an initial deployment yetessam/orange-heart-image-addressing (branch: prod) and selected src as the Publish directory. Published at 10:01 AM to <a class="xref" href="https://delicate-glitter-6121.on.fleek.co/" target="_blank" rel="external noopener">https://delicate-glitter-6121.on.fleek.co/</a>.</p>
+                    <p class="p">Locally ran python -m http.server 8000 so that we can verify that the markdown is loaded locally, checked developer console and made adjustments until we had zero errors in the console.</p>
+                    <p class="p">Pushed changes to design branch.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Friday June 15th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Prepped with Krylon matte transparent fixative on two 5 x 7 birchwood panels. Made in Canada.</p>
+                    <p class="p">Selected a Bulma for a modern CSS framework.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Wed June 13th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Create mockups for physical layout for gallery wall space. Took first draft photographs of the art pieces and then loaded them into a new Miro board to create a 2D diagram of the physical gallery space. Scaling the images down to onto the Miro grid to result in a maximum wall width of 3 feet. Will need to pad everything by several inches to accommodate frames.</p>
+                    <p class="p">Design branch on Git holds the current set of draft images.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Tuesday June 12th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Updates to design doc.</p>
+                </dd>
+            
+            
+                <dt class="dt dlterm">Monday June 11th, 2024</dt>
+                <dd class="dd">
+                    <p class="p">Today’s decisions: start with Fleek, don’t recreate the wheel when it comes to CSS, and start with RDF/XML. Stick some images into IPFS and then sign up for Fleek as my IPFS Gateway. Should I use RDF vs Property DBs? Asked Chat GPT for a series of options for hosting. Fleek is Web 3 friendly and I can also store my content on Github and publish that way, which opens up the content to multiple contributors.</p>
+                    <p class="p">Created a Github Repo <a class="xref" href="https://github.com/yetessam/orange-heart-image-addressing" target="_blank" rel="external noopener">https://github.com/yetessam/orange-heart-image-addressing</a>.</p>
+                </dd>
+            
+        </dl>
+    </div>
+</article></main></body></html>
