@@ -25,7 +25,16 @@ def update_head(soup, filepath):
             else:
                 # Append the new meta tag to the head if no other meta tags exist
                 head.append(meta_tag)
+            
             print(f"Added viewport meta tag to {filepath}")
-    
+           
+            # Create a new script tag
+            new_script = soup.new_tag('script', src="https://use.fontawesome.com/releases/v5.14.0/js/all.js", defer=True)
+
+            # Find the head tag and append the new script tag to it
+            head.append(new_script)
+            
+            print(f"Added font awesome script tag to {filepath}")
+           
     return soup
 
