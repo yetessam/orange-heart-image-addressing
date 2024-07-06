@@ -137,7 +137,7 @@ jobs:
           ls -l
           echo "Contents of src directory:"
           ls -la src
-          cat scr/topics/cap*
+          cat src/topics/cap*
 
 
       - name: Remove venv, tar file and out folder
