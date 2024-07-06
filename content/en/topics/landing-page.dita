@@ -4,15 +4,13 @@
   <title>Home</title>
 <conbody>
     <!-- Hero Section -->
-    <section class="hero is-primary is-fullheight">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
+    <section outputclass="hero is-danger is-fullheight">
+        <div outputclass="hero-body">
+            <div outputclass="container has-text-centered">
+                <title>
                     Welcome to Our Website
-                </h1>
-                <h2 class="subtitle">
-                    Your subtitle goes here
-                </h2>
+                </title>
+                
                 <p>
                    <p><image href="../images/gallery/black-heart-hero-cover-tablet.png" alt="Orange Stencil with Black Leather Background"/>
    When creators start using Dweb components and technologies, what changes?  How do processes change? 
