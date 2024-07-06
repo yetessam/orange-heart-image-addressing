@@ -2,21 +2,11 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="landing-page">
   <title>Home</title>
-<conbody>
-    <!-- Hero Section -->
-    <section outputclass="hero">
-        <div outputclass="hero-body">
+     <conbody>
         <p><image href="../images/gallery/black-heart-hero-cover-tablet.png" alt="Orange Stencil with Black Leather Background"/>
    When creators start using Dweb components and technologies, what changes?  How do processes change? 
    Do we need to change tools? Where do I store my content?   Does the underlying HTML, or images need to change?  How is a website deployed onto the blockchain?       
 </p>
-        </div>
-    </section>
-
- 
-  <section>
- 
-    </section>
   </conbody>
 </concept>
 
