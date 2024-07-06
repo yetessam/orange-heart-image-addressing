@@ -7,9 +7,9 @@
     <section outputclass="hero is-danger is-fullheight">
         <div outputclass="hero-body">
             <div outputclass="container has-text-centered">
-                <title>
+                <p>
                     Welcome to Our Website
-                </title>
+                </p>
                 
                 <p>
                    <p><image href="../images/gallery/black-heart-hero-cover-tablet.png" alt="Orange Stencil with Black Leather Background"/>
