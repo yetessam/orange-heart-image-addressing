@@ -15,9 +15,9 @@
             <p>Content itself can be used to derive a unique identifier called a hash.
             The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
             <fig><title></title>
-            <image href="images/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
-            <image href="images/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
-            <image href="images/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
            </fig>
 
         </section>
