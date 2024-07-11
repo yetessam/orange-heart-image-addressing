@@ -8,9 +8,6 @@
     <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
     <topicref href="topics/about.dita" format="dita" type="concept"/> 
    
-   <topicgroup processing-role="resource-only">
-       <mapref href="images/gallery/png-resources.ditamap"/> 
-   </topicgroup>
 
 <reltable>
     <title>Source and target: Links that apply only to HTML version of distribution documentation</title>
