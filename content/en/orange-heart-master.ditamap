@@ -2,6 +2,7 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>Orange Heart - DWeb Project</title>
+    <topicref href="topics/index.dita" format="dita" type="concept"/>
     <topicref href="topics/orange-heart.dita" format="dita" type="concept"/>
     <topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
     <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
