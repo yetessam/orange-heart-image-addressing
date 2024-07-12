@@ -12,7 +12,7 @@ bulma_classes = {
     'li': 'list-item',
     'dl': 'list',
     'dt': 'list-item-title',
-    'dd': 'list-item-content',
+    'dd': 'list-item',
     'note': 'notification is-primary',
     'figure': 'image',
     'image' : 'is-rounded is-bordered',
