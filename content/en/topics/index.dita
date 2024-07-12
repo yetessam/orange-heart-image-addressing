@@ -17,8 +17,7 @@
   Dweb components and technologies changes where and how data is stored, updates processes and focuses attention on areas of postive change within the Web 3 tech stack.
   This proof-of-concept projects stores some images on chain within IPFS using content-based addressing. 
   The source markup language for the content was DITA XML that was transformed to HTML5 using the latest version of the DITA Open Toolkit. 
-  Fleek was used to deploy the website onto the blockchain.
-
+  Fleek deploys the website onto the blockchain directly from Github.  
 </p>
   </conbody>
 </concept>
