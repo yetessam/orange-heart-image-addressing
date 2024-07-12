@@ -1,0 +1,39 @@
+name: Promote src to Prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  promote-src-to-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Staging Branch
+        uses: actions/checkout@v2
+        with:
+          ref: staging
+
+      - name: Copy src Folder to Temporary Location
+        run: cp -r src /tmp/src
+
+      - name: Checkout Prod Branch
+        run: |
+          git fetch origin
+          git checkout prod
+          git pull origin prod
+
+      - name: Remove Existing src Folder
+        run: rm -rf src
+
+      - name: Move src Folder from Temporary Location
+        run: mv /tmp/src ./src
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src
+          git commit -m 'Promote src folder from staging branch to prod'
+
+      - name: Push Changes to Prod
+        run: git push origin prod

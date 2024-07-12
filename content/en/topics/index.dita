@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="home-landing-page">
+  <title>Home</title>
+     <conbody>
+        <fig>
+           <figgroup outputclass="picture">
+            <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
+            <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
+               <alt>White daisies in a field peeking through an orange heart opening.</alt>
+            </image>
+            <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
+          </figgroup>  
+        </fig>
+       <p>This proof-of-concept combines Web 1.0 with dweb technologies such as IPFS using content-based addressing. 
+The source markup language for the content is DITA XML that is transformed to HTML5 using the latest version of the DITA Open Toolkit that's run with Github Actions.
+Python is used to adjust the HTML5 for a better responsive user experience.  Fleek auto-deploys the websites onto the blockchain by picking up the changed content in Github. 
+</p>
+   <note>DWeb is a global community of builders and dreamers working together to create a better, less centralized web.
+   </note> 
+  </conbody>
+</concept>
+

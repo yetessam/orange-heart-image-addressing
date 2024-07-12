@@ -26,7 +26,9 @@ jobs:
         with:
           build: |
             set -e
-            dita --input=$(pwd)/dita/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/dita/build.properties -Dargs.input.dir=$(pwd)/dita 2>&1 | tee log.txt
+            echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
+
+            dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
 
 
       - name: Upload log file as an artifact
@@ -49,6 +51,13 @@ jobs:
       - name: List build output
         run: ls -R out
 
+      - name: Delete out folder
+        run: |
+          echo "Deleting out folder"
+          sudo chown -R $USER:$USER out
+          rm -rf out
+   
+
       - name: Configure git
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
@@ -58,7 +67,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git add out
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
@@ -97,17 +105,15 @@ jobs:
         run: |
           mkdir -p ./src
           ls -la 
-
    
       - name: Python 
         run:  | # Come back here
           echo "Installing Python and dependencies"
            
-
       - name: Install Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: ''3.12''
+          python-version: '3.12'
 
       - name: Install dependencies and run Python script
         run: |
@@ -117,7 +123,6 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install beautifulsoup4
-          python python/orchestrate_html.py
           
           echo "Listing contents of $(pwd):"
           ls -laR
@@ -127,11 +132,7 @@ jobs:
         run: |
           set -e
           source venv/bin/activate
-          python python/orchestrate_html.py
-       
-  #  For now, see if we can have Python process everything in the out folder
-  #  Copying HTML over should happen after the Python code runs 
- 
+          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src
 
       - name: List directory contents after running Python script
         run: |
@@ -140,6 +141,7 @@ jobs:
           ls -l
           echo "Contents of src directory:"
           ls -la src
+          cat src/topics/cap*
 
 
       - name: Remove venv, tar file and out folder
@@ -149,12 +151,11 @@ jobs:
           rm -rf out/
           echo "Deleting out folder and out.tar.gz file"
 
-      
       - name: Commit and push changes to dev branch
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
-          git add --verbose --force src
+          git add --verbose --force $(pwd)/src
           git commit -m "Copy files from DITA OT build to src "
           git push origin dev
           

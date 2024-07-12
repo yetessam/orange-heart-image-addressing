@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="gallery">
+    <title>Gallery</title>
+ <shortdesc>
+ 
+ <!--  Content addresses are locations that help users and computers locate experiences in the physical and digital world. 
+  Findability with regards to the physical world is fairly simple, we tend to use street addresses and landmarks, or directions to find people or places. 
+  --></shortdesc>
+   
+    <conbody>
+        <!-- Section 1 -->
+        <section>
+            <title>IPFS Content Addressing</title>
+            <p>Content itself can be used to derive a unique identifier called a hash.
+            The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
+            <fig><title></title>
+            <image href="../images/gallery/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
+           </fig>
+
+        </section>
+    </conbody>
+</concept>
+
+
