@@ -78,20 +78,6 @@ def process_html_files():
 
             print(f"Modified and saved HTML file: {filepath}")
         
-            
-        # Problem with the landing page, clobber index.html with landing-page.html
-        # Check if the landing-page file exists
-        # Define the paths to the source and destination files
-        #source_file = os.path.join(out_dir, 'en/topics/landing-page.html')
-        #destination_file = os.path.join(out_dir, 'en/topics/index.html')
-
-        #if os.path.exists(source_file):
-            # Copy the file
-        #    copy_files(source_file, destination_file)
-        #    print(f"Copied {source_file} to {destination_file}")
-        #else:
-        #    print(f"Could not find a landing page to copy over to index.html {source_file} does not exist.")
-
         # Copy all files and directories to src
         copy_files(out_dir, src_dir)
         print(f"Copied all files from {out_dir} to {src_dir}")
