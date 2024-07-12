@@ -3,7 +3,6 @@
 <concept id="home-landing-page">
   <title>Home</title>
      <conbody>
-        <p>
         <fig>
            <figgroup outputclass="picture">
             <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
@@ -13,13 +12,9 @@
             <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
           </figgroup>  
         </fig>
-
-
-  Dweb components and technologies changes where and how data is stored, updates processes and focuses attention on areas of postive change within the Web 3 tech stack.
-  This proof-of-concept projects stores some images on chain within IPFS using content-based addressing. 
-  The source markup language for the content was DITA XML that was transformed to HTML5 using the latest version of the DITA Open Toolkit. 
-  Fleek was used to deploy the website onto the blockchain.
-
+       <p>This proof-of-concept experiments with combining Web 1.0 with dweb technologies such as IPFS using content-based addressing. 
+The source markup language for the content is DITA XML that is transformed to HTML5 using the latest version of the DITA Open Toolkit that's run with Github Actions.
+Python is used to adjust the HTML5 for a better responsive user experience.  Fleek auto-deploys the websites onto the blockchain by picking up the changed content in Github. 
 </p>
   </conbody>
 </concept>
