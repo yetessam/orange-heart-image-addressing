@@ -54,6 +54,7 @@ jobs:
       - name: Delete out folder
         run: |
           echo "Deleting out folder"
+          sudo chown -R $USER:$USER out
           rm -rf out
    
 
