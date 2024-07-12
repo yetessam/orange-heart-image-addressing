@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-src-to-staging:
+  deploy-dev-to-stage:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,11 +16,11 @@ jobs:
       - name: Copy src Folder to Temporary Location
         run: cp -r src /tmp/src
 
-      - name: Checkout Staging Branch
+      - name: Checkout Stage Branch
         run: |
           git fetch origin
-          git checkout staging
-          git pull origin staging
+          git checkout stage
+          git pull origin stage
 
       - name: Remove Existing src Folder
         run: rm -rf src
@@ -33,7 +33,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add src
-          git commit -m 'Deploy src folder from dev branch to staging'
+          git commit -m 'Deployed html src folder from dev branch to stage'
 
-      - name: Push Changes to Staging
-        run: git push origin staging
+      - name: Push Changes to Stage
+        run: git push origin stage
