@@ -11,27 +11,28 @@ def create_picture_tags(soup, filepath):
         for attr, value in div.attrs.items():
             picture_tag[attr] = value
         
-        # Move the contents of the div into the picture tag
-        for child in div.contents:
-            if child.name == 'img':
-                img_classes = child.get('class', [])
-                is_default = 'tablet' in img_classes
-                
-                for img_class in img_classes:
-                    if img_class != 'image' and img_class != 'tablet':
-                        source_tag = soup.new_tag('source')
-                        if img_class == 'desktop':
-                            source_tag['media'] = '(min-width: 1024px)'
-                        elif img_class == 'mobile':
-                            source_tag['media'] = '(max-width: 600px)'
-                        source_tag['srcset'] = child['src']
-                        picture_tag.append(source_tag)
-                
-                # Append the original img tag as the fallback
-                if is_default or not picture_tag.find_all('source'):
-                    picture_tag.append(child)
+        # Process img tags inside the div
+        img_tags = div.find_all('img')
+        default_img = None
+        
+        for img in img_tags:
+            img_classes = img.get('class', [])
+            if 'tablet' in img_classes:
+                default_img = img
             else:
-                picture_tag.append(child)
+                source_tag = soup.new_tag('source')
+                if 'desktop' in img_classes:
+                    source_tag['media'] = '(min-width: 1024px)'
+                elif 'mobile' in img_classes:
+                    source_tag['media'] = '(max-width: 600px)'
+                source_tag['srcset'] = img['src']
+                picture_tag.append(source_tag)
+        
+        # Append the default img as fallback if it exists, otherwise append any img
+        if default_img:
+            picture_tag.append(default_img)
+        elif img_tags:
+            picture_tag.append(img_tags[0])
         
         # Replace the div with the picture tag
         div.replace_with(picture_tag)
