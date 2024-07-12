@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from update_html.bulma_classes import bulma_classes
 
 def apply_bulma_classes(soup):
-    for tag, class_attr in bulma_classes.items():
+    for selector, class_attr in bulma_classes.items():
         elements = soup.select(selector)
         for element in elements:
             if 'class' not in element.attrs:
