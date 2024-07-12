@@ -10,7 +10,7 @@ def modify_navbar(soup):
             print("Navbar already modified. Skipping.")
             return soup
         
-        nav['class'] = 'navbar is-spaced is-link'
+        nav['class'] = 'navbar is-spaced'
         nav['role'] = 'navigation'
         nav['aria-label'] = 'main navigation'
         print("Applied Bulma classes to <nav> tag.")
