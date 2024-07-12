@@ -17,7 +17,7 @@
    <!-- Header injection test -->
    <meta content="Yas Etessam" name="author"/>
   </header>
-  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+  <nav aria-label="main navigation" class="navbar is-spaced is-link" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button">
      <span aria-hidden="true">
@@ -98,22 +98,18 @@
      Home
     </h1>
     <div class="body conbody box">
-     <div class="p box">
-      <figure class="fig fignone image">
-       <figcaption class="desc figdesc">
-        White daisies peeking through an orange heart opening.
-       </figcaption>
-       <picture class="figgroup picture">
-        <source media="(min-width: 1024px)" srcset="../images/gallery/daisy-desktop.png"/>
-        <source media="(max-width: 600px)" srcset="../images/gallery/daisy-mobile.png"/>
-        <img class="image tablet" src="../images/gallery/daisy-tablet.png"/>
-       </picture>
-      </figure>
-      Dweb components and technologies changes where and how data is stored, updates processes and focuses attention on areas of postive change within the Web 3 tech stack.
-  This proof-of-concept projects stores some images on chain within IPFS using content-based addressing. 
-  The source markup language for the content was DITA XML that was transformed to HTML5 using the latest version of the DITA Open Toolkit. 
-  Fleek deploys the website onto the blockchain directly from Github.
-     </div>
+     <figure class="fig fignone image">
+      <picture class="figgroup picture">
+       <source media="(min-width: 1024px)" srcset="../images/gallery/daisy-desktop.png"/>
+       <source media="(max-width: 600px)" srcset="../images/gallery/daisy-mobile.png"/>
+       <img alt="White daisies peeking through an orange heart opening." class="image tablet" src="../images/gallery/daisy-tablet.png"/>
+      </picture>
+     </figure>
+     <p class="p content">
+      This proof-of-concept experiments with combining Web 1.0 with dweb technologies such as IPFS using content-based addressing. 
+The source markup language for the content is DITA XML that is transformed to HTML5 using the latest version of the DITA Open Toolkit that's run with Github Actions.
+Python is used to adjust the HTML5 for a better responsive user experience.  Fleek auto-deploys the websites onto the blockchain by picking up the changed content in Github.
+     </p>
     </div>
    </article>
   </main>
