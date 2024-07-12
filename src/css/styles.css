@@ -1,0 +1,8 @@
+/* Import in external CSS */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css");
+
+
+.dl .dd:not(:last-child):not(.box) {
+    border-block-end: 1px solid var(--be-list-item-divider-color);
+  }
+
