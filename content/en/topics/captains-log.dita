@@ -6,6 +6,25 @@
     <conbody>
         <dl outputclass="container">
 
+            <dlentry>
+                 <dt>Tuesday July 9, 2024</dt>
+                <dd>
+                    <p>Resize some images to desktop/mobile/tablet, export to PNG and use TinyPNG to compress the file size.
+                     </p>
+                </dd>
+            
+            </dlentry>
+           <dlentry>
+                 <dt>Thursday July 11, 2024</dt>
+                <dd>
+                    <p>Saved the black heart hero image as SVG and added some basic Dublin Core metadata to the image.
+                   
+
+                     </p>
+                </dd>
+            
+            </dlentry>
+
            <dlentry>
                  <dt>Thursday July 4, 2024</dt>
                 <dd>
