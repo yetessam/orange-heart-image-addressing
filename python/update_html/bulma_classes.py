@@ -4,7 +4,7 @@ bulma_classes = {
     'h2': 'title',
     'h3': 'title',
     'p': 'content',
-    'div': 'box',
+    'div.body': 'container',
     'a': 'button is-primary',
     'button': 'button is-link',
     'ul': 'list is-hoverable',
@@ -16,6 +16,6 @@ bulma_classes = {
     'note': 'notification is-primary',
     'figure': 'image',
     'image' : 'is-rounded is-bordered',
-    'div.note' : 'notification is-link is-light'
+    'div.note' : 'notification is-info is-light'
 }
 
