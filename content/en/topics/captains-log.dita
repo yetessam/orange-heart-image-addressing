@@ -9,6 +9,7 @@
                  <dt>Friday July 12, 2024</dt>
                 <dd>
                     <p>Update Python to use CSS selectors to get better styles on the output. </p>
+                    <p>Promote from dev to stage and add manual workflow job</p>
                 </dd>
             
             </dlentry>
