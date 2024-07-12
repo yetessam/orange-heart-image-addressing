@@ -4,11 +4,12 @@
   <title>Home</title>
      <conbody>
         <p>
-        <fig><desc>White daisies peeking through an orange heart opening.</desc>
-      
+        <fig>
            <figgroup outputclass="picture">
             <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
-            <image outputclass="tablet" href="../images/gallery/daisy-tablet.png" />
+            <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
+               <alt>White daisies peeking through an orange heart opening.</alt>
+            </image>
             <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
           </figgroup>  
         </fig>
