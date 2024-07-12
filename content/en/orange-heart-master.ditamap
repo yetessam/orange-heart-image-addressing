@@ -7,8 +7,8 @@
     <topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
     <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
     <topicref href="topics/about.dita" format="dita" type="concept"/> 
-    <topicref href="topics/landing-page.dita" format="dita" type="concept" toc="no"/> 
-    
+   <!-- <topicref href="topics/landing-page.dita" format="dita" type="concept" toc="no"/> 
+    -->
 
 <reltable>
     <title>Source and target: Links that apply only to HTML version of distribution documentation</title>
