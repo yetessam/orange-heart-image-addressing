@@ -3,11 +3,15 @@
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
     <conbody>
-        <p>Moving content from the physical world to the digital realm has a lot of steps and a lot of decisions that need to be made.  To simplify this process, I'm reusing the same stencil so that we've got some continuity.
+        <p>In Spring 2018, I first started stenciling hearts in San Francisco's Mission District.
+        Red hearts were sprinkled around Capp Street between 21st and 22nd st.   They followed the SFPD killing of 19-year-old Jesus Adolfo Delgado-Duarte on Capp Street.
+        I've been reusing and repurposing the same stencil for the last six years through life in the Mission, during my travels and on different mediums beyond concrete.
+         
         </p>
-        
-        <note>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.
+       <note>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.
         This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.</note>
+        
+
     </conbody>
 </concept>
 
