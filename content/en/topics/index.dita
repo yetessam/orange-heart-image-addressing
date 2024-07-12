@@ -12,7 +12,7 @@
             <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
           </figgroup>  
         </fig>
-       <p>This proof-of-concept experiments with combining Web 1.0 with dweb technologies such as IPFS using content-based addressing. 
+       <p>This proof-of-concept combines Web 1.0 with dweb technologies such as IPFS using content-based addressing. 
 The source markup language for the content is DITA XML that is transformed to HTML5 using the latest version of the DITA Open Toolkit that's run with Github Actions.
 Python is used to adjust the HTML5 for a better responsive user experience.  Fleek auto-deploys the websites onto the blockchain by picking up the changed content in Github. 
 </p>
