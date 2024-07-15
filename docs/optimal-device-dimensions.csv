@@ -1,7 +1,7 @@
 Device, Orientation, Optimal Width,Optimal Height
 Desktop,, 1200-1920,800-1080
 Laptop,,1280-1440,800-900
-Tablet,portrait, 768,1024 
-Tablet,landscape,  1024, 800
-Mobile,portrait, 360 , 640 
-Mobile, landscape, 640 , 896 
+Tablet,Portrait, 768,1024 
+Tablet,Landscape,  1024, 800
+Mobile,Portrait, 360 , 640 
+Mobile, Landscape, 640 , 896 
