@@ -10,7 +10,8 @@
                 <dd>
                     <p>Update Python to use CSS selectors to get better styles on the output. </p>
                     <p>Promote from dev to stage and add manual workflow job</p>
-                    <p><codeblock> <codeblock>
+                    <p>
+<codeblock>  
             024-07-12T22:20:34.718Z: Deploy started
 2024-07-12T22:20:39.240Z: Docker image: 'node:slim'
 2024-07-12T22:20:39.240Z: Build command: ''
