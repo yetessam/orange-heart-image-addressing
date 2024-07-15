@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title>Orange Heart - DWeb Project</title>
+    <title>Orange Heart - DWeb for Creators Practicum</title>
     <topicref href="topics/index.dita" format="dita" type="concept"/>
     <topicref href="topics/orange-heart.dita" format="dita" type="concept"/>
     <topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
@@ -26,11 +26,23 @@
       			<navtitle>DWeb Principles</navtitle>
     		  </topicmeta>
 	    </topicref> 
-       <topicref href="https://getdweb.net/principles/" format="html" scope="external">
+       <topicref href="https://github.com/yetessam/orange-heart-image-addressing" format="html" scope="external">
  		    <topicmeta>
-      			<navtitle>DWeb Principles</navtitle>
+      			<navtitle>Github repository: https://github.com/yetessam/orange-heart-image-addressing</navtitle>
     		  </topicmeta>
 	    </topicref> 
+       <topicref href="https://fleek.xyz/" format="html" scope="external">
+ 		    <topicmeta>
+      			<navtitle>Fleek</navtitle>
+    		  </topicmeta>
+	    </topicref> 
+   <topicref href="https://www.dita-ot.org/" format="html" scope="external">
+ 		    <topicmeta>
+      			<navtitle>DITA Open Toolkit</navtitle>
+    		  </topicmeta>
+	    </topicref> 
+      
+      
       </relcell>
     </relrow>
     <relrow>
