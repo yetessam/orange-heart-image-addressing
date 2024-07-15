@@ -35,6 +35,15 @@ Content addressing interests me. Moving from art that's got a physical location 
 
 ### Building Blocks
 
+#### Images
+
+Selected PNG.  
+
+See the optimal-device-dimensions.csv for optimal image dimensions for varying devices. 
+Consider automating image generation so that we can switch to SVG easily. 
+Consider using DITA keys from day one for image addressing so that if we switch to SVG from PNG, its super easy.
+
+
 #### Technologies
 - HTML5, CSS3, JavaScript, Knowledge Graphs support (RDF? RDFa for embedding RDF, Property Graph databases?)
 
@@ -69,3 +78,6 @@ Content addressing interests me. Moving from art that's got a physical location 
 
 ### DWeb Tech to Investigate, Consider Out of Scope
 - Nextcloud which is decentralized Google Drive
+
+###  Source Content
+- Using DITA XML for source
