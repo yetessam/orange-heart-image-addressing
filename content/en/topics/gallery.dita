@@ -14,18 +14,13 @@
             <title>IPFS Content Addressing</title>
             <p>Content itself can be used to derive a unique identifier called a hash.
             The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
-            <fig><title></title>
-            <image href="../images/gallery/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
-            <image href="../images/gallery/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
-            <image href="../images/gallery/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
-           </fig>
-
+           
         </section>
 
          <!-- Dweb Values  -->
         <section>
             <title>Human Rights</title>
-            <p>Dweb values are centered around human agency and ecological awareness. 
+            <p>Dweb values center human agency and agency and ecological awareness. 
              </p>
             <fig><title>Dweb Camp 2022 Notes</title>
                 <figgroup outputclass="picture">
