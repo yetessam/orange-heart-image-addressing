@@ -5,6 +5,18 @@
     </shortdesc>
     <conbody>
         <dl>
+
+            <dlentry>
+                 <dt>Monday July 15, 2024</dt>
+                <dd>
+                    <p>Refactor the update_head() code to make it more modular. </p>
+                    <p>Assess project: Fleek has deployed the site onto IPFS (InterPlanetary File System).  That is already a decentralized storage protocol that enables the creation, distribution, and retrieval of data in a peer-to-peer (P2P) network.
+                    In terms of search, might want to add a search box and try out IPFS based search.   
+                    </p>
+                </dd>
+            
+            </dlentry>
+        
          <dlentry>
                  <dt>Friday July 12, 2024</dt>
                 <dd>
