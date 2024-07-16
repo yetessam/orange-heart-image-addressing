@@ -1,12 +1,19 @@
 from bs4 import BeautifulSoup
 
-def update_head(soup, filepath):
-    # Check if a viewport meta tag already exists
+def apply_viewport_metatag(soup):
+    """
+    Applies the viewport meta tag to the soup object.
+    
+    Parameters:
+    - soup (BeautifulSoup): The BeautifulSoup object representing the HTML document.
+    
+    Returns:
+    - soup (BeautifulSoup): The updated BeautifulSoup object.
+    """
     viewport_meta = soup.find('meta', attrs={'name': 'viewport'})
     if viewport_meta:
         # Update the existing viewport meta tag
         viewport_meta['content'] = 'width=device-width, initial-scale=1.0'
-        print(f"Updated viewport meta tag in {filepath}")
     else:
         # Create a new viewport meta tag if it doesn't exist
         meta_tag = soup.new_tag('meta', attrs={
@@ -25,8 +32,27 @@ def update_head(soup, filepath):
             else:
                 # Append the new meta tag to the head if no other meta tags exist
                 head.append(meta_tag)
-            
-            print(f"Added viewport meta tag to {filepath}")
-           
+    
+    return soup
+    
+def update_head(soup, filepath):
+    """
+    Updates the head section of an HTML document using specified update functions.
+    
+    Parameters:
+    - soup (BeautifulSoup): The BeautifulSoup object representing the HTML document.
+    - filepath (str): The path to the HTML file (for logging purposes).
+    
+    Returns:
+    - soup (BeautifulSoup): The updated BeautifulSoup object.
+    """
+    
+    # List of update functions
+    update_functions = [apply_viewport_metatag]
+
+    for update_function in update_functions:
+        soup = update_function(soup)
+        print(f"Applied {update_function.__name__} to {filepath}")
+    
     return soup
 
