@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="home-landing-page">
+<concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-        <fig>
-           <figgroup outputclass="picture">
-            <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
-            <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
-               <alt>White daisies in a field peeking through an orange heart opening.</alt>
-            </image>
-            <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
-          </figgroup>  
-        </fig>
-       <p>Welcome to my orange heart project website, this site is being served up to you from the Interplanetary File System (IPFS). 
-The source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
-Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
-</p>
-   <note>DWeb is a global community of builders and dreamers working together to create a better, less centralized web.
-  </note> 
+        <section><title outputclass="hero-title">Welcome to the orange heart project</title>
+         <fig>
+            <title outputclass="subtitle"><p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
+        </title>
+            <figgroup outputclass="picture">
+               <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
+               <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
+                  <alt>White daisies in a field peeking through an orange heart opening.</alt>
+               </image>
+               <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
+            </figgroup>  
+         </fig>
+        </section>
   </conbody>
 </concept>
 
