@@ -3,10 +3,11 @@
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-        <section><title outputclass="hero-title">Welcome to the orange heart project</title>
+        <section>
+             <title outputclass="hero-title">Welcome to the orange heart project</title>
+             <title outputclass="subtitle">Current address: Interplanetary File System (IPFS) on the decentralized web.</title>
          <fig>
-            <title outputclass="subtitle"><p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
-        </title>
+       
             <figgroup outputclass="picture">
                <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
                <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
