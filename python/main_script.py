@@ -10,6 +10,8 @@ from update_html.file_operations import read_html_file, write_html_file, copy_fi
 from update_html.update_head import update_head
 from update_html.create_responsive import create_responsive
 from update_html.create_pictures import create_picture_tags
+from update_html.update_landing_page import update_landing_page
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder and the target src folder')
@@ -36,6 +38,7 @@ def process_html_file(filepath):
 
     soup = apply_bulma_classes(soup)
     soup = modify_navbar(soup)
+    soup = update_landing_page(soup)
 
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
