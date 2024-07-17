@@ -12,7 +12,7 @@
             <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
           </figgroup>  
         </fig>
-       <p>Welcome to my orange heart project website, this site incorporates dweb technologies such as IPFS content-based addressing. 
+       <p>Welcome to my orange heart project website, this site is being served up to you from the Interplanetary File System, or IPFS. 
 The source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
 Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
 </p>
