@@ -8,6 +8,7 @@ from update_html.apply_bulma import apply_bulma_classes
 from update_html.modify_navbar import modify_navbar
 from update_html.file_operations import read_html_file, write_html_file, copy_files
 from update_html.update_head import update_head
+from update_html.create_responsive import create_responsive
 from update_html.create_pictures import create_picture_tags
 
 def parse_arguments():
@@ -31,6 +32,8 @@ def process_html_file(filepath):
 
     soup = update_head(soup, filepath)
     soup = create_picture_tags(soup, filepath)
+    soup = create_responsive(soup, filepath)
+
     soup = apply_bulma_classes(soup)
     soup = modify_navbar(soup)
 

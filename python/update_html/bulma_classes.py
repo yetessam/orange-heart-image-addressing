@@ -16,6 +16,8 @@ bulma_classes = {
     'note': 'notification is-primary',
     'figure': 'image',
     'image' : 'is-rounded is-bordered',
-    'div.note' : 'notification is-info is-light'
+    'div.note' : 'notification is-info',
+    'gallery' : 'columns is-multiline is-variable is-8',
+
 }
 
