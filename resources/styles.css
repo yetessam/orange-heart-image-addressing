@@ -5,7 +5,3 @@
 .dl .dd:not(:last-child):not(.box) {
     border-block-end: 1px solid var(--be-list-item-divider-color);
   }
-
-.like-link:not(:hover) {
-  background-color: white;
-}
