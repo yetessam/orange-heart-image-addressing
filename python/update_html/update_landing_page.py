@@ -29,15 +29,16 @@ def update_landing_page(soup, filename):
         print(f"Article not found in {filename}")
         return soup
     
-    h1 = article.find('h1', {'class': 'title topictitle1'})
-    if h1:
-        text_content_div.append(h1.extract())
+    # Find any element with class that contains "hero-title"
+    hero_title_element = article.find(class_='hero-title')
+    if hero_title_element:
+        text_content_div.append(hero_title_element.extract())
     
     section = article.find('section', {'class': 'section'})
     if section:
-        h2 = section.find('h2', {'class': 'title sectiontitle hero-title'})
-        if h2:
-            text_content_div.append(h2.extract())
+        hero_subtitle_element = section.find(class_='hero-subtitle')
+        if hero_subtitle_element:
+            text_content_div.append(hero_subtitle_element.extract())
     
     # Create the inner div for image content
     image_content_div = soup.new_tag('div', style='flex: 2; padding: 20px;')
