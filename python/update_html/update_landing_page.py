@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 def update_landing_page(soup, filename):
     # Check if body has a class that contains "landing-page"
     if not soup.body or 'landing-page' not in soup.body.get('class', []):
-        return
+        return soup
     
     print(f"Landing page found in {filename}")
         
@@ -27,7 +27,7 @@ def update_landing_page(soup, filename):
     article = main_content.find('article', {'role': 'article'})
     if not article:
         print(f"Article not found in {filename}")
-        return
+        return soup
     
     h1 = article.find('h1', {'class': 'title topictitle1'})
     if h1:
