@@ -14,7 +14,7 @@ def update_landing_page(soup, filename):
         return soup
 
     # Create the new section with the desired class
-    hero_section = soup.new_tag('section', **{'class': 'hero is-success is-halfheight'})
+    hero_section = soup.new_tag('section', **{'class': 'hero is-halfheight'})
     
     # Create the hero-body div
     hero_body = soup.new_tag('div', **{'class': 'hero-body'})
@@ -53,14 +53,9 @@ def update_landing_page(soup, filename):
     
     # Append the hero-body div to the hero section
     hero_section.append(hero_body)
-    
-    # Preserve the rest of the content in main_content
-    for content in main_content.contents[:]:
-        if content != article:
-            hero_section.insert_before(content.extract())
-    
-    # Append the hero section to the main content
-    main_content.append(hero_section)
+
+    # Replace the old section with the new hero section
+    section.replace_with(hero_section)
     
     # Embed necessary CSS for flexbox layout directly into the HTML
     soup = embed_flexbox_css(soup)
