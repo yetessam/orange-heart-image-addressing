@@ -3,7 +3,7 @@
 <concept id="orange-heart-project-about">
   <title>About</title>
   <shortdesc>
-  The Orange Heart Project creates stencil-based art product while introducing the dweb stack into a structured content life-cycle. 
+ Orange heart project depicts images of stencil-based art within a structured contetnt life cycle using the dweb stack.
  </shortdesc>
    <prolog>
     <metadata>
@@ -13,7 +13,7 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Years ago, I made a simple stencil from a paper plate.  Stencils create a form of visual consistency that builds upon itself and can be used over and over again.
+    <p>Years ago, I used a paper plate to make a stencil.  Stencils create a form of visual consistency that builds upon itself and can be used over and over again.
     Practically speaking, stencils are a fast and easy way of creating consistent universal visual languages. 
 
     Spray-paint is a powerful medium, its fast, it doesn't require studio space, and certainly doesn't require permisson to create art.
