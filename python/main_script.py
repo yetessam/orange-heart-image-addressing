@@ -32,13 +32,14 @@ def process_html_file(filepath):
     soup = BeautifulSoup(content, 'html.parser')
     soup.prettify()
 
+    # Passing through the filepath to improve error messages
     soup = update_head(soup, filepath)
     soup = create_picture_tags(soup, filepath)
     soup = create_responsive(soup, filepath)
 
     soup = apply_bulma_classes(soup)
     soup = modify_navbar(soup)
-    soup = update_landing_page(soup)
+    soup = update_landing_page(soup, filepath)
 
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
