@@ -5,7 +5,7 @@ bulma_classes = {
     'h3': 'title',
     'p': 'content',
     'div.body': 'container',
-    'a': 'button is-primary',
+    'a': 'is-link',
     'button': 'button is-link',
     'ul': 'list is-hoverable',
     'ol': 'list is-hoverable',
