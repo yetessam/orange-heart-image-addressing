@@ -5,11 +5,14 @@ def update_landing_page(soup, filename):
     if not soup.body or 'landing-page' not in soup.body.get('class', []):
         return
     
+    print(f"Landing page found in {filename}")
+        
+    
     # Find the main content to transform
     main_content = soup.find('main', {'class': 'container'})
     if not main_content:
         print(f"Main content not found in {filename}")
-        return
+        return soup
 
     # Create the new section with the desired class
     hero_section = soup.new_tag('section', **{'class': 'hero is-success is-halfheight'})
