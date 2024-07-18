@@ -17,24 +17,22 @@
            
         </section>
 
-         <!-- Dweb Values  -->
-        <section>
+         <section id="human-rights-dweb-camp-2022-notes">
             <title>Human Rights - Dweb Camp 2022 Notes</title>
             <p>Orange outline about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. center human agency and agency and ecological awareness. 
              </p>
-            <fig>
+            <fig><title>Human Rights - Dweb Camp 2022 Notes</title>
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/human-rights-centered-desktop.png" />
-                    <image outputclass="tablet" href="../images/gallery/human-rights-centered-tablet.png">
-                    <alt>Orange heart with the words "HUMAN RIGHTS CENTERED DESIGN BASED IN NYC/BERLIN" surrounded by additional notes that say "Public Research Technologies", 
-                    "looks at threat models.  Staff is secure and careful.  Goals: provide resources, usable security, open source", "Change who technology serves". 
-                    An overlay of other notes documents DWeb values of diversity, inclusion, model tech around common good".</alt>
-                    </image>
+                    <image outputclass="tablet" href="../images/gallery/human-rights-centered-tablet.png"/>
                     <image outputclass="mobile" href="../images/gallery/human-rights-centered-mobile.png"/>
                 </figgroup>  
-                
-           </fig>
 
+                <description>Digital rendering of paint/ink with background flattening by ChatGPT 4o.</description>
+                    <alt><alt>Orange heart with the words "HUMAN RIGHTS CENTERED DESIGN BASED IN NYC/BERLIN" surrounded by additional notes that say "Public Research Technologies", 
+                    "looks at threat models.  Staff is secure and careful.  Goals: provide resources, usable security, open source", "Change who technology serves". 
+                    An overlay of other notes documents DWeb values of diversity, inclusion, model tech around common good".</alt>
+           </fig>
         </section>
     </conbody>
 </concept>
