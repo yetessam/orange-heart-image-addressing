@@ -5,43 +5,6 @@ def update_landing_page(soup, filename):
     if not soup.body or 'landing-page' not in soup.body.get('class', []):
         return
     
-    # Create a new div to act as the flex container
-    flex_container = soup.new_tag('div', **{'class': 'flex-container'})
-    
-    # Create a new div for the text content
-    text_content = soup.new_tag('div', **{'class': 'flex-text'})
-    for element in soup.body.find_all(['h1', 'h2', 'p'], recursive=False):
-        text_content.append(element.extract())
-    
-    # Create a new div for the image content
-    image_content = soup.new_tag('div', **{'class': 'flex-image'})
-    for element in soup.body.find_all('img', recursive=False):
-        image_content.append(element.extract())
-    
-    # Append the new divs to the flex container
-    flex_container.append(text_content)
-    flex_container.append(image_content)
-    
-    # Find the main content container or create a new one if not existing
-    main_content = soup.body.find('main')
-    if not main_content:
-        main_content = soup.new_tag('main')
-        soup.body.append(main_content)
-    
-    # Replace the main content with the new flex container
-    main_content.clear()
-    main_content.append(flex_container)
-    
-    return soup
-
-
-from bs4 import BeautifulSoup
-
-def update_landing_page(soup, filename):
-    # Check if body has a class that contains "landing-page"
-    if not soup.body or 'landing-page' not in soup.body.get('class', []):
-        return
-    
     # Find the main content to transform
     main_content = soup.find('main', {'class': 'container'})
     if not main_content:
