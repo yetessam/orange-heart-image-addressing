@@ -7,7 +7,6 @@ def update_landing_page(soup, filename):
     
     print(f"Landing page found in {filename}")
         
-    
     # Find the main content to transform
     main_content = soup.find('main', {'class': 'container'})
     if not main_content:
@@ -55,8 +54,12 @@ def update_landing_page(soup, filename):
     # Append the hero-body div to the hero section
     hero_section.append(hero_body)
     
-    # Replace the main content with the new hero section
-    main_content.clear()
+    # Preserve the rest of the content in main_content
+    for content in main_content.contents[:]:
+        if content != article:
+            hero_section.insert_before(content.extract())
+    
+    # Append the hero section to the main content
     main_content.append(hero_section)
     
     # Embed necessary CSS for flexbox layout directly into the HTML
