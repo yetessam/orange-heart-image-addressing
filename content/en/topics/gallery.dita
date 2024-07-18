@@ -21,6 +21,18 @@
            </fig>
 
         </section>
+        <!-- Section 2 -->
+        <section>
+            <title>DWeb Camp Notes 2022</title>
+            <p>Digitized rendering of handwritten notes and stencilled paper while looking for cybersecurity resources for women's reproductive health. 
+            Digitally altered by prompting Chat GPT to "flatten background".</p>
+            <fig><title>Camp Notes</title>
+            <image href="../images/gallery/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
+           </fig>
+
+        </section>
     </conbody>
 </concept>
 
