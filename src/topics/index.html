@@ -13,12 +13,25 @@
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
   <style>
    .hero-body {
-        display: flex;
         align-items: center;
     }
     .image-content img {
         width: 100%;
         height: auto;
+    }
+
+    .hero-title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33.33%; /* One-third of the image width */
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
   </style>
  </head>
@@ -106,12 +119,12 @@
     <div class="body conbody container">
      <section class="hero is-halfheight">
       <div class="hero-body">
-       <div style="flex: 1; padding: 20px;">
+       <div style=" padding: 20px;">
         <h2 class="title sectiontitle hero-title">
          Welcome to the orange heart project
         </h2>
        </div>
-       <div style="flex: 2; padding: 20px;">
+       <div style=" padding: 20px;">
         <figure class="fig fignone image">
          <picture class="figgroup picture">
           <source media="(min-width: 1024px)" srcset="../images/gallery/daisy-desktop.png"/>
