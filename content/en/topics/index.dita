@@ -3,13 +3,9 @@
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-      <section outputclass="hero is-marginless is-padless">
-        <div outputclass="hero-body">
-         <div outputclass="hero-text is-overlay is-pulled-right">
-             <p outputclass="hero-title">Welcome to the orange heart project</p>
-              <p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
-         </div>
-        <div outputclass="hero-image>
+        <div outputclass="level">
+        
+        <div outputclass="level-left>
          <fig>
             <figgroup outputclass="picture">
                <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
@@ -19,6 +15,10 @@
                <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
             </figgroup>  
          </fig>
+         </div>
+         <div outputclass="level-right">
+             <p outputclass="hero-title">Welcome to the orange heart project</p>
+              <p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
          </div>
         </div>
       </section>
