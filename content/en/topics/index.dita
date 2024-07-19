@@ -16,9 +16,9 @@
             </figgroup>  
          </fig>
          </div>
-         <div outputclass="level-right">
-             <p outputclass="hero-title">Welcome to the orange heart project</p>
-              <p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
+         <div outputclass="level-right is-one-third">
+             <p outputclass="is-size-5 has-text-grey-dark">Welcome to the orange heart project</p>
+              <p outputclass="is-size-5 has-text-grey-dark">Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
          </div>
         </div>
       
