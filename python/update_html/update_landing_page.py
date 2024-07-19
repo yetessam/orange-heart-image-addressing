@@ -20,7 +20,7 @@ def update_landing_page(soup, filename):
     hero_body = soup.new_tag('div', **{'class': 'hero-body'})
     
     # Create the inner div for text content
-    text_content_div = soup.new_tag('div', style='flex: 1; padding: 20px;')
+    text_content_div = soup.new_tag('div', style=' padding: 20px;')
     
     # Extract the title and subtitle from the article and section
     article = main_content.find('article', {'role': 'article'})
@@ -33,14 +33,9 @@ def update_landing_page(soup, filename):
     if hero_title_element:
         text_content_div.append(hero_title_element.extract())
     
-    section = article.find('section', {'class': 'section'})
-    if section:
-        hero_subtitle_element = section.find(class_='hero-subtitle')
-        if hero_subtitle_element:
-            text_content_div.append(hero_subtitle_element.extract())
     
     # Create the inner div for image content
-    image_content_div = soup.new_tag('div', style='flex: 2; padding: 20px;')
+    image_content_div = soup.new_tag('div', style=' padding: 20px;')
     
     # Extract the image from the figure
     figure = section.find('figure', {'class': 'fig fignone image'})
@@ -67,13 +62,27 @@ def embed_flexbox_css(soup):
     style_tag = soup.new_tag('style')
     style_tag.string = """
     .hero-body {
-        display: flex;
         align-items: center;
     }
     .image-content img {
         width: 100%;
         height: auto;
     }
+
+    .hero-title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 33.33%; /* One-third of the image width */
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
     """
     soup.head.append(style_tag)
     return soup
