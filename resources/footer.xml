@@ -12,8 +12,11 @@
     <p>
         <span class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none"><g clip-path="url(#a)"><path fill="#fff" d="M40 7.03 7.02 24.37v31.28L40 72.97l32.98-17.32V24.37z"/><path fill="#2081C3" d="M40 7.03v65.94l32.98-17.32V24.37zm0 65.94L7.02 55.65V24.37z"/><path fill="#41AAF1" d="m72.98 24.37-32.98 17.3-32.98-17.3m32.98 17.3v31.27-31.27Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h80v80H0z"/></clipPath></defs></svg>
-         </span><a href="https://ipfs.fleek.co/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145" target="_blank">"https://ipfs.fleek.co/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145
-            <p>View on IPFS</p>
-        </a>   
+         </span>
+        <p>
+          <a href="https://ipfs.fleek.co/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145" target="_blank">View on IPFS
+  </a>
+</p>
+
     </p>
 </div>
