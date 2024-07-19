@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 
 def update_landing_page(soup, filename):
+
+    return soup
+    
     # Check if body has a class that contains "landing-page"
     if not soup.body or 'landing-page' not in soup.body.get('class', []):
         return soup
