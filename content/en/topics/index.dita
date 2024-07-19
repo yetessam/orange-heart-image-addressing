@@ -3,7 +3,7 @@
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-      <section outputclass="hero">
+      <section outputclass="hero column">
         <div outputclass="hero-body">
          <div outputclass="hero-text">
              <p outputclass="hero-title">Welcome to the orange heart project</p>
