@@ -5,9 +5,7 @@
      <conbody>
         <section>
              <title outputclass="hero-title">Welcome to the orange heart project</title>
-             <title outputclass="subtitle">Current address: Interplanetary File System (IPFS) on the decentralized web.</title>
          <fig>
-       
             <figgroup outputclass="picture">
                <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
                <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
@@ -16,6 +14,7 @@
                <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
             </figgroup>  
          </fig>
+          <p>Current address: Interplanetary File System (IPFS) on the decentralized web.</title>
         </section>
   </conbody>
 </concept>
