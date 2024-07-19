@@ -27,6 +27,11 @@ def update_landing_page(soup, filename):
     if not article:
         print(f"Article not found in {filename}")
         return soup
+
+    section = main_content.find('section')
+    if not section:
+        print(f"Section not found in main in {filename}")
+        return soup
     
     # Find any element with class that contains "hero-title"
     hero_title_element = article.find(class_='hero-title')
