@@ -3,9 +3,9 @@
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-      <section outputclass="hero column">
+      <section outputclass="hero">
         <div outputclass="hero-body">
-         <div outputclass="hero-text">
+         <div outputclass="hero-text is-overlay">
              <p outputclass="hero-title">Welcome to the orange heart project</p>
               <p>Current address: Interplanetary File System (IPFS) on the decentralized web.</p>
          </div>
