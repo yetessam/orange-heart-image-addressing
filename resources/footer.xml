@@ -15,4 +15,35 @@
          </span>
          <a href="https://ipfs.fleek.co/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145" target="_blank">View on IPFS</a>
 </p>
+<div id="ipfs-hash-container">Loading IPFS path...</div>
+
+  <script>
+    // Function to fetch the IPFS path and display it in the div
+    function displayIpfsPath() {
+      const container = document.getElementById('ipfs-hash-container');
+      const url = window.location.href;
+      const ipfsHashMatch = url.match(/\/ipfs\/([^\/]+)/);
+
+      if (ipfsHashMatch && ipfsHashMatch[1]) {
+        const ipfsHash = ipfsHashMatch[1];
+        container.textContent = `Current IPFS Path: ${ipfsHash}`;
+      } else {
+        fetch(window.location.href)
+          .then(response => response.headers.get('x-ipfs-path'))
+          .then(ipfsPath => {
+            if (ipfsPath) {
+              container.textContent = `Current IPFS Path: ${ipfsPath}`;
+            } else {
+              container.textContent = 'No IPFS Path found in the URL or headers';
+            }
+          })
+          .catch(error => {
+            container.textContent = `Error fetching IPFS path: ${error}`;
+          });
+      }
+    }
+
+    // Run the function when the page loads
+    window.onload = displayIpfsPath;
+  </script>
 </div>
