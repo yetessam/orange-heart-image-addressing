@@ -47,3 +47,4 @@
     window.onload = displayIpfsPath;
   </script>
 </div>
+</div>
