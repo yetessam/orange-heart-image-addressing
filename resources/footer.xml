@@ -18,6 +18,8 @@
 <div id="ipfs-hash-container">Loading IPFS path...</div>
 
   <script>
+      
+    //<![CDATA[
     // Function to fetch the IPFS path and display it in the div
     function displayIpfsPath() {
       const container = document.getElementById('ipfs-hash-container');
@@ -45,6 +47,7 @@
 
     // Run the function when the page loads
     window.onload = displayIpfsPath;
+      //]]>
   </script>
 </div>
 </div>
