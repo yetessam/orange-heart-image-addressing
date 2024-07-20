@@ -30,7 +30,7 @@ jobs:
 
             dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
 
-            if grep -q "Error: [DOT" log.txt; then
+            if grep -q "Error:" log.txt; then
                 echo "Error detected in DITA OT build log."
                 exit 1
             fi
