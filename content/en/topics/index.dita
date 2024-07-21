@@ -13,9 +13,7 @@
             </p>
           </div>
           <div class="column is-half">
-            <figure class="image is-4by3">
-             
-         <fig>
+       <fig outputclass="image is-4by3">
             <figgroup outputclass="picture">
                <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
                <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
