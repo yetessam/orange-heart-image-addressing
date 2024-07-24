@@ -3,8 +3,8 @@
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
      <conbody>
-        <div class="columns is-vcentered">
-          <div class="column is-half">
+        <div outputclass="columns is-vcentered">
+          <div outputclass="column is-half">
             <p outputclass="title is-4">
               Welcome to the Orange Heart Project
             </p>
@@ -12,7 +12,7 @@
               Current content address: QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145 on the Interplanetary File System (IPFS) on the decentralized web.
             </p>
           </div>
-          <div class="column is-half">
+          <div outputclass="column is-half">
        <fig outputclass="image is-4by3">
             <figgroup outputclass="picture">
                <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />

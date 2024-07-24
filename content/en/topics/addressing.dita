@@ -62,12 +62,12 @@ If I share the following link, it lives in multiple places on the web but all of
 
  <p>With the content id, you can retrieve the image yourself.  
  </p>
- <choices>
+ <ul>
  
- <choice>View on an IPFS gateway </choice>
- <choice>Install IPFS and then use the following command:  
- </choice>
- </choices>
+ <li>View on an IPFS gateway </li>
+ <li>Install IPFS and then use the following command:  
+ </li>
+ </ul>
  </section>
   </conbody>
 </concept>
