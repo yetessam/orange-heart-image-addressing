@@ -5,15 +5,15 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2024" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="" name="description"/>
+  <meta content="Humans use an infinite number of different modes of addressing from sentimental to scientific. My art project looks at various forms of addressing, including the Interplanetary File System (IPFS). IPFS uses content addressing to identify and locate content." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Gallery
+   Content Addressing Systems
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body id="gallery">
+ <body id="content-addressing">
   <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button">
@@ -95,42 +95,111 @@
   <main class="container" role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Gallery
+     Content Addressing Systems
     </h1>
-    <div class="body conbody columns is-multiline is-variable is-8 container">
+    <div class="body conbody container">
      <p class="shortdesc content">
+      Humans use an infinite number of different modes of addressing from sentimental to scientific.  My art project looks at various forms
+ of addressing, including the Interplanetary File System (IPFS).  IPFS uses content addressing to identify and locate content.
      </p>
      <section class="section">
       <h2 class="title sectiontitle">
-       IPFS Content Addressing
+       Addressing Protocols and Standards
       </h2>
+      <div class="p">
+       Addressing protocols and standards make things findable. 
+    In real-life, humans are more than capable of understanding multiple addressing schemes.
+    For example, the average probably is able to use the following systems to find a location, object, or information.
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         Street addresses
+        </li>
+        <li class="li list-item">
+         Landmarks
+        </li>
+        <li class="li list-item">
+         Dewey decimal system
+        </li>
+        <li class="li list-item">
+         Longitude and latitude
+        </li>
+       </ul>
+      </div>
       <p class="p content">
-       Content itself can be used to derive a unique identifier called a hash.
-            The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image.
+       The web uses a combination of protocols and standards such as CID/HTTP/TCP-IP/W3C/ARP. 
+   Together, these addressing protocols determine how assets and resources are addressed, stored and retrieved on the web.
       </p>
      </section>
-     <section class="section" id="gallery__human-rights-dweb-camp-2022-notes">
-      <figure class="fig fignone image">
-       <figcaption>
-        <span class="fig--title-label">
-         Figure 1.
-        </span>
-        Human Rights - Dweb Camp 2022 Notes.
-        <span class="desc figdesc">
-         Digital rendering of paint/ink with background flattening by ChatGPT 4o.
-        </span>
-       </figcaption>
-       <p class="p content">
-        Orange outline around handwritten notes on a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. center human agency and agency and ecological awareness.
-       </p>
-       <picture class="figgroup picture">
-        <source media="(min-width: 1024px)" srcset="../images/gallery/human-rights-centered-desktop.png"/>
-        <source media="(max-width: 600px)" srcset="../images/gallery/human-rights-centered-mobile.png"/>
-        <img class="image tablet" src="../images/gallery/human-rights-centered-tablet.png"/>
-       </picture>
-      </figure>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Content Addressing
+      </h2>
+      <p class="p content">
+       When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image.
+      </p>
+      <p class="p content">
+       This result is a content address ID (CID).  These CIDs that result from cryptographic hash are a form of the image's address.
+as a location address.   
+
+If I share the following link, it lives in multiple places on the web but all of the following links are guaranteed to be the exact same, unaltered image.
+      </p>
+      <p class="p content">
+       As this is a globally unique ID, if I request this image, can be retrieved from any number of servers.  Its authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.
+      </p>
+      <p class="p content">
+       Another way to look at CIDs is to consider them as a text-based and unique property of the content object.
+      </p>
+      <p class="p content">
+       If you've published a book and have a different version of the book, its CID will change.
+  In that case, you can create specific links to the original version of the book as well as version two.
+      </p>
+      <p class="p content">
+       How is the use case handled for the "most recent" version of a book?
+      </p>
+     </section>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Adopting CID for your website
+      </h2>
+      <p class="p content">
+       If you create a website and publish through a dweb-friendly provider, your content already lives on the 
+ decentralized web and uses CIDs for 
+ content addressing!
+      </p>
+      <div class="p">
+       Here's the HTML5 that renders the precending image.
+       <pre class="pre codeblock"><code>
+ </code></pre>
+      </div>
+      <p class="p content">
+       With the content id, you can retrieve the image yourself.
+      </p>
+      <ul class="ul list is-hoverable">
+       <li class="li list-item">
+        View on an IPFS gateway
+       </li>
+       <li class="li list-item">
+        Install IPFS and then use the following command:
+       </li>
+      </ul>
      </section>
     </div>
+    <nav class="related-links" role="navigation">
+     <div class="linklist relinfo">
+      <strong>
+       Related information
+      </strong>
+      <br/>
+      <ul class="linklist list is-hoverable">
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" rel="external noopener" target="_blank">
+         A Practical Explainer for IPFS Gateways - Part 2
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
    </article>
   </main>
   <footer role="contentinfo">
