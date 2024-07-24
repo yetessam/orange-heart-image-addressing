@@ -27,21 +27,19 @@
     HTTP URLs and we had a high level of control over that content.  Web 2... no comment.  And now with Web 3, or DWeb, there are new options for storing, hosting and deploying content including protocols like IPSF.</p>
     
     <p>As a creator, I had heaps of questions about creating DWeb content:  
-        <ul><li>How do we share information in DWeb?</li>
-        <li>What processes change when we want to publish content? </li>
-        <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
-        <li>How do I deploy a dwebsite? </li></ul>
+        <ul>
+          <li>How do we share information in DWeb?</li>
+          <li>What processes change when we want to publish content? </li>
+          <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
+          <li>How do I deploy a dwebsite? </li>
+        </ul>
 
         The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
-        
+        DWeb is a global community of builders and dreamers working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
   </p>
-
   <p>Source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
 Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
 </p>
-   <note>DWeb is a global community of builders and dreamers working together to create a better, less centralized web.
-  </note> 
-   
   </conbody>
 </concept>
 
