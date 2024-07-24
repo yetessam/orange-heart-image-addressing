@@ -45,9 +45,7 @@
 				</relrow>
 				<relrow>
 					<relcell>
-			
-						<topicref href="addressing.dita"/>
-					
+						<topicref href="topics/addressing.dita"/>
 					</relcell>
 					<relcell>
 					
