@@ -14,23 +14,27 @@
     </metadata>
   </prolog>
   <conbody>
-    <section><title>Addressing Schemes Makes Things Findable</title>
-    <p> <li>Street addresses and landmarks</li>
-        <ul><li>Use Google</li>
-        <li>Libraries using systems such as Dewey decimal system </li>
-        <li>Longitude and latitude is a geographic addressing system</li>
-        <li>HTTP/TCP-IP/W3C recommendations all come together to define how assets and resources are addressed, stored and retrieved on the web</li>
-        </ul>
-
-        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
-        
+    <section><title>Addressing Protocols and Standards</title>
+    <p>Addressing protocols and standards make things findable. 
+    In real-life, humans are more than capable of understanding multiple addressing schemes.
+    For example, the average probably is able to use the following systems to find a location, object, or information.
+    
+        <ul>
+            <li>Street addresses</li>
+            <li>Landmarks</li>
+            <li>Dewey decimal system </li>
+            <li>Longitude and latitude</li>
+        </ul>         
   </p>
- <p>With all these different types of addressing, you might not want to learn about one more.  That said,
- this one makes sense.   When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+  <p>The web uses a combination of protocols and standards such as CID/HTTP/TCP-IP/W3C/ARP. 
+   Together, these addressing protocols determine how assets and resources are addressed, stored and retrieved on the web.
+</p>
+  </section>
+<section><title>Content Addressing</title>
+     
+ <p>When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image. 
 </p>
-</section>
-<section><title>Content Addressing</title>
 
 <p>This result is a content address ID (CID).  These CIDs that result from cryptographic hash are a form of the image's address.
 as a location address.   
@@ -47,7 +51,7 @@ If I share the following link, it lives in multiple places on the web but all of
   <p>How is the use case handled for the "most recent" version of a book?</p> 
 
  </section>
- <section><title>For people who hate change and don't want to learn new things</title>
+ <section><title>Adopting CID for your website</title>
  <p>If you create a website and publish through a dweb-friendly provider, your content already lives on the 
  decentralized web and uses CIDs for 
  content addressing! </p>
