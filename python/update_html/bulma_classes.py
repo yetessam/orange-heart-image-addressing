@@ -1,9 +1,9 @@
 bulma_classes = {
     'main': 'container',
+    'article': 'content',
     'h1': 'title',
     'h2': 'title',
     'h3': 'title',
-    'p': 'content',
     'div.body': 'container',
     'a': 'is-link',
     'button': 'button is-link',
@@ -17,7 +17,6 @@ bulma_classes = {
     'figure': 'image',
     'image' : 'is-rounded is-bordered',
     'div.note' : 'notification is-info',
-    'gallery' : 'columns is-multiline is-variable is-8',
-    'section': 'content',
+    'gallery' : 'columns is-multiline is-variable is-8', 
 }
 
