@@ -1,7 +1,10 @@
 name: Deploy src to Staging
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["DITA Workflow"]
+    types:
+      - completed
 
 jobs:
   deploy-dev-to-stage:
