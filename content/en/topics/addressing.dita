@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="addressing">
-  <title>Findability Protocols for Web Content Addressing</title>
+  <title>Findability Protocols and Web Content Addressing</title>
   <shortdesc>
- Humans use an infinite number of different modes of addressing from sentimental to scientific to help us locate things.  
  
- </shortdesc>
+  </shortdesc>
    <prolog>
     <metadata>
       <keywords>
@@ -64,7 +63,7 @@ If I share the following link, it lives in multiple places on the web but all of
   <p>How is the use case handled for the "most recent" version of a book?</p> 
 
  </section>
- <section><title>Adopting CID for your website</title>
+ <section><title>Using Web Content Addressing CID for your website</title>
  <p>If you create a website and publish through a dweb-friendly provider, your content already lives on the 
  decentralized web and and uses content-addressed CIDs and location-based HTTP URLS.
  </p>
