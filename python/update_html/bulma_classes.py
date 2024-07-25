@@ -18,6 +18,6 @@ bulma_classes = {
     'image' : 'is-rounded is-bordered',
     'div.note' : 'notification is-info',
     'gallery' : 'columns is-multiline is-variable is-8',
-
+    'section': 'content',
 }
 
