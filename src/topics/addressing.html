@@ -5,15 +5,15 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2024" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Humans use an infinite number of different modes of addressing from sentimental to scientific. My art project looks at various forms of addressing, including the Interplanetary File System (IPFS). IPFS uses content addressing to identify and locate content." name="description"/>
+  <meta content="Humans use an infinite number of different modes of addressing from sentimental to scientific to help us locate things." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Content Addressing Systems
+   Findability Protocols for Web Content Addressing
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body id="content-addressing">
+ <body id="addressing">
   <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button">
@@ -37,7 +37,7 @@
       Gallery
      </a>
      <a class="navbar-item" href="../topics/addressing.html">
-      Content Addressing Systems
+      Findability Protocols for Web Content Addressing
      </a>
      <a class="navbar-item" href="../topics/captains-log.html">
       Captain's Log
@@ -95,42 +95,66 @@
   <main class="container" role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Content Addressing Systems
+     Findability Protocols for Web Content Addressing
     </h1>
     <div class="body conbody container">
      <p class="shortdesc content">
-      Humans use an infinite number of different modes of addressing from sentimental to scientific.  My art project looks at various forms
- of addressing, including the Interplanetary File System (IPFS).  IPFS uses content addressing to identify and locate content.
+      Humans use an infinite number of different modes of addressing from sentimental to scientific to help us locate things.
      </p>
-     <section class="section">
+     <section class="section content">
       <h2 class="title sectiontitle">
-       Addressing Protocols and Standards
+       Findability Protocols
       </h2>
       <div class="p">
-       Addressing protocols and standards make things findable. 
-    In real-life, humans are more than capable of understanding multiple addressing schemes.
-    For example, the average probably is able to use the following systems to find a location, object, or information.
+       What is an Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
+    Let's group together all of these diverse systems together as "findability protocols." 
+    Any of the following could be considered examples of findability protocols:
        <ul class="ul list is-hoverable">
         <li class="li list-item">
          Street addresses
         </li>
         <li class="li list-item">
-         Landmarks
+         Physical landmarks
         </li>
         <li class="li list-item">
          Dewey decimal system
         </li>
         <li class="li list-item">
-         Longitude and latitude
+         Geographic systems such as longitude and latitude
+        </li>
+        <li class="li list-item">
+         Sonar
+        </li>
+       </ul>
+      </div>
+     </section>
+     <section class="section content">
+      <h2 class="title sectiontitle">
+       Web Content Addressing Methods
+      </h2>
+      <div class="p">
+       The web uses a combination of findability protocols to address and retrieve content. 
+    The key addressing protocols include:
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         Content Addressable Identifiers (CIDs)
+        </li>
+        <li class="li list-item">
+         Uniform Resource Locators (HTTP URLs)
+        </li>
+        <li class="li list-item">
+         Domain Names
+        </li>
+        <li class="li list-item">
+         Metadata for Accessbility and Search Engine Indexing
         </li>
        </ul>
       </div>
       <p class="p content">
-       The web uses a combination of protocols and standards such as CID/HTTP/TCP-IP/W3C/ARP. 
-   Together, these addressing protocols determine how assets and resources are addressed, stored and retrieved on the web.
+       The current website uses content-based and location-based addressing, along with accessiblity metadata.
       </p>
      </section>
-     <section class="section">
+     <section class="section content">
       <h2 class="title sectiontitle">
        Content Addressing
       </h2>
@@ -158,14 +182,13 @@ If I share the following link, it lives in multiple places on the web but all of
        How is the use case handled for the "most recent" version of a book?
       </p>
      </section>
-     <section class="section">
+     <section class="section content">
       <h2 class="title sectiontitle">
        Adopting CID for your website
       </h2>
       <p class="p content">
        If you create a website and publish through a dweb-friendly provider, your content already lives on the 
- decentralized web and uses CIDs for 
- content addressing!
+ decentralized web and and uses content-addressed CIDs and location-based HTTP URLS.
       </p>
       <div class="p">
        Here's the HTML5 that renders the precending image.
