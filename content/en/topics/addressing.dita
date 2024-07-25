@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="content-addressing">
-  <title>Content Addressing Systems</title>
+<concept id="addressing">
+  <title>Findability Protocols for Web Content Addressing</title>
   <shortdesc>
- Humans use an infinite number of different modes of addressing from sentimental to scientific.  My art project looks at various forms
- of addressing, including the Interplanetary File System (IPFS).  IPFS uses content addressing to identify and locate content. 
-    </shortdesc>
+ Humans use an infinite number of different modes of addressing from sentimental to scientific to help us locate things.  
+ 
+ </shortdesc>
    <prolog>
     <metadata>
       <keywords>
-        <indexterm>dweb</indexterm>
+        <indexterm>findability protocols</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <conbody>
-    <section><title>Addressing Protocols and Standards</title>
-    <p>Addressing protocols and standards make things findable. 
-    In real-life, humans are more than capable of understanding multiple addressing schemes.
-    For example, the average probably is able to use the following systems to find a location, object, or information.
-    
-        <ul>
-            <li>Street addresses</li>
-            <li>Landmarks</li>
-            <li>Dewey decimal system </li>
-            <li>Longitude and latitude</li>
-        </ul>         
-  </p>
-  <p>The web uses a combination of protocols and standards such as CID/HTTP/TCP-IP/W3C/ARP. 
-   Together, these addressing protocols determine how assets and resources are addressed, stored and retrieved on the web.
-</p>
+    <section><title>Findability Protocols</title>
+    <p>What is an Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
+    Let's group together all of these diverse systems together as "findability protocols." 
+    Any of the following could be considered examples of findability protocols:
+    <ul>
+        <li>Street addresses</li>
+        <li>Physical landmarks</li>
+        <li>Dewey decimal system </li>
+        <li>Geographic systems such as longitude and latitude</li>
+        <li>Sonar</li>
+    </ul>
+    </p>
   </section>
-<section><title>Content Addressing</title>
-     
+
+  <section><title>Web Content Addressing Methods</title>
+    <p>The web uses a combination of findability protocols to address and retrieve content. 
+    The key addressing protocols include:
+
+ <ul>
+    <li>Content Addressable Identifiers (CIDs)</li>
+    <li>Uniform Resource Locators (HTTP URLs)</li>
+    <li>Domain Names</li>
+    <li>Metadata for Accessbility and Search Engine Indexing</li>
+  </ul>
+</p>
+<p>
+The current website uses content-based and location-based addressing, along with accessiblity metadata. 
+</p>
+</section>
+<section><title>Content Addressing </title>
+
  <p>When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image. 
 </p>
@@ -53,8 +66,8 @@ If I share the following link, it lives in multiple places on the web but all of
  </section>
  <section><title>Adopting CID for your website</title>
  <p>If you create a website and publish through a dweb-friendly provider, your content already lives on the 
- decentralized web and uses CIDs for 
- content addressing! </p>
+ decentralized web and and uses content-addressed CIDs and location-based HTTP URLS.
+ </p>
  <p>Here's the HTML5 that renders the precending image. 
  <codeblock>
  </codeblock>
