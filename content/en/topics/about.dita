@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="orange-heart-project-about">
+<concept id="about">
   <title>About</title>
-  <shortdesc>
- Orange heart project's online experiences present images viewed through an orange heart-shaped stencil and published to multiple nodes using decentralized technologies.
- The gallery component presents stencil-based spray art on birchwood.
- </shortdesc>
-   <prolog>
+  <shortdesc>Orange heart project's online experiences present images viewed through an orange heart-shaped stencil and published to multiple nodes using decentralized technologies. The gallery component presents stencil-based spray art on birchwood.</shortdesc>
+  <prolog>
     <metadata>
       <keywords>
         <indexterm>dweb</indexterm>
@@ -14,32 +11,16 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Stencils create a form of visual consistency that builds upon itself and can be used over and over again.  
-   They also support a cultural world view where individuals don't need to ask permission to participate in public spaces.  You simply participate.
-  </p>
-  <p>The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.</p>
-
-
-  <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I wanted to play with images that were very different such as the various photographs as well as images that almost identifical. 
-  </p>
-  <p>For the online component, I wanted to experiment with simply publishing content to the decentralized web and sharing learnings. </p>
-
-<section><title>Learnings</title>
- <p>The questions that I had at the start of the process included the following:</p>
-      <li>What processes change when we want to publish content to a series of decentralized nodes? </li>
-        <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
-        <li>How do I deploy a dwebsite? </li>
-        <li>How do I make the references to the images, should I be using CIDs rather than URLs?</li>
-        <li>Do we need to perform any actions for content replication to deploy across the decentralized web? </li>
-        </ul>
-<p>
-        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
-        DWeb is a global community of builders and dreamers working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
-  </p>
-  <p>Source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
-Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
-</p>
+  <section>
+  <title>Orange Heart Project 2024</title>
+  <p>The "Orange Heart Project 2024" is an exploration of resilient dweb technologies through the mediums of photography and stencil-based art. This online photography exhibit uses the orange heart stencil as a central motif to investigate various forms of addressing—from physical landmarks to digital coordinates.</p>
+  <p>This exhibit takes the stencil and showcases photos taken through this heart. Thematically, it looks at various images and how they relate to the concept of addressing. The exhibit explores the content development lifecycle and the use of decentralized technologies like [IPFS](https://ipfs.io/) for content replication and authenticity verification. By leveraging IPFS, the project ensures faster and more reliable content delivery, as well as verifiable provenance. Tools like the [CID Inspector](https://cid.ipfs.tech/) can be used to confirm the integrity and originality of the images.</p>
+  <p>By utilizing decentralized technologies like IPFS, the exhibit not only preserves the authenticity of these images but also experiments with using these emergent technologies, which support digital provenance and integrity. The gallery show features a series of similar orange heart images, all created using the same stencil and can of paint. These images are intentionally crafted to highlight the power of repetition and the subtle variations that emerge through the process. The uniformity of the orange hearts serves as a visual representation of stability and resilience.</p>
+  <note>The Orange Heart project repurposes a heart-shaped stencil originally used in response to gun violence in San Francisco's Mission District in 2017.</note>
 </section>
-  </conbody>
+<section>
+  <title>Yas Etessam</title>
+  <p>Yas Etessam is an extensible markup technologist.</p>
+</section>
+   </conbody>
 </concept>
-
