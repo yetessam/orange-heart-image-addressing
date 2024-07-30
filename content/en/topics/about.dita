@@ -30,7 +30,7 @@
         <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
         <li>How do I deploy a dwebsite? </li>
         <li>How do I make the references to the images, should I be using CIDs rather than URLs?</li>
-        <li>How does the replication serv
+        <li>Do we need to perform any actions for content replication to deploy across the decentralized web? </li>
         </ul>
 <p>
         The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
