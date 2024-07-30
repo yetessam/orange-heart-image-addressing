@@ -5,22 +5,58 @@
     </shortdesc>
     <conbody>
         <dl>
-
-         <dlentry>
+          <dlentry>
+                 <dt>Saturday July 27, 2024</dt>
+                <dd>
+                    <p>Adding more content to the gallery page and moving unused images.</p>
+                </dd>
+            </dlentry>
+          <dlentry>
+                 <dt>Thursday July 18, 2024</dt>
+                <dd>
+                    <p>Revert changes on the index page.</p>
+                </dd>
+            </dlentry>
+             <dlentry>
+                 <dt>Wed July 17, 2024</dt>
+                <dd>
+                    <p>Added functionality to dynamically style the landing page</p>
+                </dd>
+            </dlentry>
+          <dlentry>
                  <dt>Tuesday July 16, 2024</dt>
                 <dd>
-            
-                    <p>Start working on gallery page.</p>
-        
+                    <p>Start working on gallery</p>
                 </dd>
-            
             </dlentry>
-
+            <dlentry>
+                 <dt>Monday July 15, 2024</dt>
+                <dd>
+                    <p>Refactor the update_head() code to make it more modular. </p>
+                    <p>Assess project: Fleek has deployed the site onto IPFS (InterPlanetary File System).  That is already a decentralized storage protocol that enables the creation, distribution, and retrieval of data in a peer-to-peer (P2P) network.
+                    In terms of search, might want to add a search box and try out IPFS based search.   
+                    </p>
+                </dd>
+            </dlentry>
+        
          <dlentry>
                  <dt>Friday July 12, 2024</dt>
                 <dd>
                     <p>Update Python to use CSS selectors to get better styles on the output. </p>
                     <p>Promote from dev to stage and add manual workflow job</p>
+                    <p>
+<codeblock>  
+            024-07-12T22:20:34.718Z: Deploy started
+2024-07-12T22:20:39.240Z: Docker image: 'node:slim'
+2024-07-12T22:20:39.240Z: Build command: ''
+2024-07-12T22:20:39.240Z: Triggering build execution...
+2024-07-12T22:21:09.654Z: Deployed to IPFS and got the hash:
+2024-07-12T22:21:09.654Z: QmczM4XheVhvx6qEW7H4rkzW921WZBt22VB4rufq1cEoik
+2024-07-12T22:21:09.654Z: Checking content availability on IPFS...
+2024-07-12T22:21:11.676Z: You can preview this build on :
+2024-07-12T22:21:11.676Z: https://bafybeigzvo53gll6xbdr2uoja3ientn3vtbfm4oaovbu5ozwprb6uyxieu.on.fleek.co
+
+         </codeblock></p>
                 </dd>
             
             </dlentry>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="addressing">
+  <title>Findability Protocols and Web Content Addressing</title>
+  <shortdesc>
+ 
+  </shortdesc>
+   <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>findability protocols</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+    <section><title>Findability Protocols</title>
+    <p>What is an Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
+    Let's group together all of these diverse systems together as "findability protocols." 
+    Any of the following could be considered examples of findability protocols:
+    <ul>
+        <li>Street addresses</li>
+        <li>Physical landmarks</li>
+        <li>Dewey decimal system </li>
+        <li>Geographic systems such as longitude and latitude</li>
+        <li>Sonar</li>
+    </ul>
+    </p>
+  </section>
+
+  <section><title>Web Content Addressing Methods</title>
+    <p>The web uses a combination of findability protocols to address and retrieve content. 
+    The key addressing protocols include:
+
+ <ul>
+    <li>Content Addressable Identifiers (CIDs)</li>
+    <li>Uniform Resource Locators (HTTP URLs)</li>
+    <li>Domain Names</li>
+    <li>Metadata for Accessbility and Search Engine Indexing</li>
+  </ul>
+</p>
+<p>
+The current website uses content-based and location-based addressing, along with accessiblity metadata. 
+</p>
+</section>
+<section><title>Content Addressing </title>
+
+ <p>When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image. 
+</p>
+
+<p>This result is a content address ID (CID).  These CIDs that result from cryptographic hash are a form of the image's address.
+as a location address.   
+
+If I share the following link, it lives in multiple places on the web but all of the following links are guaranteed to be the exact same, unaltered image.
+</p>
+
+  <p>As this is a globally unique ID, if I request this image, can be retrieved from any number of servers.  Its authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
+   
+  <p>Another way to look at CIDs is to consider them as a text-based and unique property of the content object.</p>
+  <p>If you've published a book and have a different version of the book, its CID will change.
+  In that case, you can create specific links to the original version of the book as well as version two.
+  </p>
+  <p>How is the use case handled for the "most recent" version of a book?</p> 
+
+ </section>
+ <section><title>Using Web Content Addressing CID for your website</title>
+ <p>If you create a website and publish through a dweb-friendly provider, your content already lives on the 
+ decentralized web and and uses content-addressed CIDs and location-based HTTP URLS.
+ </p>
+ <p>Here's the HTML5 that renders the precending image. 
+ <codeblock>
+ </codeblock>
+</p>
+
+ <p>With the content id, you can retrieve the image yourself.  
+ </p>
+ <ul>
+ 
+ <li>View on an IPFS gateway </li>
+ <li>Install IPFS and then use the following command:  
+ </li>
+ </ul>
+ </section>
+  </conbody>
+</concept>
+

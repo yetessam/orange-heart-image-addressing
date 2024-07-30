@@ -3,8 +3,9 @@
 <concept id="orange-heart-project-about">
   <title>About</title>
   <shortdesc>
-  The Orange Heart Project features spray-painted hearts and musings on birchwood panels with descriptive text incorporating different approaches to the concept of addressing.
-  This project experiments with integrating DWeb components into a typical content creation life-cycle. </shortdesc>
+ Orange heart project's online experiences present images viewed through an orange heart-shaped stencil and published to multiple nodes using decentralized technologies.
+ The gallery component presents stencil-based spray art on birchwood.
+ </shortdesc>
    <prolog>
     <metadata>
       <keywords>
@@ -13,29 +14,32 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Years ago, I made a simple stencil from a paper plate.  Stencils create a form of visual consistency that builds upon itself and can be used over and over again.
-    Practically speaking, stencils are a fast and easy way of creating consistent universal visual languages. 
-
-    Spray-paint is a powerful medium, its fast, it doesn't require studio space, and certainly doesn't require permisson to create art.
-    Usually you have to be a somewhat audacious person to participate in street art.   Street art is cool, it lives in the real world and it's powerful.
-
-    That said, wouldn't it be nice if the  platforms where people upload and share their street art were actually cool.  Maybe some day.
-     </p>
-
-    <p>In the physical world, stencil art can be found on the sidewalk, on walls, near intersections, and frequently in alleys. 
-    How does that translate to the online world.  In Web 1, we used to websites and stored our images so that they were under our control.  They had
-    HTTP URLs and we had a high level of control over that content.  Web 2... no comment.  And now with Web 3, or DWeb, there are new options for storing, hosting and deploying content including protocols like IPSF.</p>
-    
-    <p>Given that most of us know about Web 1 and 2 tech, its natural to have lots of questions about creating DWeb content:  
-        <ul><li>How do we share information in DWeb?</li>
-        <li>What processes change when we want to publish content? </li>
-        <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
-        <li>How do I deploy a dwebsite? </li></ul>
-
-        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
-        
+    <p>Stencils create a form of visual consistency that builds upon itself and can be used over and over again.  
+   They also support a cultural world view where individuals don't need to ask permission to participate in public spaces.  You simply participate.
   </p>
-   
+  <p>The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.</p>
+
+
+  <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I wanted to play with images that were very different such as the various photographs as well as images that almost identifical. 
+  </p>
+  <p>For the online component, I wanted to experiment with simply publishing content to the decentralized web and sharing learnings. </p>
+
+<section><title>Learnings</title>
+ <p>The questions that I had at the start of the process included the following:</p>
+      <li>What processes change when we want to publish content to a series of decentralized nodes? </li>
+        <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
+        <li>How do I deploy a dwebsite? </li>
+        <li>How do I make the references to the images, should I be using CIDs rather than URLs?</li>
+        <li>How does the replication serv
+        </ul>
+<p>
+        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
+        DWeb is a global community of builders and dreamers working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
+  </p>
+  <p>Source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
+Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
+</p>
+</section>
   </conbody>
 </concept>
 
