@@ -21,8 +21,8 @@
             <fig><title>July is Disability Pride Month</title>
                 <desc>Photograph of Disability Pride flag viewed through an orange heart stencil.</desc>
                
-                <longdesc>
-                <p>The following descriptive text was copied from the Ashland Public Library.</p>
+                <lq>
+                <p>The following descriptive text was copied from the Ashland Public Library:</p>
                 <p>Ashland Public Library, Ashland, Oregon, USA</p>
                 <p>From top to bottom:</p> 
                 <p>Green is for sensory disabilities, including deafness and blindness.</p>
@@ -31,7 +31,7 @@
                 <p>Gold is for neurodiversity.</p>
                 <p>Red represents physical disabilities.</p>
                 <p>The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.</p>
-               </longdesc>
+               </lq>
                </desc>
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/disability-pride-desktop.png">
