@@ -15,9 +15,10 @@ from update_html.copy_resource import copy_resource
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder and the target src folder')
+    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder, the target src folder and the resources folder')
     parser.add_argument('--out_dir', type=str, required=True, help="DITA OT folder where the HTML files are build, normally called 'out'")
     parser.add_argument('--src_dir', type=str, required=True, help='After processing, this folder contains the Bulma-ready HTML.')
+    parser.add_argument('--resource_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
     return parser.parse_args()
 
 def find_html_files(out_dir):
@@ -59,7 +60,7 @@ def build_search_index(src_dir):
     print(f"Building search index for {src_dir}")
     # Implement search index logic here
 
-def process_html_files(out_dir, src_dir):
+def process_html_files(out_dir, src_dir, resource_dir):
     print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
 
     setup_directories(out_dir, src_dir)
@@ -88,12 +89,13 @@ def main():
     args = parse_arguments()
     out_dir = args.out_dir
     src_dir = args.src_dir
+    resource_dir = args.src_dir
 
     print(f"Output directory: {out_dir}")
     print(f"Web site source directory: {src_dir}")
 
     try:
-        process_html_files(out_dir, src_dir)
+        process_html_files(out_dir, src_dir, resource_dir)
     except Exception as e:
         print(e)
         sys.exit(1)
