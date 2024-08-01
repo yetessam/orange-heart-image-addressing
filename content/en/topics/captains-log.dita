@@ -5,6 +5,12 @@
     </shortdesc>
     <conbody>
         <dl>
+        <dlentry>
+                 <dt>Wed July 31, 2024</dt>
+                <dd>
+                    <p>Adding Bulma CSS to the resources and copy it over in Python.</p>
+                </dd>
+            </dlentry>
           <dlentry>
                  <dt>Saturday July 27, 2024</dt>
                 <dd>
