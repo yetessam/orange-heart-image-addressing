@@ -19,17 +19,19 @@
 
          <section id="disability-pride">
             <fig><title>July is Disability Pride Month</title>
-                <desc>Photograph of Disability Pride flag, viewed through an orange heart stencil. 
-                "From top to bottom: 
-                Green is for sensory disabilities, including deafness and blindness.
-                Blue represents emotional and psychiatric disabilities, including mental illness, anxiety and depression.
-                White stands for non-visible and undiagnosed disabilities.
-                Gold is for neurodiversity.
-                Red represents physical disabilities.
-                The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.
+                <desc>Photograph of Disability Pride flag viewed through an orange heart stencil. 
                 </desc>
-                 <p>The preceding quote was displayed next to the flag by the Ashland Public Library.</p>
-             <p>Ashland Public Library, Ashland, Oregon, USA</p>
+                <p>The following descriptive text was copied from the Ashland Public Library.</p>
+                <q>
+                <p>Ashland Public Library, Ashland, Oregon, USA</p>
+                <p>From top to bottom:</p> 
+                <p>Green is for sensory disabilities, including deafness and blindness.</p>
+                <p>Blue represents emotional and psychiatric disabilities, including mental illness, anxiety and depression.</p>
+                <p>White stands for non-visible and undiagnosed disabilities.</p>
+                <p>Gold is for neurodiversity.</p>
+                <p>Red represents physical disabilities.</p>
+                <p>The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.</p>
+               </q>
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/disability-pride-desktop.png">
                          <alt></alt>
@@ -57,14 +59,14 @@
            </fig>
         </section>
 
-         <section id="elephant-rock">
+        <section id="elephant-rock">
             <fig><title>Elephant Rock</title>
                 <desc>Photograph of Elephant Rock, a naturally formed geological landmark on the road to Dillon Beach, viewed through an orange heart stencil.  Rock indentations form the elephant's eyes, and the top of its trunk and limbs.
                 The rock formation is viewed through a blurry orange stencil.
                  </desc>
-                 <p>This local landmark is frequently used when providing directions to Dillon Beach.   Several hundred yards away, a sign warns drivers that the GPS directions to the beach are incorrect. 
+                 <p>Marin County landmark frequently used while providing directions to Dillon Beach.   Several hundred yards away, a sign warns drivers that the GPS directions to the beach are incorrect. 
                </p>
-             <p>Elephant Rock, Dillon Beach, California, USA</p>
+             <p>Elephant Rock, Dillon Beach,  Marin County, California, USA</p>
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/elephant-rock-desktop.png">
                          <alt>Natural gray rock formation which resembles an elephant looking down framed by an orange heart stencil. Rock indentations on what looks like the torso resemble the top of the elephant's limbs.
@@ -72,6 +74,21 @@
                     </image>
                     <image outputclass="tablet" href="../images/gallery/elephant-rock-tablet.png"/>
                     <image outputclass="mobile" href="../images/gallery/elephant-rock-mobile.png"/>
+                </figgroup>  
+           </fig>
+        </section>
+        <section id="daisy">
+            <fig><title>Daisy Flowers</title>
+                <desc>Photograph of white and yellow daisies, viewed through an orange heart stencil.  
+                 </desc>       
+             <p>Salt Spring Island, British Columbia, Canada</p>
+                <figgroup outputclass="picture">
+                    <image outputclass="desktop" href="../images/gallery/daisy-desktop.png">
+                         <alt>White and yellow daisies growing in the ground with green foliage framed by an orange heart stencil. 
+                         </alt>
+                    </image>
+                    <image outputclass="tablet" href="../images/gallery/daisy-tablet.png"/>
+                    <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
                 </figgroup>  
            </fig>
         </section>
