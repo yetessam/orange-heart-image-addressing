@@ -11,6 +11,7 @@ from update_html.update_head import update_head
 from update_html.update_landing_page import update_landing_page
 from update_html.create_responsive import create_responsive
 from update_html.create_pictures import create_picture_tags
+from update_html.copy_resource import copy_resource 
 
 
 def parse_arguments():
@@ -41,6 +42,7 @@ def process_html_file(filepath):
     soup = modify_navbar(soup)
     soup = update_landing_page(soup, filepath)
 
+    
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
 
@@ -74,6 +76,12 @@ def process_html_files(out_dir, src_dir):
     copy_files(out_dir, src_dir)
     print(f"Copied all files from {out_dir} to {src_dir}")
 
+    # Call the generic function to copy the bulma css resource
+    css_dest_dir = os.path.join(src_dir, "css")
+    css_file = "bulma.css"
+    copy_resource(resource_dir, css_dest_dir, css_file)
+    
+    
     build_search_index(src_dir)
 
 def main():
