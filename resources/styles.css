@@ -10,3 +10,10 @@
 .dl .dd:not(:last-child):not(.box) {
     border-block-end: 1px solid var(--be-list-item-divider-color);
   }
+
+
+  .figure > *:not(.figcaption):not(.picture) {
+    text-align: left; /* Align text content to the left */
+    float: left;      /* Optional: float left if you want the elements to stack horizontally */
+    display: block;   /* Ensure elements are block-level */
+}
