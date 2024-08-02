@@ -34,11 +34,15 @@ def create_picture_tags(soup, filepath):
         elif img_tags:
             picture_tag.append(img_tags[0])
         
-        # Replace the div with the picture tag
-        div.replace_with(picture_tag)
+        # Get the parent of the div
+        parent = div.parent
         
-        print(f"Replaced div with picture tag in {filepath}")
+        # Delete the div
+        div.decompose()
+        
+        # Insert the picture tag as the first child of its parent
+        parent.insert(0, picture_tag)
+        
+        print(f"Deleted div and inserted picture tag as first child of its parent in {filepath}")
         
     return soup
-
-
