@@ -93,7 +93,7 @@ def main():
     logger.info(f"Resource directory: {res_dir}\n\n")
     
     try:
-        process_html_files(out_dir, src_dir, resource_dir)
+        process_html_files(out_dir, src_dir, res_dir)
     except Exception as e:
         logger.error(e)
         sys.exit(1)
