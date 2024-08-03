@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from ..logging_ohp import logger
+from update_html.logging_ohp import logger
 
 def copy_resource(resource_dir, src_dir, filename):
     source_file_path = os.path.join(resource_dir, filename)

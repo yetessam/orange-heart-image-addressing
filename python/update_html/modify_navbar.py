@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from ..logging_ohp import logger
+from update_html.logging_ohp import logger
 
 def modify_navbar(soup):
     # Specific handling for navigation

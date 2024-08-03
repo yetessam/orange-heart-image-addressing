@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from ..logging_ohp import logger
+from update_html.logging_ohp import logger
 
 def apply_viewport_metatag(soup):
     """

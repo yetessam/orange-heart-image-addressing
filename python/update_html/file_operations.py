@@ -1,6 +1,6 @@
 import os
 import shutil
-from ..logging_ohp import logger
+from update_html.logging_ohp import logger
 
 def read_html_file(filepath):
     try:	
