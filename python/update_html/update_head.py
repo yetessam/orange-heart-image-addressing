@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from ..logging_ohp import logger
 
 def apply_viewport_metatag(soup):
     """
@@ -52,7 +53,7 @@ def update_head(soup, filepath):
 
     for update_function in update_functions:
         soup = update_function(soup)
-        print(f"Applied {update_function.__name__} to {filepath}")
+        logger.info(f"Applied {update_function.__name__} to {filepath}")
     
     return soup
 
