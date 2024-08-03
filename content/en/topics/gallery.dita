@@ -9,20 +9,21 @@
   --></shortdesc>
    
     <conbody outputclass="columns is-multiline is-variable is-8">
-        <!-- Section 1 -->
-        <section>
-            <title>IPFS Content Addressing</title>
-            <p>Content itself can be used to derive a unique identifier called a hash.
-            The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
-           
-        </section>
-
+        
          <section id="disability-pride">
-            <fig><title>July is Disability Pride Month</title>
+            <fig>
+                <title>July is Disability Pride Month</title>
                 <desc>Photograph of Disability Pride flag viewed through an orange heart stencil.</desc>
-                <p>Ashland Public Library, Ashland, Oregon, USA</p>
-
-                <p>The following descriptive text was copied from the Ashland Public Library:</p>
+                <figgroup outputclass="picture">
+                    <image outputclass="desktop" href="../images/gallery/disability-pride-desktop.png">
+                         <alt></alt>
+                    </image>
+                    <image outputclass="tablet" href="../images/gallery/disability-pride-tablet.png"/>
+                    <image outputclass="mobile" href="../images/gallery/disability-pride-mobile.png"/>
+                </figgroup>  
+           </fig>
+           <p>Ashland, Oregon, USA</p>
+           <p>The following descriptive text was copied from the Ashland Public Library:</p>
                 <lq>
                     <p>From top to bottom:</p> 
                     <p>Green is for sensory disabilities, including deafness and blindness.</p>
@@ -31,24 +32,14 @@
                     <p>Gold is for neurodiversity.</p>
                     <p>Red represents physical disabilities.</p>
                     <p>The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.</p>
-            </lq>
+               </lq>
             
-               <figgroup outputclass="picture">
-                    <image outputclass="desktop" href="../images/gallery/disability-pride-desktop.png">
-                         <alt></alt>
-                    </image>
-                    <image outputclass="tablet" href="../images/gallery/disability-pride-tablet.png"/>
-                    <image outputclass="mobile" href="../images/gallery/disability-pride-mobile.png"/>
-                </figgroup>  
-           </fig>
         </section>
 
          <section id="human-rights-dweb-camp-2022-notes">
             <fig><title>Human Rights - Dweb Camp 2022 Notes</title>
                 <desc>Digital rendering of paint/ink of handwritten notes and paint about a human-rights centered design agency assisting with online safety.</desc>
-                <p>Orange heart outline around handwritten notes about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. Chat GPT 4o was used to flatten the image backgrond. 
-                </p>
-               <figgroup outputclass="picture">
+                <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/human-rights-centered-desktop.png">
                      <alt>Orange heart with the words "HUMAN RIGHTS CENTERED DESIGN BASED IN NYC/BERLIN" surrounded by additional notes that say "Public Research Technologies", 
                 "looks at threat models.  Staff is secure and careful.  Goals: provide resources, usable security, open source", "Change who technology serves". 
@@ -58,32 +49,34 @@
                     <image outputclass="mobile" href="../images/gallery/human-rights-centered-mobile.png"/>
                 </figgroup>  
            </fig>
+           <p>Orange heart outline around handwritten notes about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. Chat GPT 4o was used to flatten the image backgrond. 
+           </p> 
         </section>
 
         <section id="elephant-rock">
-            <fig><title>Elephant Rock</title>
-                <desc>Photograph of Elephant Rock, a naturally formed geological landmark on the road to Dillon Beach, viewed through an orange heart stencil.  Rock indentations form the elephant's eyes, and the top of its trunk and limbs.
+            <fig><title>Elephantish</title>
+                <desc>Close up photograph of Elephant Rocks, a naturally formed geological landmark on the road to Dillon Beach, viewed through an orange heart stencil.  Rock indentations form the elephant's eyes, and the top of its trunk and limbs.
                 The rock formation is viewed through a blurry orange stencil.
                  </desc>
-                 <p>Elephant Rock, Dillon Beach,  Marin County, California, USA</p>
-                 <p>Marin County landmark used to provide directions to Dillon Beach.   Several hundred yards away, a sign warns drivers that the GPS directions to the beach and campgrounds are incorrect. 
-               </p>
+                 </p>
              
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/elephant-rock-desktop.png">
-                         <alt>Natural gray rock formation which resembles an elephant looking down framed by an orange heart stencil. Rock indentations on what looks like the torso resemble the top of the elephant's limbs.
+                         <alt>Natural gray rock formations which resembles elephants looking down framed by an orange heart stencil. Rock indentations on what looks like the torso resemble the top of the elephant's limbs.
                          </alt>
                     </image>
                     <image outputclass="tablet" href="../images/gallery/elephant-rock-tablet.png"/>
                     <image outputclass="mobile" href="../images/gallery/elephant-rock-mobile.png"/>
                 </figgroup>  
            </fig>
+           <p>Dillon Beach, California, USA</p>
+           <p>Marin County landmark used to help provide directions to the beach.   Downhill from the rocks, a highway sign informs drivers that the GPS directions to the beach and campgrounds are incorrect. 
+               
         </section>
         <section id="daisy">
             <fig><title>Daisy Flowers</title>
                 <desc>Photograph of white and yellow daisies, viewed through an orange heart stencil.  
                  </desc>       
-                <p>Salt Spring Island, British Columbia, Canada</p>
                 <figgroup outputclass="picture">
                     <image outputclass="desktop" href="../images/gallery/daisy-desktop.png">
                          <alt>White and yellow daisies growing in the ground with green foliage framed by an orange heart stencil. 
@@ -93,7 +86,17 @@
                     <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
                 </figgroup>  
            </fig>
+           <p>Salt Spring Island, British Columbia, Canada</p>
+                
         </section>
+<!-- Section 1 -->
+        <section>
+            <title>IPFS Content Addressing</title>
+            <p>Content itself can be used to derive a unique identifier called a hash.
+            The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
+           
+        </section>
+
     </conbody>
 </concept>
 
