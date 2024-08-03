@@ -13,7 +13,7 @@ from update_html.create_responsive import create_responsive
 from update_html.create_pictures import create_picture_tags
 from update_html.copy_resource import copy_resource 
 
-from logging import logger
+from logging_ohp import logger
 
 
 def parse_arguments():
