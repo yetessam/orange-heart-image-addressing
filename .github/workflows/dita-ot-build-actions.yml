@@ -109,29 +109,25 @@ jobs:
         run: |
           mkdir -p ./src
           ls -la 
-   
-      - name: Python 
-        run:  | # Come back here
-          echo "Installing Python and dependencies"
-           
-      - name: Install Python
+    
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Install dependencies and run Python script
+      - name: Install dependencies
         run: |
           set -e
-          echo "Listing contents of $(pwd):"
-          ls -laR
           python -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
           
+      - name: List files
+        run: |
+          set -e
           echo "Listing contents of $(pwd):"
           ls -laR
       
-
       - name: Run Python script 
         run: |
           set -e
@@ -145,7 +141,6 @@ jobs:
           ls -l
           echo "Contents of src directory:"
           ls -la src
-          cat src/topics/cap*
 
 
       - name: Remove venv, tar file and out folder
