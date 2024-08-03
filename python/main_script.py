@@ -3,16 +3,15 @@ import os
 import sys
 from bs4 import BeautifulSoup
 
-from update_html.bulma_classes import bulma_classes
 from update_html.apply_bulma import apply_bulma_classes
-from update_html.modify_navbar import modify_navbar
-from update_html.file_operations import read_html_file, write_html_file, copy_files
-from update_html.update_head import update_head
-from update_html.create_responsive import create_responsive
+from update_html.bulma_classes import bulma_classes
+from update_html.copy_resource import copy_resource
 from update_html.create_pictures import create_picture_tags
-from update_html.copy_resource import copy_resource 
-
-from logging_ohp import logger
+from update_html.create_responsive import create_responsive
+from update_html.file_operations import copy_files, read_html_file, write_html_file
+from update_html.logging_ohp import logger
+from update_html.modify_navbar import modify_navbar
+from update_html.update_head import update_head
 
 
 def parse_arguments():
