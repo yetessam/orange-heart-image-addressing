@@ -15,10 +15,10 @@ from update_html.update_head import update_head
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder, the target src folder and the resources folder')
+    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder, the target src folder and the Python resources folder')
     parser.add_argument('--out_dir', type=str, required=True, help="DITA OT folder where the HTML files are build, normally called 'out'")
     parser.add_argument('--src_dir', type=str, required=True, help='After processing, this folder contains the Bulma-ready HTML.')
-    parser.add_argument('--resource_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
+    parser.add_argument('--res_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
     return parser.parse_args()
 
 def find_html_files(out_dir):
@@ -58,8 +58,8 @@ def build_search_index(src_dir):
     logger.debug(f"Placeholder for build_search_index logic in {src_dir}")
     # Implement search index logic here
 
-def process_html_files(out_dir, src_dir, resource_dir):
-    logger.info(f"process_html_files to copy from out directory: {out_dir}, to src directory: {src_dir} with resources from {resource_dir}")
+def process_html_files(out_dir, src_dir, res_dir):
+    logger.info(f"process_html_files to copy from out directory: {out_dir}, to src directory: {src_dir} with resources from {res_dir}")
 
     setup_directories(out_dir, src_dir)
 
@@ -73,12 +73,12 @@ def process_html_files(out_dir, src_dir, resource_dir):
         process_html_file(filepath)
 
     copy_files(out_dir, src_dir)
-    logger.info(f"Copied all files from {out_dir} to {src_dir}")
+    logger.info(f"Copied all files from {out_dir} to {src_dir}\n\n")
 
     # Call the generic function to copy the bulma css resource
     css_dest_dir = os.path.join(src_dir, "css")
     css_file = "bulma.css"
-    copy_resource(resource_dir, css_dest_dir, css_file)
+    copy_resource(res_dir, css_dest_dir, css_file)
     
     build_search_index(src_dir)
 
@@ -86,11 +86,12 @@ def main():
     args = parse_arguments()
     out_dir = args.out_dir
     src_dir = args.src_dir
-    resource_dir = args.src_dir
+    res_dir = args.res_dir
 
     logger.info(f"Output directory: {out_dir}")
     logger.info(f"Web site source directory: {src_dir}")
-
+    logger.info(f"Resource directory: {res_dir}\n\n")
+    
     try:
         process_html_files(out_dir, src_dir, resource_dir)
     except Exception as e:
