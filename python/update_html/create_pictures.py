@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from logging_config import logger
 
 def create_picture_tags(soup, filepath):
     figgroup_divs = soup.find_all('div', class_=lambda c: c and 'figgroup' in c.split() and 'picture' in c.split())
@@ -43,6 +44,6 @@ def create_picture_tags(soup, filepath):
         # Insert the picture tag as the first child of its parent
         parent.insert(0, picture_tag)
         
-        print(f"Deleted div and inserted picture tag as first child of its parent in {filepath}")
+        logger.debug(f"Deleted div and inserted picture tag as first child of its parent in {filepath}")
         
     return soup
