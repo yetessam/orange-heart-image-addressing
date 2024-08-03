@@ -120,14 +120,8 @@ jobs:
           set -e
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt
+          pip install -r python/requirements.txt
           
-      - name: List files
-        run: |
-          set -e
-          echo "Listing contents of $(pwd):"
-          ls -laR
-      
       - name: Run Python script 
         run: |
           set -e
