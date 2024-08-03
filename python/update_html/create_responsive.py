@@ -1,6 +1,10 @@
 from bs4 import BeautifulSoup
+from ..logging_ohp import logger
 
 def create_responsive(soup, filepath):
+    # Turn off this processing for now.
+    return soup
+    
     # Find all elements with a class containing both "container" and "gallery"
     container_gallery_elements = soup.find_all(class_=lambda c: c and 'container' in c.split() and 'gallery' in c.split())
     
