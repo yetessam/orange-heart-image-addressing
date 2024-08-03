@@ -5,6 +5,13 @@
     </shortdesc>
     <conbody>
         <dl>
+           <dlentry>
+                 <dt>Aug 3, 2024</dt>
+                <dd>
+                  <p>Switch to logaru for logging.</p>
+                </dd>
+            </dlentry>
+  
          <dlentry>
                  <dt>Thursday Aug 1, 2024</dt>
                 <dd>
