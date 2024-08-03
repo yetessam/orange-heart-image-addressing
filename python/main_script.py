@@ -8,7 +8,6 @@ from update_html.apply_bulma import apply_bulma_classes
 from update_html.modify_navbar import modify_navbar
 from update_html.file_operations import read_html_file, write_html_file, copy_files
 from update_html.update_head import update_head
-from update_html.update_landing_page import update_landing_page
 from update_html.create_responsive import create_responsive
 from update_html.create_pictures import create_picture_tags
 from update_html.copy_resource import copy_resource 
@@ -43,8 +42,6 @@ def process_html_file(filepath):
 
     soup = apply_bulma_classes(soup)
     soup = modify_navbar(soup)
-    soup = update_landing_page(soup, filepath)
-
     
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
@@ -59,7 +56,7 @@ def setup_directories(out_dir, src_dir):
 
 def build_search_index(src_dir):
     # Placeholder for search index building logic
-    print(f"Building search index for {src_dir}")
+    #print(f"Building search index for {src_dir}")
     # Implement search index logic here
 
 def process_html_files(out_dir, src_dir, resource_dir):
@@ -77,7 +74,7 @@ def process_html_files(out_dir, src_dir, resource_dir):
         process_html_file(filepath)
 
     copy_files(out_dir, src_dir)
-    print(f"Copied all files from {out_dir} to {src_dir}")
+    logger.info(f"Copied all files from {out_dir} to {src_dir}")
 
     # Call the generic function to copy the bulma css resource
     css_dest_dir = os.path.join(src_dir, "css")
@@ -93,13 +90,13 @@ def main():
     src_dir = args.src_dir
     resource_dir = args.src_dir
 
-    print(f"Output directory: {out_dir}")
-    print(f"Web site source directory: {src_dir}")
+    logger.info(f"Output directory: {out_dir}")
+    logger.info(f"Web site source directory: {src_dir}")
 
     try:
         process_html_files(out_dir, src_dir, resource_dir)
     except Exception as e:
-        print(e)
+        logger.error(e)
         sys.exit(1)
 
 if __name__ == "__main__":
