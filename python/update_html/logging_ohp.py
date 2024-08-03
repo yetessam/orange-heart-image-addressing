@@ -6,10 +6,10 @@ def setup_logger(debug_mode=True):
     logger.remove()
 
     # Add a new logger that outputs to stdout
-    logger.add(sys.stdout, level="DEBUG" if debug_mode else "INFO", format="{time} - {name} - {level} - {message}")
+    logger.add(sys.stdout, level="DEBUG" if debug_mode else "INFO", format="{level}: {name}  {message}")
     
     # Add another logger that outputs errors to stderr
-    logger.add(sys.stderr, level="ERROR", format="{time} - {name} - {level} - {message}")
+    logger.add(sys.stderr, level="ERROR", format="{level}: {name}  {message}")
 
     return logger
 
