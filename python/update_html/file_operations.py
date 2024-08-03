@@ -1,5 +1,6 @@
 import os
 import shutil
+from ..logging import logger
 
 def read_html_file(filepath):
     try:	
@@ -7,14 +8,14 @@ def read_html_file(filepath):
             content = file.read()
         return content
     except Exception as e:
-        print(f"Error reading file {filepath}: {e}");
+        logger.error(f"Error reading file {filepath}: {e}");
 
 def write_html_file(filepath, content):
     try:	
         with open(filepath, 'w', encoding='utf-8') as file:
             file.write(content)
     except Exception as e:
-        print(f"Error writing file {filepath}: {e}");
+        logger.error(f"Error writing file {filepath}: {e}");
 
 def copy_files(src, dst):
     if os.path.isdir(src):
