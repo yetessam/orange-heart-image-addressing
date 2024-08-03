@@ -126,7 +126,7 @@ jobs:
         run: |
           set -e
           source venv/bin/activate
-          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --resource_dir $(pwd)/python/resources
+          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/python/resources
 
       - name: List directory contents after running Python script
         run: |
