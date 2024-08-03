@@ -5,6 +5,9 @@ on:
     workflows: ["DITA Workflow"]
     types:
       - completed
+    # Ensure the action runs only if the previous workflow succeeded
+    conclusions: 
+      - success
 
 jobs:
   deploy-dev-to-stage:
