@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from update_html.bulma_classes import bulma_classes
-from ..logging_config import logger
+from ..logging import logger
 
 def apply_bulma_classes(soup):
     for selector, class_attr in bulma_classes.items():
