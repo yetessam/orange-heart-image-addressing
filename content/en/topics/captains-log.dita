@@ -8,7 +8,7 @@
            <dlentry>
                  <dt>Aug 3, 2024</dt>
                 <dd>
-                  <p>Switch to logaru for logging.</p>
+                  <p>Categorize output messages using logaru and split out messages for INFO/DEBUG/ERROR across files. </p>
                 </dd>
             </dlentry>
   
