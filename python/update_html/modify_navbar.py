@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from ..logging_ohp import logger
 
 def modify_navbar(soup):
     # Specific handling for navigation
@@ -7,7 +8,7 @@ def modify_navbar(soup):
 
         # Check if the nav has already been modified
         if nav.get('id') == 'navbar-bulma':
-            print("Navbar already modified. Skipping.")
+            logger.debug("Navbar already modified. Skipping.")
             return soup
         
         nav['class'] = 'navbar is-spaced'
@@ -43,7 +44,7 @@ def modify_navbar(soup):
                 if a:
                     a['class'] = 'navbar-item'
                     navbar_start.append(a)
-            print("Reorganized <nav> structure with Bulma classes.")
+            logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         # Assemble the new navbar structure
         navbar_menu.append(navbar_start)
@@ -103,6 +104,6 @@ def modify_navbar(soup):
         nav.insert_after(script_tag)
 
         nav['id'] = 'navbar-bulma'
-        print("Added Bulma inline script after <nav> tag.")
+        logger.info("Added Bulma inline script after <nav> with id='navbar-bulma'.")
 
     return soup
