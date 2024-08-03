@@ -56,11 +56,11 @@ def setup_directories(out_dir, src_dir):
 
 def build_search_index(src_dir):
     # Placeholder for search index building logic
-    #print(f"Building search index for {src_dir}")
+    logger.debug(f"Placeholder for build_search_index logic in {src_dir}")
     # Implement search index logic here
 
 def process_html_files(out_dir, src_dir, resource_dir):
-    print(f"Starting script. Source directory: {out_dir}, Destination directory: {src_dir}")
+    logger.info(f"process_html_files to copy from out directory: {out_dir}, to src directory: {src_dir} with resources from {resource_dir}")
 
     setup_directories(out_dir, src_dir)
 
@@ -68,7 +68,7 @@ def process_html_files(out_dir, src_dir, resource_dir):
     if not html_files:
         raise FileNotFoundError(f"No HTML files found in the {out_dir}. Exiting.")
     
-    print(f"Found {len(html_files)} HTML files:")
+    logger.debug(f"Found {len(html_files)} HTML files:")
     for filepath in html_files:
         print(filepath)
         process_html_file(filepath)
@@ -80,7 +80,6 @@ def process_html_files(out_dir, src_dir, resource_dir):
     css_dest_dir = os.path.join(src_dir, "css")
     css_file = "bulma.css"
     copy_resource(resource_dir, css_dest_dir, css_file)
-    
     
     build_search_index(src_dir)
 
