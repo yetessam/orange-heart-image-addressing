@@ -8,7 +8,8 @@
            <dlentry>
                  <dt>Aug 3, 2024</dt>
                 <dd>
-                  <p>Include logaru for logging and provide INFO/DEBUG/ERROR level messages. </p>
+                  <p>Adding logging_ohp.py that uses logaru for logging.</p>
+                  <p>Remove unused scripts and update main/modules to use INFO/DEBUG/ERROR level messages. </p>
                 </dd>
             </dlentry>
   
