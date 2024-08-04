@@ -17,8 +17,3 @@
 dd:not(:last-child) {
   margin-bottom: 2.5em; /* Adjust the value as needed */
 }
-
-dd {
-  border-bottom: 1px solid #ddd; /* Adds a border to the bottom of each <dd> */
-  padding-bottom: 0.5em; /* Adds some space between the content and the border */
-}
