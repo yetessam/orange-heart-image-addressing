@@ -2,25 +2,21 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
-    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging through an orange heart-shaped stencil.
+    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging.
     <conbody>
-      <p>
-     This photography exhibit showcases photograph taken through a heart-shaped stencil.
-    Thematically, it looks at various images and how they relate to the concept of addressing. 
-    </p>
-            <p>The exhibit experiments with using emergent decentralized technologies, which support digital provenance and integrity. 
-      As a user, you are viewing this content live on the Interplanetary File System (IPFS) which makes the content more stable and resilient than if it was only being stored in a single location on the web. 
-
- <p>Otherwise, this exhibit uses a typical enterprise content development lifecycle using DITA XML to generate topic-based information.
-
-            IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier. This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.
+      <p>The project showcases photograph taken through a heart-shaped stencil.
+      </p>
+    <p>The exhibit is using emergent decentralized technologies, which support digital provenance and integrity.</p> 
+    <p>You are viewing this content live on the Interplanetary File System (IPFS).   The current website is more stable and resilient than if it was only being stored in a single location on the web.</p>
+    <p>The source content for the site is DITA XML which has been pushed through a very typical enterprise content development lifecycle using the DITA Open Toolkit. 
+    <p>IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier. This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.
         </p>
-<p> <xref href="https://ipfs.io/" scope="external">IPFS</xref> for content replication and authenticity verification. By leveraging IPFS, the project ensures faster and more reliable content delivery, as well as verifiable provenance. 
+<p> <xref href="https://ipfs.io/" scope="external">IPFS</xref> for content replication and authenticity verification. 
+By leveraging IPFS, the project ensures faster and more reliable content delivery, as well as verifiable provenance. 
 
 Tools like the <xref href="https://cid.ipfs.tech/" scope="external">CID Inspector</xref> can be used to confirm the integrity and originality of the images.
             
-</p>
-            
+</p>        
             <note>
                 The Orange Heart project repurposes a heart-shaped stencil originally used in response to gun violence in San Francisco's Mission District in 2017.
             </note>
@@ -28,9 +24,6 @@ Tools like the <xref href="https://cid.ipfs.tech/" scope="external">CID Inspecto
             <p>
                 In Spring 2018, I first started stenciling hearts in San Francisco's Mission District as part of a healing journey.
                 The same stencil has been reused and repurposed for the last six years on a variety of mediums beyond concrete.
-            </p>
-     
-
-       
+            </p>  
     </conbody>
 </concept>
