@@ -16,7 +16,6 @@ bulma_classes = {
     'dd': 'list-item',
     'note': 'notification is-primary',
     'fig':  'image is-128x128',
-    'figure': 'image',
     'image' : 'is-rounded is-bordered',
     'div.note' : 'notification is-info',
     'gallery' : 'columns is-multiline is-variable is-8', 
