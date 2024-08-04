@@ -14,6 +14,6 @@
 }
 
 
-dd:not(:last-child) {
-  margin-bottom: 2.5em; /* Adjust the value as needed */
+dt:not(:first-child) {
+  margin-top: 2.5em; /* Adjust the value as needed */
 }
