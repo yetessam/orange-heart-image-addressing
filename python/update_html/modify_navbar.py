@@ -22,7 +22,7 @@ def modify_navbar(soup):
         # Create and add the hamburger menu
         navbar_burger = soup.new_tag('a', **{
             'role': 'button',
-            'class': 'navbar-burger',
+            'class': 'navbar-burger is-boxed',
             'aria-label': 'menu',
             'aria-expanded': 'false',
             'data-target': 'navbarBasicExample'
