@@ -2,24 +2,25 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
-    <shortdesc>Orange heart project explores themes of addressing and belonging through an orange heart-shaped stencil.
-    The online website is using decentralized technologies. The gallery component presents stencil-based spray art on birchwood.</shortdesc>
-    
+    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging through an orange heart-shaped stencil.
     <conbody>
-        <section>
-            <title>Orange Heart Project 2024 - Exploring the Concept of Addressing</title>
-            <p>
-                The "Orange Heart Project 2024" is an exploration of resilient dweb technologies through the mediums of photography and stencil-based art. This online photography exhibit uses the orange heart stencil as a central motif to investigate various forms of addressing—from physical landmarks to digital coordinates.
-            </p>
-            <p>
-                This exhibit takes the stencil and showcases photos taken through this heart. Thematically, it looks at various images and how they relate to the concept of addressing. The exhibit explores the content development lifecycle and the use of decentralized technologies like <xref href="https://ipfs.io/" scope="external">IPFS</xref> for content replication and authenticity verification. By leveraging IPFS, the project ensures faster and more reliable content delivery, as well as verifiable provenance. Tools like the <xref href="https://cid.ipfs.tech/" scope="external">CID Inspector</xref> can be used to confirm the integrity and originality of the images.
-            </p>
-            <p>
-                By utilizing decentralized technologies like IPFS, the exhibit not only preserves the authenticity of these images but also experiments with using these emergent technologies, which support digital provenance and integrity. The gallery show features a series of similar orange heart images, all created using the same stencil and can of paint. These images are intentionally crafted to highlight the power of repetition and the subtle variations that emerge through the process. The uniformity of the orange hearts serves as a visual representation of stability and resilience.
-            </p>
-             <p>
+      <p>
+     This photography exhibit showcases photograph taken through a heart-shaped stencil.
+    Thematically, it looks at various images and how they relate to the concept of addressing. 
+    </p>
+            <p>The exhibit experiments with using emergent decentralized technologies, which support digital provenance and integrity. 
+      As a user, you are viewing this content live on the Interplanetary File System (IPFS) which makes the content more stable and resilient than if it was only being stored in a single location on the web. 
+
+ <p>Otherwise, this exhibit uses a typical enterprise content development lifecycle using DITA XML to generate topic-based information.
+
             IPFS images use content addressing which is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier. This content identifier acts as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.
         </p>
+<p> <xref href="https://ipfs.io/" scope="external">IPFS</xref> for content replication and authenticity verification. By leveraging IPFS, the project ensures faster and more reliable content delivery, as well as verifiable provenance. 
+
+Tools like the <xref href="https://cid.ipfs.tech/" scope="external">CID Inspector</xref> can be used to confirm the integrity and originality of the images.
+            
+</p>
+            
             <note>
                 The Orange Heart project repurposes a heart-shaped stencil originally used in response to gun violence in San Francisco's Mission District in 2017.
             </note>
