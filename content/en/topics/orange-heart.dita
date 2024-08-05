@@ -2,7 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
-    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging.</shortdesc>
+    <shortdesc>Orange Heart Project 2024 explores themes of addressing and resilience both in terms of imagery as well as the technical infrastructure used to produce and host the web content. 
+</shortdesc>
     <conbody>
         <p>The project showcases photograph taken through a heart-shaped stencil.</p>
         <p>The Orange Heart project repurposes a heart-shaped stencil originally used in response to gun violence in San Francisco's Mission District in 2017.</p>
@@ -13,5 +14,8 @@
         
         <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref> , which replicates content, 
 and verifies its authenticity and provenance.  </p>
+<p>
+addressing themed images viewed through an orange heart-shaped stencil. THE website is published  the decentralized web. The gallery component presents stencil-based spray art on birchwood.</p>
+<
           </conbody>
 </concept>
