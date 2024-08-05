@@ -8,9 +8,7 @@
             <p outputclass="title is-4">
               Welcome to the Orange Heart Project
             </p>
-            <p outputclass="subtitle is-6">
-              Current content address: QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145 on the Interplanetary File System (IPFS) on the decentralized web.
-            </p>
+            <p outputclass="subtitle">Addressing and Resilience on the Decentralized Web</p>
           </div>
           <div outputclass="column is-half">
        <fig outputclass="image is-4by3">
@@ -22,6 +20,7 @@
                <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
             </figgroup>  
          </fig>
+          <p outputclass="cid">QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145</p>
          </div>
        </div>
   </conbody>
