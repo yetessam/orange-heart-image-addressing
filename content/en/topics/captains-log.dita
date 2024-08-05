@@ -17,6 +17,13 @@
                  <dt>Thursday Aug 1, 2024</dt>
                 <dd>
                     <p>Content updates and working out gallery problems.</p>
+
+                    <p>One issue is that we're not explicity surfacing content addressing.  If the CID is is derived from taking the image itself and pushing it through a computation algorithm, known as a hash, that generates a unique identifier.  However, its not visible in this browser and how would the user know?
+                   If we do expose the CIDs for the gallery images, those content identifier act as the address of the image and ensures that the image is the original image that was uploaded and hasn't been modified in any way.
+I suppose we could view the images in IPFS. </p>
+        <p>How do you get metrics to determine whether this is faster and more reliable content delivery? 
+ Tools like the <xref href="https://cid.ipfs.tech/" scope="external">CID Inspector</xref> can be used to confirm the integrity and originality of the images.</p>
+
                 </dd>
             </dlentry>
         <dlentry>
