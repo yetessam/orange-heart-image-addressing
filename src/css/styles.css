@@ -1,6 +1,5 @@
-/* Import in external CSS */
 
-/* Fall backs in case Bulma CDN is down or the user is offline */
+/* Local and CDN CSS for bulma  */
 
 @import url("bulma.css");
 
