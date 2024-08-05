@@ -2,16 +2,14 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
-    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging.</shortdesc>
+    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging.  This collection of images viewed through a heart-shaped stencil was created from May - August 2024.</shortdesc>
     <conbody>
-        <p>The project showcases photograph taken through a heart-shaped stencil.</p>
-        <p>The Orange Heart project repurposes a heart-shaped stencil originally used in response to gun violence in San Francisco's Mission District in 2017.</p>
-        <p>I started stenciling hearts in my neighbourhood as part of a healing journey.  Since then, they have been reused and repurposed on a variety of mediums beyond concrete.</p>
-        
         <p>You are viewing this content live on the Interplanetary File System (IPFS). The current website is more stable and resilient than if it was only being stored in a single location on the web.</p>
         <p>The source content was developed in DITA XML and travelled through a typical enterprise content development lifecycle using the DITA Open Toolkit, Github and Fleek.</p>
-        
-        <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref> , which replicates content, 
-and verifies its authenticity and provenance.  </p>
-          </conbody>
+        <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref>, which ensures that the content is decentralized, replicated, 
+and verifies its authenticity and provenance. </p>
+         <p>I first started stenciling hearts in my neighbourhood as part of a healing journey.  Since then, they have been reused and repurposed on a variety of mediums beyond concrete.</p>
+         <p>This project repurposes a heart-shaped stencil originally created as a response to gun violence in San Francisco's Mission District in 2017.</p>
+       
+        </conbody>
 </concept>
