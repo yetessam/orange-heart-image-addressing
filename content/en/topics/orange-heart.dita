@@ -12,6 +12,6 @@
         <p>The source content was developed in DITA XML and travelled through a typical enterprise content development lifecycle using the DITA Open Toolkit, Github and Fleek.</p>
         
         <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref> , which replicates content, 
-and verifies its authenticity and provenance.  
+and verifies its authenticity and provenance.  </p>
           </conbody>
 </concept>
