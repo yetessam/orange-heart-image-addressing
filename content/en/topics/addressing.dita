@@ -56,7 +56,7 @@ as a location address.
 If I share the following link, it lives in multiple places on the web but all of the following links are guaranteed to be the exact same, unaltered image.
 </p>
 
-  <p>As this is a globally unique ID, if I request this image, can be retrieved from any number of servers.  Its authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
+  <p>As this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Its authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
    
   <p>Another way to look at CIDs is to consider them as a text-based and unique property of the content object.</p>
   <p>If you've published a website and have a different version of the content, its CID will change.
