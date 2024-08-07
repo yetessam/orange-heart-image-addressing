@@ -19,6 +19,4 @@ dt:not(:first-child) {
 
 .footer {
   color: rgba(255, 255, 255, 0.7); /* Lighten the text color */
-  text-align: center; /* Center block elements */
-  margin-bottom: 0.5em; /* Reduce space between paragraphs */
 }
