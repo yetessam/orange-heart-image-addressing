@@ -82,13 +82,6 @@ Each piece offers a different ways of expressing findability through different f
            <p>Salt Spring Island, British Columbia, Canada</p>
                 
         </section>
-<!-- Section 1 -->
-        <section>
-            <title>IPFS Content Addressing</title>
-            <p>Content itself can be used to derive a unique identifier called a hash.
-            The Interplanetary File System, or IPSF, uses the content's SHA-256 to locate the image. </p>
-           
-        </section>
 
     </conbody>
 </concept>
