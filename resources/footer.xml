@@ -1,7 +1,5 @@
 <div class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-    
+    <div class="content">
        <p>Fleek <a class="is-link" href="https://delicate-glitter-6121.on.fleek.co" target="_blank">delicate-glitter-6121.on.fleek.co</a>.  
        </p>
        <p> <span class="icon">
@@ -13,7 +11,5 @@
           yetessam/orange-heart-image-addressing
         </a></p>
         <p>IPFS <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/</a></p>
-      
-    </div>
   </div>
 </div>
