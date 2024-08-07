@@ -1,6 +1,6 @@
-<div class="footer">
-    <div class="content">
-       <p>Fleek <a class="is-link" href="https://delicate-glitter-6121.on.fleek.co" target="_blank">delicate-glitter-6121.on.fleek.co</a>.  
+<div class="is-flex">
+    <div class="is-flex-direction-column">
+       <p class=">Fleek <a class="is-link" href="https://delicate-glitter-6121.on.fleek.co" target="_blank">delicate-glitter-6121.on.fleek.co</a>.  
        </p>
        <p> <span class="icon">
           <svg aria-hidden="true" class="" data-icon="github" data-prefix="fab" focusable="false" role="img" viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
