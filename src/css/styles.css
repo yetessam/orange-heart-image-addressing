@@ -15,4 +15,3 @@
 dt:not(:first-child) {
   margin-top: 2.5em; /* Adjust the value as needed */
 }
-
