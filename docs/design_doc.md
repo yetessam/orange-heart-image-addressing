@@ -12,9 +12,11 @@
 
 ## Description
 
-Content addressing interests me. Moving from art that's got a physical location such as a street corner or an address to the digital addressing for digital representations of an orange heart whose original stencils get reused over and over again. I'd like to do a piece of work that looks at this one image and then its different forms of addressing, whether the art is moving through the postal service using mailing addresses, intersection, local landmark, or online hosting with Web 3 providers such as Fleek using IPFS.
+Content addressing interests me. Moving from art that's lives in physical location such as a street corner towards images that gets stored on IPFS and use content identifier.  
 
-## Website Content Structure
+Rather than looking at the one heart image online, I use it to peer through to other (and more comnmonly known) forms of addressing, such as mailing addresses, intersections, local landmark, and flags.   Fleek's platform is used to publish the content to IPFS and then host static HTML. 
+
+### Website Content Structure
 
 ### Overall Structure
 - Home
