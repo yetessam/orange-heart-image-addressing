@@ -5,6 +5,36 @@
     </shortdesc>
     <conbody>
         <dl>
+        <dlentry>
+                 <dt>Aug 15, 2024</dt>
+                <dd>
+                  <p>Reading the Future Proof the Truth slides by Jack Fox. 
+ProofMode app creates legally admissable content that gathers multiple forms of metadata, which is obviously better than capturing no metadata. 
+
+<ul>
+<li>
+C2PA (Coalition for Content Provenance and
+    Authenticity)
+        A technical standard that allows people to
+        determine the origin and edits of different media
+        types
+</li>
+<li>
+    CAI (Content Authenticity Initiative)
+        A global community advancing the C2PA
+        standards
+</li>
+<li>
+    Content Credentials
+         Verifiable metadata following the C2PA standard
+        for tracing media creation and changes
+</li>
+
+The level of change tracking is impressive alongside IPFS. 
+            </p>
+        </dd>
+            </dlentry>
+    
             <dlentry>
                  <dt>Aug 13, 2024</dt>
                 <dd>
