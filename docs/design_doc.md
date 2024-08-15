@@ -1,6 +1,8 @@
-# Orange Heart Content Addressing Design Document
+# Orange Heart Project
 
-## Overview
+## Content Addressing Design Document
+
+### Overview
 
 **Project Name:** Orange Heart Image Addressing
 
