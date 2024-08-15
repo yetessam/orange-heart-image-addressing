@@ -6,39 +6,28 @@
     <conbody>
         <dl>
         <dlentry>
-                 <dt>Aug 15, 2024</dt>
-                <dd>
-                  <p>Reading the Future Proof the Truth slides by Jack Fox. 
-ProofMode app creates legally admissable content that gathers multiple forms of metadata, which is obviously better than capturing no metadata. 
+            <dt>Aug 15, 2024</dt>
+            <dd>
+                <p>Reading the Future Proof the Truth slides by Jack Fox Keen.  ProofMode app creates legally admissable content that gathers multiple forms of metadata, which is obviously better than capturing no metadata. 
 
 <ul>
-<li>
-C2PA (Coalition for Content Provenance and
-    Authenticity)
-        A technical standard that allows people to
-        determine the origin and edits of different media
-        types
+<li>Coalition for Content Provenance and
+    Authenticity -  C2PA is the technical standard that allows people to determine the origin and edits of different media
+    types. 
 </li>
-<li>
-    CAI (Content Authenticity Initiative)
-        A global community advancing the C2PA
-        standards
+<li> Content Authenticity Initiative - CAI  A global community advancing the C2PAstandards
 </li>
-<li>
-    Content Credentials
-         Verifiable metadata following the C2PA standard
+<li>Content Credentials - Verifiable metadata following the C2PA standard
         for tracing media creation and changes
 </li>
 </ul>
-The level of change tracking is impressive alongside being able to verify against IPFS and the hashes.
-AI changes the game as phone start to introduce features that use AI manipulation of photos, then that creates an issue with the burden of proof.  
-
-
-            </p>
+Impressive in terms of change tracking, and that you're able verify against IPFS using CIDss.
+AI changes the game as phones introduce features that use AI manipulation of photos, then that creates an issue with the burden of proof.  
+</p>
 <p>UC Santa Cruz has an AIEA (Artificial Intelligence Explainability and Accountability) Lab.
- <note>XAI is a TLA for eXplainable Artificial Intelligence</note>
-    
-        Verifiable data is reliable data. 
+ <note>XAI is a TLA for eXplainable Artificial Intelligence.   XAI is a pre-req for accountability of AI systems.  
+</note>
+Verifiable data is reliable data.</p>
         </dd>
             </dlentry>
     
