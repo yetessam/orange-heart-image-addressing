@@ -3,6 +3,8 @@ import os
 import sys
 from bs4 import BeautifulSoup
 
+from utils import parse_arguments, find_html_files, setup_directories
+
 from update_html.apply_bulma import apply_bulma_classes
 from update_html.bulma_classes import bulma_classes
 from update_html.copy_resource import copy_resource
@@ -12,22 +14,6 @@ from update_html.file_operations import copy_files, read_html_file, write_html_f
 from update_html.logging_ohp import logger
 from update_html.modify_navbar import modify_navbar
 from update_html.update_head import update_head
-
-
-def parse_arguments():
-    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder, the target src folder and the Python resources folder')
-    parser.add_argument('--out_dir', type=str, required=True, help="DITA OT folder where the HTML files are build, normally called 'out'")
-    parser.add_argument('--src_dir', type=str, required=True, help='After processing, this folder contains the Bulma-ready HTML.')
-    parser.add_argument('--res_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
-    return parser.parse_args()
-
-def find_html_files(out_dir):
-    html_files = []
-    for root, dirs, files in os.walk(out_dir):
-        for fname in files:
-            if fname.endswith('.html'):
-                html_files.append(os.path.join(root, fname))
-    return html_files
 
 def process_html_file(filepath):
     content = read_html_file(filepath)
@@ -44,14 +30,6 @@ def process_html_file(filepath):
     
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
-
-def setup_directories(out_dir, src_dir):
-    if not os.path.exists(out_dir):
-        raise FileNotFoundError(f"Could not find the html 5 out directory: {out_dir}. Exiting.")
-    
-    if not os.path.exists(src_dir):
-        os.makedirs(src_dir)
-        print(f"Created destination directory: {src_dir}")
 
 def build_search_index(src_dir):
     # Placeholder for search index building logic
