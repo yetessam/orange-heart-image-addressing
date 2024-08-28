@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="gallery">
-    <title>Gallery</title>
- <shortdesc>Explore this collection of images that depict various interpretations of addressing, location, and a sense of belonging. 
-Each piece offers a different ways of expressing findability through different forms of addressing. 
-</shortdesc>
-    <conbody outputclass="columns is-multiline is-variable is-8">
+<title>Gallery</title>
+<shortdesc>Explore this collection of images that depict various interpretations of addressing, location, and a sense of belonging. 
+Each piece offers a different ways of expressing findability through different forms of addressing.</shortdesc>
+<conbody>
          <section id="disability-pride">
             <fig>
                 <title>July is Disability Pride Month</title>
