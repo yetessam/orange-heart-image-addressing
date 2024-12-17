@@ -1,0 +1,27 @@
+Vector Search
+
+Vector search is more than text-matching, it allows semantics search can match terminology.
+ need the keywords.
+
+Similar images, audio or multi-modal models that combine text and image in one training model.
+
+Can fine tune your models and domain for your industry and fine tune in. vector search.
+
+Vector search has input media, send it into a embedding dense vector model and run through multiple layers to find the text using semantic search...
+
+Output is dense vector representation, store it into a vector database such as Elastic so it's searchable.
+
+During query time, run the query through the SAME embedding model, and you run vector search to find documents that are hopefully most relevant, (nearest neighbour or approximate nearest neighbour).
+
+Elastic Search 
+
+Specifically with Elasticsearch, you want to think about many facets.. speed, all the other search engine capabilities that search has provided including full text search,  roles, confidential vs public facing, geo region search, chunking and re-ranking.
+
+Why use Elastic as the vector data base?   Already one of the most popular search engines, 12 years of experience, already combine multiple search methodologies, nested vector storage so that large docs are chunks and you can have nested vectors that allows you have some of the metadata stored together for large documents.    Dense vectors need to be cached in RAM and they already have caching models to save RAM and try to do more efficient storage methods.
+
+BBQ Better Binary Quantization to create more efficiency and oversampling to help speed up retrievel time.
+
+
+Once you have the search results you pass it to the LLM prompted to improve the LLM response.
+
+
