@@ -43,7 +43,7 @@ How to Build a Real-Time RAG-Enabled AI Chatbot with Flink, Elastic, OpenAI, and
 
 ## Resources  
 
--[Github Repo](https://github.com/gopi0518/docschatbot)
--[Gen AI](https://www.confluent.io/generative-ai/)
--[Flink AI Inference Model for RAG]https://www.confluent.io/blog/mastering-real-time-retrieval-augmented-generation-rag-with-flink/
+- [Github Repo](https://github.com/gopi0518/docschatbot)
+- [Gen AI](https://www.confluent.io/generative-ai/)
+- [Flink AI Inference Model for RAG]https://www.confluent.io/blog/mastering-real-time-retrieval-augmented-generation-rag-with-flink/
 
