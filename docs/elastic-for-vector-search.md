@@ -1,4 +1,4 @@
-Vector Search
+#Vector Search
 
 Vector search is more than text-matching, it allows semantics search can match terminology.
  need the keywords.
@@ -13,7 +13,7 @@ Output is dense vector representation, store it into a vector database such as E
 
 During query time, run the query through the SAME embedding model, and you run vector search to find documents that are hopefully most relevant, (nearest neighbour or approximate nearest neighbour).
 
-Elastic Search 
+#Elastic Search 
 
 Specifically with Elasticsearch, you want to think about many facets.. speed, all the other search engine capabilities that search has provided including full text search,  roles, confidential vs public facing, geo region search, chunking and re-ranking.
 
@@ -24,4 +24,24 @@ BBQ Better Binary Quantization to create more efficiency and oversampling to hel
 
 Once you have the search results you pass it to the LLM prompted to improve the LLM response.
 
+# Elasticsearch _infererence API
+
+New API that allows for a search followed up by reranking after retrieval.
+Multi stage retrieval gives you the documents and then you have a second stage to do re-ranking, which gives better results.
+
+A Perform lexical search 
+B Then pass that to the semantic reranking model to get better results.
+
+In step B, you can pass the content to one of many services to do the reranking. 
+
+Semantic search chunks the documents for you and then manages the context. 
+
+#Sources  
+How to Build a Real-Time RAG-Enabled AI Chatbot with Flink, Elastic, OpenAI, and LangChain webinar presented by Confluent, Dec 17, 2024
+
+# Resources  
+
+-[Github Repo](https://github.com/gopi0518/docschatbot)
+-[Gen AI](https://www.confluent.io/generative-ai/)
+-[Flink AI Inference Model for RAG]https://www.confluent.io/blog/mastering-real-time-retrieval-augmented-generation-rag-with-flink/
 
