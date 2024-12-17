@@ -1,4 +1,4 @@
-# Notes from How to Build a Real-Time RAG-Enabled AI Chatbot with Flink, Elastic, OpenAI, and LangChain webinar
+# 'How to Build a Real-Time RAG-Enabled AI Chatbot with Flink, Elastic, OpenAI, and LangChain' webinar notes
 
 ## Vector Search
 
