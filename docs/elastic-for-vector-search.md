@@ -1,7 +1,16 @@
 # 'How to Build a Real-Time RAG-Enabled AI Chatbot with Flink, Elastic, OpenAI, and LangChain' webinar notes
 
+## Summary
+
+Webinar on how to combine multiple search methods and content sources using fully supporter connections and feeds into a single platform which then uses Elastic to do searching, retrieval augemented generation (RAG) so that your chatbot can be updated real-time while simulatneously caching.   That last bit with the caching helps reduce the compute costs,  huge number of asynchrnous updates from all the various content sources (both internal/external) and the continual need to filter/personalize/store content, refinine search etc. 
+
+The webinar has one specific stock symbol's price being pulled in real time.  That's the simplest use case, but for the case of real financial data, there could be heaps of connectors, setting up the SQL statements etc.
+
 ## Vector Search
 
+From https://www.elastic.co/what-is/vector-search:
+
+> Vector search leverages machine learning (ML) to capture the meaning and context of unstructured data, including text and images, transforming it into a numeric representation. Frequently used for semantic search, vector search finds similar data using approximate nearest neighbor (ANN) algorithms. Compared to traditional keyword search, vector search yields more relevant results and executes faster.
 Vector search is more than text-matching, it allows semantics search can match terminology.
  need the keywords.
 
@@ -15,7 +24,7 @@ Output is dense vector representation, store it into a vector database such as E
 
 During query time, run the query through the SAME embedding model, and you run vector search to find documents that are hopefully most relevant, (nearest neighbour or approximate nearest neighbour).
 
-## Elastic Search 
+## Elasticsearch 
 
 Specifically with Elasticsearch, you want to think about many facets.. speed, all the other search engine capabilities that search has provided including full text search,  roles, confidential vs public facing, geo region search, chunking and re-ranking.
 
