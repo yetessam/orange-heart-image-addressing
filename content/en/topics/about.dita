@@ -35,8 +35,10 @@
           <p>None, if you use platform like Fleek where you can use auto-deploy from Git or CLI to deploy from your own servers, its exactly the same.</p>
         </li>
         <li>How much do I need to think about security and encryption?  Or is it auto-magical
-          <p>It's auto-magical https when deploying from Fleek</li>
-          <li>How do I deploy a dweb site? <p>Choose a platform provider or you can publish directly onto IPFS.</p>
+            <p>It's auto-magical https when deploying from Fleek</p>
+          </li>
+          <li>How do I deploy a dweb site? 
+              <p>Choose a platform provider or you can publish directly onto IPFS.</p>
           </li>
           <li>How do I make the references to the images, should I be using CIDs rather than URLs?<p>URLS are fine.</p>
           </li>
