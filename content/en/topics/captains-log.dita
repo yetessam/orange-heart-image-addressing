@@ -8,14 +8,18 @@
             <dlentry>
                  <dt>Sunday Jan 12, 2025</dt>
                 <dd>
-                    <p>Participated at Dweb YVR event and built out the message with daffl to get a like snippet in this web app that's built with Feather.Clouds and Automerge.  
-                    </p>
+                  
                     <p>Here's a simple live chat app that's semi-private.  To view and participate in our chat app, enter your email. 
-                    Then check your email for your orange-heart-chat sign in code. 
+                    Then check your email for your orange-heart-chat sign in code.   
+
+    
                    <object outputclass="iframe" data="https://future-fall-deep.on-fleek.app"
                 height="600px" width="600px">
                 
         </object>
+          <p>Worked on extending this chat at Dweb YVR event.  Built out the message data types with daffl to add likes array and like functionality in React. 
+             Chat was built with React, Feather.Clouds and Automerge.  
+                    </p>
                 </dd>
             </dlentry>
 
