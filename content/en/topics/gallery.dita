@@ -2,9 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="gallery">
 <title>Gallery</title>
-<shortdesc>Explore this collection of images that depict various interpretations of addressing, location, and a sense of belonging. 
-Each piece offers a different ways of expressing findability through different forms of addressing.</shortdesc>
-<conbody>
+<shortdesc>Heart-centered addressing is touched upon in the following photos.  All of the following images were taken with a very inexpensive and physically damaged mobile phone.   Each piece examines some aspect of how different forms of addresses—both physical and digital—shape our connection to places and communities.
+  </shortdesc>
          <section id="disability-pride">
             <fig>
                 <title>July is Disability Pride Month</title>
@@ -80,6 +79,18 @@ Each piece offers a different ways of expressing findability through different f
            </fig>
            <p>Salt Spring Island, British Columbia, Canada</p>
                 
+        </section>
+
+        <section>
+            <title>DWeb Camp Notes 2022</title>
+            <p>Digitized rendering of handwritten notes and stencilled paper while looking for cybersecurity resources for women's reproductive health. 
+            Digitally altered by prompting Chat GPT to "flatten background".</p>
+            <fig><title>Camp Notes</title>
+            <image href="../images/gallery/black-heart-desktop.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-mobile.png" alt="Desktop Image 1" placement="break"/>
+            <image href="../images/gallery/black-heart-tablet.png" alt="Desktop Image 1" placement="break"/>
+           </fig>
+
         </section>
 
     </conbody>

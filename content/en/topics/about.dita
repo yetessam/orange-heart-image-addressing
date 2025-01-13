@@ -2,21 +2,53 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="about">
   <title>About</title>
-  <shortdesc>Orange heart project looks at themes around addressing and resiience through a heart-centered perspective.</shortdesc>
+  <shortdesc>The orange heart project is an example of art and technology that presents themes of addressing and resilience through a heart-centered perspective. 
+  This website was built with a blend of dweb and old school technologies.   The gallery component presents stancil-based spray art on birchwood.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
         <indexterm>Yas Etessam</indexterm>
+        <indexterm>Dweb</indexterm>
+        <indexterm>IPFS</indexterm>
+        <indexterm>decentralized technologies</indexterm>
+        <indexterm>street art</indexterm>
+        
       </keywords>
     </metadata>
   </prolog>
   <conbody>
-   <p>Yas Etessam is a markup technologist.  Yas prefers she/her pronouns. She’s been coding since the 80’s and is best known for her expertise in enterprise content management, particularly within the framework of the Darwin Information Typing Architecture (DITA).</p>
+    <p>Stencils create a form of visual consistency that builds upon itself and can be used over and over again.  
+   They also support a cultural world view where individuals don't need to ask permission to participate in public spaces.  You simply participate.
+  </p>
+  <p>The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.</p>
 
-<p>Yas has had the opportunity to work alongside a variety of technology industry giants including leaders in the semiconductor, enterprise software, cloud computing, networking and telecommunications, and artificial intelligence sectors.   
+
+  <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I wanted to play with images that were very different such as the various photographs as well as images that almost identifical. 
+  </p>
+  <p>For the online component, I wanted to experiment with simply publishing content to the decentralized web and sharing learnings. </p>
+
+<section><title>Learnings</title>
+ <p>The questions that I had at the start of the process included the following:</p>
+      <li>What processes change when we want to publish content to a series of decentralized nodes? </li>
+        <li>How much do I need to think about security and encryption?  Or is it auto-magical?</li>
+        <li>How do I deploy a dwebsite? </li>
+        <li>How do I make the references to the images, should I be using CIDs rather than URLs?</li>
+        <li>How does the replication serv
+        </ul>
+<p>
+        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
+        DWeb is a global community of builders and dreamers working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
+  </p>
+  <p>Source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
+Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
+</p>
+</section>
+ <section><title>Yas Etessam (she/her)</title>
+   <p>Yas Etessam is a markup technologist.   She’s been coding since the 80’s and has expertise in enterprise content.</p>
+     <p>Yas has had the opportunity to work alongside a variety of technology industry giants including leaders in the semiconductor, enterprise software, cloud computing, networking and telecommunications, and artificial intelligence sectors.   
 Most recently, Yas served as a Product Owner on an enterprise Content Pipeline team and chaired the applicable product information governance board.
 </p>
-<p>DITA continues to serve as the foundational standard for user-centric information architecture, as it is flexible and adaptable to change.  
+<p>Darwin Information Typing Architecture (DITA) is the foundational standard for user-centric information architecture, as it is flexible and adaptable to change.  
  Yas notably contributed to DITA adoption as a significant contributor on the team that developed the first commercially available DITA editor, the XMetaL DITA Edition, and to key discussions and policy decisions on the OASIS Technical Committee.  She has frequently shared her knowledge at industry events and provided technical input to DITA Best Practices: A Roadmap for Writing, Editing, and Architecting in DITA by Laura Bellamy, Michelle Carey, et al.  published by IBM Press.
 </p>
 
