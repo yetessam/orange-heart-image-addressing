@@ -10,10 +10,8 @@
                 <dd>
                     <p>Was at Dweb YVR event in Vancouver and built out the message with daffl to get a like snippet in this web app that's built with Feather.Clouds and Automerge.  
                     </p>
-                    <p> <object outputclass="iframe" data="https://future-fall-deep.on-fleek.app"/>
-                    </p>
-            <param name="microphone" value="true" />
-            <param name="camera" value="true" />
+                   <object outputclass="iframe" data="https://future-fall-deep.on-fleek.app">
+                
         </object>
                 </dd>
             </dlentry>
