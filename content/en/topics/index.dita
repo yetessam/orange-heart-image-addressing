@@ -4,24 +4,20 @@
   <title>Home</title>
      <conbody>
         <div outputclass="columns is-vcentered">
-          <div outputclass="column is-half">
-            <p outputclass="title is-4">
-              Welcome to the Orange Heart Project
-            </p>
-            <p outputclass="subtitle">Addressing and Resilience on the Decentralized Web</p>
+          <div outputclass="column">
+            <p outputclass="title mb-6">Welcome to the Orange Heart Project</p>
           </div>
-          <div outputclass="column is-half">
-       <fig outputclass="image is-4by3">
-            <figgroup outputclass="picture">
-               <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" />
-               <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
-                  <alt>White daisies in a field peeking through an orange heart opening.</alt>
-               </image>
-               <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
-            </figgroup>  
-         </fig>
-          <p outputclass="cid">QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145</p>
-         </div>
-       </div>
+          <div outputclass="column is-three-fifths">
+             <fig outputclass="image is-4by3">
+                  <figgroup outputclass="picture">
+                     <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" otherprops="QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145"/>
+                     <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
+                        <alt>White daisies in a field peeking through an orange heart opening.</alt>
+                     </image>
+                     <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
+                  </figgroup>  
+               </fig>
+            </div>
+      </div>
   </conbody>
 </concept>

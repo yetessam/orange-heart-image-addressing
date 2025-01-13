@@ -1,7 +1,18 @@
-/* Import in external CSS */
+
+/* Local and CDN CSS for bulma  */
+
+@import url("bulma.css");
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css");
 
 
-.dl .dd:not(:last-child):not(.box) {
-    border-block-end: 1px solid var(--be-list-item-divider-color);
-  }
+  .figure > *:not(.figcaption):not(.picture) {
+    text-align: left; /* Align text content to the left */
+    float: left;      /* Optional: float left if you want the elements to stack horizontally */
+    display: block;   /* Ensure elements are block-level */
+}
+
+
+dt:not(:first-child) {
+  margin-top: 2.5em; /* Adjust the value as needed */
+}
