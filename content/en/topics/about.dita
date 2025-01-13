@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="about">
   <title>About</title>
-  <shortdesc>The orange heart project is an example of art and technology that presents themes of addressing and resilience through a heart-centered perspective. 
+  <shortdesc>The orange heart project is an example of art and Dweb technology on themes of addressing and resilience through a heart-centered perspective. 
   This website was built with a blend of dweb and old school technologies.   The gallery component presents stancil-based spray art on birchwood.</shortdesc>
   <prolog>
     <metadata>
@@ -25,22 +25,23 @@
 
     <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I wanted to play with images that were very different such as the various photographs as well as images that almost identifical. 
     </p>
-    <p>For the online component, I wanted to experiment with simply publishing content to the decentralized web and sharing learnings. </p>
+    <p>For the online component, I'm experimenting with  publishing content to the decentralized web and sharing learnings. </p>
 
     <section>
       <title>Learnings</title>
       <p>Working on this project helped answer the following questions</p>
       <ul>
         <li>What processes change if you want to publish content to IFPS?
-          <p>None, if you use platform like Fleek where you can use auto-deploy from Git or CLI to deploy from your own servers, its exactly the same.</p>
+          <lq>None.  I used Fleek as my platform provider which supports auto-deploy from Git and has a CLI. </lq>
         </li>
         <li>How much do I need to think about security and encryption?  Or is it auto-magical
-            <p>It's auto-magical https when deploying from Fleek</p>
+            <lq>It's auto-magical https when deploying from Fleek</lq>
           </li>
           <li>How do I deploy a dweb site? 
-              <p>Choose a platform provider or you can publish directly onto IPFS.</p>
+              <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
           </li>
-          <li>How do I make the references to the images, should I be using CIDs rather than URLs?<p>URLS are fine.</p>
+          <li>How do I make the references to the images, should I be using CIDs rather than URLs?
+            <lq>URLS are fine.</lq>
           </li>
         </ul>
         <p>
