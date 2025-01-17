@@ -13,7 +13,7 @@
           Logically, the only thing that you could really embed would be a IPNS since you obviously can't create an image, get the CID and then embed that CID into the file.  
           InterPlanetary Name System (IPNS) supports mutable pointers to IPFS nodes (immutable).
           <xref href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" scope="external" format="html"/>
-/dd>
+        </dd>
       </dlentry>
       
       <dlentry>
