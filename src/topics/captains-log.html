@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="This blog documents technical progress, challenges, solutions and people and events encountered." name="description"/>
+  <meta content="Technical progress, challenges, solutions and people and events encountered are noted below." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
    Captain's Log
@@ -92,16 +92,28 @@
             });
         });
   </script>
-  <main class="container" role="main">
+  <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
      Captain's Log
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      This blog documents technical progress, challenges, solutions and people and events encountered.
+      Technical progress, challenges, solutions and people and events encountered are noted below.
      </p>
      <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       Thursday Jan 16, 2025
+      </dt>
+      <dd class="dd">
+       Used Python to look at image metadata and then used exiftool to set metadata in test images. 
+          Want to consider embedding metadata into image files in the pipeline vs delivering JSON file adjacent to the image.
+          Logically, the only thing that you could really embed would be a IPNS since you obviously can't create an image, get the CID and then embed that CID into the file.  
+          InterPlanetary Name System (IPNS) supports mutable pointers to IPFS nodes (immutable).
+       <a class="xref is-link" href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" rel="external noopener" target="_blank">
+        https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs
+       </a>
+      </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        Sunday Jan 12, 2025
       </dt>
