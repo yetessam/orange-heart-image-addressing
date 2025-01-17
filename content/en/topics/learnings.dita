@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="learnings">
   <title>Learnings</title>
-   <shortdesc>Sharing some learnings since it is normal to have a lot of unanswered questions when trying out new tools and technologies. 
+   <shortdesc>Short questions and answers about publishing content to the decentralized web.
 </shortdesc>
   <prolog>
     <metadata>
@@ -14,16 +14,25 @@
     </metadata>
   </prolog>
   <conbody>
-  <section>
-       <p>Taking the Dweb Course for Creators gave me the opportunity to experiment with decentralized web tech while making art.</p>
-       <p>I only had questions at the start, so I started with a design doc and tried to capture learnings along the way in a Captain's Log style journal.</p>
-        <p>You are currently interacting with the dweb... it works!
-        </p>
-         <p>My source content is written in OASIS Open DITA XML, it is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
-         HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
-         </p>
-         <p>And here are some answers to some questions..</p>
+  
       <dl outputclass="notification is-warning">
+       <dlentry>
+        <dt>How did you make this dwebsite? </dt>
+        <dd><p>At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.</p>
+          <p>The source content is written in OASIS Open DITA XML.</p>
+          <p>It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
+          <p>Python massages the HTML5 so it plays nicely with Bulma CSS.  </p>
+          <p>Bulma CSS on a CDN provides responsive layout and UX</p>
+          <p>Fleek is the platform and application host and uses the InterPlanetary File System (IPFS).</p>
+          </dd>
+      </dlentry>
+
+       <dlentry>
+        <dt>What processes need to change if you want to publish content to IFPS?</dt>
+        <dd>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path. </dd>
+      </dlentry>
+
        <dlentry>
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
         <dd>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
@@ -49,7 +58,5 @@
           </dd>
           </dlentry>  
       </dl>
-  </sectiondiv>
-</section>
     </conbody>
   </concept>
