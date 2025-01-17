@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="about">
   <title>About</title>
-   <shortdesc>The orange heart project is an example of art and Dweb technology that uses a heart-centered perspective to explore addressing and resilience. 
+   <shortdesc>The orange heart project mixes art and Dweb technology through a heart-centered perspective to explore addressing and resilience. 
   The gallery component presents stancil-based spray art on birchwood.</shortdesc>
   <prolog>
     <metadata>
@@ -29,33 +29,33 @@
 
     <section>
       <title>Learnings</title>
-      <p>Working on this project answered the following questions</p>
+      <p>Working on this project clarified answers to the following questions: 
+       /p>
       <ul>
-        <li>What processes change if you want to publish content to IFPS?
-          <lq>None.  I used Fleek as my platform provider which supports auto-deploy from Git and has a CLI. </lq>
+        <li>What processes need to change if you want to publish content to IFPS?
+          <lq>None.  Using Fleek as my platform provider lets you supports auto-deploy from Git and has a CLI.   There were instances when I used the CLI to Fleek and even though I could have used the IPFS CLI, that seems inefficient compared to letting Fleek handle the entire IPFS layer. </lq>
         </li>
         <li>How much do I need to think about security and encryption?  Or is it auto-magical
-            <lq>It's auto-magical https when deploying from Fleek</lq>
+            <lq>It is auto-magical https when deploying from Fleek.</lq>
           </li>
           <li>How do I deploy a dweb site? 
               <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
           </li>
-          <li>How do I make the references to the images, should I be using CIDs rather than URLs?
-            <lq>URLS are fine.</lq>
+          <li>How do I make the references to graphics, should I be using CIDs rather than URLs?
+            <lq>Human readable filenames and human-readable URLS are fine.</lq>
           </li>
         </ul>
-        <p>
-        The goals of the project were to experiment as much as possible with different tools and try out various dweb-friendly tools and technologies. 
+        <p>My project goals were to experiment and try out different dweb-friendly tools and technologies. 
         DWeb is starting to turn into a truly global community of builders and dreamers.    Everybody is working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
         </p>
-        <p>Source markup language for the content is DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 and Github Actions. 
-Python adjusts the HTML5 for a better responsive user experience and when the source moves from staging to prod, Fleek deploys to IPFS.
+        <p>The source for this site was built with DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 through Github Actions. 
+          Python adjusts the HTML5, Bulma CSS ensures a responsive user experience and pull requests into prod deploys to Fleek which then deploys to IPFS.
         </p>
       </section>
       <section>
         <title>Yas Etessam (she/her)</title>
         <p>Yas Etessam is a markup technologist.   She’s been coding since the 80’s and has expertise in enterprise content.</p>
-        <p>Yas has had the opportunity to work alongside a variety of technology industry giants including leaders in the semiconductor, enterprise software, cloud computing, networking and telecommunications, and artificial intelligence sectors.   
+        <p>Yas has had the opportunity to work alongside a variety of technology industry giants in semiconductor, enterprise software, cloud computing, networking, telecommunications, and artificial intelligence.   
 Most recently, Yas served as a Product Owner on an enterprise Content Pipeline team and chaired the applicable product information governance board.
         </p>
         <p>Darwin Information Typing Architecture (DITA) is the foundational standard for user-centric information architecture, as it is flexible and adaptable to change.  
