@@ -45,9 +45,7 @@
             <lq>Human readable filenames and human-readable URLS are fine.</lq>
           </li>
         </ul>
-        <p>My project goals were to experiment and try out different dweb-friendly tools and technologies. 
-        DWeb is starting to turn into a truly global community of builders and dreamers.    Everybody is working together to create a better, less centralized web and to model these technologies around human agency and ecological awareness. 
-        </p>
+        <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
         <p>The source for this site was built with DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 through Github Actions. 
           Python adjusts the HTML5, Bulma CSS ensures a responsive user experience and pull requests into prod deploys to Fleek which then deploys to IPFS.
         </p>
