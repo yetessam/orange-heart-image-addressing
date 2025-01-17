@@ -20,11 +20,15 @@
         <dt>How did you make this dwebsite? </dt>
         <dd><p>At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.</p>
           <p>The source content is written in OASIS Open DITA XML.</p>
-          <p>It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
+          <p>It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions.</p> 
           <p>Python massages the HTML5 so it plays nicely with Bulma CSS.  </p>
           <p>Bulma CSS on a CDN provides responsive layout and UX</p>
-          <p>Fleek is the platform and application host and uses the InterPlanetary File System (IPFS).</p>
+          <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
           </dd>
+      </dlentry>
+     <dlentry>
+        <dt>Do I need to use Content Identifiers in my XML/Markdown/HTML?</dt>
+        <dd>Nope.  Don't even try.  There's zero benefit AFAIC. 
       </dlentry>
 
        <dlentry>
