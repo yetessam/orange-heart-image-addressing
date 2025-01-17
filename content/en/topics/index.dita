@@ -4,9 +4,7 @@
   <title>Home</title>
      <conbody>
         <div outputclass="columns is-vcentered">
-          <div outputclass="column">
-            <p outputclass="title mb-6">Welcome to the Orange Heart Project</p>
-          </div>
+         
           <div outputclass="column is-three-fifths">
              <fig outputclass="image is-4by3">
                   <figgroup outputclass="picture">
@@ -18,6 +16,9 @@
                   </figgroup>  
                </fig>
             </div>
+            <div outputclass="column">
+            <p outputclass="title mb-6">Welcome to the Orange Heart Project</p>
+          </div>
       </div>
   </conbody>
 </concept>
