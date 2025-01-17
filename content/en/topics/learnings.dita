@@ -21,7 +21,7 @@
          HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
          </p>
 
-      <dl class="notification is-warning">
+      <dl outputclass="notification is-warning">
        <dlentry>
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
         <dd>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
