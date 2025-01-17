@@ -2,7 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="learnings">
   <title>Learnings</title>
-   <shortdesc>Answers to mostly technical questions are gathered here.</shortdesc>
+   <shortdesc>Sharing some learnings since it is normal to have a lot of unanswered questions when trying out new tools and technologies. 
+</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -13,14 +14,15 @@
     </metadata>
   </prolog>
   <conbody>
-  <section><title>Learning Objectives</title>
-       <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
-       <p>As part of the Dweb Course for Creators, I wanted to experiment with decentralized web tech while making art.</p>
-       
-        <p>You are currently interacting with the dweb... my source content is written in OASIS Open DITA XML and (supports Markdown), it is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
+  <section>
+       <p>Taking the Dweb Course for Creators gave me the opportunity to experiment with decentralized web tech while making art.</p>
+       <p>I only had questions at the start, so I started with a design doc and tried to capture learnings along the way in a Captain's Log style journal.</p>
+        <p>You are currently interacting with the dweb... it works!
+        </p>
+         <p>My source content is written in OASIS Open DITA XML, it is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
          HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
          </p>
-
+         <p>And here are some answers to some questions..</p>
       <dl outputclass="notification is-warning">
        <dlentry>
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
@@ -30,7 +32,7 @@
 
          <dlentry>
             <dt>How much do I need to think about security and encryption?  Or is it auto-magical?</dt>
-            <dd>It is auto-magical https when deploying from Fleek.</dd>
+            <dd>It is auto-magical HTTPS -  deploying from Fleek.</dd>
          </dlentry>
         <dlentry>
             <dt>How do I deploy a dweb site?</dt>
@@ -38,12 +40,13 @@
           </dlentry>
           <dlentry>
              <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
-            <dd>Human readable filenames and human-readable URLS are fine.</dd>
+            <dd>Human-readable filenames and human-readable URLS are fine.</dd>
           </dlentry>
           <dlentry>
            <dt>Search</dt>
-            <dd>Search is a rabbit hole.   Got Algolia search working locally but should swap it out with decentralized search. 
-            </dd>
+            <dd>Search is a rabbit hole.   Something like the Graph should be all I need, but I went and wasted time fiddling with Elastic search and Alogolia.
+            Soon, there will be a function search box that's using dweb-based search. 
+          </dd>
           </dlentry>  
       </dl>
   </sectiondiv>
