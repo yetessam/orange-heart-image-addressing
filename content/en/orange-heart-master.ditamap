@@ -5,11 +5,14 @@
 	<topicref href="topics/index.dita" format="dita" type="concept"/>
 
 	<topicref href="topics/orange-heart.dita" format="dita" type="concept">
-		<topicref href="topics/learnings.dita" format="dita" type="concept"/> 
+		
 	</topicref>	
+
+
 	<topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
 	<topicref href="topics/addressing.dita" format="dita" type="concept"/> 
 	<topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
+	<topicref href="topics/learnings.dita" format="dita" type="concept"/> 
 	<topicref href="topics/about.dita" format="dita" type="concept"/> 
 		
 	<reltable>
