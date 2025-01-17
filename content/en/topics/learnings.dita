@@ -47,7 +47,8 @@
           </dlentry>
           <dlentry>
              <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
-            <dd>No, stick to meaningful and human-readable names.  </dlentry>
+            <dd>No, stick to meaningful and human-readable names. </dd>
+        </dlentry>
           <dlentry>
            <dt>Search??</dt>
             <dd>Search is a rabbit hole.  You can use Elastic search and Algolia on decentralized websites.
