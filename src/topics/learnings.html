@@ -5,15 +5,15 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Orange Heart Project 2024 explores themes of addressing and belonging. This collection of images viewed through a heart-shaped stencil was created from May - August 2024." name="description"/>
+  <meta content="Answers to a lot of questions that I had during this project are gathered here." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Orange Heart Project
+   Learnings
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body id="orange-heart">
+ <body id="learnings">
   <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
@@ -98,29 +98,52 @@
   <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Orange Heart Project
+     Learnings
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Orange Heart Project 2024 explores themes of addressing and belonging.  This collection of images viewed through a heart-shaped stencil was created from May - August 2024.
+      Answers to a lot of questions that I had during this project are gathered here.
      </p>
      <p class="p">
-      The source content was developed in DITA XML and travelled through a typical enterprise content development lifecycle using DITA Open Toolkit, Github and Fleek.
+      My project goals were to experiment and try out different Dweb-friendly tools and technologies.
      </p>
      <p class="p">
-      The content that you are viewing is stored on the Interplanetary File System,
-      <a class="xref is-link" href="https://ipfs.io/" rel="external noopener" target="_blank">
-       IPFS
-      </a>
-      , which ensures that the content is decentralized, replicated, 
-and verifies its authenticity and provenance.  Peer to peer sites that are replicated on organizational servers are more stable and resilient than content stored in a single location on the web.
+      Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
+         HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek.
      </p>
-     <p class="p">
-      This project repurposes a heart-shaped stencil originally created as a response to gun violence in San Francisco's Mission District in 2017.
-     </p>
-     <p class="p">
-      I first started stenciling hearts in my neighbourhood as part of a healing journey.  Since then, they have been reused and repurposed on a variety of mediums beyond concrete.
-     </p>
+     <dl class="dl cards">
+      <dt class="dt dlterm has-text-weight-semibold">
+       What processes need to change if you want to publish content to IFPS?
+      </dt>
+      <dd class="dd">
+       None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How much do I need to think about security and encryption?  Or is it auto-magical?
+      </dt>
+      <dd class="dd">
+       It is auto-magical https when deploying from Fleek.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I deploy a dweb site?
+      </dt>
+      <dd class="dd">
+       Select a platform provider or you can publish directly onto IPFS yourself.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I make the references to graphics, should I be using CIDs rather than URLs?
+      </dt>
+      <dd class="dd">
+       Human readable filenames and human-readable URLS are fine.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Search
+      </dt>
+      <dd class="dd">
+       Search is a rabbit hole.   Got Algolia search working locally but should swap it out with decentralized search.
+      </dd>
+     </dl>
     </div>
    </article>
   </main>
