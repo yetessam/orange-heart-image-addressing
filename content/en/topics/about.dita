@@ -29,21 +29,21 @@
      <section>
       <title>Learnings</title>
       <p>Working on this project provided answers to the following questions: </p>
-      <sl>
-        <sli>What processes need to change if you want to publish content to IFPS?
+      
+        <p>What processes need to change if you want to publish content to IFPS?
           <lq>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
          Having Fleek handle the entire IPFS layer is a happy path. </lq>
-        </sli>
-        <sli>How much do I need to think about security and encryption?  Or is it auto-magical
+        </p>
+        <p>How much do I need to think about security and encryption?  Or is it auto-magical
             <lq>It is auto-magical https when deploying from Fleek.</lq>
-          </sli>
-          <sli>How do I deploy a dweb site? 
+          </p>
+          <p>How do I deploy a dweb site? 
               <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
-          </sli>
-          <sli>How do I make the references to graphics, should I be using CIDs rather than URLs?
+          </p>
+          <p>How do I make the references to graphics, should I be using CIDs rather than URLs?
             <lq>Human readable filenames and human-readable URLS are fine.</lq>
-          </sli>
-        </sl>
+          </p>
+        
         <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
         <p>Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
          HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
