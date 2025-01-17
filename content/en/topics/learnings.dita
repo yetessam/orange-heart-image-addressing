@@ -18,32 +18,30 @@
         <p>Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
          HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
         </p>
-      <section outputclass="cards">
-       <example outputclass="card">
-        <title>What processes need to change if you want to publish content to IFPS?</title>
-          <lq>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
-         Having Fleek handle the entire IPFS layer is a happy path. </lq>
-        </example>
+      <dl outputclass="cards">
+       <dlentry outputclass="card">
+        <dt>What processes need to change if you want to publish content to IFPS?</dt>
+        <dd>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path. </dd>
+      </dlentry>
 
-         <example outputclass="card">
-        <title>How much do I need to think about security and encryption?  Or is it auto-magical?</title>
-            <lq>It is auto-magical https when deploying from Fleek.</lq>
-          </example>
-          <example outputclass="card">
-        <title>How do I deploy a dweb site?</title>
-              <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
-          </example>
-          <example outputclass="card">
-           <title>How do I make the references to graphics, should I be using CIDs rather than URLs?</title>
-            <lq>Human readable filenames and human-readable URLS are fine.</lq>
-          </example>
-          <example outputclass="card">
-           <title>Search</title>
-            <lq>Search is a rabbit hole.   Have Algolia search working locally but intend to swap it out with decentralized search. 
-            </lq>
-          </example>
-        
-      </section>
-      
+         <dlentry outputclass="card">
+            <dt>How much do I need to think about security and encryption?  Or is it auto-magical?</dt>
+            <dd>It is auto-magical https when deploying from Fleek.</dd>
+         </dlentry>
+        <dlentry outputclass="card">
+            <dt>How do I deploy a dweb site?</dt>
+              <dd>Select a platform provider or you can publish directly onto IPFS yourself.</dd>
+          </dlentry>
+          <dlentry outputclass="card">
+             <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
+            <dd>Human readable filenames and human-readable URLS are fine.</dd>
+          </dlentry>
+          <dlentry outputclass="card">
+           <dt>Search</dt>
+            <dd>Search is a rabbit hole.   Got Algolia search working locally but should swap it out with decentralized search. 
+            </dd>
+          </dlentry>  
+      </dl>
     </conbody>
   </concept>
