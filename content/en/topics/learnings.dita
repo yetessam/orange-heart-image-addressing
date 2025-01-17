@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="learnings">
+  <title>Learnings</title>
+   <shortdesc>Answers to a lot of questions that I had during this project are gathered here.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Learnings</indexterm>
+        <indexterm>Dweb</indexterm>
+        <indexterm>IPFS</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+  
+      <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
+        <p>Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
+         HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
+        </p>
+      <section outputclass="cards">
+       <example outputclass="card">
+        <title>What processes need to change if you want to publish content to IFPS?</title>
+          <lq>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path. </lq>
+        </example>
+
+         <example outputclass="card">
+        <title>How much do I need to think about security and encryption?  Or is it auto-magical?</title>
+            <lq>It is auto-magical https when deploying from Fleek.</lq>
+          </example>
+          <example outputclass="card">
+        <title>How do I deploy a dweb site?</title>
+              <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
+          </example>
+          <example outputclass="card">
+        <title>How do I make the references to graphics, should I be using CIDs rather than URLs?</title>
+            <lq>Human readable filenames and human-readable URLS are fine.</lq>
+          </examplep>
+      </section>
+      
+    </conbody>
+  </concept>
