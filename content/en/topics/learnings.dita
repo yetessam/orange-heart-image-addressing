@@ -49,9 +49,10 @@
              <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
             <dd>No, stick to meaningful and human-readable names.  </dlentry>
           <dlentry>
-           <dt>Search</dt>
-            <dd>Search is a rabbit hole.   Something like the Graph should be all I need, but I went and wasted time fiddling with Elastic search and Alogolia.
-            Soon, there will be a function search box that's using dweb-based search. 
+           <dt>Search??</dt>
+            <dd>Search is a rabbit hole.  You can use Elastic search and Algolia on decentralized websites.
+             Elastic search and Algolia had no problems crawling/indexing this site. 
+             I haven't gotten to trying out The Graph. That's next. 
           </dd>
           </dlentry>  
       </dl>
