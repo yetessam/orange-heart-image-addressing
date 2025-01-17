@@ -1,5 +1,5 @@
 bulma_classes = {
-    'main': 'container',
+    'main': 'container p-5',
     'article': 'content',
     'h1': 'title',
     'h2': 'title',
