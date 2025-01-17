@@ -34,9 +34,15 @@
               <lq>Select a platform provider or you can publish directly onto IPFS yourself.</lq>
           </example>
           <example outputclass="card">
-        <title>How do I make the references to graphics, should I be using CIDs rather than URLs?</title>
+           <title>How do I make the references to graphics, should I be using CIDs rather than URLs?</title>
             <lq>Human readable filenames and human-readable URLS are fine.</lq>
-          </examplep>
+          </example>
+          <example outputclass="card">
+           <title>Search</title>
+            <lq>Search is a rabbit hole.   Have Algolia search working locally but intend to swap it out with decentralized search. 
+            </lq>
+          </example>
+        
       </section>
       
     </conbody>
