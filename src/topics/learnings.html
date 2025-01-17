@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Answers to a lot of questions that I had during this project are gathered here." name="description"/>
+  <meta content="Short questions and answers about publishing content to the decentralized web." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
    Learnings
@@ -102,16 +102,45 @@
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Answers to a lot of questions that I had during this project are gathered here.
+      Short questions and answers about publishing content to the decentralized web.
      </p>
-     <p class="p">
-      My project goals were to experiment and try out different Dweb-friendly tools and technologies.
-     </p>
-     <p class="p">
-      Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
-         HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek.
-     </p>
-     <dl class="dl cards">
+     <dl class="dl notification is-warning">
+      <dt class="dt dlterm has-text-weight-semibold">
+       How did you make this dwebsite?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.
+       </p>
+       <p class="p">
+        The source content is written in OASIS Open DITA XML.
+       </p>
+       <p class="p">
+        It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions.
+       </p>
+       <p class="p">
+        Python massages the HTML5 so it plays nicely with Bulma CSS.
+       </p>
+       <p class="p">
+        Bulma CSS on a CDN provides responsive layout and UX
+       </p>
+       <p class="p">
+        Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Do I need to use Content Identifiers in my XML/Markdown/HTML?
+      </dt>
+      <dd class="dd">
+       Nope.  Don't even try.  There's zero benefit AFAIC.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       What processes need to change if you want to publish content to IFPS?
+      </dt>
+      <dd class="dd">
+       None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path.
+      </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        What processes need to change if you want to publish content to IFPS?
       </dt>
@@ -123,7 +152,7 @@
        How much do I need to think about security and encryption?  Or is it auto-magical?
       </dt>
       <dd class="dd">
-       It is auto-magical https when deploying from Fleek.
+       It is auto-magical HTTPS -  deploying from Fleek.
       </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        How do I deploy a dweb site?
@@ -135,13 +164,14 @@
        How do I make the references to graphics, should I be using CIDs rather than URLs?
       </dt>
       <dd class="dd">
-       Human readable filenames and human-readable URLS are fine.
+       Human-readable filenames and human-readable URLS are fine.
       </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        Search
       </dt>
       <dd class="dd">
-       Search is a rabbit hole.   Got Algolia search working locally but should swap it out with decentralized search.
+       Search is a rabbit hole.   Something like the Graph should be all I need, but I went and wasted time fiddling with Elastic search and Alogolia.
+            Soon, there will be a function search box that's using dweb-based search.
       </dd>
      </dl>
     </div>
