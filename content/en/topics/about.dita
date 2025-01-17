@@ -3,7 +3,7 @@
 <concept id="about">
   <title>About</title>
    <shortdesc>The orange heart project mixes art and Dweb technology through a heart-centered perspective to explore addressing and resilience. 
-  The gallery component presents stancil-based spray art on birchwood.</shortdesc>
+  The gallery component presents stencil-based spray art on birchwood.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -17,20 +17,18 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Stencils create a form of visual consistency that builds upon itself and can be used over and over again.  
-   They also support a cultural world view where individuals don't need to ask permission to participate in public spaces.  You simply participate.
+    <p>Stencils create a form of visual consistency that builds upon itself through repeated reuse. </p>
+    <p>In terms of re-purposing, the same stencil is getting used in two different ways.
+ The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.</p>
+
+
+    <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I am intentionally using the same stencil even though it creates a sequence of repetitive images.
+     Over the time, art degrade on any surface whether it is concrete or paper.
+     As you reuse the stencil, it does loose its sharpness as it picks up paint. 
     </p>
-    <p>The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.</p>
-
-
-    <p>Given that one of the features of decentralized technologies, such as IPFS, is replication, I wanted to play with images that were very different such as the various photographs as well as images that almost identifical. 
-    </p>
-    <p>For the online component, I'm experimenting with  publishing content to the decentralized web and sharing learnings. </p>
-
-    <section>
+     <section>
       <title>Learnings</title>
-      <p>Working on this project clarified answers to the following questions: 
-       /p>
+      <p>Working on this project provided answers to the following questions: </p>
       <ul>
         <li>What processes need to change if you want to publish content to IFPS?
           <lq>None.  Using Fleek as my platform provider lets you supports auto-deploy from Git and has a CLI.   There were instances when I used the CLI to Fleek and even though I could have used the IPFS CLI, that seems inefficient compared to letting Fleek handle the entire IPFS layer. </lq>
