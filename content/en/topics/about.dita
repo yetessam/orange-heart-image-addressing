@@ -45,8 +45,8 @@
           </li>
         </ul>
         <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
-        <p>The source for this site was built with DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 through Github Actions. 
-          Python adjusts the HTML5, Bulma CSS ensures a responsive user experience and pull requests into prod deploys to Fleek which then deploys to IPFS.
+        <p>Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
+         HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
         </p>
       </section>
       <section>
