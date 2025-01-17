@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="learnings">
   <title>Learnings</title>
-   <shortdesc>Answers to a lot of questions that I had during this project are gathered here.</shortdesc>
+   <shortdesc>Answers to mostly technical questions are gathered here.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -13,11 +13,14 @@
     </metadata>
   </prolog>
   <conbody>
-  
-      <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
-        <p>Source content is written in OASIS Open DITA XML transformed to HTML5 using the DITA Open Toolkit 4.2.3 with Github Actions. 
+  <section><title>Learning Objectives</title>
+       <p>My project goals were to experiment and try out different Dweb-friendly tools and technologies. </p>
+       <p>As part of the Dweb Course for Creators, I wanted to experiment with decentralized web tech while making art.</p>
+       
+        <p>You are currently interacting with the dweb... my source content is written in OASIS Open DITA XML and (supports Markdown), it is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions. 
          HTML5 mods performed by Python, rendered with Responsive Bulma CSS and deployed to the InterPlanetary File System (IPFS) through Fleek. 
-        </p>
+         </p>
+
       <dl class="notification is-warning">
        <dlentry>
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
