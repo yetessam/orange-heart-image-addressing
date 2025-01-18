@@ -2,6 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="home-landing-page" outputclass="landing-page">
   <title>Home</title>
+  <titlealts><navtitle>Welcome to the Orange Heart Project</navtitle></titlealts>
      <conbody>
         <div outputclass="columns is-vcentered">
          
