@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="home-landing-page" outputclass="landing-page">
+<concept id="home-landing-page" outputclass="landing-page hero">
   <title>Welcome to the Orange Heart Project</title>
   <titlealts><navtitle>Home</navtitle></titlealts>
      <conbody>
