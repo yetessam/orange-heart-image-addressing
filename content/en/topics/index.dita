@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="home-landing-page" outputclass="landing-page">
-  <title>Home</title>
-  <titlealts><navtitle>Welcome to the Orange Heart Project</navtitle></titlealts>
+  <title>Welcome to the Orange Heart Project</title>
+  <titlealts><navtitle>Home</navtitle></titlealts>
      <conbody>
         <div outputclass="columns is-vcentered">
          
@@ -18,7 +18,7 @@
                </fig>
             </div>
             <div outputclass="column">
-            <p outputclass="title mb-6">Welcome to the Orange Heart Project</p>
+            <p outputclass="title mb-6"><!-- Welcome to the Orange Heart Project--></p>
           </div>
       </div>
   </conbody>
