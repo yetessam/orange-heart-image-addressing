@@ -9,11 +9,11 @@
           <div outputclass="column is-three-fifths">
              <fig outputclass="image is-4by3">
                   <figgroup outputclass="picture">
-                     <image outputclass="desktop" href="../images/gallery/daisy-desktop.png" otherprops="QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145"/>
-                     <image outputclass="tablet" href="../images/gallery/daisy-tablet.png">
+                     <image outputclass="desktop" href="images/gallery/daisy-desktop.png" otherprops="QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145"/>
+                     <image outputclass="tablet" href="images/gallery/daisy-tablet.png">
                         <alt>White daisies in a field peeking through an orange heart opening.</alt>
                      </image>
-                     <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
+                     <image outputclass="mobile" href="images/gallery/daisy-mobile.png"/>
                   </figgroup>  
                </fig>
             </div>
