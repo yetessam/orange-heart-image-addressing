@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ai_usage">
+  <title>AI Usage</title>
+  <shortdesc>Find out how Artificial Intelligence (AI) was used in this project.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>AI</indexterm>
+        <indexterm>Content Conversion</indexterm>
+        <indexterm>Messy Markdown</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+    <p>AI was used as a learning partner, researcher and for tasks like debugging, spell checking and scanning through hard-to-read messages and logs.
+    </p>
+    <simpletable>
+      <sthead>
+        <stentry>Assistance Type</stentry>
+        <stentry>Example (s)</stentry>
+        <stentry>Technology</stentry>
+      </sthead>
+      <strow>
+        <stentry>Learning and research partner </stentry>
+        <stentry>
+          <ul>
+            <li>Provided concise summaries to help compare different dweb technologies
+            </li>
+            <li>Up-to-date knowledge on latest dweb technology </li>
+            <li>Interactive learning partner when prompted with learning objectives
+            </li>
+          </ul>
+        </stentry>
+        <stentry>
+             Open AI GPT-4o, GPT-3.5, 
+        </stentry>
+      </strow>
+      <strow>
+        <stentry>Programming</stentry>
+
+        <stentry>
+          <ul>
+            <li>Troubleshooting error messages  </li>
+            <li>Scanning build logs</li>
+            <li>Used for prototyping Python and helped set up Github actions</li>
+
+          </ul>
+        </stentry>
+        <stentry>
+              Open AI GPT-4o,GPT-4, GPT-3.5, GitHub Copilot, Anthropic Claude 3.5 Sonnet, VS Code Copilot, Microsoft Copilot
+        </stentry>
+      </strow>
+      <strow>
+        <stentry>Content development</stentry>
+
+        <stentry>
+          <ul>
+            <li>Formatting code and XML nesting </li>
+            <li>Adding XML tagging with auto-complete in VS Code
+            </li>
+            <li>Spelling and grammar checking </li>
+          </ul>
+        </stentry>
+        <stentry>
+            Open AI GPT-4o, GitHub Copilot, VS Code Copilot
+              
+        </stentry>
+      </strow>
+    </simpletable>
+  </conbody>
+</concept>
