@@ -53,13 +53,11 @@ def process_html_files(out_dir, src_dir, res_dir):
     copy_files(out_dir, src_dir)
     logger.info(f"Copied all files from {out_dir} to {src_dir}\n\n")
 
-    # Copy bulma css resource and the index redirect 
+    # Copy bulma css resource  
     css_dest_dir = os.path.join(src_dir, "css")
     css_file = "bulma.css"
-    index_file  = "index.html"
     
     copy_resource(res_dir, css_dest_dir, css_file)
-    copy_resource(res_dir, src_dir, index_file)
     
     build_search_index(src_dir)
 
