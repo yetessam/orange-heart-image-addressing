@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="ai_usage">
   <title>AI Usage</title>
-  <shortdesc>Find out how Artificial Intelligence (AI) was used in this project.</shortdesc>
+  <shortdesc>Discover how Artificial Intelligence (AI) was used in this project.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -13,8 +13,10 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>AI was used as a learning partner, researcher and for tasks like debugging, spell checking and scanning through hard-to-read messages and logs.
-    </p>
+    <p>AI was an excellent learning partner and researcher on the Dweb stack.  Copilots were used for programming tasks such as 
+prototyping, refactoring code, rewriting existing functions, debugging and scanning through complex messages and logs.  
+For content development, I wrote the content myself.  Personally, I prefer my short, fact-based minimalism to the rambling, trippy Generative AI content.    
+</p>
     <simpletable>
       <sthead>
         <stentry>Assistance Type</stentry>
