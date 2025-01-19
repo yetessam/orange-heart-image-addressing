@@ -39,11 +39,11 @@ def modify_navbar(soup):
         # Move list items to the new structure
         ul = nav.find('ul')
         if ul:
-            for li in ul.find_all('li'):
+            for li in ul.find_all('li', recursive=False):
                 a = li.find('a')
                 if a:
                     a['class'] = 'navbar-item'
-                    navbar_start.append(a)
+                    navbar_start.append(li) # Append the entire <li> instead of just the <a> to include nested links
             logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         # Assemble the new navbar structure
