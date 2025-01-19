@@ -48,6 +48,9 @@ def process_html_files(out_dir, src_dir, res_dir):
     logger.debug(f"Found {len(html_files)} HTML files:")
     for filepath in html_files:
         print(filepath)
+        if 'toc.html' in filepath:
+            print(f"Leave toc.html alone: {filepath}")
+            return
         process_html_file(filepath)
 
     copy_files(out_dir, src_dir)
