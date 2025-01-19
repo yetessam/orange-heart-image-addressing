@@ -9,7 +9,7 @@ on:
     workflows: ["DITA Workflow"]
     types:
       - completed
-    conclusion: 
+    conclusions: 
       - success
 
 
