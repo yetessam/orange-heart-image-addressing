@@ -50,16 +50,24 @@ The current website uses content-based and location-based addressing, along with
 
 
 <p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
+</p>
+<p>
+
+For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+
+Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
+
 This CID in the decentralized web can be used as the asset's location address.
-For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx. 
+
 I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
 
 All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
 </p>
 
 
- <p>When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
- series of numbers and letters for this exact image. 
+ <p>Any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image.   
+
 </p>
 
   <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
