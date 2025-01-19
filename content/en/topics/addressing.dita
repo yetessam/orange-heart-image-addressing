@@ -13,7 +13,7 @@
   </prolog>
   <conbody>
     <section><title>Findability Protocols</title>
-    <p>What is an Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
+    <p>What is a Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
     Let's group together all of these diverse systems together as "findability protocols." 
     Any of the following could be considered examples of findability protocols:
     <ul>
@@ -46,17 +46,26 @@ The current website uses content-based and location-based addressing, along with
 </section>
 <section><title>Content Addressing </title>
 
+
+
+
+<p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
+This CID in the decentralized web can be used as the asset's location address.
+For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx. 
+I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
+
+All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
+</p>
+
+
  <p>When you take any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image. 
 </p>
 
-<p>This result is a content address ID (CID).  These CIDs that result from cryptographic hash are a form of the image's address.
-as a location address.   
-
-If I share the following link, it lives in multiple places on the web but all of the following links are guaranteed to be the exact same, unaltered image.
-</p>
-
-  <p>As this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Its authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
+  <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
+This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
+Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
+   
    
   <p>Another way to look at CIDs is to consider them as a text-based and unique property of the content object.</p>
   <p>If you've published a website and have a different version of the content, its CID will change.
