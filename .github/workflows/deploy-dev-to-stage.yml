@@ -2,7 +2,7 @@ name: Deploy src to Staging
 
 on:
   workflow_run:
-    workflows: ["DITA Workflow"]
+    workflows: ["Generate Sitemap"]
     types:
       - completed
     # Ensure the action runs only if the previous workflow succeeded
