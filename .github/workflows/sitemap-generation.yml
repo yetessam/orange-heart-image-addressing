@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Stage Branch
+    - name: Checkout dev Branch
       run: |
           git fetch origin
-          git checkout stage
-          git pull origin stage
+          git checkout dev
+          git pull origin dev
 
     - name: Checkout the repo
       uses: actions/checkout@v4
