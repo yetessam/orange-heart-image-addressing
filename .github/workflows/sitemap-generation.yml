@@ -2,7 +2,7 @@
 # https://github.com/cicirello/actions/blob/main/.github/workflows/sitemap-generation.yml
 # Modified by [Yas Etessam] for [orange-heart-project]
 
-name: Generate sitemap
+name: Generate Sitemap
 
 on:
   workflow_run:
