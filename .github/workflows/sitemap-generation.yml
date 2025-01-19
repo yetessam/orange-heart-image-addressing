@@ -1,7 +1,6 @@
 # This workflow file was originally sourced from:
 # https://github.com/cicirello/actions/blob/main/.github/workflows/sitemap-generation.yml
 # Modified by [Yas Etessam] for [orange-heart-project]
-
 name: Generate sitemap
 
 on:
@@ -13,17 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout dev Branch
-      run: |
-          git fetch origin
-          git checkout dev
-          git pull origin dev
-
     - name: Checkout the repo
       uses: actions/checkout@v4
       with:
         fetch-depth: 0    # Need timestamp info
-    
+        ref: dev
+
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
@@ -38,6 +32,8 @@ jobs:
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
     
     - name: Commit and push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         if [[ `git status --porcelain src/sitemap.xml` ]]; then
           git config --global user.name "${{ github.actor }}"
