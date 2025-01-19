@@ -1,10 +1,17 @@
 # This workflow file was originally sourced from:
 # https://github.com/cicirello/actions/blob/main/.github/workflows/sitemap-generation.yml
 # Modified by [Yas Etessam] for [orange-heart-project]
+
 name: Generate sitemap
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["DITA Workflow"]
+    types:
+      - completed
+    conclusion: 
+      - success
+
 
 jobs:
   sitemap:
