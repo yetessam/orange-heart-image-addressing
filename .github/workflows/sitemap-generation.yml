@@ -2,10 +2,17 @@
 # https://github.com/cicirello/actions/blob/main/.github/workflows/sitemap-generation.yml
 # Modified by [Yas Etessam] for [orange-heart-project]
 
-name: Generate sitemap
+
+name: Generate Sitemap
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["DITA Workflow"]
+    types:
+      - completed
+    conclusions: 
+      - success
+
 
 jobs:
   sitemap:
@@ -17,7 +24,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0    # Need timestamp info
-    
+
+        ref: dev
+
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
@@ -26,16 +35,22 @@ jobs:
     
     - name: Output stats
       run: |
+
+        cp ${{ steps.sitemap.outputs.sitemap-path }} src/sitemap.xml
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
     
     - name: Commit and push
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        if [[ `git status --porcelain sitemap.xml` ]]; then
+        if [[ `git status --porcelain src/sitemap.xml` ]]; then
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add sitemap.xml
-          git commit -m "Automated sitemap update" sitemap.xml
+          git add src/sitemap.xml
+          git commit -m "Automated sitemap update" src/sitemap.xml
+
           git push
         fi
