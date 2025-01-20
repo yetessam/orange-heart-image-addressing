@@ -11,8 +11,10 @@
         <topicref href="topics/discover.dita"  format="dita" type="concept" collection-type="sequence">
 		<topicref href="topics/addressing.dita" format="dita" type="concept"/> 
 		<topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
+                <topicref href="topics/deploy.dita" format="dita" type="concept"/> 
 		<topicref href="topics/learnings.dita" format="dita" type="concept"/> 
-		<topicref href="topics/ai_usage.dita" format="dita" type="concept"/> 		
+		<topicref href="topics/faq.dita" format="dita" type="concept"/> 
+               <topicref href="topics/ai_usage.dita" format="dita" type="concept"/> 		
 	</topicref>
 	<topicref href="topics/about.dita" format="dita" type="concept"/>
 		
