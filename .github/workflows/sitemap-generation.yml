@@ -6,13 +6,7 @@
 name: Sitemap Generation
 
 on:
-  workflow_run:
-    workflows: ["DITA Workflow"]
-    types:
-      - completed
-    conclusions: 
-      - success
-
+  workflow_dispatch:
 
 jobs:
   sitemap:
