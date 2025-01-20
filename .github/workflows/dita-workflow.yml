@@ -1,3 +1,6 @@
+# Used Github Copilot to refactor the workflow from loosely coupled workflows
+# to putting the workflow in one file.  
+
 name: DITA Workflow
 
 on:
@@ -6,150 +9,19 @@ on:
       - dita
 
 jobs:
-  build-html:
-    name: Generate html5 with latest DITA Open Toolkit  # Human-readable job name
-    runs-on: ubuntu-latest
+  build-html-step:
+    uses: ./.github/workflows/build-html.yml
     
-    steps:
-      - name: Check out the dita branch
-        uses: actions/checkout@v4
-        with:
-          ref: dita
+  prep-html5-step:
+    needs: build-html-step
+    uses: ./.github/workflows/prep-html5.yml
 
-      - name: Delete out folder
-        run: |
-          echo "Deleting out folder"
-          rm -rf out
-   
-      - name: Build HTML5
-        uses: dita-ot/dita-ot-action@master
-        with:
-          build: |
-            set -e
+  sitemap-generation-step:
+    needs: prep-html5-step
+    uses: ./.github/workflows/sitemap-generation.yml
 
-            echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
+  deploy-dev-to-stage-step:
+    needs: sitemap-generation-step
+    uses: ./.github/workflows/deploy-to-staging.yml.yml
 
-            dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
-
-            if grep -q "Error:" log.txt; then
-                echo "Error detected in DITA OT build log."
-                exit 1
-            fi
-
-      - name: Upload log file as an artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log-html5-txt
-          path: log.txt
-
-      - name: Archive the 'out' folder
-        run: |
-          set -e
-          tar -czf out.tar.gz out
-
-      - name: Upload 'out' folder archive
-        uses: actions/upload-artifact@v4
-        with:
-          name: out-html5-archive
-          path: out.tar.gz
-    
-      - name: List build output
-        run: ls -R out
-
-      - name: Delete out folder
-        run: |
-          echo "Deleting out folder"
-          sudo chown -R $USER:$USER out
-          rm -rf out
-   
-
-      - name: Configure git
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
-
-      - name: Commit and push changes
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          if git diff-index --quiet HEAD; then
-            echo "No changes to commit"
-          else
-            git commit -m "Github workflow ran DITA OT and generated html5 to out folder"
-            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
-          fi
-
-      - name: Summarize build
-        run: |
-          echo "### Summary " >> $GITHUB_STEP_SUMMARY
-          echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY
-
-  switch-branch:
-    name: Switch to Dev Branch and Configure HTML # Human-readable name for the job
-    runs-on: ubuntu-latest
-    needs: build-html  # Indicates that this job depends on the build-html job
-
-    steps:
-      - name: Check out the dev branch
-        uses: actions/checkout@v4
-        with:
-          ref: dev
-
-      - name: Download 'out-html5-archive' artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: out-html5-archive
-          path: .
-
-      - name: Extract the 'out' folder
-        run: |
-          tar -xzf out.tar.gz
-          ls -laR
-
-      - name: Create src folder if it doesn't exist
-        run: |
-          mkdir -p ./src
-          ls -la 
-    
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: |
-          set -e
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r python/requirements.txt
-          
-      - name: Run Python script 
-        run: |
-          set -e
-          source venv/bin/activate
-          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/python/resources
-
-      - name: List directory contents after running Python script
-        run: |
-          set -e
-          echo "Listing contents of $(pwd):"
-          ls -l
-          echo "Contents of src directory:"
-          ls -la src
-
-
-      - name: Remove venv, tar file and out folder
-        run: |
-          rm -rf venv/
-          rm -f out.tar.gz
-          rm -rf out/
-          echo "Deleting out folder and out.tar.gz file"
-
-      - name: Commit and push changes to dev branch
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
-          git add --verbose --force $(pwd)/src
-          git commit -m "Copy files from DITA OT build to src "
-          git push origin dev
-          
+      
