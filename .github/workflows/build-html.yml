@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-html:
-    name: Generate html5 with latest DITA Open Toolkit
+    name: Build HTML 5 using the latest DITA Open Toolkit
     runs-on: ubuntu-latest
     
     steps:
