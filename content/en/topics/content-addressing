@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="content_addressing">
-<title>Content Addressing Identifiers</title>
-
-<conbody>
+<concept id="cids">
+  <title>Content Addressing</title>
+   <shortdesc>Content addressing identifiers effectively provide provenance for digital assets.    
+  </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Content Addressing Identifiers</indexterm>
+        <indexterm>CID</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
 
 <p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
 </p>
@@ -44,3 +52,6 @@ Content's  authenticity can be easily verified by running the image through a ha
  </li>
  </ul>
 </conbody>
+</concept>
+
+
