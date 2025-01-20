@@ -1,9 +1,7 @@
 name: Build HTML
 
 on:
-  push:
-    branches:
-      - dita
+  workflow_dispatch:
 
 jobs:
   build-html:
