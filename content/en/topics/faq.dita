@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="learnings">
-  <title>Learnings</title>
-   <shortdesc>Short questions and answers about creating content for the decentralized web.
+<concept id="faq">
+  <title>Dweb Content FAQ </title>
+   <shortdesc>Short questions and answers on creating content for the decentralized web.
 </shortdesc>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Learnings</indexterm>
+        <indexterm>FAQ</indexterm>
         <indexterm>Dweb</indexterm>
         <indexterm>IPFS</indexterm>
       </keywords>
