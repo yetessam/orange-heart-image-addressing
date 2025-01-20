@@ -35,9 +35,21 @@ For content development, I wrote the content myself.  Personally, I prefer my sh
           </ul>
         </stentry>
         <stentry>
-             Open AI GPT-4o, GPT-3.5, 
+             Open AI GPT-4o, GPT-3.5
         </stentry>
       </strow>
+      <strow>
+        <stentry>Design</stentry>
+        <stentry>
+          <ul>
+            <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
+          </ul>
+        </stentry>
+        <stentry>
+             Open AI GPT-3.5
+        </stentry>
+      </strow>
+      
       <strow>
         <stentry>Programming</stentry>
 
