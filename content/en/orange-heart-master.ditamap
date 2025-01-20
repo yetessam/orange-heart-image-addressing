@@ -7,16 +7,14 @@
 	<topicref href="topics/orange-heart.dita" format="dita" type="concept">
 		
 	</topicref>	
-
-
 	<topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
-	<topicref href="topics/addressing.dita" format="dita" type="concept"/> 
-	<topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
-	<topicref href="topics/about.dita" format="dita" type="concept">
-	
+        <topicref href="topics/discover.dita"  format="dita" type="concept" collection-type="sequence">
+		<topicref href="topics/addressing.dita" format="dita" type="concept"/> 
+		<topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
 		<topicref href="topics/learnings.dita" format="dita" type="concept"/> 
 		<topicref href="topics/ai_usage.dita" format="dita" type="concept"/> 		
-</topicref>
+	</topicref>
+	<topicref href="topics/about.dita" format="dita" type="concept"/>
 		
 	<reltable>
 		<title>Source and target: Links that apply only to HTML version of distribution documentation</title>
