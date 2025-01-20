@@ -25,11 +25,8 @@ jobs:
         with:
           build: |
             set -e
-
             echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
-
             dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
-            
             
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
