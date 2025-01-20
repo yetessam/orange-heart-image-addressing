@@ -32,7 +32,6 @@
   <section><title>Web Addressing Methods</title>
     <p>The web uses a combination of findability protocols to address and retrieve content. 
     The key addressing protocols include:
-
  <ul>
     <li>Content Identifiers (CIDs)</li>
     <li>Uniform Resource Locators (HTTP URLs)</li>
@@ -83,7 +82,7 @@ Content's  authenticity can be easily verified by running the image through a ha
  </section>
  
 
-
+<section><title>Try it out </title>
 <ul>
  <li>View on an IPFS gateway </li>
  <li>Install IPFS and then use the following command:  
