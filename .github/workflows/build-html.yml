@@ -36,7 +36,8 @@ jobs:
                 echo "$ERRORS"
                 echo "$ERRORS" >> log.txt
                 exit 1
-                
+            fi    
+            
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
         with:
