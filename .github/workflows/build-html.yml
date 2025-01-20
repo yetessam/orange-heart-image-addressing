@@ -65,6 +65,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
 
+      
       - name: Commit and push changes
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -74,7 +75,7 @@ jobs:
           else
             git add .
             git commit -m "Github workflow ran DITA OT and generated html5 to out folder"
-            git push https://${{ secrets.GH_TOKEN }}@github.com/yetessam/orange-heart-image-addressing.git dita
+            git push https://${{secrets.GH_TOKEN}}@github.com/yetessam/orange-heart-image-addressing.git dita
 
       - name: Summarize build
         run: |
