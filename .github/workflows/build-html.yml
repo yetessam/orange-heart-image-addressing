@@ -2,6 +2,7 @@ name: Build HTML
 
 on:
   workflow_dispatch:
+  workflow_call: 
 
 jobs:
   build-html:
