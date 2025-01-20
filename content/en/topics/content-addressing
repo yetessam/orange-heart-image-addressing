@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="content_addressing">
+<title>Content Addressing </title>
+<conbody>
+
+<p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
+</p>
+<p>
+
+For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+
+Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
+
+This CID in the decentralized web can be used as the asset's location address.
+
+I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
+
+All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
+</p>
+
+
+ <p>Any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image.   
+
+</p>
+
+  <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
+This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
+Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
+   
+   
+  <p>Another way to look at CIDs is to consider them as a text-based and unique property of the content object.</p>
+  <p>If you've published a website and have a different version of the content, its CID will change.
+  How we handle link management and other notions such </p>
+  <p>How is the use case handled for the "most recent" version of an asset/resource/website?</p> 
+
+ </section>
+<section><title>Try it out </title>
+<ul>
+ <li>View on an IPFS gateway </li>
+ <li>Install IPFS and then use the following command:  
+ </li>
+ </ul>
+</conbody>
