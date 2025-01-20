@@ -3,7 +3,7 @@
 # Modified by [Yas Etessam] for [orange-heart-project]
 
 
-name: Generate Sitemap
+name: Sitemap Generation
 
 on:
   workflow_run:
