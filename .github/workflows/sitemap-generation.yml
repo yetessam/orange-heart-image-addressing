@@ -7,6 +7,7 @@ name: Sitemap Generation
 
 on:
   workflow_dispatch:
+  workflow_call: 
 
 jobs:
   sitemap:
