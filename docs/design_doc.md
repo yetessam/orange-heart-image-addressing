@@ -21,9 +21,12 @@ Rather than looking at the one heart image online, I use it to peer through to o
 ### Overall Structure
 - Home
 - Orange Heart
-- Gallery Page
-  - 1 to n subpages
-- Captain's Log
+- Gallery
+  - bulma cards that can open up into its own modal dialog
+- Discover
+  - subpages
+- About 
+
 
 ### Website Content Diagram
 - **Home**
@@ -32,11 +35,13 @@ Rather than looking at the one heart image online, I use it to peer through to o
 - **Gallery Page**
   - Links to 3-5 HTML pages that have similar but different photos of orange hearts with titles and descriptions for each. Assuming here that we should be using a separate page is simpler. That might be an incorrect assumption.
   - Include examples of physical addressing, hearts that exist on streets or on landmarks. Street art has ambient findability and immediacy.
-- **Captain’s Log**
-  - Blog about the process and document decision.
+- **Discover**
+    - Dweb background info
+    - FAQ
+    - Captain's log about the process and document decision.
+  - **About**
 
 ## Technical Description
-
 ### Building Blocks
 
 #### Images
