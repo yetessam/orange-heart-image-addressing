@@ -11,10 +11,10 @@ on:
 jobs:
   build-html-step:
     uses: ./.github/workflows/build-html.yml
-    
-#  prep-html5-step:
-#    needs: build-html-step
-#    uses: ./.github/workflows/prep-html5.yml
+  
+  prep-html5-step:
+    needs: build-html-step
+    uses: ./.github/workflows/prep-html5.yml
 
 #  sitemap-generation-step:
 #    needs: prep-html5-step
