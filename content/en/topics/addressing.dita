@@ -43,10 +43,9 @@
 The current website uses content-based and location-based addressing, along with accessiblity metadata. 
 </p>
 </section>
+
+
 <section><title>Content Addressing </title>
-
-
-
 
 <p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
 </p>
@@ -80,8 +79,6 @@ Content's  authenticity can be easily verified by running the image through a ha
   <p>How is the use case handled for the "most recent" version of an asset/resource/website?</p> 
 
  </section>
- 
-
 <section><title>Try it out </title>
 <ul>
  <li>View on an IPFS gateway </li>
