@@ -22,6 +22,6 @@ jobs:
 
   deploy-dev-to-stage-step:
     needs: sitemap-generation-step
-    uses: ./.github/workflows/deploy-to-staging.yml.yml
+    uses: ./.github/workflows/deploy-to-staging.yml
 
       
