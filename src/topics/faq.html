@@ -1,0 +1,215 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Short questions and answers on creating content for the decentralized web." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dweb Content FAQ
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="faq">
+  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarBasicExample">
+    <div class="navbar-start">
+     <ul class="list is-hoverable">
+      <li class="list-item">
+       <a class="navbar-item" href="../index.html">
+        Home
+       </a>
+      </li>
+      <li class="list-item">
+       <a class="navbar-item" href="../topics/orange-heart.html">
+        Orange Heart Project
+       </a>
+      </li>
+      <li class="list-item">
+       <a class="navbar-item" href="../topics/gallery.html">
+        Gallery
+       </a>
+      </li>
+      <li class="list-item">
+       <a class="navbar-item" href="../topics/discover.html">
+        Discover
+       </a>
+       <ul class="list is-hoverable">
+        <li class="list-item">
+         <a class="navbar-item" href="../topics/addressing.html">
+          Addressing and Resilience
+         </a>
+        </li>
+        <li class="list-item">
+         <a class="navbar-item" href="../topics/captains-log.html">
+          Captain's Log
+         </a>
+        </li>
+        <li class="list-item">
+         <a class="navbar-item" href="../topics/deploy.html">
+          Deployment
+         </a>
+        </li>
+        <li class="active list-item">
+         <a class="navbar-item" href="../topics/faq.html">
+          Dweb Content FAQ
+         </a>
+        </li>
+        <li class="list-item">
+         <a class="navbar-item" href="../topics/ai_usage.html">
+          AI Usage
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="list-item">
+       <a class="navbar-item" href="../topics/about.html">
+        About
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="navbar-end">
+    </div>
+   </div>
+  </nav>
+  <script src="js/navbar.js" type="text/javascript">
+  </script>
+  <main class="container p-5" role="main">
+   <article aria-labelledby="ariaid-title1" class="content" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Dweb Content FAQ
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Short questions and answers on creating content for the decentralized web.
+     </p>
+     <dl class="dl notification is-warning">
+      <dt class="dt dlterm has-text-weight-semibold">
+       How did you make this dwebsite?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.
+       </p>
+       <p class="p">
+        The source content is written in OASIS Open DITA XML.
+       </p>
+       <p class="p">
+        It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions.
+       </p>
+       <p class="p">
+        Python massages the HTML5 so it plays nicely with Bulma CSS.
+       </p>
+       <p class="p">
+        Bulma CSS on a CDN provides responsive layout and UX
+       </p>
+       <p class="p">
+        Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Do I need to use Content Identifiers in my XML/Markdown/HTML?
+      </dt>
+      <dd class="dd">
+       Nope.  Don't even try.  There's zero benefit AFAIC.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       What processes need to change if you want to publish content to IFPS?
+      </dt>
+      <dd class="dd">
+       None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How much do I need to think about security and encryption?  Or is it auto-magical?
+      </dt>
+      <dd class="dd">
+       It is auto-magical HTTPS -  deploying from Fleek.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I deploy a dweb site?
+      </dt>
+      <dd class="dd">
+       Select a platform provider or you can publish directly onto IPFS yourself.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I make the references to graphics, should I be using CIDs rather than URLs?
+      </dt>
+      <dd class="dd">
+       No, stick to meaningful and human-readable names.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Search??
+      </dt>
+      <dd class="dd">
+       Search is a rabbit hole.  You can use Elastic search and Algolia on decentralized websites.
+             Elastic search and Algolia had no problems crawling/indexing this site. 
+             I haven't gotten to trying out The Graph. That's next.
+      </dd>
+     </dl>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="discover.html" title="Explore concepts, frequently asked questions and technical shares about the technologies behind the Orange Heart project.">
+        Discover
+       </a>
+      </div>
+      <div class="previouslink">
+       <strong>
+        Previous topic:
+       </strong>
+       <a class="link is-link" href="deploy.html" title="Platforms and approaches to deploying HTML to the decentralized web. Multiple platforms and services can publish, pin or host the content using IPFS.">
+        Deployment
+       </a>
+      </div>
+      <div class="nextlink">
+       <strong>
+        Next topic:
+       </strong>
+       <a class="link is-link" href="ai_usage.html" title="Discover how Artificial Intelligence (AI) was used in this project.">
+        AI Usage
+       </a>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <div class="content has-text-primary is-centered">
+     <p>
+      © 2024 Orange Heart Project. This work is licensed under the
+      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+      </a>
+      .
+     </p>
+     <p>
+      IPFS
+      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
+       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
+      </a>
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
