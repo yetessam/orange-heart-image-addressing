@@ -1,4 +1,5 @@
 import argparse
+import shutil
 import os
 import sys
 from bs4 import BeautifulSoup
@@ -55,13 +56,11 @@ def process_html_files(out_dir, src_dir, res_dir):
 
     copy_files(out_dir, src_dir)
     logger.info(f"Copied all files from {out_dir} to {src_dir}\n\n")
+    
+    # Copy resources directory that includes css and js folders
+    
+    shutil.copytree(res_dir, src_dir, dirs_exist_ok=True)
 
-    # Copy bulma css resource  
-    css_dest_dir = os.path.join(src_dir, "css")
-    css_file = "bulma.css"
-    
-    copy_resource(res_dir, css_dest_dir, css_file)
-    
     build_search_index(src_dir)
 
 def main():
