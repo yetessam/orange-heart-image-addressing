@@ -1,10 +1,18 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="captains-log">
   <title>Captain's Log</title>
-  <shortdesc>Technical progress, challenges, solutions and people and events encountered are noted below.
+  <shortdesc>Brief notes capturing technical progress, challenges, solutions and events.
   </shortdesc>
   <conbody>
     <dl>
+     <dlentry>
+        <dt>Monday Jan 20, 2025</dt>
+        <dd>
+          Decided to reorg site into nested structures, so updated DITA map to use collection-type.
+          Have to go back and reread the short descs to make sure that are descriptive enough for the Discover landing page.
+        </dd>
+      </dlentry>
+      
      <dlentry>
         <dt>Thursday Jan 16, 2025</dt>
         <dd>
