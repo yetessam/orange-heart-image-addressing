@@ -30,10 +30,13 @@ jobs:
 
             dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
 
-            if grep -q "Error:" log.txt; then
-                echo "Error detected in DITA OT build log."
+            ERRORS=$(grep -Ei 'Error|ERROR' log.txt)
+            if [ -n "$ERRORS" ]; then
+                echo "Errors detected in DITA OT build log:"
+                echo "$ERRORS"
+                echo "$ERRORS" >> log.txt
                 exit 1
-
+                
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
         with:
