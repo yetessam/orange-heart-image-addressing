@@ -10,7 +10,7 @@
 #  NOTE:  Resources which normally could be modified by writers such asboilerplate text live on dita branch. 
 # 
 
-name: Switch to Dev Branch and Configure HTML
+name: Prep HTML5
 
 on:
   workflow_run:
@@ -19,8 +19,8 @@ on:
       - completed
 
 jobs:
-  switch-branch:
-    name: Switch to Dev Branch and Configure HTML
+  prep-html5:
+    name: Switch to Dev Branch and Prepare HTML
     runs-on: ubuntu-latest
 
     steps:
