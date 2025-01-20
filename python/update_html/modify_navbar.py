@@ -1,8 +1,21 @@
 from bs4 import BeautifulSoup
 from update_html.logging_ohp import logger
 
+
+# Function to recursively set classes for nested menu items in a depth-first manner
+def set_navbar_classes(list_element):
+    for li in list_element.find_all('li', recursive=False):
+        # Check for nested ul or ol
+        nested_list = li.find(['ul', 'ol'], recursive=False)
+        if nested_list:
+            set_navbar_classes(nested_list)
+        a = li.find('a')
+        if a:
+            a['class'] = 'navbar-item'
+
+ # Handle navigation and update the navbar for Bulma Responsive CSS
 def modify_navbar(soup):
-    # Specific handling for navigation
+   
     nav = soup.find('nav')
     if nav:
 
@@ -39,11 +52,9 @@ def modify_navbar(soup):
         # Move list items to the new structure
         ul = nav.find('ul')
         if ul:
-            for li in ul.find_all('li', recursive=False):
-                a = li.find('a')
-                if a:
-                    a['class'] = 'navbar-item'
-                    navbar_start.append(li) # Append the entire <li> instead of just the <a> to include nested links
+            set_navbar_classes(ul);
+        
+            navbar_start.append(ul);
             logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         # Assemble the new navbar structure
