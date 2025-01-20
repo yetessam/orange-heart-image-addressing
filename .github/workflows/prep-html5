@@ -13,10 +13,13 @@
 name: Prep HTML5
 
 on:
-  workflow_run:
-    workflows: ["Build HTML"]
-    types:
-      - completed
+  workflow_dispatch:
+
+#on:
+#  workflow_run:
+#    workflows: ["Build HTML"]
+#    types:
+#      - completed
 
 jobs:
   prep-html5:
