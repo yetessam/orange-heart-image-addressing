@@ -34,7 +34,6 @@ jobs:
             if [ -n "$ERRORS" ]; then
                 echo "Errors detected in DITA OT build log:"
                 echo "$ERRORS"
-                echo "$ERRORS" >> log.txt
                 exit 1
             fi    
             
