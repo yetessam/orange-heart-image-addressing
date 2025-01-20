@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="discover">
+  <title>Discover</title>
+   <shortdesc>Explore concepts, frequently asked questions and technical shares about the technologies behind the Orange Heart project.
+  </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Explore</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  </concept>
