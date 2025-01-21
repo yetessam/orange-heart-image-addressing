@@ -4,13 +4,14 @@
 #  dita              DITA XML             Authoring and information architect
 # 
 #
-#  dev               HTML +  JS +         Authoring and information architect
-#                    Python + Assets
+#  dev               HTML +  JS +         Python where you can adjust the menu and 
+#                    Python + Assets      update the Bulma CSS class names, add
+#                                         Javascript.
 #
 #
-#  stage              DITA XML            Authoring and information architect
+#  stage             HTML 5               Use for localhost testing
 #
-#  prod                                   Pull stage into prod to trigger Fleek deployment
+#  prod              Deployed HTML5       Pull stage into prod to trigger Fleek deployment
 
 # Used Github Copilot to refactor the workflow from loosely coupled workflows
 # to putting the workflow in one file.  
