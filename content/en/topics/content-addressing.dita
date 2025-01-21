@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-   <shortdesc>Content addressing identifiers effectively provide provenance for digital assets.    
+   <shortdesc>Content addressing identifiers provide provenance for digital assets.  Leveraging crypto, assets are identified uniquely by its contents.    
   </shortdesc>
   <prolog>
     <metadata>
@@ -15,9 +15,13 @@
 <conbody>
 <p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
 </p>
+ <p>You can take any type of digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image.   
+
+</p>
 <p>
 
-For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+For example, if we take this website's logo <!-- add logo --> and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
 
@@ -29,10 +33,7 @@ All the links to this image are guaranteed to present you with the exact same, u
 </p>
 
 
- <p>Any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
- series of numbers and letters for this exact image.   
 
-</p>
 
   <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
 This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
