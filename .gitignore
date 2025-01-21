@@ -1,4 +1,8 @@
 
+
+# Add search folder to gitignore
+python/resources/search/*
+
 # Ignore Mac OS files
 .DS_Store
 
