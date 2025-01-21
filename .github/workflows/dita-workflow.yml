@@ -1,3 +1,17 @@
+# DITA Workflow runs the content development life cycle automatically from
+#  Branch name       Content Type         Purpose
+#
+#  dita              DITA XML             Authoring and information architect
+# 
+#
+#  dev               HTML +  JS +         Authoring and information architect
+#                    Python + Assets
+#
+#
+#  stage              DITA XML            Authoring and information architect
+#
+#  prod                                   Pull stage into prod to trigger Fleek deployment
+
 # Used Github Copilot to refactor the workflow from loosely coupled workflows
 # to putting the workflow in one file.  
 
