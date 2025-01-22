@@ -5,10 +5,10 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Short questions and answers on creating content for the decentralized web." name="description"/>
+  <meta content="Short questions and answers on content creation and publishing with the decentralized web." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Dweb Content FAQ
+   Dwebsite FAQ
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
@@ -28,65 +28,43 @@
    <div class="navbar-menu" id="navbarBasicExample">
     <div class="navbar-start">
      <ul class="list is-hoverable">
-      <li class="list-item">
-       <a class="navbar-item" href="../index.html">
-        Home
-       </a>
-      </li>
-      <li class="list-item">
-       <a class="navbar-item" href="../topics/orange-heart.html">
-        Orange Heart Project
-       </a>
-      </li>
-      <li class="list-item">
-       <a class="navbar-item" href="../topics/gallery.html">
-        Gallery
-       </a>
-      </li>
-      <li class="list-item">
-       <a class="navbar-item" href="../topics/discover.html">
-        Discover
+      <a class="navbar-item" href="../index.html">
+       Home
+      </a>
+      <a class="navbar-item" href="../topics/orange-heart.html">
+       Orange Heart Project
+      </a>
+      <a class="navbar-item" href="../topics/gallery.html">
+       Gallery
+      </a>
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover
+      </a>
+      <ul class="list is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing and Resilience
        </a>
        <ul class="list is-hoverable">
-        <li class="list-item">
-         <a class="navbar-item" href="../topics/addressing.html">
-          Addressing and Resilience
-         </a>
-         <ul class="list is-hoverable">
-          <li class="list-item">
-           <a class="navbar-item" href="../topics/content-addressing.html">
-            Content Addressing
-           </a>
-          </li>
-         </ul>
-        </li>
-        <li class="list-item">
-         <a class="navbar-item" href="../topics/captains-log.html">
-          Captain's Log
-         </a>
-        </li>
-        <li class="list-item">
-         <a class="navbar-item" href="../topics/deploy.html">
-          Deployment
-         </a>
-        </li>
-        <li class="active list-item">
-         <a class="navbar-item" href="../topics/faq.html">
-          Dweb Content FAQ
-         </a>
-        </li>
-        <li class="list-item">
-         <a class="navbar-item" href="../topics/ai-usage.html">
-          AI Usage
-         </a>
-        </li>
+        <a class="navbar-item" href="../topics/content-addressing.html">
+         Content Addressing
+        </a>
        </ul>
-      </li>
-      <li class="list-item">
-       <a class="navbar-item" href="../topics/about.html">
-        About
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
        </a>
-      </li>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </ul>
+      <a class="navbar-item" href="../topics/about.html">
+       About
+      </a>
      </ul>
     </div>
     <div class="navbar-end">
@@ -98,28 +76,32 @@
   <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Dweb Content FAQ
+     Dwebsite FAQ
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Short questions and answers on creating content for the decentralized web.
+      Short questions and answers on content creation and publishing with the decentralized web.
      </p>
      <dl class="dl notification is-warning">
       <dt class="dt dlterm has-text-weight-semibold">
-       How did you make this dwebsite?
+       How was this dwebsite made?
       </dt>
       <dd class="dd">
        <p class="p">
-        At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.
+        Started with a design doc and a log to capture decisions and briefly document the general process.
        </p>
        <p class="p">
-        The source content is written in OASIS Open DITA XML.
+        Source content was intentionally written in OASIS Open DITA XML.  
+             Dweb YVR Chat is a React app running on its own node. 
+           markdown/pdf/html/video.
        </p>
        <p class="p">
-        It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions.
+        It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
+             
+           Current version is DITA Open Toolkit 4.2.3 which is being used through Github Actions.
        </p>
        <p class="p">
-        Python massages the HTML5 so it plays nicely with Bulma CSS.
+        Python preps the HTML5 so it plays nicely with Bulma CSS.
        </p>
        <p class="p">
         Bulma CSS on a CDN provides responsive layout and UX
