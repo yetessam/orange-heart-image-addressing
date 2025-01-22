@@ -5,6 +5,13 @@
   </shortdesc>
   <conbody>
     <dl>
+ <dlentry>
+        <dt>Wed Jan 22, 2025</dt>
+        <dd>
+         Reorganizing the content and want to have multi-level navbars.   Needing to update the Python script to add more Bulma classnames for two level menus.
+
+        </dd>
+      </dlentry>
      <dlentry>
         <dt>Thursday Jan 16, 2025</dt>
         <dd>
