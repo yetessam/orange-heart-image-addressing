@@ -5,6 +5,15 @@
   </shortdesc>
   <conbody>
     <dl>
+   <dlentry>
+        <dt>Wed Jan 22, 2025</dt>
+        <dd>
+         Want multi-level navbars so they are two levels deep. 
+         Python script to add more Bulma classnames and changed the build.properties file for the DOT.
+         
+
+        </dd>
+      </dlentry>
      <dlentry>
         <dt>Monday Jan 20, 2025</dt>
         <dd>
