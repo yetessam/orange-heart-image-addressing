@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="faq">
-  <title>Dweb Content FAQ </title>
-   <shortdesc>Short questions and answers on creating content for the decentralized web.
+  <title>Dwebsite FAQ </title>
+   <shortdesc>Short questions and answers on content creation and publishing with the decentralized web.
 </shortdesc>
   <prolog>
     <metadata>
@@ -17,11 +17,15 @@
   
       <dl outputclass="notification is-warning">
        <dlentry>
-        <dt>How did you make this dwebsite? </dt>
-        <dd><p>At the very start, I had a thousand questions and started a design doc and committed  to writing a log to capture the general process.</p>
-          <p>The source content is written in OASIS Open DITA XML.</p>
-          <p>It is transformed to HTML5 using the DITA Open Toolkit 4.2.3 via Github Actions.</p> 
-          <p>Python massages the HTML5 so it plays nicely with Bulma CSS.  </p>
+        <dt>How was this dwebsite made?</dt>
+        <dd><p>Started with a design doc and a log to capture decisions and briefly document the general process.</p>
+          <p>Source content was intentionally written in OASIS Open DITA XML.  
+             Dweb YVR Chat is a React app running on its own node. 
+           markdown/pdf/html/video.</p>
+          <p>It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
+             
+           Current version is DITA Open Toolkit 4.2.3 which is being used through Github Actions.</p> 
+          <p>Python preps the HTML5 so it plays nicely with Bulma CSS.  </p>
           <p>Bulma CSS on a CDN provides responsive layout and UX</p>
           <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
           </dd>
