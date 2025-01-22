@@ -51,7 +51,11 @@ def modify_navbar(soup):
         ul = nav.find('ul')
         if ul:
             set_navbar_classes(ul);
+            # remove the li element, Bulma CSS only needs div/a 
+            for tag in ul.find_all('li'):
+                tag.unwrap()
             navbar_start.append(ul);
+            
             logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         
