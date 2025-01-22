@@ -39,6 +39,8 @@
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
         <dd>Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
          Having Fleek handle the entire IPFS layer is a happy path. 
+         <p>With existing legacy systems, there would need to be larger business incentives or regulations in order to get past the inertia that sets in once you're using enterprise solutions.
+
          </dd>
       </dlentry>
 
