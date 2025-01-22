@@ -24,7 +24,7 @@ on:
 
 jobs:
   prep-html5:
-    name: Switch to Dev Branch and Prepare HTML
+    name: HTML5 prep download OT output and run python main script
     runs-on: ubuntu-latest
 
     steps:
