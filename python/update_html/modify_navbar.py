@@ -1,14 +1,28 @@
 from bs4 import BeautifulSoup
 from update_html.logging_ohp import logger
 
+# Adding attribution 
+def update_attribute(element, att_name, att_value):
+    att = element.get(att_name, [])
+    if att_value not in att:
+        element[att_name] = att + [att_value]
+
 
 # Function to recursively set classes for nested menu items in a depth-first manner
 def set_navbar_classes(list_element):
     for li in list_element.find_all('li', recursive=True):
         a = li.find('a')
         if a:
-            a['class'] = 'navbar-item'
+            update_attribute(a, 'class', 'navbar-item')
 
+    for ul in list_element.find_all('ul', recursive=True):
+        if ul:
+            update_attribute(ul, 'class', 'navbar-dropdown')
+            # rename nested menu items to div
+            new_tag = soup.new_tag("div")
+            new_tag.attrs = ul.attrs
+            new_tag.contents = ul.contents
+            ul.replace_with(new_tag)
 
 
  # Handle navigation and update the navbar for Bulma Responsive CSS
@@ -54,6 +68,8 @@ def modify_navbar(soup):
             # remove the li element, Bulma CSS only needs div/a 
             for tag in ul.find_all('li'):
                 tag.unwrap()
+
+            
             navbar_start.append(ul);
             
             logger.debug("Reorganized <nav> structure with Bulma classes.")
