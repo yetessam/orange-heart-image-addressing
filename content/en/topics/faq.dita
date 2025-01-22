@@ -15,7 +15,7 @@
   </prolog>
   <conbody>
   
-      <dl outputclass="notification is-warning">
+      <dl outputclass="notification is-info">
        <dlentry>
         <dt>How was this dwebsite made?</dt>
         <dd><p>Started with a design doc and a log to capture decisions and briefly document the general process.</p>
@@ -37,13 +37,14 @@
 
        <dlentry>
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
-        <dd>None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
-         Having Fleek handle the entire IPFS layer is a happy path. </dd>
+        <dd>Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path. 
+         </dd>
       </dlentry>
 
          <dlentry>
-            <dt>How much do I need to think about security and encryption?  Or is it auto-magical?</dt>
-            <dd>It is auto-magical HTTPS -  deploying from Fleek.</dd>
+            <dt>How much do I need to think about security or encryption?  Or is it auto-magical?</dt>
+            <dd>Auto-magical HTTPS via Fleek.</dd>
          </dlentry>
         <dlentry>
             <dt>How do I deploy a dweb site?</dt>
