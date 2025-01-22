@@ -9,7 +9,7 @@ def update_attribute(element, att_name, att_value):
 
 
 # Function to recursively set classes for nested menu items in a depth-first manner
-def set_navbar_classes(list_element):
+def set_navbar_classes(soup, list_element):
     for li in list_element.find_all('li', recursive=True):
         a = li.find('a')
         if a:
@@ -64,7 +64,7 @@ def modify_navbar(soup):
         # Move list items to the new structure
         ul = nav.find('ul')
         if ul:
-            set_navbar_classes(ul);
+            set_navbar_classes(soup, ul);
             # remove the li element, Bulma CSS only needs div/a 
             for tag in ul.find_all('li'):
                 tag.unwrap()
