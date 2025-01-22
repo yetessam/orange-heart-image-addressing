@@ -18,7 +18,7 @@ def set_navbar_classes(soup, list_element):
     for ul in list_element.find_all('ul', recursive=True):
         if ul:
             update_attribute(ul, 'class', 'navbar-dropdown')
-            update_attribute(ul,find_parent('li'), 'class', 'has-dropdown')
+            update_attribute(ul.find_parent('li'), 'class', 'has-dropdown')
             # rename nested menu items to div
             new_tag = soup.new_tag("div")
             new_tag.attrs = ul.attrs
