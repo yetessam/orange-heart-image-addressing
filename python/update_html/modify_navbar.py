@@ -1,4 +1,7 @@
+# Description: This script modifies the navigation bar to be compatible with Bulma CSS.
 from bs4 import BeautifulSoup
+import os
+
 from update_html.logging_ohp import logger
 
 # Adding attribution 
@@ -8,26 +11,39 @@ def update_attribute(element, att_name, att_value):
         element[att_name] = att + [att_value]
 
 
+def remove_attribute_value(element, att_name, att_value):
+    att = element.get(att_name, [])
+    if att_value in att:
+        att.remove(att_value)
+        element[att_name] = att
+
 # Function to recursively set classes for nested menu items in a depth-first manner
 def set_navbar_classes(soup, list_element):
+    # Run through this routine twice, once just to set all of the navbar-item classes
+    # and a second time to set the has-dropdown classes
     for li in list_element.find_all('li', recursive=True):
         a = li.find('a')
         if a:
             update_attribute(a, 'class', 'navbar-item')
+            remove_attribute_value(a, 'class', 'is-link')
+            # We know that the <a> tag is a navbar item, so we can remove the <li> tag
+            if (len(list(li.children)) == 1):
+                li.unwrap() # Remove the <li> tag if it contains a single menu item
 
-    for ul in list_element.find_all('ul', recursive=True):
-        if ul:
-            update_attribute(ul, 'class', 'navbar-dropdown')
-            update_attribute(ul.find_parent('li'), 'class', 'has-dropdown')
-            # rename nested menu items to div
-            new_tag = soup.new_tag("div")
-            new_tag.attrs = ul.attrs
-            new_tag.contents = ul.contents
-            ul.replace_with(new_tag)
-
+    
+    for li in list_element.find_all('li', recursive=True):
+        # Check if the list item contains a nested list
+        has_dropdown = False
+        for submenu in li.find_all('ul', recursive=True):
+            if submenu:
+                has_dropdown = True
+                update_attribute(li, 'class', 'has-dropdown')
+                update_attribute(submenu, 'class', 'navbar-dropdown')
+                remove_attribute_value(submenu, 'class', 'list')
+                
 
  # Handle navigation and update the navbar for Bulma Responsive CSS
-def modify_navbar(soup):
+def modify_navbar(soup,  filepath=None, root_dir=None):
    
     nav = soup.find('nav')
     if nav:
@@ -65,14 +81,8 @@ def modify_navbar(soup):
         # Move list items to the new structure
         ul = nav.find('ul')
         if ul:
-            set_navbar_classes(soup, ul);
-            # remove the li element, Bulma CSS only needs div/a 
-            for tag in ul.find_all('li'):
-                tag.unwrap()
-
-            
-            navbar_start.append(ul);
-            
+            set_navbar_classes(soup, ul)
+            navbar_start.append(ul)
             logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         
@@ -84,7 +94,17 @@ def modify_navbar(soup):
         nav.append(navbar_menu)
         
         # Add javascript for Bulma
-        script_tag = soup.new_tag('script', src='js/navbar.js', type='text/javascript')
+         # Calculate relative path to root
+        if filepath and root_dir:
+            from pathlib import Path
+            current_dir = Path(filepath).parent
+            relative_path = Path(os.path.relpath(root_dir, current_dir))
+            js_path = relative_path / 'js' / 'navbar.js'
+            logger.debug(f"JS path relative to {filepath}: {js_path}")
+        else:
+            js_path = '/js/navbar.js'
+
+        script_tag = soup.new_tag('script', src='/js/navbar.js', type='text/javascript')
         nav.insert_after(script_tag)
 
         nav['id'] = 'navbar-bulma'

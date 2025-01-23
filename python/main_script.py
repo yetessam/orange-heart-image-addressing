@@ -2,6 +2,9 @@ import argparse
 import shutil
 import os
 import sys
+import tempfile
+
+
 from bs4 import BeautifulSoup
 
 from utils import parse_arguments, find_html_files, setup_directories
@@ -15,7 +18,22 @@ from update_html.logging_ohp import logger
 from update_html.modify_navbar import modify_navbar
 from update_html.update_head import update_head
 
-def process_html_file(filepath):
+def setup_temp(input_dir):
+    temp_dir = tempfile.mkdtemp()
+    logger.debug(f"Created temporary directory: {temp_dir}")
+   
+    try:
+        # Copy entire directory structure
+        shutil.copytree(input_dir, temp_dir, dirs_exist_ok=True)
+        logger.debug(f"Copied contents from {input_dir} to {temp_dir}")
+        return temp_dir
+    except Exception as e:
+        logger.error(f"Failed to copy files to temp directory: {e}")
+        shutil.rmtree(temp_dir)
+        raise   
+
+
+def process_html_file(filepath, out_dir):
     content = read_html_file(filepath)
     soup = BeautifulSoup(content, 'html.parser')
     soup.prettify()
@@ -26,8 +44,9 @@ def process_html_file(filepath):
     soup = create_responsive(soup, filepath)
 
     soup = apply_bulma_classes(soup)
-    soup = modify_navbar(soup)
+    soup = modify_navbar(soup, filepath, out_dir)
     
+    # Yas:  we are using a temp directory for processing
     write_html_file(filepath, soup.prettify())
     print(f"Modified and saved HTML file: {filepath}")
 
@@ -51,13 +70,13 @@ def process_html_files(out_dir, src_dir, res_dir):
         if 'toc.html' in filepath:
             print(f"Leave toc.html alone: {filepath}")
             continue 
-        process_html_file(filepath)
+        process_html_file(filepath, out_dir )
 
     copy_files(out_dir, src_dir)
     logger.info(f"Copied all files from {out_dir} to {src_dir}\n\n")
     
     # Copy resources directory that includes css and js folders
-    
+
     shutil.copytree(res_dir, src_dir, dirs_exist_ok=True)
 
     build_search_index(src_dir)
@@ -73,7 +92,8 @@ def main():
     logger.info(f"Resource directory: {res_dir}\n\n")
     
     try:
-        process_html_files(out_dir, src_dir, res_dir)
+        temp_dir = setup_temp(out_dir)
+        process_html_files(temp_dir, src_dir, res_dir)
     except Exception as e:
         logger.error(e)
         sys.exit(1)
