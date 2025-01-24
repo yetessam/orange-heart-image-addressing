@@ -11,6 +11,7 @@ bulma_classes = {
     'ul': 'list is-hoverable',
     'ol': 'list is-hoverable',
     'li': 'list-item',
+    'lq': 'notification',
     'dt': 'has-text-weight-semibold',
     'note': 'notification is-primary',
     'image' : 'is-rounded is-bordered',
