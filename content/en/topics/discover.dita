@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="discover">
-  <title>Discover</title>
-   <shortdesc>Explore concepts, frequently asked questions and technical shares about the technologies behind the Orange Heart project.
-  </shortdesc>
+<concept id="discover-dweb-tech">
+  <title>Discover Dweb </title>
+   <shortdesc>Dweb technology experimentation resulted in this website.   A tiny sliver of Dweb concepts, frequently asked questions and technical shared are gathered here. 
+    </shortdesc>
   <prolog>
     <metadata>
       <keywords>
         <indexterm>Explore</indexterm>
       </keywords>
     </metadata>
-  </prolog>
+  </prolog><conbody>
+ My largest challenge was picking a single sliver of Dweb to try out and unlearning preconceived notions and misconceptions about decentralized technologies. 
+
+</conbody>
   </concept>
+       
