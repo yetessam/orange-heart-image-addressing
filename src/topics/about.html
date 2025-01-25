@@ -27,21 +27,40 @@
    </div>
    <div class="navbar-menu" id="navbarBasicExample">
     <div class="navbar-start">
-     <a class="navbar-item" href="../topics/index.html">
+     <a class="navbar-item" href="../index.html">
       Home
      </a>
      <a class="navbar-item" href="../topics/orange-heart.html">
-      Orange Heart Project
+      Project
      </a>
      <a class="navbar-item" href="../topics/gallery.html">
       Gallery
      </a>
-     <a class="navbar-item" href="../topics/addressing.html">
-      Addressing and Resilience
-     </a>
-     <a class="navbar-item" href="../topics/captains-log.html">
-      Captain's Log
-     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing and Resilience
+       </a>
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </div>
+     </div>
      <a class="navbar-item" href="../topics/about.html">
       About
      </a>
@@ -50,47 +69,7 @@
     </div>
    </div>
   </nav>
-  <script type="text/javascript">
-   document.addEventListener('DOMContentLoaded', () => {
-            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            const targetMenu = document.getElementById('navbarBasicExample');
-
-            const isDesktop = () => window.innerWidth >= 1024; // Adjust this breakpoint as needed
-
-            const setInitialMenuState = () => {
-                if (isDesktop() && localStorage.getItem('navbar-menu-state') === 'active') {
-                    targetMenu.classList.add('is-active');
-                    navbarBurgers.forEach(el => el.classList.add('is-active'));
-                } else {
-                    targetMenu.classList.remove('is-active');
-                    navbarBurgers.forEach(el => el.classList.remove('is-active'));
-                }
-            };
-
-            setInitialMenuState();
-
-            // Add click event to toggle state
-            navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-                    el.classList.toggle('is-active');
-                    targetMenu.classList.toggle('is-active');
-
-                    // Save the state to localStorage if on desktop
-                    if (isDesktop()) {
-                        if (targetMenu.classList.contains('is-active')) {
-                            localStorage.setItem('navbar-menu-state', 'active');
-                        } else {
-                            localStorage.removeItem('navbar-menu-state');
-                        }
-                    }
-                });
-            });
-
-            // Recheck the menu state on window resize
-            window.addEventListener('resize', () => {
-                setInitialMenuState();
-            });
-        });
+  <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
@@ -102,58 +81,20 @@
       The orange heart project mixes art and Dweb technology through a heart-centered perspective to explore addressing and resilience. 
   The gallery component presents stencil-based spray art on birchwood.
      </p>
-     <p class="p">
-      Stencils create a form of visual consistency that builds upon itself through repeated reuse.
-     </p>
-     <p class="p">
-      In terms of re-purposing, the same stencil is getting used in two different ways.
- The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world through the stencil.
-     </p>
-     <p class="p">
-      Given that one of the features of decentralized technologies, such as IPFS, is replication, I am intentionally using the same stencil even though it creates a sequence of repetitive images.
-     Over the time, art degrade on any surface whether it is concrete or paper.
-     As you reuse the stencil, it does loose its sharpness as it picks up paint.
-     </p>
      <section class="section">
-      <h2 class="title sectiontitle">
-       Learnings
-      </h2>
       <p class="p">
-       Working on this project provided answers to the following questions:
-      </p>
-      <ul class="ul list is-hoverable">
-       <li class="li list-item">
-        What processes need to change if you want to publish content to IFPS?
-        <blockquote class="lq">
-         None.  Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
-         Having Fleek handle the entire IPFS layer is a happy path.
-        </blockquote>
-       </li>
-       <li class="li list-item">
-        How much do I need to think about security and encryption?  Or is it auto-magical
-        <blockquote class="lq">
-         It is auto-magical https when deploying from Fleek.
-        </blockquote>
-       </li>
-       <li class="li list-item">
-        How do I deploy a dweb site?
-        <blockquote class="lq">
-         Select a platform provider or you can publish directly onto IPFS yourself.
-        </blockquote>
-       </li>
-       <li class="li list-item">
-        How do I make the references to graphics, should I be using CIDs rather than URLs?
-        <blockquote class="lq">
-         Human readable filenames and human-readable URLS are fine.
-        </blockquote>
-       </li>
-      </ul>
-      <p class="p">
-       My project goals were to experiment and try out different Dweb-friendly tools and technologies.
+       Stencils create a form of visual consistency that builds upon itself through repeated reuse.
       </p>
       <p class="p">
-       The source for this site was built with DITA XML transformed to HTML5 with DITA Open Toolkit 4.2.3 through Github Actions. 
-          Python adjusts the HTML5, Bulma CSS ensures a responsive user experience and pull requests into prod deploys to Fleek which then deploys to IPFS.
+       A feature of decentralized technologies, such as IPFS, is replication.   Content is stored in mulitiple places all over the web, closest to where it is used.
+      Which makes it resilient.    I've owned music which was banned and I know that even though those recordings were banned, there were copies
+of them all over the world.   Decentralization works the same way.    Except you get the exact same copy of content. 
+
+Outside of cyberspace, art degrade on any surface whether it is concrete or paper.
+     Especially stencils, the more you reuse the stencil, the more paint it picks up and the image loses sharpness.
+      </p>
+      <p class="p">
+       The stencil isn't just reused, its repurposed.   The gallery show is a series of images created by the stencil, whereas the online component includes photographs of the world where the stencil acts as a frame.
       </p>
      </section>
      <section class="section">
@@ -161,7 +102,7 @@
        Yas Etessam (she/her)
       </h2>
       <p class="p">
-       Yas Etessam is a markup technologist.   She’s been coding since the 80’s and has expertise in enterprise content.
+       Yas Etessam is a markup technologist.   She’s been coding since the 80’s and has expertise in digital content.
       </p>
       <p class="p">
        Yas has had the opportunity to work alongside a variety of technology industry giants in semiconductor, enterprise software, cloud computing, networking, telecommunications, and artificial intelligence.   
@@ -169,11 +110,12 @@ Most recently, Yas served as a Product Owner on an enterprise Content Pipeline t
       </p>
       <p class="p">
        Darwin Information Typing Architecture (DITA) is the foundational standard for user-centric information architecture, as it is flexible and adaptable to change.  
- Yas notably contributed to DITA adoption as a significant contributor on the team that developed the first commercially available DITA editor, the XMetaL DITA Edition, and to key discussions and policy decisions on the OASIS Technical Committee.  She has frequently shared her knowledge at industry events and provided technical input to DITA Best Practices: A Roadmap for Writing, Editing, and Architecting in DITA by Laura Bellamy, Michelle Carey, et al.  published by IBM Press.
+ Yas notably contributed to DITA adoption on Canadian teams that developed the first commercially available DITA editor, the XMetaL DITA Edition.
+     A long time ago, she participated on the OASIS Technical Committee.  She has frequently shared her knowledge at industry event as well as DITA Best Practices: A Roadmap for Writing, Editing, and Architecting in DITA published by IBM Press.
       </p>
       <p class="p">
        Currently, Yas is experimenting with integrating decentralized technologies and AI into a DITA content pipeline.
-Outside of markup, Yas loves travel, art, music, and dance and frequently finds herself supporting social movements for positive change.
+        Yas loves travel, art, music, and dancing.
       </p>
      </section>
     </div>

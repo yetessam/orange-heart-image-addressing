@@ -27,21 +27,40 @@
    </div>
    <div class="navbar-menu" id="navbarBasicExample">
     <div class="navbar-start">
-     <a class="navbar-item" href="../topics/index.html">
+     <a class="navbar-item" href="../index.html">
       Home
      </a>
      <a class="navbar-item" href="../topics/orange-heart.html">
-      Orange Heart Project
+      Project
      </a>
      <a class="navbar-item" href="../topics/gallery.html">
       Gallery
      </a>
-     <a class="navbar-item" href="../topics/addressing.html">
-      Addressing and Resilience
-     </a>
-     <a class="navbar-item" href="../topics/captains-log.html">
-      Captain's Log
-     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing and Resilience
+       </a>
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </div>
+     </div>
      <a class="navbar-item" href="../topics/about.html">
       About
      </a>
@@ -50,47 +69,7 @@
     </div>
    </div>
   </nav>
-  <script type="text/javascript">
-   document.addEventListener('DOMContentLoaded', () => {
-            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            const targetMenu = document.getElementById('navbarBasicExample');
-
-            const isDesktop = () => window.innerWidth >= 1024; // Adjust this breakpoint as needed
-
-            const setInitialMenuState = () => {
-                if (isDesktop() && localStorage.getItem('navbar-menu-state') === 'active') {
-                    targetMenu.classList.add('is-active');
-                    navbarBurgers.forEach(el => el.classList.add('is-active'));
-                } else {
-                    targetMenu.classList.remove('is-active');
-                    navbarBurgers.forEach(el => el.classList.remove('is-active'));
-                }
-            };
-
-            setInitialMenuState();
-
-            // Add click event to toggle state
-            navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-                    el.classList.toggle('is-active');
-                    targetMenu.classList.toggle('is-active');
-
-                    // Save the state to localStorage if on desktop
-                    if (isDesktop()) {
-                        if (targetMenu.classList.contains('is-active')) {
-                            localStorage.setItem('navbar-menu-state', 'active');
-                        } else {
-                            localStorage.removeItem('navbar-menu-state');
-                        }
-                    }
-                });
-            });
-
-            // Recheck the menu state on window resize
-            window.addEventListener('resize', () => {
-                setInitialMenuState();
-            });
-        });
+  <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
