@@ -15,8 +15,8 @@
   </prolog>
   <conbody>
   
-      <dl outputclass="notification is-info">
-       <dlentry>
+      <dl>
+       <dlentry  outputclass="notification is-info">
         <dt>How was this dwebsite made?</dt>
         <dd><p>Started with a design doc and a log to capture decisions and briefly document the general process.</p>
           <p>Source content was intentionally written in OASIS Open DITA XML.  
@@ -30,12 +30,12 @@
           <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
           </dd>
       </dlentry>
-     <dlentry>
+     <dlentry  outputclass="notification is-info">
         <dt>Do I need to use Content Identifiers in my XML/Markdown/HTML?</dt>
         <dd>Nope.  Don't even try.  There's zero benefit AFAIC. </dd>
       </dlentry>
 
-       <dlentry>
+       <dlentry  outputclass="notification is-info">
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
         <dd><p>Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
          Having Fleek handle the entire IPFS layer is a happy path. </p>
@@ -47,11 +47,12 @@
          </dd>
       </dlentry>
 
-         <dlentry>
+         <dlentry  outputclass="notification is-info">
             <dt>How much do I need to think about security or encryption?  Or is it auto-magical?</dt>
             <dd>Auto-magical HTTPS via Fleek.</dd>
          </dlentry>
-        <dlentry>
+
+        <dlentry  outputclass="notification is-info">
             <dt>How do I deploy a dweb site?</dt>
               <dd>Select a platform provider or you can publish directly onto IPFS yourself.</dd>
           </dlentry>
@@ -59,7 +60,8 @@
              <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
             <dd>No, stick to meaningful and human-readable names. </dd>
         </dlentry>
-          <dlentry>
+
+          <dlentry outputclass="notification is-info">
            <dt>Search??</dt>
             <dd>Search is a rabbit hole.  You can use Elastic search and Algolia on decentralized websites.
              Elastic search and Algolia had no problems crawling/indexing this site. 
