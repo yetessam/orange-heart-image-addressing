@@ -5,6 +5,16 @@
   </shortdesc>
   <conbody>
     <dl>
+
+   <dlentry>
+        <dt>Sun Jan 26, 2025</dt>
+        <dd>
+           The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
+           It isn't the same use case as site search. 
+           Publishing a subgraph could still be a good exercise.  TBD.     
+      </dlentry>
+
+
    <dlentry>
         <dt>Wed Jan 22, 2025</dt>
         <dd>
