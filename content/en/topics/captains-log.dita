@@ -13,6 +13,7 @@
            It isn't the same use case as site search. 
            Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
            Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
+        </dd>
       </dlentry>
 
 
