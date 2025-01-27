@@ -49,7 +49,8 @@
 
          <dlentry  outputclass="notification is-info">
             <dt>How much do I need to think about security or encryption?  Or is it auto-magical?</dt>
-            <dd>Auto-magical HTTPS via Fleek.</dd>
+            <dd>Auto-magical HTTPS via Fleek.  DDOS protection via edge/node replication https://dev.to/fleek/release-update-new-dns-configuration-with-cdn-perks-ddos-protection-3lmm 
+                </dd>
          </dlentry>
 
         <dlentry  outputclass="notification is-info">
