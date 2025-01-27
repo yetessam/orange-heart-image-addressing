@@ -1,0 +1,42 @@
+# DITA Workflow runs the content development life cycle automatically from
+#  Branch name       Content Type         Purpose
+#
+#  dita              DITA XML             Authoring and information architect
+# 
+#
+#  dev               HTML +  JS +         Python where you can adjust the menu and 
+#                    Python + Assets      update the Bulma CSS class names, add
+#                                         Javascript.
+#
+#
+#  stage             HTML 5               Use for localhost testing
+#
+#  prod              Deployed HTML5       Pull stage into prod to trigger Fleek deployment
+
+# Used Github Copilot to refactor the workflow from loosely coupled workflows
+# to putting the workflow in one file.  
+
+name: DITA Workflow
+
+on:
+  push:
+    branches:
+      - dita
+
+jobs:
+  build-html-step:
+    uses: ./.github/workflows/build-html.yml
+  
+  prep-html5-step:
+    needs: build-html-step
+    uses: ./.github/workflows/prep-html5.yml
+
+  sitemap-generation-step:
+    needs: prep-html5-step
+    uses: ./.github/workflows/sitemap-generation.yml
+
+  deploy-dev-to-stage-step:
+    needs: sitemap-generation-step
+    uses: ./.github/workflows/deploy-to-staging.yml
+
+      

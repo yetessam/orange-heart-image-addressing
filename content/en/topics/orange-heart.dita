@@ -2,7 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="orange-heart">
     <title>Orange Heart Project</title>
-    <shortdesc>Orange Heart Project 2024 explores themes of addressing and belonging.  This collection of images viewed through a heart-shaped stencil was created from May - August 2024.</shortdesc>
+   <titlealts><navtitle>Project</navtitle></titlealts>
+    <shortdesc>Orange Heart Project explores themes of addressing and belonging.  This collection of images viewed through a heart-shaped stencil was created from May - August 2024.</shortdesc>
     <conbody>
         <p>The source content was developed in DITA XML and travelled through a typical enterprise content development lifecycle using DITA Open Toolkit, Github and Fleek.</p>
         <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref>, which ensures that the content is decentralized, replicated, 

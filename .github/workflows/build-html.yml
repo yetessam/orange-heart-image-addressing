@@ -1,0 +1,83 @@
+name: Build HTML
+
+on:
+  workflow_dispatch:
+  workflow_call: 
+
+jobs:
+  build-html:
+    name: Build HTML 5 using the latest DITA Open Toolkit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out the dita branch
+        uses: actions/checkout@v4
+        with:
+          ref: dita
+
+      - name: Delete out folder
+        run: |
+          echo "Deleting out folder"
+          rm -rf out
+
+      - name: Build HTML5
+        uses: dita-ot/dita-ot-action@master
+        with:
+          build: |
+            set -e
+            echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
+            dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
+            
+      - name: Upload log file as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log-html5-txt
+          path: log.txt
+
+      - name: Archive the 'out' folder
+        run: |
+          set -e
+          tar -czf out.tar.gz out
+
+      - name: Upload 'out' folder archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-html5-archive
+          path: out.tar.gz
+
+      - name: List build output and errors
+        run: |
+          if grep -qEi 'Error|ERROR' log.txt; then
+              echo "Errors detected in DITA OT build log:"
+              grep -Ei 'Error|ERROR' log.txt
+              exit 1
+          fi
+          ls -R out
+
+      - name: Delete out folder
+        run: |
+          echo "Deleting out folder"
+          sudo chown -R $USER:$USER out
+          rm -rf out
+
+      - name: Configure git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+
+      
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git add .
+            git commit -m "Github workflow ran DITA OT and generated html5 to out folder"
+            git push https://${{secrets.GH_TOKEN}}@github.com/yetessam/orange-heart-image-addressing.git dita
+          fi
+      - name: Summarize build
+        run: |
+          echo "### Summary " >> $GITHUB_STEP_SUMMARY
+          echo "$(cat log.txt)" >> $GITHUB_STEP_SUMMARY

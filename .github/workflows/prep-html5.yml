@@ -1,0 +1,91 @@
+#  Switches to the dev branch, brings over the build content, uses Python to prep the HTML5 and checks in the 
+#  content into dev.   
+# 
+# Dependencies: 
+#  Requires html5 artifact that came out of converting DITA to html5 using the DOT
+#  Expects default folder names that come out of the DOT  such as "out". 
+#  Expects Python resources to live on the dev branch  python/resources and will copy those over for use by HTML
+#  For example, python/resources/css/*.css and python/resources/js/*.js 
+#  These shouldn't be touched by writers so they live on dev branch
+#  NOTE:  Resources which normally could be modified by writers such asboilerplate text live on dita branch. 
+# 
+
+name: Prep HTML5
+
+on:
+  workflow_dispatch:
+  workflow_call: 
+
+#on:
+#  workflow_run:
+#    workflows: ["Build HTML"]
+#    types:
+#      - completed
+
+jobs:
+  prep-html5:
+    name: HTML5 prep download OT output and run python main script
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the dev branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Download 'out-html5-archive' artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: out-html5-archive
+          path: .
+
+      - name: Extract the 'out' folder
+        run: |
+          tar -xzf out.tar.gz
+          ls -laR
+
+      - name: Create src folder if it doesn't exist
+        run: |
+          mkdir -p ./src
+          ls -la 
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          set -e
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r python/requirements.txt
+
+      - name: Run Python script 
+        run: |
+          set -e
+          source venv/bin/activate
+          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/python/resources
+
+      - name: List directory contents after running Python script
+        run: |
+          set -e
+          echo "Listing contents of $(pwd):"
+          ls -l
+          echo "Contents of src directory:"
+          ls -la src
+
+      - name: Remove venv, tar file and out folder
+        run: |
+          rm -rf venv/
+          rm -f out.tar.gz
+          rm -rf out/
+          echo "Deleting out folder and out.tar.gz file"
+
+      - name: Commit and push changes to dev branch
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git add --verbose --force $(pwd)/src
+          git commit -m "Copy files from DITA OT build to src "
+          git push origin dev

@@ -13,7 +13,7 @@
   </prolog>
   <conbody>
     <section><title>Findability Protocols</title>
-    <p>What is a Findability Protocol?   It is a system that's generally shared by one or more actors to make things findable.
+    <p>What is a Findability Protocol?   Lets' define it as a system that's generally shared by one or more actors to make things findable.
     Let's group together all of these diverse systems together as "findability protocols." 
     Any of the following could be considered examples of findability protocols:
     <ul>
@@ -32,7 +32,6 @@
   <section><title>Web Addressing Methods</title>
     <p>The web uses a combination of findability protocols to address and retrieve content. 
     The key addressing protocols include:
-
  <ul>
     <li>Content Identifiers (CIDs)</li>
     <li>Uniform Resource Locators (HTTP URLs)</li>
@@ -44,10 +43,9 @@
 The current website uses content-based and location-based addressing, along with accessiblity metadata. 
 </p>
 </section>
+
+
 <section><title>Content Addressing </title>
-
-
-
 
 <p>Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
 </p>
@@ -81,19 +79,8 @@ Content's  authenticity can be easily verified by running the image through a ha
   <p>How is the use case handled for the "most recent" version of an asset/resource/website?</p> 
 
  </section>
- <section><title>Using Web Content Addressing CID for your website</title>
- <p>If you create a website and publish through a dweb-friendly provider, your content already lives on the 
- decentralized web and and uses content-addressed CIDs and location-based HTTP URLS.
- </p>
- <p>Here's the HTML5 that renders the precending image. 
- <codeblock>
- </codeblock>
-</p>
-
- <p>With the content id, you can retrieve the image yourself.  
- </p>
- <ul>
- 
+<section><title>Try it out </title>
+<ul>
  <li>View on an IPFS gateway </li>
  <li>Install IPFS and then use the following command:  
  </li>
@@ -101,4 +88,3 @@ Content's  authenticity can be easily verified by running the image through a ha
  </section>
   </conbody>
 </concept>
-

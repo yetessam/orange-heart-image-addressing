@@ -1,17 +1,42 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="captains-log">
   <title>Captain's Log</title>
-  <shortdesc>Technical progress, challenges, solutions and people and events encountered are noted below.
+  <shortdesc>Brief notes capturing technical progress, challenges, solutions and events.
   </shortdesc>
   <conbody>
     <dl>
- <dlentry>
+
+   <dlentry>
+        <dt>Sun Jan 26, 2025</dt>
+        <dd>
+           The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
+           It isn't the same use case as site search. 
+           Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
+           Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
+        </dd>
+      </dlentry>
+
+
+   <dlentry>
         <dt>Wed Jan 22, 2025</dt>
         <dd>
-         Reorganizing the content and want to have multi-level navbars.   Needing to update the Python script to add more Bulma classnames for two level menus.
+         Want multi-level navbars so they are two levels deep. 
+         Python script to add more Bulma classnames and changed the build.properties file for the DOT.
+         
 
         </dd>
       </dlentry>
+     <dlentry>
+        <dt>Monday Jan 20, 2025</dt>
+        <dd>
+          Refactoring and cleanup activities. 
+          Decided to reorg site into nested structures, so updated DITA map to use collection-type.
+          Have to go back and reread the short descs to make sure that are descriptive enough for the Discover landing page.
+          Fixed up workflows for maintainability and so that the names in the gui match the yml.
+          Python cleanup.
+    </dd>
+      </dlentry>
+      
      <dlentry>
         <dt>Thursday Jan 16, 2025</dt>
         <dd>
