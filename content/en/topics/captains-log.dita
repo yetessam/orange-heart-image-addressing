@@ -5,7 +5,11 @@
   </shortdesc>
   <conbody>
     <dl>
-
+   <dlentry>
+        <dt>Monday Jan 27, 2025</dt>
+        <dd>Calling Algolia via crawler.yml on push to prod.
+        </dd>
+      </dlentry>
    <dlentry>
         <dt>Sun Jan 26, 2025</dt>
         <dd>
