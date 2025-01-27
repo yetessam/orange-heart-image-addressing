@@ -84,6 +84,10 @@ Consider using DITA keys from day one for image addressing so that if we switch 
 - Accessibility: Ensure all my HTML pages are accessible. Use tags like `<menu>`, `<nav>`, `<form>`, and `<main>` that don’t need not use ARIA landmarks, as their purpose is already established with their names. Review that the content has enough metadata and includes ARIA roles and labels where necessary.  
 - Bulma uses a lot of divs, that's one concern 
 
+### Search
+- Uses Instant Search.js for front end JS
+- Index lives on Algolia's cloud
+- Runs to Algolia crawler on push to prod
 
 ### DWeb Tech to Investigate, Consider Out of Scope
 - Nextcloud which is decentralized Google Drive
