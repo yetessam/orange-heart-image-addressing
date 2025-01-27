@@ -2,8 +2,8 @@ name: Update XML from Dita Branch
 
 on:
   workflow_dispatch:  # This will allow manual dispatch of the workflow
-  push:
-    branches: [ stage ]
+ # push:
+ #   branches: [ stage ]
  
 jobs:
   update-xml:
