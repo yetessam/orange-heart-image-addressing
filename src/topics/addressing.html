@@ -1,0 +1,252 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Addressing and Resilient Technologies use a combination of findability protocols to locate and retrieve content. Let's introduce the concept of findability protocols, resilience, and web addressing methods, then look at how IPFS content addressing works to make the web more resilient." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Addressing and Resilience
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body id="addressing">
+  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarBasicExample">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing and Resilience
+       </a>
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </div>
+     </div>
+     <a class="navbar-item" href="../topics/about.html">
+      About
+     </a>
+    </div>
+    <div class="navbar-end">
+    </div>
+   </div>
+  </nav>
+  <script src="../js/navbar.js" type="text/javascript">
+  </script>
+  <main class="container p-5" role="main">
+   <article aria-labelledby="ariaid-title1" class="content" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Addressing and Resilience
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Addressing and Resilient Technologies use a combination of findability protocols to locate and retrieve content.
+  Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.
+     </p>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Findability Protocols
+      </h2>
+      <div class="p">
+       What is a Findability Protocol?   Lets' define it as a system that's generally shared by one or more actors to make things findable.
+    Let's group together all of these diverse systems together as "findability protocols." 
+    Any of the following could be considered examples of findability protocols:
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         Street addresses
+        </li>
+        <li class="li list-item">
+         Physical landmarks
+        </li>
+        <li class="li list-item">
+         Dewey decimal system
+        </li>
+        <li class="li list-item">
+         Geographic systems such as longitude and latitude
+        </li>
+        <li class="li list-item">
+         Sonar
+        </li>
+       </ul>
+      </div>
+     </section>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Resilience
+      </h2>
+      <p class="p">
+       Resilience is the ability of a system to recover from a failure although in more humanistic terms it means that ability to withstand what's to come.
+      </p>
+     </section>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Web Addressing Methods
+      </h2>
+      <div class="p">
+       The web uses a combination of findability protocols to address and retrieve content. 
+    The key addressing protocols include:
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         Content Identifiers (CIDs)
+        </li>
+        <li class="li list-item">
+         Uniform Resource Locators (HTTP URLs)
+        </li>
+        <li class="li list-item">
+         Domain Names
+        </li>
+        <li class="li list-item">
+         Metadata for Accessbility and Search Engine Indexing
+        </li>
+       </ul>
+      </div>
+      <p class="p">
+       The current website uses content-based and location-based addressing, along with accessiblity metadata.
+      </p>
+     </section>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Content Addressing
+      </h2>
+      <p class="p">
+       Content address identifiers (CID)s are derived from pushing assets through a cryptographic hash to retrieve a unique identifier.
+      </p>
+      <p class="p">
+       For example, if we take the following tiny image and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+
+Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
+
+This CID in the decentralized web can be used as the asset's location address.
+
+I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
+
+All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
+      </p>
+      <p class="p">
+       Any digital asset, say an image, and process it with a cryptographic hash, or function, the result is a unique
+ series of numbers and letters for this exact image.
+      </p>
+      <p class="p">
+       Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
+This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
+Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.
+      </p>
+      <p class="p">
+       Another way to look at CIDs is to consider them as a text-based and unique property of the content object.
+      </p>
+      <p class="p">
+       If you've published a website and have a different version of the content, its CID will change.
+  How we handle link management and other notions such
+      </p>
+      <p class="p">
+       How is the use case handled for the "most recent" version of an asset/resource/website?
+      </p>
+     </section>
+     <section class="section">
+      <h2 class="title sectiontitle">
+       Try it out
+      </h2>
+      <ul class="ul list is-hoverable">
+       <li class="li list-item">
+        View on an IPFS gateway
+       </li>
+       <li class="li list-item">
+        Install IPFS and then use the following command:
+       </li>
+      </ul>
+     </section>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="discover.html" title="Dweb technology experimentation resulted in this website. A tiny sliver of Dweb concepts, frequently asked questions and technical shared are gathered here.">
+        Discover Dweb
+       </a>
+      </div>
+      <div class="nextlink">
+       <strong>
+        Next topic:
+       </strong>
+       <a class="link is-link" href="content-addressing.html" title="Content addressing identifiers provide provenance for digital assets. Leveraging crypto, assets are identified uniquely by its contents.">
+        Content Addressing
+       </a>
+      </div>
+     </div>
+     <div class="linklist relinfo">
+      <strong>
+       Related information
+      </strong>
+      <br/>
+      <ul class="linklist list is-hoverable">
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" rel="external noopener" target="_blank">
+         A Practical Explainer for IPFS Gateways - Part 2
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <div class="content has-text-primary is-centered">
+     <p>
+      © 2024 Orange Heart Project. This work is licensed under the
+      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+      </a>
+      .
+     </p>
+     <p>
+      IPFS
+      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
+       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
+      </a>
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
