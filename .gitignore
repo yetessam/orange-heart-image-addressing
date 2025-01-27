@@ -1,4 +1,11 @@
-#Ignore Mac OS files
+
+
+# Add search folder to gitignore
+python/resources/search/*
+
+.vscode
+
+# Ignore Mac OS files
 .DS_Store
 
 # Ignore Vim swap files
@@ -7,3 +14,9 @@
 # Ignore Python cache directories
 __pycache__/
 *.py[cod]
+
+# Ignore Python virtual environments
+venv/
+
+launch.json
+settings.json
