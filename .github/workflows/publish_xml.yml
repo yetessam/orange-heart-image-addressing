@@ -1,0 +1,42 @@
+name: Update XML from Dita Branch
+
+on:
+  workflow_dispatch:  # This will allow manual dispatch of the workflow
+
+jobs:
+  update-xml:
+    runs-on: ubuntu-latest  # Use a Linux environment, you can also use macos-latest or windows-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Set up Git
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Checkout the Dita branch and retrieve the content folder
+      run: |
+        git checkout dita -- content
+        mv content xml
+
+    - name: Checkout the Prod branch
+      run: |
+        git checkout prod
+
+    - name: Clobber existing XML folder (if it exists)
+      run: |
+        rm -rf xml
+
+    - name: Move new XML folder into place
+      run: |
+        mv ../xml ./xml
+
+    - name: Commit and Push changes to Prod
+      run: |
+        git add xml
+        git add -u  # To stage the removal of the old xml folder
+        git commit -m "Clobber existing xml folder with content from dita branch"
+        git push origin prod
+
