@@ -2,7 +2,9 @@ name: Update XML from Dita Branch
 
 on:
   workflow_dispatch:  # This will allow manual dispatch of the workflow
-
+  push:
+    branches: [ prod ]
+ 
 jobs:
   update-xml:
     runs-on: ubuntu-latest  # Use a Linux environment, you can also use macos-latest or windows-latest
