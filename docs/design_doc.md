@@ -6,9 +6,9 @@
 
 **Project Name:** Orange Heart Image Addressing
 
-**Purpose:** Themewise, I’m using an orange heart to explore and present different forms of addressing (physical and digital). As a proof of concept, I want to easily use and incorporate various Web 3 technologies into this exercise.
+**Purpose:** Themewise, I’m using an orange heart to explore and present different forms of addressing (physical and digital).    My goals are to investigate, learn and play with various Dweb technologies. 
 
-**Target Audience:** Art enthusiasts, information architects, people interested in web technologies.
+**Target Audience:** Art enthusiasts, developers, information architects, people interested in web technologies.
 
 ## Description
 
@@ -87,6 +87,7 @@ Consider using DITA keys from day one for image addressing so that if we switch 
 
 ### DWeb Tech to Investigate, Consider Out of Scope
 - Nextcloud which is decentralized Google Drive
+- Fleek does storage on IPFS, its simple drag and drop
 
 ###  Source Content
-- Using DITA XML for source
+- Using OOTB DITA XML for source.   
