@@ -104,17 +104,16 @@ def modify_navbar(soup,  filepath=None, root_dir=None):
         navbar_end = soup.new_tag('div', **{'class': 'navbar-end'})
 
         # Move list items to the new structure
-        ul = nav.find('ul')
-        if ul:
-            ul.name = 'div'
-            ul['class'] = 'navbar-start'
-            set_navbar_classes(soup, ul)
-            #navbar_start.append(ul)
+        navbar_start = nav.find('ul')
+        if navbar_start:
+            navbar_start.name = 'div'
+            navbar_start['class'] = 'navbar-start'
+            set_navbar_classes(soup, navbar_start)
             logger.debug("Reorganized <nav> structure with Bulma classes.")
 
         
         # Assemble the new navbar structure
-        navbar_menu.append(ul)
+        navbar_menu.append(navbar_start)
         navbar_menu.append(navbar_end)
         nav.clear()
         nav.append(navbar_brand)
