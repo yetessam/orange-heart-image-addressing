@@ -6,15 +6,13 @@ on:
  # push:
  #   branches: [ stage ]
 
-
-  
 jobs:
   deploy-xml-to-stage:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout DITA Branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: dita
 
