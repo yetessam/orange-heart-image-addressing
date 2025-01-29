@@ -43,10 +43,12 @@ For content development, I wrote the content myself.  Personally, I prefer my sh
         <stentry>
           <ul>
             <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
+            <li>Use AI suggestions to get to 5 star Linked Data.</li>
+         
           </ul>
         </stentry>
         <stentry>
-             Open AI GPT-3.5
+             Open AI GPT-3.5, DeepSeek-V3
         </stentry>
       </strow>
       
