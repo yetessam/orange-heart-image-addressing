@@ -27,7 +27,7 @@ jobs:
           git fetch origin
           if git show-ref --quiet refs/remotes/origin/xml; then
             git checkout xml
-            git pull origin xml
+            git pull origin xml --rebase
           else
             git checkout --orphan xml
             git reset --hard
