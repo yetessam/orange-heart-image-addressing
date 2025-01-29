@@ -26,13 +26,13 @@ jobs:
           
           git fetch origin
           if git show-ref --quiet refs/remotes/origin/src/xml; then
-            git checkout src/xml
-            git pull origin src/xml
+            git checkout xml
+            git pull origin xml
           else
             git checkout --orphan xml
             git reset --hard
             git commit --allow-empty -m "Initial commit for XML branch"
-            git push origin src/xml
+            git push origin xml
           fi
 
       - name: Remove Existing xml Folder
