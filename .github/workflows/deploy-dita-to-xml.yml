@@ -25,14 +25,15 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
           git fetch origin
-          if git show-ref --quiet refs/remotes/origin/src/xml; then
+          if git show-ref --quiet refs/remotes/origin/xml; then
+            # If the branch exists, check it out and reset it to match the remote
             git checkout xml
-            git pull origin xml --rebase
+            git reset --hard origin/xml
           else
+            # If the branch doesn't exist, create it as an orphan branch
             git checkout --orphan xml
             git reset --hard
             git commit --allow-empty -m "Initial commit for XML branch"
-            git push origin xml
           fi
 
       - name: Remove Existing xml Folder
@@ -48,4 +49,4 @@ jobs:
         run: |
           git add src/xml
           git commit -m 'Deployed XML content folder from dita branch to xml branch'  
-          git push origin src/xml
+          git push origin xml --force  # Force push to overwrite remote branch
