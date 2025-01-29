@@ -35,8 +35,13 @@ jobs:
     needs: prep-html5-step
     uses: ./.github/workflows/sitemap-generation.yml
 
-  deploy-dev-to-stage-step:
+  deploy-dev-to-staging-step:
     needs: sitemap-generation-step
     uses: ./.github/workflows/deploy-to-staging.yml
+
+  deploy-xml-to-staging-step:
+    needs: deploy-dev-to-staging-step
+    uses: ./.github/workflows/deploy-xml-to-staging.yml
+    
 
       
