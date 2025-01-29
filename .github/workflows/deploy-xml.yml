@@ -1,4 +1,4 @@
-name: Update XML from Dita Branch
+name: Deploy XML to Stage
 
 on:
   workflow_dispatch:  # This will allow manual dispatch of the workflow
@@ -6,13 +6,15 @@ on:
  # push:
  #   branches: [ stage ]
 
+
+  
 jobs:
   deploy-xml-to-stage:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout DITA Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           ref: dita
 
@@ -30,11 +32,19 @@ jobs:
 
       - name: Move src Folder from Temporary Location
         run: mv /tmp/content ./xml
- 
-      - name: Commit and Push changes to Prod
+
+      - name: Commit Changes
+        run: |
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add src
+            git commit -m 'Deployed XML content folder from dev branch to stage'
+
+      -
+      - name: Commit and Push XML To Stage
         run: |
             git add xml
             git add -u  # To stage the removal of the old xml folder
             git commit -m "Clobber existing xml folder with content from dita branch"
-            git push origin prod
+            git push origin stage
 
