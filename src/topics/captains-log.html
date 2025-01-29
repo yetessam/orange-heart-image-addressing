@@ -7,11 +7,18 @@
   <meta content="DITA-OT" name="generator"/>
   <meta content="Brief notes capturing technical progress, challenges, solutions and events." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
    Captain's Log
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
+  </script>
+  <script src="js/search.js">
+  </script>
  </head>
  <body id="captains-log">
   <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
@@ -81,6 +88,21 @@
       Brief notes capturing technical progress, challenges, solutions and events.
      </p>
      <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Jan 27, 2025
+      </dt>
+      <dd class="dd">
+       Calling Algolia via crawler.yml on push to prod.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sun Jan 26, 2025
+      </dt>
+      <dd class="dd">
+       The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
+           It isn't the same use case as site search. 
+           Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
+           Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
+      </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        Wed Jan 22, 2025
       </dt>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="discover-dweb-tech">
+  <title>Discover Dweb </title>
+   <shortdesc>Dweb technology experimentation resulted in this website.   A tiny sliver of Dweb concepts, frequently asked questions and technical shared are gathered here. 
+    </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Dweb landing page</indexterm>
+      </keywords>
+    </metadata>
+  </prolog><conbody>
+ <p>Users can't necessarily tell that they are consuming information or running apps on the decentralized web.  
+Most of the challenge was unlearning preconceived notions and misconceptions about decentralized technologies.</p>
+ 
+</conbody>
+  </concept>
+       
