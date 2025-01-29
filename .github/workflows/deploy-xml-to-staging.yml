@@ -1,4 +1,4 @@
-name: Deploy XML to Stage
+name: Deploy XML to Staging
 
 on:
   workflow_dispatch:  # This will allow manual dispatch of the workflow
@@ -40,7 +40,7 @@ jobs:
             git add src
             git commit -m 'Deployed XML content folder from dev branch to stage'
 
-      -
+    
       - name: Commit and Push XML To Stage
         run: |
             git add xml
