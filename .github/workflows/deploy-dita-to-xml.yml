@@ -38,6 +38,9 @@ jobs:
       - name: Remove Existing xml Folder
         run: rm -rf src/xml
 
+      - name: Create src Directory (if it doesn't exist)
+        run: mkdir -p src
+
       - name: Move src Folder from Temporary Location
         run: mv /tmp/content ./src/xml
 
