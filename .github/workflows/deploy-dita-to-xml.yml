@@ -1,0 +1,48 @@
+name: Deploy XML to XML Branch
+
+on:
+  workflow_dispatch:  # This will allow manual dispatch of the workflow
+  workflow_call: 
+ # push:
+ #   branches: [ stage ]
+
+jobs:
+  deploy-xml-to-xml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout DITA Branch
+        uses: actions/checkout@v3
+        with:
+          ref: dita
+
+      - name: Copy DITA Folder to Temporary Location
+        run: cp -r content /tmp/content
+
+      - name: Checkout or Create XML Branch
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          git fetch origin
+          if git show-ref --quiet refs/remotes/origin/xml; then
+            git checkout xml
+            git pull origin xml
+          else
+            git checkout --orphan xml
+            git reset --hard
+            git commit --allow-empty -m "Initial commit for XML branch"
+            git push origin xml
+          fi
+
+      - name: Remove Existing xml Folder
+        run: rm -rf xml
+
+      - name: Move src Folder from Temporary Location
+        run: mv /tmp/content ./xml
+
+      - name: Commit and Push Changes
+        run: |
+          git add xml
+          git commit -m 'Deployed XML content folder from dita branch to xml branch'  
+          git push origin xml
