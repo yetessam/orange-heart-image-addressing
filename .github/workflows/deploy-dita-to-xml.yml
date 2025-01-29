@@ -25,24 +25,24 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
           git fetch origin
-          if git show-ref --quiet refs/remotes/origin/xml; then
-            git checkout xml
-            git pull origin xml
+          if git show-ref --quiet refs/remotes/origin/src/xml; then
+            git checkout src/xml
+            git pull origin src/xml
           else
             git checkout --orphan xml
             git reset --hard
             git commit --allow-empty -m "Initial commit for XML branch"
-            git push origin xml
+            git push origin src/xml
           fi
 
       - name: Remove Existing xml Folder
-        run: rm -rf xml
+        run: rm -rf src/xml
 
       - name: Move src Folder from Temporary Location
-        run: mv /tmp/content ./xml
+        run: mv /tmp/content ./src/xml
 
       - name: Commit and Push Changes
         run: |
-          git add xml
+          git add src/xml
           git commit -m 'Deployed XML content folder from dita branch to xml branch'  
-          git push origin xml
+          git push origin src/xml
