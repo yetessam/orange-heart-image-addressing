@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="orange-heart">
+    <title>Orange Heart Project</title>
+   <titlealts><navtitle>Project</navtitle></titlealts>
+    <shortdesc>Orange Heart Project explores themes of addressing and belonging.  This collection of images viewed through a heart-shaped stencil was created from May - August 2024.</shortdesc>
+    <conbody>
+        <p>The source content was developed in DITA XML and travelled through a typical enterprise content development lifecycle using DITA Open Toolkit, Github and Fleek.</p>
+        <p>The content that you are viewing is stored on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref>, which ensures that the content is decentralized, replicated, 
+and verifies its authenticity and provenance.  Peer to peer sites that are replicated on organizational servers are more stable and resilient than content stored in a single location on the web.</p>
+         <p>This project repurposes a heart-shaped stencil originally created as a response to gun violence in San Francisco's Mission District in 2017.</p>
+         <p>I first started stenciling hearts in my neighbourhood as part of a healing journey.  Since then, they have been reused and repurposed on a variety of mediums beyond concrete.</p>
+       
+        </conbody>
+</concept>
