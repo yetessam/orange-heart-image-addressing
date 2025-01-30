@@ -39,9 +39,9 @@ jobs:
     needs: sitemap-generation-step
     uses: ./.github/workflows/deploy-to-staging.yml
 
-  deploy-xml-to-staging-step:
+  deploy-dita-to-xml-step:
     needs: deploy-dev-to-staging-step
-    uses: ./.github/workflows/deploy-xml-to-staging.yml
+    uses: ./.github/workflows/deploy-dita-to-xml.yml
     
 
       
