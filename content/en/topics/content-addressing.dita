@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-   <shortdesc>Content addressing identifiers provide provenance for digital assets.  Leveraging crypto, assets are identified uniquely by its contents.    
+   <shortdesc>Content addressing identifiers provide provenance for digital assets.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.    
   </shortdesc>
   <prolog>
     <metadata>
