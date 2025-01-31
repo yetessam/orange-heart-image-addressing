@@ -1,0 +1,1 @@
+Currently using Algolia search 
