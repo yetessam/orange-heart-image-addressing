@@ -25,6 +25,7 @@ jobs:
         with:
           build: |
             set -e
+            dita --version
             echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
             dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
             
