@@ -9,15 +9,10 @@ from bs4 import BeautifulSoup
 
 from utils import parse_arguments, find_html_files, setup_directories
 
-from update_html.apply_bulma import apply_bulma_classes
-from update_html.bulma_classes import bulma_classes
-from update_html.create_pictures import create_picture_tags
-from update_html.create_responsive import create_responsive
-from update_html.file_operations import copy_files, read_html_file, write_html_file
-from update_html.logging_ohp import logger
-from update_html.modify_navbar import modify_navbar
-from update_html.update_head import update_head
-
+from update_html import (
+    apply_bulma_classes, bulma_classes, create_picture_tags, create_responsive,
+    copy_files, read_html_file, write_html_file, logger, modify_navbar, update_head
+)
 def setup_temp(input_dir):
     temp_dir = tempfile.mkdtemp()
     logger.debug(f"Created temporary directory: {temp_dir}")
