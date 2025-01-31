@@ -1,16 +1,25 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="bio">
+  <title>Bio</title>
+  <shortdesc>Biography
+  </shortdesc>
+  <conbody>
+      <p>Yas Etessam (she/her) is a markup technologist.    She’s been coding since the 80’s and has expertise in digital content pipelines.</p>
 
+      <p>While living in California, Yas had the privilege of collaborating with technology industry giants in semiconductor, enterprise software, cloud computing, networking, telecommunications, and artificial intelligence.   
+      Recently, Yas has been focused on self-directed learning and travel.   
       
-        <title>Yas Etessam (she/her)</title>
-        <p>Yas Etessam is a markup technologist.   She’s been coding since the 80’s and has expertise in digital content.</p>
-        <p>Yas has had the opportunity to work alongside a variety of technology industry giants in semiconductor, enterprise software, cloud computing, networking, telecommunications, and artificial intelligence.   
-Most recently, Yas served as a Product Owner on an enterprise Content Pipeline team and chaired the applicable product information governance board.
+   
+       Yas served as a Product Owner on an enterprise Content Pipeline team and chaired the applicable product information governance board.
         </p>
         <p>Darwin Information Typing Architecture (DITA) is the foundational standard for user-centric information architecture, as it is flexible and adaptable to change.  
- Yas notably contributed to DITA adoption on Canadian teams that developed the first commercially available DITA editor, the XMetaL DITA Edition.
-     A long time ago, she participated on the OASIS Technical Committee.  She has frequently shared her knowledge at industry event as well as DITA Best Practices: A Roadmap for Writing, Editing, and Architecting in DITA published by IBM Press.
-        </p>
+ Yas notably contributed to DITA adoption with  colleagues who developed the first commercially available DITA editor, the XMetaL DITA Edition.
 
-        <p>Currently, Yas is experimenting with integrating decentralized technologies and AI into a DITA content pipeline.
+     A long time ago, she participated on the OASIS Technical Committee and is learning about the new DITA 2.0 features such as inclusions.  
+    She  frequently shared her knowledge at industry events as well as in IBM Press' DITA Best Practices: A Roadmap for Writing, Editing, and Architecting in DITA.
+    </p>
+
+        <p>Currently, Yas is experimenting with integrating decentralized technologies with a DITA content pipeline.
         Yas loves travel, art, music, and dancing. </p>
       </section>
     </conbody>
