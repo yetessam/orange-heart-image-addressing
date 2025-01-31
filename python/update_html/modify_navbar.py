@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import os
 
-from update_html.logging_ohp import logger
+from .logging_ohp import logger
 
 # Adding attribution 
 def update_attribute(element, att_name, att_value):
