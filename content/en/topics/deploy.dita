@@ -24,7 +24,7 @@ Fleek does support building on Fleek, but I'm building on Git and only deploying
     <fig>
       <title>Fleek deployment status</title>
       <desc>The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.</desc>
-      <image href="fleek_deploy.png" placement="break">
+      <image href="../images/fleek_deploy.png" placement="break">
         <alt>Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release</alt>
       </image>
     </fig>
