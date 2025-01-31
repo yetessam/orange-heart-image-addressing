@@ -24,7 +24,7 @@
            markdown/pdf/html/video.</p>
           <p>It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
              
-           Current version is DITA Open Toolkit 4.2.3 which is being used through Github Actions.</p> 
+           Current version is DITA Open Toolkit DITA-OT 4.2.4 which is being used through Github Actions.</p> 
           <p>Python preps the HTML5 so it plays nicely with Bulma CSS.  </p>
           <p>Bulma CSS on a CDN provides responsive layout and UX</p>
           <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
@@ -39,9 +39,6 @@
         <dt>What processes need to change if you want to publish content to IFPS?</dt>
         <dd><p>Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
          Having Fleek handle the entire IPFS layer is a happy path. </p>
-          <fig><title>Fleek Deployment</title>
-<image href="../images/fleek_capture.png" alt="The Handshake"/>
-</fig>
          <p>With legacy systems, there would need to be larger business incentives or regulations in order to get past the inertia that sets in once you're using enterprise solutions.
          </p>
          </dd>
