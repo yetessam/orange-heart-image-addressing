@@ -7,9 +7,9 @@
     <metadata>
       <keywords>
         <indexterm>Deployment</indexterm>
-        <indexterm>Deployment</indexterm>
-        <indexterm>Deployment</indexterm>
-        <indexterm>Deployment</indexterm>
+        <indexterm>Fleek</indexterm>
+        <indexterm>IPFS</indexterm>
+        <indexterm>pinning</indexterm>
       </keywords>
     </metadata>
   </prolog>
@@ -25,11 +25,11 @@ Fleek does support building on Fleek, but I'm building on Git and only deploying
 <fig><title>Fleek deployment status</title>
    <image href="fleek_deploy.png" placement="break">
    <alt>Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release</alt>
-   <desc>
+</image>
+<desc>
       The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. 
       It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.
     </desc>
-</image>
 </fig>
 </conbody>
 </concept>
