@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-from update_html.logging_ohp import logger
-from update_html.head_operations import apply_meta_tag, add_script_tag
 
+from .logging_ohp import logger
+from .head_operations import apply_meta_tag, add_script_tag
 
 
 def apply_algolia_verification_metatag(soup):
