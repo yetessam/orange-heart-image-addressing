@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="deploy">
   <title>Deployment Options</title>
-   <shortdesc> Multiple platforms and services can publish, pin and host the content to the decentralized web using IPFS.</shortdesc>
+  <shortdesc> Multiple platforms and services can publish, pin and host the content to the decentralized web using IPFS.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -13,23 +13,20 @@
       </keywords>
     </metadata>
   </prolog>
-  
-<conbody>
-  
-<p>This site's content publishing is automated by connected Fleek to a Github CI/CD. 
-Whenever changes are pushed to the prod branch, Fleek runs a deployment.</p>
-<p>The general process is that Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content to ensure that it remains accessible.</p>
-<p>Fleek provides a unique IPFS gateway URL (e.g., <codeph>https://https://delicate-glitter-6121.on-fleek.app/</codeph>).  It supports providing a custom domain or a static IPNS namespace identifiers.
+
+  <conbody>
+    <p>This site's content publishing is automated by connected Fleek to a Github CI/CD. Whenever changes are pushed to the prod branch, Fleek runs a deployment.</p>
+    <p>The general process is that Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content to ensure that it remains accessible.</p>
+    <p>Fleek provides a unique IPFS gateway URL (e.g., <codeph>https://https://delicate-glitter-6121.on-fleek.app/</codeph>).  It supports providing a custom domain or a static IPNS namespace identifiers.
 Fleek does support building on Fleek, but I'm building on Git and only deploying through Fleek.</p>
-<p>Below is a screenshot of the deployment status for this project:<p>
-<fig><title>Fleek deployment status</title>
-   <image href="fleek_deploy.png" placement="break">
-   <alt>Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release</alt>
-</image>
-<desc>
-      The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. 
-      It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.
-    </desc>
-</fig>
-</conbody>
+    <p>Below is a screenshot of the deployment status for this project:</p>
+
+    <fig>
+      <title>Fleek deployment status</title>
+      <desc>The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.</desc>
+      <image href="fleek_deploy.png" placement="break">
+        <alt>Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release</alt>
+      </image>
+    </fig>
+  </conbody>
 </concept>
