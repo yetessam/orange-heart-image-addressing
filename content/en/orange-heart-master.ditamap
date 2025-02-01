@@ -31,7 +31,7 @@
 		</relheader>
 		<relrow>
 			<relcell>
-					<topicref href="topics/about.dita" format="dita" type="concept"/>
+				<topicref href="topics/discover.dita" format="dita" type="concept"/>
 			</relcell>
 			<relcell>
 			<topicref href="https://getdweb.net/principles/" format="html" scope="external">
