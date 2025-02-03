@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="deploy">
-  <title>Deployment Options</title>
-  <shortdesc> Multiple platforms and services can publish, pin and host the content to the decentralized web using IPFS.</shortdesc>
+  <title>Deployment</title>
+  <shortdesc> Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
