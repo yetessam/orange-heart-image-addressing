@@ -26,6 +26,8 @@ jobs:
   prep-html5:
     name: HTML5 prep download OT output and run python main script
     runs-on: ubuntu-latest
+    env:
+      MODULE_DIR: html5plus  # Define MODULE_DIR at the workflow level
 
     steps:
       - name: Check out the dev branch
@@ -53,11 +55,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Set up environment
-        run: |
-          MODULE_DIR="html5plus"  # Define the directory name as a variable
-    
     
       - name: Install dependencies
         run: |
