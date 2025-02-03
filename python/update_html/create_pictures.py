@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-from .logging_ohp import logger
+from ..common.logging_ohp import logger
 
-def create_picture_tags(soup, filepath):
+def create_picture_tags(soup, filepath, logger):
     figgroup_divs = soup.find_all('div', class_=lambda c: c and 'figgroup' in c.split() and 'picture' in c.split())
     
     for div in figgroup_divs:
