@@ -54,19 +54,24 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Set up environment
+        run: |
+          MODULE_DIR="html5plus"  # Define the directory name as a variable
+    
+    
       - name: Install dependencies
         run: |
           set -e
           python -m venv venv
           source venv/bin/activate
-          pip install -r python/requirements.txt
+          pip install -r $MODULE_DIR/requirements.txt
 
       - name: Run Python script 
         run: |
           set -e
           source venv/bin/activate
           export PYTHONPATH=$(pwd):$PYTHONPATH
-          python -m html5plus.main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/python/resources
+          python -m $MODULE_DIR.main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/$MODULE_DIR/resources
 
       - name: List directory contents after running Python script
         run: |
