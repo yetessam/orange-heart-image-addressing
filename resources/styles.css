@@ -1,38 +1,46 @@
 
-/* Local and CDN CSS for bulma  */
+/*
+ * Welcome to styles.css!
+ *
+ * Use this CSS stylesheet to add additional CSS on top of the existing DITA OT CSS.
+ * You can add your custom CSS
+ * directly in this file, import a local CSS file, or include a CSS file hosted
+ * in the cloud or on a CDN.
+ *
+ * To add your custom styles:
+ * 1. Scroll down to the "Your Custom CSS" section.
+ * 2. Insert your CSS rules there.
+ *
+ * To include a local CSS file:
+ * 1. Create a new file (e.g., custom.css) in the same directory.
+ * 2. Add the following line at the top of this file:
+ *    @import url('custom.css');
+ *
+ * To include a CSS file hosted in the cloud or on a CDN:
+ * 1. Copy the full URL of the CSS file (e.g., https://cdn.example.com/styles.css).
+ * 2. Add the following line at the top of this file:
+ *    @import url('https://cdn.example.com/styles.css');
+ *
+ * Note: Future updates to this file may include additional @import statements
+ * at the top. Your custom styles will remain unaffected as long as they are
+ * placed in the designated section or in a separate file.
+ *
+ * Happy styling!
+ */
 
-@import url("bulma.css");
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css");
+/* Adjusting the DITA OT default output with minor layout fixes*/
 
-
-  .figure > *:not(.figcaption):not(.picture) {
+.figure > *:not(.figcaption):not(.picture) {
     text-align: left; /* Align text content to the left */
     float: left;      /* Optional: float left if you want the elements to stack horizontally */
     display: block;   /* Ensure elements are block-level */
 }
-
 
 dt:not(:first-child) {
   margin-top: 2.5em; /* Adjust the value as needed */
 }
 
 
-/* Algolia Search CSS */
-   .ais-Hits-list {
-    list-style-type: none;
-    padding: 0;
+/* Your Custom CSS - Add your styles below this line */
 
-    max-height: 300px;   /* Set the maximum height */
-    overflow-y: auto;    /* Enable vertical scrolling */
-    padding-right: 1rem; /* Add space for scrollbar */ 
-   }
-
-    .ais-Hits-item {
-      padding: 0.5rem;
-    }
-
-    /* Remove underline from links inside ais-Hits-item */
-    .ais-Hits-item a {
-      text-decoration: none !important;  /* Use !important to override any competing styles */
-    }
