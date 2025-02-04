@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
-from ..common.logging_ohp import logger
-from ..common.head_operations import  apply_meta_tag, add_script_tag
+from ..common.logging import logger
+from ..common.headoperations import  apply_meta_tag, add_script_tag
 
 from ..search.algolia_operations import apply_algolia_verification_metatag, apply_algolia_scripts
 
@@ -13,7 +13,6 @@ def apply_viewport_metatag(soup):
     return apply_meta_tag(soup, 'viewport', 'width=device-width, initial-scale=1.0')
 
     
-
 def update_head(soup):
     """
     Updates the head section of an HTML document using specified update functions.

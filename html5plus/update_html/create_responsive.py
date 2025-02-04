@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-from ..common.logging_ohp import logger
+from ..common.logging import logger
 
-def create_responsive(soup, filepath):
+def create_responsive(soup, filepath, logger):
     # Turn off this processing for now.
     return soup
     

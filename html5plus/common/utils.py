@@ -1,7 +1,26 @@
-import shutil
-import os
 import argparse
+import os
+import shutil
+import tempfile
 
+from .logging import set_log_temp 
+
+def setup_temp(input_dir, logger):
+    
+    temp_dir = tempfile.mkdtemp()
+    logger.info(f"Created temp directory: {temp_dir}")
+    set_log_temp(temp_dir)  # Strip temp_dir from log messages
+    
+    try:
+        # Copy entire directory structure
+        shutil.copytree(input_dir, temp_dir, dirs_exist_ok=True)
+        logger.debug(f"Copied contents from {input_dir} to temp directory")
+        return temp_dir
+    
+    except Exception as e:
+        logger.error(f"Failed to copy files to temp directory: {e}")
+        shutil.rmtree(temp_dir)
+        raise   
 
 
 def copy_specific_resources(source_dir, resource_type, target_dir):
@@ -34,11 +53,6 @@ def parse_arguments():
     parser.add_argument('--res_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
     return parser.parse_args()
 
-def find_html_files(directory):
-    """Find all HTML files in the given directory."""
-    return [os.path.join(root, file) 
-            for root, _, files in os.walk(directory) 
-            for file in files if file.endswith('.html')]
 
 def setup_directories(origin_dir, destination_dir,logger):
     if not os.path.exists(origin_dir):

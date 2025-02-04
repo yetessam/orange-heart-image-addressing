@@ -1,8 +1,10 @@
 import os
 import shutil
-from .logging_ohp import logger
 
-def read_html_file(filepath):
+from .logging import (logger, set_log_temp)
+ 
+
+def read_html_file(filepath, logger):
     try:	
         with open(filepath, 'r', encoding='utf-8') as file:
             content = file.read()
@@ -30,4 +32,6 @@ def copy_files(src, dst):
                 shutil.copy2(s, d)
     else:
         shutil.copy2(src, dst)
+
+
 

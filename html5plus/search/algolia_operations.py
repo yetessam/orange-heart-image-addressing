@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 
-from ..common.head_operations import apply_meta_tag, add_script_tag 
+from ..common.headoperations import apply_meta_tag, add_script_tag 
 
 
 def apply_algolia_verification_metatag(soup):
@@ -18,7 +18,8 @@ def apply_algolia_scripts(soup):
 
      # External CDN scripts
     scripts = [
-        {"src": "https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js"},
+        {   "src": "https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js"},
+        
         {
             "src": "https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js",
             "integrity": "sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==",

@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from .logging_ohp import logger
+from .logging import logger
 
 def apply_meta_tag(soup, name, content):
     """

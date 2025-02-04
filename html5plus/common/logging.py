@@ -1,10 +1,19 @@
 from loguru import logger
 import sys
 
-def setup_logger(debug_mode=True):
-    """Initialize the logger with a simple format and temp_dir stripping."""
-    logger.remove()  # Remove default logger
 
+# Dependency to store the name of the temp dir so we can strip it out later
+
+def set_log_temp(temp_dir):
+    logger.temp_dir = temp_dir
+    
+def initialize_logger(debug_mode = False):
+    
+    #Initialize the logger by simplifying the format and strip out long temp dirs
+    
+    # Initialize logging 
+    
+    logger.remove()  # Remove default logger
    
     # Add stdout logger with the default format: "- {message}"
     logger.add(
@@ -17,7 +26,8 @@ def setup_logger(debug_mode=True):
     # Overload logger.info and logger.debug
     logger.original_info = logger.info
     logger.original_debug = logger.debug
-
+    
+  
     def custom_log(original_func):
         """Wrapper function to handle temp_dir removal."""
         def wrapper(message, *args, **kwargs):
@@ -28,17 +38,16 @@ def setup_logger(debug_mode=True):
 
     logger.info = custom_log(logger.original_info)
     logger.debug = custom_log(logger.original_debug)
+    
     return logger
 
-def set_log_temp(temp_dir):
-    logger.temp_dir = temp_dir
     
     
 # Example usage (commented out for reference)
 """
 if __name__ == "__main__":
     # Initialize the logger once
-    setup_logger(debug_mode=True)
+    initialize_logger(): 
 
     # Set the temporary directory
     set_log_temp("/tmp/my_temp_dir")
