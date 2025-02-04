@@ -5,7 +5,7 @@
 #  Requires html5 artifact that came out of converting DITA to html5 using the DOT
 #  Expects default folder names that come out of the DOT  such as "out". 
 #  Expects Python resources to live on the dev branch  python/resources and will copy those over for use by HTML
-#  For example, python/resources/css/*.css and python/resources/js/*.js 
+#  For example, html5plus/resources/css/*.css or html5plus/search/resources/js/*.js 
 #  These shouldn't be touched by writers so they live on dev branch
 #  NOTE:  Resources which normally could be modified by writers such asboilerplate text live on dita branch. 
 # 
