@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="addressing">
-  <title>Addressing and Resilience</title>
-  <shortdesc>Addressing and Resilient Technologies use a combination of findability protocols to locate and retrieve content.
+  <title>Addressing</title>
+  <shortdesc>Humans and computers find things using addresses.   
+    We use heaps of different findability protocols to locate and retrieve content.
   Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.</shortdesc>
    <prolog>
     <metadata>
@@ -18,16 +19,15 @@
     Any of the following could be considered examples of findability protocols:
     <ul>
         <li>Street addresses</li>
+        <li>White canes</li>
         <li>Physical landmarks</li>
+        <li>Dewey decimal system </li>
         <li>Dewey decimal system </li>
         <li>Geographic systems such as longitude and latitude</li>
         <li>Sonar</li>
     </ul>
     </p>
   </section>
-  <section><title>Resilience</title>
-    <p>Resilience is the ability of a system to recover from a failure although in more humanistic terms it means that ability to withstand what's to come.</p>
-    </section>
 
   <section><title>Web Addressing Methods</title>
     <p>The web uses a combination of findability protocols to address and retrieve content. 
@@ -78,13 +78,6 @@ Content's  authenticity can be easily verified by running the image through a ha
   How we handle link management and other notions such </p>
   <p>How is the use case handled for the "most recent" version of an asset/resource/website?</p> 
 
- </section>
-<section><title>Try it out </title>
-<ul>
- <li>View on an IPFS gateway </li>
- <li>Install IPFS and then use the following command:  
- </li>
- </ul>
  </section>
   </conbody>
 </concept>
