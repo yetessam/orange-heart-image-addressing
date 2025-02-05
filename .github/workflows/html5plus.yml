@@ -10,7 +10,7 @@
 #  NOTE:  Resources which normally could be modified by writers such asboilerplate text live on dita branch. 
 # 
 
-name: Prep HTML5
+name: HTML5 Plus
 
 on:
   workflow_dispatch:
@@ -23,8 +23,8 @@ on:
 #      - completed
 
 jobs:
-  prep-html5:
-    name: HTML5 prep download OT output and run python main script
+  html5plus:
+    name: HTML5 plus takes downloaded OT output and processes it with python
     runs-on: ubuntu-latest
 
     steps:
@@ -49,23 +49,23 @@ jobs:
           mkdir -p ./src
           ls -la 
 
-      - name: Set up Python
+      - name: Set up Python 3.8
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.8'
 
       - name: Install dependencies
         run: |
           set -e
           python -m venv venv
           source venv/bin/activate
-          pip install -r python/requirements.txt
+          pip install -r html5plus/requirements.txt
 
       - name: Run Python script 
         run: |
           set -e
-          source venv/bin/activate
-          python python/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/python/resources
+          # source venv/bin/activate why do ihave 2
+          python html5plus/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/html5plus/resources
 
       - name: List directory contents after running Python script
         run: |
