@@ -14,8 +14,8 @@
   </prolog>
   <conbody>
     <p>AI was an excellent learning partner and researcher on the Dweb stack.  Copilots were used for programming tasks such as 
-prototyping, refactoring code, rewriting existing functions, debugging and scanning through complex messages and logs.  
-For content development, I wrote the content myself.  Personally, I prefer my short, fact-based minimalism to the rambling, trippy Generative AI content.    
+prototyping, refactoring, rewriting existing functions, debugging and scanning through complex messages and logs.  
+I authored most of the content and have indicated where content was written by Generative AI.
 </p>
     <simpletable>
       <sthead>
@@ -48,7 +48,7 @@ For content development, I wrote the content myself.  Personally, I prefer my sh
           </ul>
         </stentry>
         <stentry>
-             Open AI GPT-3.5, DeepSeek-V3
+             Open AI GPT-3.5, DeepSeek-V3, DeepSeek-R1.
         </stentry>
       </strow>
       
