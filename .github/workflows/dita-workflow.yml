@@ -27,12 +27,12 @@ jobs:
   build-html-step:
     uses: ./.github/workflows/build-html.yml
   
-  prep-html5-step:
+  html5plus-step:
     needs: build-html-step
-    uses: ./.github/workflows/prep-html5.yml
+    uses: ./.github/workflows/html5plus.yml
 
   sitemap-generation-step:
-    needs: prep-html5-step
+    needs: html5plus-step
     uses: ./.github/workflows/sitemap-generation.yml
 
   deploy-dev-to-staging-step:
