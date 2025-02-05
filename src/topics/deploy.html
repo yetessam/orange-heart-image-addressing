@@ -1,0 +1,27 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage."><title>Deployment</title><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/styles.css"></head><body id="deploy"><nav class="toc" role="navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../topics/orange-heart.html">Project</a></li><li><a href="../topics/gallery.html">Gallery</a></li><li><a href="../topics/discover.html">Discover Dweb </a><ul><li><a href="../topics/addressing.html">Addressing</a></li><li><a href="../topics/content-addressing.html">Content Addressing</a></li><li><a href="../topics/captains-log.html">Captain's Log</a></li><li class="active"><a href="../topics/deploy.html">Deployment</a></li><li><a href="../topics/faq.html">Dwebsite FAQ </a></li></ul></li><li><a href="../topics/about.html">About</a><ul><li><a href="../topics/bio.html">Bio</a></li><li><a href="../topics/ai-usage.html">AI Usage</a></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Deployment</h1>
+  
+  
+
+  <div class="body conbody"><p class="shortdesc"> Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.</p>
+    <p class="p">This site's content publishing is automated by connected Fleek to a Github CI/CD. Whenever changes are pushed to the prod branch, Fleek runs a deployment.</p>
+    <p class="p">The general process is that Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content to ensure that it remains accessible.</p>
+    <p class="p">Fleek provides a unique IPFS gateway URL (e.g., <code class="ph codeph">https://https://delicate-glitter-6121.on-fleek.app/</code>).  It supports providing a custom domain or a static IPNS namespace identifiers.
+Fleek does support building on Fleek, but I'm building on Git and only deploying through Fleek.</p>
+    <p class="p">Below is a screenshot of the deployment status for this project:</p>
+
+    <figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Fleek deployment status. <span class="desc figdesc">The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.</span></figcaption>
+      
+      
+      <br><img class="image" src="../images/fleek_deploy.png" alt="Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release"><br>
+    </figure>
+  </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="discover.html" title="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb.">Discover Dweb</a></div><div class="previouslink"><strong>Previous topic:</strong> <a class="link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">Captain's Log</a></div><div class="nextlink"><strong>Next topic:</strong> <a class="link" href="faq.html" title="Short questions and answers on content creation and publishing with the decentralized web.">Dwebsite FAQ</a></div></div></nav></article></main><footer role="contentinfo"><div class="footer">
+  <div class="content has-text-primary is-centered">
+       <p>© 2025 Orange Heart Project. This work is licensed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.
+    </p>
+      <p>IPFS <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/</a></p>
+  </div>
+</div></footer></body></html>
