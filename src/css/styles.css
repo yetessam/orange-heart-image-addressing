@@ -1,38 +1,26 @@
+/*
+ * styles.css
+ *
+ * Performs a local import
+ * of the Bulma CSS framework 
+ * Structure of this file:
+ * The Bulma CSS framework is imported locally for consistent and off-line styling.
+ * Your custom styles are added below the Bulma import.
+ *
+ * To modify or extend styles:
+ * - Add your custom CSS rules below the "Your Custom CSS" section.
+ * - Avoid modifying the Bulma import or its core styles directly to ensure
+ *   easy updates in the future.
+ *
+ * Note: If you need to update the Bulma framework, replace the local Bulma file
+ * in the project directory with the new version and ensure the import path
+ * remains correct.
+ *
+ * If you prefer to use the CDN version, you can also swap out the local import  to 
+*    @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css");
+ */
 
-/* Local and CDN CSS for bulma  */
-
-@import url("bulma.css");
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css");
+/* Import Bulma CSS framework locally */
+@import url('bulma.css');
 
 
-  .figure > *:not(.figcaption):not(.picture) {
-    text-align: left; /* Align text content to the left */
-    float: left;      /* Optional: float left if you want the elements to stack horizontally */
-    display: block;   /* Ensure elements are block-level */
-}
-
-
-dt:not(:first-child) {
-  margin-top: 2.5em; /* Adjust the value as needed */
-}
-
-
-/* Algolia Search CSS */
-   .ais-Hits-list {
-    list-style-type: none;
-    padding: 0;
-
-    max-height: 300px;   /* Set the maximum height */
-    overflow-y: auto;    /* Enable vertical scrolling */
-    padding-right: 1rem; /* Add space for scrollbar */ 
-   }
-
-    .ais-Hits-item {
-      padding: 0.5rem;
-    }
-
-    /* Remove underline from links inside ais-Hits-item */
-    .ais-Hits-item a {
-      text-decoration: none !important;  /* Use !important to override any competing styles */
-    }
