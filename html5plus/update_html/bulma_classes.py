@@ -1,0 +1,22 @@
+bulma_classes = {
+    'main': 'container p-5',
+    'article': 'content',
+    'h1': 'title',
+    'h2': 'title',
+    'h3': 'title',
+    'figdesc': 'box',
+    'div.body': 'container',
+    'a': 'is-link',
+    'button': 'button is-link',
+    'ul': 'list is-hoverable',
+    'ol': 'list is-hoverable',
+    'li': 'list-item',
+    'lq': 'notification',
+    'dt': 'has-text-weight-semibold',
+    'note': 'notification is-primary',
+    'image' : 'is-rounded is-bordered',
+    'div.note' : 'notification is-info',
+    'gallery' : 'columns is-multiline is-variable is-8', 
+    'sectiontitle' : 'is-size-4 has-text-weight-semibold',
+}
+
