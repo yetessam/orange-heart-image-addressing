@@ -1,22 +1,224 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
-<html lang="en"><head><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2025"><meta name="generator" content="DITA-OT"><meta name="description" content="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb."><title>Discover Dweb</title><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/styles.css"></head><body id="discover-dweb-tech"><nav class="toc" role="navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../topics/orange-heart.html">Project</a></li><li><a href="../topics/gallery.html">Gallery</a></li><li class="active"><a href="../topics/discover.html">Discover Dweb </a><ul><li><a href="../topics/addressing.html">Addressing</a></li><li><a href="../topics/content-addressing.html">Content Addressing</a></li><li><a href="../topics/captains-log.html">Captain's Log</a></li><li><a href="../topics/deploy.html">Deployment</a></li><li><a href="../topics/faq.html">Dwebsite FAQ </a></li></ul></li><li><a href="../topics/about.html">About</a><ul><li><a href="../topics/bio.html">Bio</a></li><li><a href="../topics/ai-usage.html">AI Usage</a></li></ul></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
-  <h1 class="title topictitle1" id="ariaid-title1">Discover Dweb </h1>
-   
-  <div class="body conbody"><p class="shortdesc">Welcome to the decentralized web.   Dweb technology experimentation resulted in this website.  Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb. 
-    </p>
- <p class="p"> You are currently using dweb and viewing HTML pages on the Interplanetary File System, <a class="xref" href="https://ipfs.io/" target="_blank" rel="external noopener">IPFS</a>.
-  As a result, this entire website's content is decentralized, replicated, and its authenticity and provenance are verifiable.  
-   </p>
-  <p class="p">Technology stack: DITA XML, DITA Open Toolkit, Github, Python, Fleek, and IPFS.</p>
-  <p class="p">Disclaimer: I am affiliated with the Dweb movement.  I am not affiliated with Protocol Labs, Filecoin, Fleek, Github, or any of their associated projects. 
-   I have not been paid or compensated by any entity to create or maintain this website. All content on this site is independent and created solely for informational purposes. 
-  </p>
-</div>
-  <nav role="navigation" class="related-links"><ol class="olchildlinks"><li class="link olchildlink"><a href="addressing.html">Addressing</a><br>Humans and computers find things using addresses.        We use heaps of different findability protocols to locate and retrieve content.   Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.</li><li class="link olchildlink"><a href="content-addressing.html">Content Addressing</a><br>Content addressing identifiers provide provenance for digital assets.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.       </li><li class="link olchildlink"><a href="captains-log.html">Captain's Log</a><br>Brief notes capturing technical progress, challenges, solutions and events.   </li><li class="link olchildlink"><a href="deploy.html">Deployment</a><br> Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.</li><li class="link olchildlink"><a href="faq.html">Dwebsite FAQ</a><br>Short questions and answers on content creation and publishing with the decentralized web. </li></ol><div class="linklist relinfo"><strong>Related information</strong><br><ul class="linklist"><li class="linklist"><a class="link" href="https://getdweb.net/principles/" target="_blank" rel="external noopener">DWeb Principles</a></li><li class="linklist"><a class="link" href="https://github.com/yetessam/orange-heart-image-addressing" target="_blank" rel="external noopener">Github repository: https://github.com/yetessam/orange-heart-image-addressing</a></li><li class="linklist"><a class="link" href="https://fleek.xyz/" target="_blank" rel="external noopener">Fleek</a></li><li class="linklist"><a class="link" href="https://www.dita-ot.org/" target="_blank" rel="external noopener">DITA Open Toolkit</a></li></ul></div></nav></article></main><footer role="contentinfo"><div class="footer">
-  <div class="content has-text-primary is-centered">
-       <p>© 2025 Orange Heart Project. This work is licensed under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a>.
-    </p>
-      <p>IPFS <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/</a></p>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
+  <title>
+   Discover Dweb
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
+  </script>
+  <script src="js/search.js">
+  </script>
+ </head>
+ <body id="discover-dweb-tech">
+  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarBasicExample">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="active navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing
+       </a>
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/bio.html">
+        Bio
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="navbar-end">
+    <!-- Search Box aligned to the right -->
+    <div class="navbar-item">
+     <!-- Search Box Widget -->
+     <div id="search-box">
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="columns is-paddingless is-hidden test_color is-full" id="dropdown-container">
+   <div class="column is-paddingless is-half-desktop is-half-widescreen is-pulled-right ml-auto" id="dropdown-content">
+    <!-- Search results will be injected here by InstantSearch.js -->
+    <div class="notification" id="hits">
+     <!-- Close Button -->
+     <button class="delete is-small" id="close-results">
+     </button>
+     <div id="hits">
+     </div>
+     <!-- Fixed the closing tag here -->
+    </div>
+   </div>
+   <div id="dropdown-footer">
+    <!-- Placeholder for footer, for refining search results or pagination-->
+   </div>
   </div>
-</div></footer></body></html>
+  <script src="../../../home/runner/work/orange-heart-image-addressing/orange-heart-image-addressing/topics/discover.html/js/navbar.js" type="text/javascript">
+  </script>
+  <main class="container p-5" role="main">
+   <article aria-labelledby="ariaid-title1" class="content" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Discover Dweb
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Welcome to the decentralized web.   Dweb technology experimentation resulted in this website.  Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb.
+     </p>
+     <p class="p">
+      You are currently using dweb and viewing HTML pages on the Interplanetary File System,
+      <a class="xref is-link" href="https://ipfs.io/" rel="external noopener" target="_blank">
+       IPFS
+      </a>
+      .
+  As a result, this entire website's content is decentralized, replicated, and its authenticity and provenance are verifiable.
+     </p>
+     <p class="p">
+      Technology stack: DITA XML, DITA Open Toolkit, Github, Python, Fleek, and IPFS.
+     </p>
+     <p class="p">
+      Disclaimer: I am affiliated with the Dweb movement.  I am not affiliated with Protocol Labs, Filecoin, Fleek, Github, or any of their associated projects. 
+   I have not been paid or compensated by any entity to create or maintain this website. All content on this site is independent and created solely for informational purposes.
+     </p>
+    </div>
+    <nav class="related-links" role="navigation">
+     <ol class="olchildlinks list is-hoverable">
+      <li class="link olchildlink list-item">
+       <a class="is-link" href="addressing.html">
+        Addressing
+       </a>
+       <br/>
+       Humans and computers find things using addresses.        We use heaps of different findability protocols to locate and retrieve content.   Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.
+      </li>
+      <li class="link olchildlink list-item">
+       <a class="is-link" href="content-addressing.html">
+        Content Addressing
+       </a>
+       <br/>
+       Content addressing identifiers provide provenance for digital assets.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.
+      </li>
+      <li class="link olchildlink list-item">
+       <a class="is-link" href="captains-log.html">
+        Captain's Log
+       </a>
+       <br/>
+       Brief notes capturing technical progress, challenges, solutions and events.
+      </li>
+      <li class="link olchildlink list-item">
+       <a class="is-link" href="deploy.html">
+        Deployment
+       </a>
+       <br/>
+       Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.
+      </li>
+      <li class="link olchildlink list-item">
+       <a class="is-link" href="faq.html">
+        Dwebsite FAQ
+       </a>
+       <br/>
+       Short questions and answers on content creation and publishing with the decentralized web.
+      </li>
+     </ol>
+     <div class="linklist relinfo">
+      <strong>
+       Related information
+      </strong>
+      <br/>
+      <ul class="linklist list is-hoverable">
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://getdweb.net/principles/" rel="external noopener" target="_blank">
+         DWeb Principles
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://github.com/yetessam/orange-heart-image-addressing" rel="external noopener" target="_blank">
+         Github repository: https://github.com/yetessam/orange-heart-image-addressing
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://fleek.xyz/" rel="external noopener" target="_blank">
+         Fleek
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://www.dita-ot.org/" rel="external noopener" target="_blank">
+         DITA Open Toolkit
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <div class="content has-text-primary is-centered">
+     <p>
+      © 2025 Orange Heart Project. This work is licensed under the
+      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+      </a>
+      .
+     </p>
+     <p>
+      IPFS
+      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
+       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
+      </a>
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
