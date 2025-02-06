@@ -6,9 +6,9 @@
 
 **Project Name:** Orange Heart Image Addressing
 
-**Purpose:** Themewise, I’m using an orange heart to explore and present different forms of addressing (physical and digital). As a proof of concept, I want to easily use and incorporate various Web 3 technologies into this exercise.
+**Purpose:** Themewise, I’m using an orange heart to explore and present different forms of addressing (physical and digital).    My goals are to investigate, learn and play with various Dweb technologies. 
 
-**Target Audience:** Art enthusiasts, information architects, people interested in web technologies.
+**Target Audience:** Art enthusiasts, developers, information architects, people interested in web technologies.
 
 ## Description
 
@@ -21,9 +21,12 @@ Rather than looking at the one heart image online, I use it to peer through to o
 ### Overall Structure
 - Home
 - Orange Heart
-- Gallery Page
-  - 1 to n subpages
-- Captain's Log
+- Gallery
+  - bulma cards that can open up into its own modal dialog
+- Discover
+  - subpages
+- About 
+
 
 ### Website Content Diagram
 - **Home**
@@ -32,11 +35,13 @@ Rather than looking at the one heart image online, I use it to peer through to o
 - **Gallery Page**
   - Links to 3-5 HTML pages that have similar but different photos of orange hearts with titles and descriptions for each. Assuming here that we should be using a separate page is simpler. That might be an incorrect assumption.
   - Include examples of physical addressing, hearts that exist on streets or on landmarks. Street art has ambient findability and immediacy.
-- **Captain’s Log**
-  - Blog about the process and document decision.
+- **Discover**
+    - Dweb background info
+    - FAQ
+    - Captain's log about the process and document decision.
+  - **About**
 
 ## Technical Description
-
 ### Building Blocks
 
 #### Images
@@ -79,9 +84,14 @@ Consider using DITA keys from day one for image addressing so that if we switch 
 - Accessibility: Ensure all my HTML pages are accessible. Use tags like `<menu>`, `<nav>`, `<form>`, and `<main>` that don’t need not use ARIA landmarks, as their purpose is already established with their names. Review that the content has enough metadata and includes ARIA roles and labels where necessary.  
 - Bulma uses a lot of divs, that's one concern 
 
+### Search
+- Uses Instant Search.js for front end JS
+- Index lives on Algolia's cloud
+- Runs to Algolia crawler on push to prod
 
 ### DWeb Tech to Investigate, Consider Out of Scope
 - Nextcloud which is decentralized Google Drive
+- Fleek does storage on IPFS, its simple drag and drop
 
 ###  Source Content
-- Using DITA XML for source
+- Using OOTB DITA XML for source.   
