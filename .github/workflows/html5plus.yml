@@ -54,18 +54,13 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install dependencies
+      - name: Install dependencies Run Python script 
         run: |
           set -e
           python -m venv venv
           source venv/bin/activate
           pip install -r html5plus/requirements.txt
-
-      - name: Run Python script 
-        run: |
-          set -e
-          # source venv/bin/activate why do ihave 2
-          python html5plus/main_script.py --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/html5plus/resources
+          python -m html5plus --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/html5plus/resources
 
       - name: List directory contents after running Python script
         run: |

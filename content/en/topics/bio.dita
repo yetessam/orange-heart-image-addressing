@@ -1,0 +1,82 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="bio">
+  <title>Bio</title>
+  <shortdesc>Biography
+  </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Yas</indexterm>
+        <indexterm>Etessam</indexterm>
+        <indexterm>Techno</indexterm>
+        
+        <indexterm>She/Her</indexterm>
+        <indexterm>Coding since the 80's</indexterm>
+        <indexterm>Digital Content Pipelines</indexterm>
+        <indexterm>California</indexterm>
+        <indexterm>Semiconductor</indexterm>
+        <indexterm>Enterprise Software</indexterm>
+        <indexterm>Cloud Computing</indexterm>
+        <indexterm>Networking</indexterm>
+        <indexterm>Telecommunications</indexterm>
+        <indexterm>Artificial Intelligence</indexterm>
+        <indexterm>Self-Directed Learning</indexterm>
+        <indexterm>Travel</indexterm>
+        <indexterm>Product Owner</indexterm>
+        <indexterm>Content Pipeline</indexterm>
+        <indexterm>Information Governance</indexterm>
+        <indexterm>Darwin Information Typing Architecture (DITA)</indexterm>
+        <indexterm>User-Centric Information Architecture</indexterm>
+        <indexterm>DITA Adoption</indexterm>
+        <indexterm>XMetaL DITA Edition</indexterm>
+        <indexterm>OASIS Technical Committee</indexterm>
+        <indexterm>DITA 2.0</indexterm>
+        <indexterm>DITA Inclusions</indexterm>
+        <indexterm>DITA Best Practices</indexterm>
+        <indexterm>Decentralized Technologies</indexterm>
+    
+        <indexterm>Integrating DITA with Decentralized Technologies</indexterm>
+        <indexterm>Travel</indexterm>
+        <indexterm>Art</indexterm>
+        <indexterm>Music</indexterm>
+        <indexterm>Dance</indexterm>
+        <indexterm>The Clash</indexterm>
+        <indexterm>The Cure</indexterm>
+        <indexterm>Galaga</indexterm>
+        <indexterm>Playa</indexterm>
+        <indexterm>Dogs</indexterm>
+        <indexterm>Cats</indexterm>
+        <indexterm>Hiking</indexterm>
+        <indexterm>Orca</indexterm>
+        <indexterm>Video Games</indexterm>
+        <indexterm>Bleep Bloops</indexterm>
+        <indexterm>Technology</indexterm>
+    
+        <indexterm>Occupy Love</indexterm>
+        <indexterm>Resist Fear</indexterm>    
+        <indexterm>Content Management</indexterm>
+        <indexterm>Content Architecture</indexterm>
+        <indexterm>Cloud Technologies</indexterm>
+        <indexterm>Product Information</indexterm>
+        <indexterm>Governance</indexterm>
+        <indexterm>Collaboration</indexterm>
+        <indexterm>Cross-Industry Experience</indexterm>
+        <indexterm>DITA</indexterm>
+        <indexterm>HTML5</indexterm>
+       <indexterm>Standards</indexterm>
+        <indexterm>Information Architecture</indexterm>
+        <indexterm>Content Pipeline</indexterm>
+        <indexterm>Content Development</indexterm>
+        <indexterm>XML</indexterm>
+        <indexterm>Learning</indexterm>
+        <indexterm>Global Collaboration</indexterm>
+    </keywords>
+
+    </metadata>
+  </prolog>
+  <conbody>
+      <p>Yas Etessam (she/her) is a markup technologist.    She’s been coding since the 80’s and has expertise in digital content pipelines.</p>
+        <p>Currently, Yas is experimenting with integrating decentralized technologies into a DITA content pipeline using the latest stable version of the DITA Open Toolkit.
+        Yas loves travel, art, music, and dancing. </p>
+    </conbody>
+  </concept>

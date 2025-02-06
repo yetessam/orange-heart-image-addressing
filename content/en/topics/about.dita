@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="about">
+  <title>About</title>
+   <shortdesc>The orange heart project mixes art and Dweb technology through a heart-centered perspective to explore addressing and resilience. 
+  The gallery component presents stencil-based spray art on birchwood.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Yas Etessam</indexterm>
+        <indexterm>Dweb</indexterm>
+        <indexterm>IPFS</indexterm>
+        <indexterm>decentralized technologies</indexterm>
+        <indexterm>street art</indexterm>
+
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+   <section><title>Some random thoughts </title>
+    
+    <p>The decentralized web us a resilient system based on sharing digital assets all over the world, while still being able to prove that they are genuine.
+</p>
+<p>That theme dovetails with stenciling.  Stencils provide visual consistency that builds upon itself through repeated reuse. </p>
+<p>Of course, stencils that are used over and over again degrade.  Art degrades on any surface whether it is concrete or paper.
+     Especially stencils, the more you reuse the stencil, the more paint it picks up and the image loses sharpness.
+    </p>
+    <p>The stencil isn't just reused, its repurposed.   The gallery show is a series of images created by a fairly old stencil, whereas the online component includes photographs of the world where the stencil acts as a frame. 
+    In both cases, their edges are softening.  Those are some of my thoughts, you can click below to see my bio.</p>
+</section>
+</conbody>
+</concept>

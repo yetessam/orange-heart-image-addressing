@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="faq">
+  <title>Dwebsite FAQ </title>
+   <shortdesc>Short questions and answers on content creation and publishing with the decentralized web.
+</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>FAQ</indexterm>
+        <indexterm>Dweb</indexterm>
+        <indexterm>IPFS</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+  
+      <dl>
+       <dlentry  outputclass="">
+        <dt>How was this dwebsite made?</dt>
+        <dd><p>Started with a design doc and a log to capture decisions and briefly document the general process.</p>
+          <p>Source content was intentionally written in OASIS Open DITA XML.  
+             Dweb YVR Chat is a React app running on its own node. 
+           markdown/pdf/html/video.</p>
+          <p>It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
+             
+           Current version is DITA Open Toolkit DITA-OT 4.2.4 which is being used through Github Actions.</p> 
+          <p>Python preps the HTML5 so it plays nicely with Bulma CSS.  </p>
+          <p>Bulma CSS on a CDN provides responsive layout and UX</p>
+          <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
+          </dd>
+      </dlentry>
+     <dlentry  outputclass="notification is-info">
+        <dt>Do I need to use Content Identifiers in my XML/Markdown/HTML?</dt>
+        <dd>Nope.  Don't even try.  There's zero benefit AFAIC. </dd>
+      </dlentry>
+
+       <dlentry  outputclass="notification is-info">
+        <dt>What processes need to change if you want to publish content to IFPS?</dt>
+        <dd><p>Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path. </p>
+         <p>With legacy systems, there would need to be larger business incentives or regulations in order to get past the inertia that sets in once you're using enterprise solutions.
+         </p>
+         </dd>
+      </dlentry>
+
+         <dlentry  outputclass="notification is-info">
+            <dt>How much do I need to think about security or encryption?  Or is it auto-magical?</dt>
+            <dd>Auto-magical HTTPS via Fleek.  DDOS protection via edge/node replication https://dev.to/fleek/release-update-new-dns-configuration-with-cdn-perks-ddos-protection-3lmm 
+                </dd>
+         </dlentry>
+
+        <dlentry  outputclass="notification is-info">
+            <dt>How do I deploy a dweb site?</dt>
+              <dd>Select a platform provider or you can publish directly onto IPFS yourself.</dd>
+          </dlentry>
+          <dlentry>
+             <dt>How do I make the references to graphics, should I be using CIDs rather than URLs?</dt>
+            <dd>No, stick to meaningful and human-readable names. </dd>
+        </dlentry>
+
+          <dlentry outputclass="message is-info">
+           <dt>Search??</dt>
+            <dd><p>Search is a rabbit hole.</p>
+              <p>My search input uses InstantSearch.js for the GUI and using an Algolia cloud index.</p>
+              <p>Research notes:  Elastic and Algolia indexed and searched the dweb site as expected, also considered Meili
+                https://github.com/meilisearch/integration-guides?tab=readme-ov-file
+              </p>
+          </dd>
+          </dlentry>  
+
+      </dl>
+    </conbody>
+  </concept>

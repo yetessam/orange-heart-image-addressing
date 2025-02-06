@@ -27,16 +27,21 @@ jobs:
   build-html-step:
     uses: ./.github/workflows/build-html.yml
   
-  prep-html5-step:
+  html5plus-step:
     needs: build-html-step
-    uses: ./.github/workflows/prep-html5.yml
+    uses: ./.github/workflows/html5plus.yml
 
   sitemap-generation-step:
-    needs: prep-html5-step
+    needs: html5plus-step
     uses: ./.github/workflows/sitemap-generation.yml
 
-  deploy-dev-to-stage-step:
+  deploy-dev-to-staging-step:
     needs: sitemap-generation-step
     uses: ./.github/workflows/deploy-to-staging.yml
+
+  deploy-dita-to-xml-step:
+    needs: deploy-dev-to-staging-step
+    uses: ./.github/workflows/deploy-dita-to-xml.yml
+    
 
       
