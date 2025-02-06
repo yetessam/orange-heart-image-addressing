@@ -43,8 +43,23 @@ I authored most of the content and have indicated where content was written by G
         <stentry>
           <ul>
             <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
-            <li>Use AI suggestions to get to 5 star Linked Data.</li>
-         
+            <li>Use AI suggestions to get to 2 star Linked Data.</li>
+            <li>Used the following prompts into Deep Seek to get a plugin design 
+               <pre>1.  Add functionality to an content pipeline that is processing HTML5.   
+                    2.  Plugins should be loaded once at startup.   
+                    3.  Plugins will be static for now and should be able to use a properties file and environmental variables (for secrets).     
+                        Don't need to validate the configurations right now.   
+                    4.  Plugins must be self contained and have their own requirements.txt.   
+                    5.  Plugins should only be able to run itself and code that lives in the commons folder.  
+                        For changes in global state, I would only want them to be able to make a change to their calling object/parent (if necessary).   
+                    6.  Error handling, let's use a continue model for the plugins.  Processing should continue if a plugin fails. 
+                        Reuse existing .logger with the plugins.  
+                    7.  Leave extensibility on the  table for now.   Load third party plugins from the local directory.  
+                    8. Performance should be best practices.  
+                    9. Security should follow best practices.  
+                   10.   I do need a template for plugin development and we should use the ui feature as an example.
+             </pre>
+        </li>
           </ul>
         </stentry>
         <stentry>
