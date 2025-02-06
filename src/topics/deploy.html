@@ -1,0 +1,201 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
+  <title>
+   Deployment
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
+  </script>
+  <script src="js/search.js">
+  </script>
+ </head>
+ <body id="deploy">
+  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarBasicExample">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/addressing.html">
+        Addressing
+       </a>
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/bio.html">
+        Bio
+       </a>
+       <a class="navbar-item" href="../topics/ai-usage.html">
+        AI Usage
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="navbar-end">
+    <!-- Search Box aligned to the right -->
+    <div class="navbar-item">
+     <!-- Search Box Widget -->
+     <div id="search-box">
+     </div>
+    </div>
+   </div>
+  </nav>
+  <div class="columns is-paddingless is-hidden test_color is-full" id="dropdown-container">
+   <div class="column is-paddingless is-half-desktop is-half-widescreen is-pulled-right ml-auto" id="dropdown-content">
+    <!-- Search results will be injected here by InstantSearch.js -->
+    <div class="notification" id="hits">
+     <!-- Close Button -->
+     <button class="delete is-small" id="close-results">
+     </button>
+     <div id="hits">
+     </div>
+     <!-- Fixed the closing tag here -->
+    </div>
+   </div>
+   <div id="dropdown-footer">
+    <!-- Placeholder for footer, for refining search results or pagination-->
+   </div>
+  </div>
+  <script src="../../../home/runner/work/orange-heart-image-addressing/orange-heart-image-addressing/topics/deploy.html/js/navbar.js" type="text/javascript">
+  </script>
+  <main class="container p-5" role="main">
+   <article aria-labelledby="ariaid-title1" class="content" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Deployment
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.
+     </p>
+     <p class="p">
+      This site's content publishing is automated by connected Fleek to a Github CI/CD. Whenever changes are pushed to the prod branch, Fleek runs a deployment.
+     </p>
+     <p class="p">
+      The general process is that Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content to ensure that it remains accessible.
+     </p>
+     <p class="p">
+      Fleek provides a unique IPFS gateway URL (e.g.,
+      <code class="ph codeph">
+       https://https://delicate-glitter-6121.on-fleek.app/
+      </code>
+      ).  It supports providing a custom domain or a static IPNS namespace identifiers.
+Fleek does support building on Fleek, but I'm building on Git and only deploying through Fleek.
+     </p>
+     <p class="p">
+      Below is a screenshot of the deployment status for this project:
+     </p>
+     <figure class="fig fignone">
+      <figcaption>
+       <span class="fig--title-label">
+        Figure 1.
+       </span>
+       Fleek deployment status.
+       <span class="desc figdesc">
+        The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.
+       </span>
+      </figcaption>
+      <br/>
+      <img alt="Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release" class="image" src="../images/fleek_deploy.png"/>
+      <br/>
+     </figure>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="discover.html" title="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb.">
+        Discover Dweb
+       </a>
+      </div>
+      <div class="previouslink">
+       <strong>
+        Previous topic:
+       </strong>
+       <a class="link is-link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
+        Captain's Log
+       </a>
+      </div>
+      <div class="nextlink">
+       <strong>
+        Next topic:
+       </strong>
+       <a class="link is-link" href="faq.html" title="Short questions and answers on content creation and publishing with the decentralized web.">
+        Dwebsite FAQ
+       </a>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <div class="content has-text-primary is-centered">
+     <p>
+      © 2025 Orange Heart Project. This work is licensed under the
+      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+      </a>
+      .
+     </p>
+     <p>
+      IPFS
+      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
+       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
+      </a>
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
