@@ -19,7 +19,7 @@ def initialize_logger(debug_mode = False):
     logger.add(
         sys.stdout,
         level="DEBUG" if debug_mode else "INFO",
-        format="     - {message}",
+        format="- {message}",
         colorize=True  #  color coding
     )
     

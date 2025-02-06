@@ -6,7 +6,11 @@ import tempfile
 from .logging import set_log_temp 
 
 def setup_temp(input_dir, logger):
+   
+    if not os.path.exists(input_dir):
+        raise FileNotFoundError(f"Could not find the directory: {input_dir}. Exiting.")
     
+   
     temp_dir = tempfile.mkdtemp()
     logger.info(f"Created temp directory: {temp_dir}")
     set_log_temp(temp_dir)  # Strip temp_dir from log messages
@@ -53,13 +57,5 @@ def parse_arguments():
     parser.add_argument('--res_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
     return parser.parse_args()
 
-
-def setup_directories(origin_dir, destination_dir,logger):
-    if not os.path.exists(origin_dir):
-        raise FileNotFoundError(f"Could not find the directory: {origin_dir}. Exiting.")
-    
-    if not os.path.exists(destination_dir):
-        os.makedirs(destination_dir)
-        logger.info(f"Created destination directory: {destination_dir}")
 
 

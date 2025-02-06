@@ -1,31 +1,35 @@
 # html_processor_conductor.py
 import os
 from .htmlprocessor import HTMLFileProcessor
+from pathlib import Path 
 
 
 class HTMLProcessorConductor:
     """Responsible for managing and processing all HTML files in a directory."""
 
-    def __init__(self, out_dir, logger, skip):
-        self.out_dir = out_dir
+    def __init__(self, directory, logger):
+        self.directory = directory
         self.logger = logger
-        self.skip = skip
+        
     
     def initialize(self):
         
         self.logger.info( self.welcome_message())
+        self.skip = ["toc.html"] # files to skip over during processing
+        
+        
      
         
     def find_html_files(self):
         """Find all HTML files in the given directory."""
         return [
             os.path.join(root, file)
-            for root, _, files in os.walk(self.out_dir)
+            for root, _, files in os.walk(self.directory)
             for file in files if file.endswith('.html')
         ]
 
     def process(self):
-        """Process all HTML files in the output directory."""
+        """Process all HTML files in directory."""
         self.initialize()
         
         try:
@@ -41,17 +45,21 @@ class HTMLProcessorConductor:
                     if os.path.basename(filepath) in self.skip:
                         self.logger.debug(f"Skipping file: {filepath}")
                         continue
-                    # TO DO:  Calculate relative path to website root  
-                    # compare filepath and self.out_dir and that will provide relative path
+                    # root_relative is the path to base dir for the current file
+                    fpath = Path(filepath).resolve()
+                    dpath = Path(self.directory).resolve()
+                    root_relative = fpath.relative_to(dpath)
                     
                     # Process the HTML file
-                    processor = HTMLFileProcessor(filepath, self.out_dir, self.logger)
+                   
+                    processor = HTMLFileProcessor(filepath,  root_relative, self.logger)
                     processor.process()
 
                 except Exception as e:
-                    self.logger.error(f"Error processing file {filepath}: {e}")
-                    raise # Reraise the exception
-                    #continue  # Continue processing other files even if one fails
+                    self.logger.info(f"Error processing file {filepath}: {e}")
+                    #raise # Reraise the exception
+                    self.logger.info(f"Continuing HTML processing on the remaining files.")
+                    continue  # Continue processing other files even if one fails
 
    
         except FileNotFoundError as e:

@@ -4,11 +4,18 @@ from pathlib import Path
 
 def modify_navbar(soup, filepath, root_dir, logger):
     nav = soup.find('nav')
-    if nav:
-        if nav.get('id') == 'navbar-bulma':
-            logger.debug("Navbar already modified. Skipping.")
-            return soup
+    
+    if nav is None:
+        logger.info(f"Expected an HTML <nav> element in {filepath}")
+        logger.debug("Navbar not found. ")
+        raise ValueError(f"Expected an HTML <nav> element in {filepath}.")
+    
+    if nav and nav.get('id') == 'navbar-bulma':
+        logger.debug("Navbar already modified. Skipping.")
+        return soup
 
+    try: 
+            
         # Apply Bulma classes to the <nav> tag
         apply_navbar_classes(nav, logger)
 
@@ -23,9 +30,13 @@ def modify_navbar(soup, filepath, root_dir, logger):
         # Add JavaScript for Bulma
         add_bulma_script(soup, nav, filepath, root_dir, logger)
 
-        # Mark the navbar as modified
+        # Mark the navbar as modified and avoid reprocessing
         nav['id'] = 'navbar-bulma'
         logger.info("Added Bulma inline script after <nav> with id='navbar-bulma'.")
+        
+    except Exception as e:
+        logger.error(f"Failed to modify navbar in {filepath}: {e}")
+        raise ValueError(f"Failed to modify navbar in {filepath}: {e}") from e
 
     return soup
 
@@ -65,24 +76,11 @@ def create_navbar_menu(soup, nav, logger):
     if navbar_start:
         navbar_start.name = 'div'
         navbar_start['class'] = 'navbar-start'
-        set_navbar_classes(soup, navbar_start)
+        navbar_start = set_navbar_classes(soup, navbar_start)
         logger.debug("Reorganized <nav> structure with Bulma classes.")
-
-    # Define and parse the navbar-end HTML
-    navbar_end_html = """
-    <div class="navbar-end">
-        <!-- Search Box aligned to the right -->
-        <div class="navbar-item">
-            <!-- Search Box Widget -->
-            <div id="search-box"></div>
-        </div>
-    </div>
-    """
-    navbar_end_soup = BeautifulSoup(navbar_end_html, 'html.parser')
 
     # Assemble the navbar menu structure
     navbar_menu.append(navbar_start)
-    navbar_menu.append(navbar_end_soup)
 
     return navbar_menu
 
@@ -122,7 +120,7 @@ def set_navbar_classes(soup, list_element):
         soup (BeautifulSoup): The BeautifulSoup object representing the HTML document.
         list_element (Tag): The parent list element containing the navbar items.
     Returns:
-        None
+        list_element 
     """
     # Set all the nav-bar items first
     for li in list_element.find_all('li', recursive=True):
@@ -150,7 +148,8 @@ def set_navbar_classes(soup, list_element):
             li.name = 'div'
             update_attribute(li, 'class', 'navbar-item has-dropdown is-hoverable')
             remove_attribute_value(li, 'class', 'list-item')
-
+            
+    return list_element
 
 def update_attribute(element, att_name, att_value):
     """Update an attribute of an element."""

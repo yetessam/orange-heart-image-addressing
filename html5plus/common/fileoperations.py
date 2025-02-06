@@ -19,7 +19,7 @@ def write_html_file(filepath, content):
     except Exception as e:
         logger.error(f"Error writing file {filepath}: {e}");
 
-def copy_files(src, dst):
+def copy_dir(src, dst):
     if os.path.isdir(src):
         if not os.path.exists(dst):
             os.makedirs(dst)
@@ -27,7 +27,7 @@ def copy_files(src, dst):
             s = os.path.join(src, item)
             d = os.path.join(dst, item)
             if os.path.isdir(s):
-                copy_files(s, d)
+                copy_dir(s, d)
             else:
                 shutil.copy2(s, d)
     else:
