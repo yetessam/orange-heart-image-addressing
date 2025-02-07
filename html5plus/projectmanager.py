@@ -21,8 +21,9 @@ class ProjectManager:
         self.html5pluspath = None 
         self.resources = [] 
         self.temp_dir = None
-
-
+        self.global_custom_css = None 
+         
+        
     def initialize(self):
         # The following section sets up the processing for success 
         
@@ -42,28 +43,13 @@ class ProjectManager:
             # Create target directory when it does not exist
             if not os.path.exists(self.src_dir):
                 os.makedirs(self.src_dir)
-
-            # Determine which features are loaded and get pointers to each
-            # Order is significant as you must define the features prior to
-            # copying over the resources
-            self.features = ["navigation", "search", "ui"] 
-            self.resources = self.setup_resources_array() 
             
-            for resource in self.resources:
-                self.logger.info(f"Resource {resource} ")
-        
-                shutil.copytree(
-                    resource,
-                    self.src_dir, 
-                    dirs_exist_ok=True
-                )
-                
-           
+         
             # Copy the output from the DITA OT to a temp folder 
             self.temp_dir = setup_temp(self.out_dir, self.logger) 
         
         except Exception as e:
-            self.logger.error(f"Project failed: {e}")
+            self.logger.error(f"Project Manager exception: {e}")
             sys.exit(1)
                    
     def post_processing(self):
@@ -77,45 +63,15 @@ class ProjectManager:
         """Run the entire project flow."""
     
         try:
-            self.initialize()
             
             conductor = HTMLProcessorConductor(self.temp_dir, self.logger)
             conductor.process()
            
-            self.post_processing()
-            self.logger.info("Project completed successfully.")
-            
         except Exception as e:
-            self.logger.error(f"Project failed: {e}")
+            self.logger.error(f"ProjectManager run exception: {e}")
             sys.exit(1)
 
 
-    def setup_resources_array(self):
-        # Resources such as .js or images for the modified html5 output
-        # 
-        # Project level resources folder and each feature level resource folder need to be 
-        # captured in the ProjectManager.that are global as well as feature
-        # level resources, set these resources up in an array
-        
-        resources = []
-        
-        if (Path(self.res_dir).exists()):
-            resources.append(self.res_dir)
-        elif Path(self.html5pluspath/ self.res_dir).exists():
-            resources.append(self.html5pluspath/ self.res_dir) 
-                
-        # Store pointers to submodule resources
-        for feature in self.features:
-            resource_path = self.html5pluspath / feature / "resources"
-        if Path(resource_path).exists():
-            resources.append(resource_path)
-        else:
-                self.logger.warning(f"Feature path {resource_path} does not exist.")
-
-        return resources 
-            
-    
- 
     def welcome_message(self):
         strMessage = f"""
         ########################################################

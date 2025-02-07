@@ -15,11 +15,10 @@ def modify_navbar(soup, filepath, root_dir, logger):
         return soup
 
     try: 
-            
+          
         # Apply Bulma classes to the <nav> tag
         apply_navbar_classes(nav, logger)
 
-        # Create and append the navbar brand with the hamburger menu
         navbar_brand = create_navbar_brand(soup)
         nav.append(navbar_brand)
 
@@ -27,6 +26,8 @@ def modify_navbar(soup, filepath, root_dir, logger):
         navbar_menu = create_navbar_menu(soup, nav, logger)
         nav.append(navbar_menu)
 
+        
+        navbar_brand = create_navbar_brand(soup)
         # Add JavaScript for Bulma
         add_bulma_script(soup, nav, filepath, root_dir, logger)
 
@@ -85,7 +86,7 @@ def create_navbar_menu(soup, nav, logger):
     return navbar_menu
 
 
-def add_bulma_script(soup, nav, filepath, root_dir, logger):
+def add_bulma_script(soup, nav, filepath, relative_path, logger):
     """Add the Bulma JavaScript file to the HTML."""
     script = {
         "src": "js/navbar.js",
@@ -93,10 +94,8 @@ def add_bulma_script(soup, nav, filepath, root_dir, logger):
     }
 
     # Calculate the relative path to the JavaScript file
-    if filepath and root_dir:
-        current_dir = Path(filepath).parent
-        relative_path = Path(os.path.relpath(root_dir, current_dir))
-        script['src'] = str(relative_path / 'js' / 'navbar.js')
+    if relative_path:
+        script['src'] = relative_path / 'js' / 'navbar.js'
 
     # Create and append the script tag
     script_tag = soup.new_tag('script', **script)
