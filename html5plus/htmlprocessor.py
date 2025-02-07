@@ -47,12 +47,14 @@ class HTMLFileProcessor:
             soup = modify_navbar_search(soup) # .search.search
             
             # Write the updated HTML back to the file
-            write_html_file(filepath, soup.prettify())
-            self.logger.info("Processing complete\n")
-       
+            write_html_file(self.filepath, soup.prettify())
+           
         except Exception as e:
             self.logger.error(f"Error processing file {filepath}: {str(e)}")
             raise  # Re-raise the exception to handle it in the conductor 
+        
+    def post_processing(self):
+        pass 
         
     def welcome_message(self):
         return f"Processing HTML file: {self.filepath}"

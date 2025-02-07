@@ -1,8 +1,17 @@
 import os
 import shutil
 
-from .logging import (logger, set_log_temp)
- 
+from .logging import logger
+from pathlib import Path 
+
+
+def get_relative_path(filepath, directory ):
+    # root_relative is the path to base dir for the current file
+    fpath = Path(filepath).resolve()
+    fdir = fpath.parent
+    dpath = Path(directory).resolve()
+    return fdir.relative_to(dpath)
+    
 
 def read_html_file(filepath, logger):
     try:	

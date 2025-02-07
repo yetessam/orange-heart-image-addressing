@@ -1,8 +1,8 @@
 # html_processor_conductor.py
 import os
 from .htmlprocessor import HTMLFileProcessor
-from pathlib import Path 
 
+from .common.fileoperations import get_relative_path
 
 class HTMLProcessorConductor:
     """Responsible for managing and processing all HTML files in a directory."""
@@ -16,9 +16,6 @@ class HTMLProcessorConductor:
         
         self.logger.info( self.welcome_message())
         self.skip = ["toc.html"] # files to skip over during processing
-        
-        
-     
         
     def find_html_files(self):
         """Find all HTML files in the given directory."""
@@ -45,10 +42,10 @@ class HTMLProcessorConductor:
                     if os.path.basename(filepath) in self.skip:
                         self.logger.debug(f"Skipping file: {filepath}")
                         continue
+                    
                     # root_relative is the path to base dir for the current file
-                    fpath = Path(filepath).resolve()
-                    dpath = Path(self.directory).resolve()
-                    root_relative = fpath.relative_to(dpath)
+                    root_relative = get_relative_path(filepath, self.directory)
+                    
                     
                     # Process the HTML file
                    
