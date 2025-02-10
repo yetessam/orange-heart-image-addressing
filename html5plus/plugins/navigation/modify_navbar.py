@@ -108,7 +108,7 @@ def modify_navbar( html_content, HTMLP):
 
         # Mark the navbar as modified and avoid reprocessing
         nav['id'] = 'navbar-bulma'
-        logger.info("Added Bulma inline script after <nav> with id='navbar-bulma'.")
+        logger.info("Modify navbar (added Bulma inline script after <nav> with id='navbar-bulma')")
         
     except Exception as e:
         logger.error(f"Failed to modify navbar in {filepath}: {e}")
