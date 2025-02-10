@@ -19,7 +19,7 @@
     <p>The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.</p>
     <p>Fleek provides a unique IPFS gateway URL  <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. This is how users access the site and 
 potentially I could use a custom domain or static IPNS namespace identifier.</p>
-    <p>Alternatively, I could (and probably will) use an app for publishing.</p>
+
 
 
     <p>When changes are pushed to a Github prod branch,  Fleek deployment starts.</p>
@@ -34,8 +34,8 @@ potentially I could use a custom domain or static IPNS namespace identifier.</p>
       </image>
     </fig>
 
-    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.
-There are many other platforms that can be used to deploy to dweb and part of the move to decentralization is moving away from "one ring to rule them all" thinking.
-In my highly subjective opinion, Open AI currently outperforms Google in helping identify emergent dweb deployment options.
+    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.     Alternatively, we could be publishing dweb or regular apps using the same stack. 
+</p>
+<p>Other platforms including the IPFS CLI can be used to deploy to dweb.  Generative AI, Open AI in particular, is adept at identifying emergent dweb deployment options.
 </p>  </conbody>
 </concept>
