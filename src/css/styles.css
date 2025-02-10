@@ -1,0 +1,48 @@
+@import url("algolia.css"); /* Imported by <class 'html5plus.plugins.search.plugin.SearchPlugin'> */
+@import url("bulma.css"); /* Imported by <class 'html5plus.plugins.ui.plugin.UIPlugin'> */
+
+/*
+ * Welcome to styles.css!
+ *
+ * Use this CSS stylesheet to add additional CSS on top of the existing DITA OT CSS.
+ * You can add your custom CSS
+ * directly in this file, import a local CSS file, or include a CSS file hosted
+ * in the cloud or on a CDN.
+ *
+ * To add your custom styles:
+ * 1. Scroll down to the "Your Custom CSS" section.
+ * 2. Insert your CSS rules there.
+ *
+ * To include a local CSS file:
+ * 1. Create a new file (e.g., custom.css) in the same directory.
+ * 2. Add the following line at the top of this file:
+ *    @import url('custom.css');
+ *
+ * To include a CSS file hosted in the cloud or on a CDN:
+ * 1. Copy the full URL of the CSS file (e.g., https://cdn.example.com/styles.css).
+ * 2. Add the following line at the top of this file:
+ *    @import url('https://cdn.example.com/styles.css');
+ *
+ * Note: Future updates to this file may include additional @import statements
+ * at the top. Your custom styles will remain unaffected as long as they are
+ * placed in the designated section or in a separate file.
+ *
+ * Happy styling!
+ */
+
+
+/* Adjusting the DITA OT default output with minor layout fixes*/
+
+.figure > *:not(.figcaption):not(.picture) {
+    text-align: left; /* Align text content to the left */
+    float: left;      /* Optional: float left if you want the elements to stack horizontally */
+    display: block;   /* Ensure elements are block-level */
+}
+
+dt:not(:first-child) {
+  margin-top: 2.5em; /* Adjust the value as needed */
+}
+
+
+/* Your Custom CSS - Add your styles below this line */
+
