@@ -13,17 +13,13 @@
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
-  </script>
-  <script src="js/search.js">
-  </script>
  </head>
  <body id="discover-dweb-tech">
-  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
-    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbar-menu" role="button">
+     <span aria-hidden="true">
+     </span>
      <span aria-hidden="true">
      </span>
      <span aria-hidden="true">
@@ -32,7 +28,7 @@
      </span>
     </a>
    </div>
-   <div class="navbar-menu" id="navbarBasicExample">
+   <div class="navbar-menu" id="navbarMenu">
     <div class="navbar-start">
      <a class="navbar-item" href="../index.html">
       Home
@@ -79,17 +75,18 @@
       </div>
      </div>
     </div>
-   </div>
-   <div class="navbar-end">
-    <!-- Search Box aligned to the right -->
-    <div class="navbar-item">
-     <!-- Search Box Widget -->
-     <div id="search-box">
+    <div class="navbar-end">
+     <!-- Search Box aligned to the right -->
+     <div class="navbar-item">
+      <!-- Search Box Widget -->
+      <div id="search-box">
+       Search
+      </div>
      </div>
     </div>
    </div>
   </nav>
-  <div class="columns is-paddingless is-hidden test_color is-full" id="dropdown-container">
+  <div class="columns is-paddingless is-hidden is-full" id="dropdown-container">
    <div class="column is-paddingless is-half-desktop is-half-widescreen is-pulled-right ml-auto" id="dropdown-content">
     <!-- Search results will be injected here by InstantSearch.js -->
     <div class="notification" id="hits">
@@ -105,7 +102,7 @@
     <!-- Placeholder for footer, for refining search results or pagination-->
    </div>
   </div>
-  <script src="topics/js/navbar.js" type="text/javascript">
+  <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main class="container p-5" role="main">
    <article aria-labelledby="ariaid-title1" class="content" role="article">
@@ -160,7 +157,7 @@
         Deployment
        </a>
        <br/>
-       Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.
+       Decentralized web publishing requires content to be published, pinned, and hosted on the decentralized storage.
       </li>
       <li class="link olchildlink list-item">
        <a class="is-link" href="faq.html">
