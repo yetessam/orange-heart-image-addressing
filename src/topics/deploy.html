@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Decentralized web publishing requires content to be published, pinned, and hosted on the decentralized storage." name="description"/>
+  <meta content="Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on decentralized storage." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
@@ -111,26 +111,27 @@
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Decentralized web publishing requires content to be published, pinned, and hosted on the decentralized storage.
+      Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on  decentralized storage.
      </p>
      <p class="p">
-      Most enterprise content publishing processes will remain the same when moving to the dweb.
+      Most enterprise content publishing processes remain the same when moving to the dweb.
      </p>
      <p class="p">
-      One shift is the use of decentralized storage using IFPS and that content should be pinned to ensure its availability.
-     </p>
-     <p class="p">
-      This current site's uses automation where changes  pushed to the prod branch, result in Fleek deployment.
-     </p>
-     <p class="p">
-      Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content it to keep it available.
+      The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.
      </p>
      <p class="p">
       Fleek provides a unique IPFS gateway URL
       <code class="ph codeph">
        https://delicate-glitter-6121.on-fleek.app/
       </code>
-      .
+      . This is how users access the site and 
+potentially I could use a custom domain or static IPNS namespace identifier.
+     </p>
+     <p class="p">
+      Alternatively, I could (and probably will) use an app for publishing.
+     </p>
+     <p class="p">
+      When changes are pushed to a Github prod branch,  Fleek deployment starts.
      </p>
      <figure class="fig fignone">
       <figcaption>
@@ -139,7 +140,7 @@
        </span>
        Fleek deployment status.
        <span class="desc figdesc">
-        The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.
+        Successful step-by-step deployment process cloned the Git repository, built the site, created a check run, published the content to IPFS, built logs, and finalized the release.
        </span>
       </figcaption>
       <br/>
@@ -147,8 +148,9 @@
       <br/>
      </figure>
      <p class="p">
-      Next steps could be using a custom domain or static IPNS namespace identifier. 
-     Alternatively, we could be publishing dweb or regular apps using the same stack.
+      Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.
+There are many other platforms that can be used to deploy to dweb and part of the move to decentralization is moving away from "one ring to rule them all" thinking.
+In my highly subjective opinion, Open AI currently outperforms Google in helping identify emergent dweb deployment options.
      </p>
     </div>
     <nav class="related-links" role="navigation">
