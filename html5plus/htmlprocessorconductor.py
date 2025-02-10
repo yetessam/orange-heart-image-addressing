@@ -1,15 +1,16 @@
 # html_processor_conductor.py
 import os
-from .htmlprocessor import HTMLFileProcessor
+from .htmlprocessor import HTMLProcessor
 
 from .common.fileoperations import get_relative_path
 
 class HTMLProcessorConductor:
     """Responsible for managing and processing all HTML files in a directory."""
 
-    def __init__(self, directory, logger):
+    def __init__(self, directory, logger, plugins):
         self.directory = directory
         self.logger = logger
+        self.plugins = plugins
         
     
     def initialize(self):
@@ -27,8 +28,6 @@ class HTMLProcessorConductor:
 
     def process(self):
         """Process all HTML files in directory."""
-        self.initialize()
-        
         try:
             # Find all HTML files in the output directory
             html_files = self.find_html_files()
@@ -36,6 +35,7 @@ class HTMLProcessorConductor:
                 raise FileNotFoundError(f"No HTML files found to process.")
 
             # Process each HTML file
+            counter = 1 
             for filepath in html_files:
                 try:
                     # Skip files that are in the array
@@ -45,19 +45,21 @@ class HTMLProcessorConductor:
                     
                     # root_relative is the path to base dir for the current file
                     root_relative = get_relative_path(filepath, self.directory)
-                    
-                    
+                    self.logger.debug(f"Filepath: {filepath}")
+                    self.logger.debug(f"Base: {self.directory}")
+                    self.logger.debug(f"Relative path: {root_relative}")
+                     
                     # Process the HTML file
-                   
-                    processor = HTMLFileProcessor(filepath,  root_relative, self.logger)
+                    processor = HTMLProcessor(filepath,  root_relative, self.logger, self.plugins)
                     processor.process()
+                    counter = counter + 1 
 
                 except Exception as e:
                     self.logger.info(f"Error processing file {filepath}: {e}")
                     #raise # Reraise the exception
                     self.logger.info(f"Continuing HTML processing on the remaining files.")
                     continue  # Continue processing other files even if one fails
-
+            self.logger.info(f"Completed processing {counter} html files")
    
         except FileNotFoundError as e:
             self.logger.error(e)

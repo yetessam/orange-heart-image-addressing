@@ -1,7 +1,11 @@
 from pathlib import Path
 from .common.utils import ( parse_arguments )
 from .projectmanager import ProjectManager
-from .ui.plugin import UIPlugin  
+
+import pkgutil, importlib
+# Dynamically import all plugins 
+plugins = {name: importlib.import_module(f".plugins.{name}", __package__).Plugin for _, name, _ in pkgutil.iter_modules(["./plugins"]) if name != "plugin"}
+
 
 def main():
         
@@ -9,25 +13,37 @@ def main():
     out_dir = args.out_dir # DITA OT output
     src_dir = args.src_dir # Processed HTML5 SRC, ready for deployment
     res_dir = args.res_dir # resources
+    debug_mode = False      # 
+        
 
     # Instantiate and initialize the ProjectManager
-    project = ProjectManager(out_dir, src_dir, res_dir)
+    project = ProjectManager(out_dir, src_dir, res_dir, debug_mode)
     project.initialize() # Project init creates temp directory 
     
-    # Instatiate and initialize UIPlugin and pass through the logger
-    ui_plugin = UIPlugin(project.logger, project.temp_dir)
-    ui_plugin.initialize() # Code that runs once
-     
- 
-    # Run the projects main code first
+    # Add plugins after project has been initialized since that's what sets up 
+    # the logging and temp folders. 
+    # Now, add as many plugs in as you want and pass through project level properties
+    # Instatiate and initialize UIPlugin and pass through the logger and temp 
+    
+    # Order is significant as you need to build the navbar before addig the search box to it
+    
+    PLUGIN_MAPPING = {
+       
+        "ui": ("ui", "UIPlugin"),
+        "navigation": ("navigation", "NavPlugin"),
+         "search": ("search", "SearchPlugin"),
+    }
+    
+    plugins = project.import_plugins(PLUGIN_MAPPING)
+    
+    for plugin in plugins:  # Initialize
+        plugin.initialize()     # runs once on each plugin
+    
     project.run()
-    
-    # Run project-level plugin code       
-    ui_plugin.run()
-    
-    # Now run post-processing after the plugins
-    project.post_processing() # Move
+    project.post_processing() 
+    project.cleanup()
     
 
 if __name__ == "__main__":
+    
     main()

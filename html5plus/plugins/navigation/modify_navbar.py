@@ -1,62 +1,45 @@
+import os 
 from bs4 import BeautifulSoup
-import os
-from pathlib import Path
 
-def modify_navbar(soup, filepath, root_dir, logger):
-    nav = soup.find('nav')
-    
-    if nav is None:
-        logger.info(f"Expected an HTML <nav> element in {filepath}")
-        logger.debug("Navbar not found. ")
-        raise ValueError(f"Expected an HTML <nav> element in {filepath}.")
-    
-    if nav and nav.get('id') == 'navbar-bulma':
-        logger.debug("Navbar already modified. Skipping.")
-        return soup
+def add_bulma_script(soup, nav, relative_path, logger):
+    """Add the Bulma JavaScript file to the HTML."""
+    jspath = "js/navbar.js"
+        # Calculate the relative path to the JavaScript file
+    if relative_path:
+        jspath = os.path.join(relative_path, 'js', 'navbar.js')
 
-    try: 
-          
-        # Apply Bulma classes to the <nav> tag
-        apply_navbar_classes(nav, logger)
+    script = {
+        "src": jspath,
+        "type": "text/javascript",
+    }
 
-        navbar_brand = create_navbar_brand(soup)
-        nav.append(navbar_brand)
 
-        # Create and append the navbar menu structure
-        navbar_menu = create_navbar_menu(soup, nav, logger)
-        nav.append(navbar_menu)
 
-        
-        navbar_brand = create_navbar_brand(soup)
-        # Add JavaScript for Bulma
-        add_bulma_script(soup, nav, filepath, root_dir, logger)
-
-        # Mark the navbar as modified and avoid reprocessing
-        nav['id'] = 'navbar-bulma'
-        logger.info("Added Bulma inline script after <nav> with id='navbar-bulma'.")
-        
-    except Exception as e:
-        logger.error(f"Failed to modify navbar in {filepath}: {e}")
-        raise ValueError(f"Failed to modify navbar in {filepath}: {e}") from e
-
-    return soup
+    # Create and append the script tag
+    script_tag = soup.new_tag('script', **script)
+    nav.insert_after(script_tag)
+    logger.debug(f"Added Bulma script: {script['src']}")
 
 
 def apply_navbar_classes(nav, logger):
     """Apply Bulma classes to the <nav> tag."""
-    nav['class'] = 'navbar is-spaced'
+    nav['class'] = 'navbar'
     nav['role'] = 'navigation'
     nav['aria-label'] = 'main navigation'
     logger.debug("Applied Bulma classes to <nav> tag.")
 
 
 def create_navbar_brand(soup):
+     
     """Create the navbar brand div with the hamburger menu."""
     navbar_brand = soup.new_tag('div', **{'class': 'navbar-brand'})
 
+
+
     # Define and parse the hamburger menu HTML
     hamburger_menu_html = """
-    <a role="button" class="navbar-burger is-boxed" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger is-boxed" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -70,7 +53,7 @@ def create_navbar_brand(soup):
 
 def create_navbar_menu(soup, nav, logger):
     """Create the navbar menu structure."""
-    navbar_menu = soup.new_tag('div', **{'class': 'navbar-menu', 'id': 'navbarBasicExample'})
+    navbar_menu = soup.new_tag('div', **{'class': 'navbar-menu', 'id': 'navbarMenu'})
 
     # Move list items to the new structure
     navbar_start = nav.find('ul')
@@ -86,21 +69,52 @@ def create_navbar_menu(soup, nav, logger):
     return navbar_menu
 
 
-def add_bulma_script(soup, nav, filepath, relative_path, logger):
-    """Add the Bulma JavaScript file to the HTML."""
-    script = {
-        "src": "js/navbar.js",
-        "type": "text/javascript",
-    }
+def modify_navbar( html_content, HTMLP):
+    
+    filepath = HTMLP.filepath, 
+    root_dir = HTMLP.root_relative
 
-    # Calculate the relative path to the JavaScript file
-    if relative_path:
-        script['src'] = relative_path / 'js' / 'navbar.js'
+    logger = HTMLP.logger
+    
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    nav = soup.find('nav')
+    
+    if nav is None:
+        logger.info(f"Expected an HTML <nav> element in {filepath}")
+        logger.debug("Navbar not found. ")
+        raise ValueError(f"Expected an HTML <nav> element in {filepath}.")
+    
+    if nav and nav.get('id') == 'navbar-bulma':
+        logger.debug("Navbar already modified. Skipping.")
+        return html_content
 
-    # Create and append the script tag
-    script_tag = soup.new_tag('script', **script)
-    nav.insert_after(script_tag)
-    logger.debug(f"Added Bulma script: {script['src']}")
+    try: 
+          
+        # Apply Bulma classes to the <nav> tag
+        apply_navbar_classes(nav, logger)
+        navbar_brand = create_navbar_brand(soup)
+        nav.append(navbar_brand)
+
+        # Create and append the navbar menu structure
+        navbar_menu = create_navbar_menu(soup, nav, logger)
+        nav.append(navbar_menu)
+
+        
+        navbar_brand = create_navbar_brand(soup)
+        
+        # Add JavaScript for Bulma
+        add_bulma_script(soup, nav, root_dir, logger)
+
+        # Mark the navbar as modified and avoid reprocessing
+        nav['id'] = 'navbar-bulma'
+        logger.info("Added Bulma inline script after <nav> with id='navbar-bulma'.")
+        
+    except Exception as e:
+        logger.error(f"Failed to modify navbar in {filepath}: {e}")
+        raise ValueError(f"Failed to modify navbar in {filepath}: {e}") from e
+
+    return str(soup)
 
 
 def set_navbar_classes(soup, list_element):

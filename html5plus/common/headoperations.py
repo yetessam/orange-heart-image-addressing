@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 from .logging import logger
 
 def apply_meta_tag(soup, name, content):
@@ -40,13 +40,14 @@ def apply_meta_tag(soup, name, content):
     return soup
 
 
-def add_script_tag(soup, script_attrs):
+def add_script_tag(soup, script_attrs, strComment = ""):
     """
     Adds a script tag with a specified src attribute to the soup object.
     
     Parameters:
     - soup (BeautifulSoup): The BeautifulSoup object representing the HTML document.
     - script_attrs (dict): A dictionary of attributes for the script tag.
+    - strComment optional comment inserted before the script 
     
     Returns:
     - soup (BeautifulSoup): The updated BeautifulSoup object with the added script tag.
@@ -55,11 +56,14 @@ def add_script_tag(soup, script_attrs):
    
     node = nde_add_script_tag(soup, script_attrs)
     
-    # Find the <head> section
-    head = soup.head
-    if head:
-        # Append the new script tag to the head
-        head.append(node)
+    # Find the <body> section
+    body = soup.body
+    if body:
+        if strComment:
+            comment = Comment(strComment)  # Create a Beautiful Soup comment
+            body.append(comment)
+        # Append the new script tag 
+        body.append(node)
     
     return soup
 
@@ -76,25 +80,7 @@ def nde_add_script_tag(soup, script_attrs):
     - nde (BeautifulSoup): The new tag 
     """
     # Create a new script tag
-    # Now do we need to think about the relative path to the file??
-    
-     #js_path = None
-        #if filepath and root_dir:
-        #    from pathlib import Path
-        #    current_dir = Path(filepath).parent
-        #    relative_path = Path(os.path.relpath(root_dir, current_dir))
-        #    js_path = relative_path / 'js' / 'navbar.js'
-        #    if not js_path.exists():
-        #        logger.error(f"JavaScript file not found at: {js_path}")
-        #        js_path = None
-        #    else:
-        #        logger.debug(f"JS path relative to {filepath}: {js_path}")
-
-        #if js_path:
-        #    script_tag = soup.new_tag('script', src=str(js_path), type='text/javascript')
-        #    nav.insert_after(script_tag)
-
-    
+   
     
     return soup.new_tag('script', **script_attrs)
        

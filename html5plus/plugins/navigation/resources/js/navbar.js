@@ -1,7 +1,7 @@
 
       document.addEventListener('DOMContentLoaded', () => {
             const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            const targetMenu = document.getElementById('navbarBasicExample');
+            const targetMenu = document.getElementById('navbarMenu');
 
             const isDesktop = () => window.innerWidth >= 1024; // Adjust this breakpoint as needed
 

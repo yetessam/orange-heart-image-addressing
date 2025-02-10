@@ -1,6 +1,5 @@
 from loguru import logger
-import sys
-
+import sys 
 
 # Dependency to store the name of the temp dir so we can strip it out later
 

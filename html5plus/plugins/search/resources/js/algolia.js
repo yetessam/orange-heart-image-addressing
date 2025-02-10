@@ -73,6 +73,7 @@ search.addWidget(
 
 // Start the search instance
 function startSearch() {
+  debugger;
   search.start();
 }
 

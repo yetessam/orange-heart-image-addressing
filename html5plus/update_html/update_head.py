@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 
 from ..common.logging import logger
-from ..common.headoperations import  apply_meta_tag, add_script_tag
+from ..common.headoperations import  apply_meta_tag 
 
-from ..search.algolia_operations import apply_algolia_verification_metatag, apply_algolia_scripts
+
 
 """
     Following series of functions add metadata and script to the HTML document
@@ -25,14 +25,9 @@ def update_head(soup):
     - soup (BeautifulSoup): The updated BeautifulSoup object.
     """
     
-    add_metatags = [apply_viewport_metatag, apply_algolia_verification_metatag]
+    add_metatags = [apply_viewport_metatag]
 
     for update_function in add_metatags:
-        soup = update_function(soup)
-        
-    add_scripts = [apply_algolia_scripts]
-
-    for update_function in add_scripts:
         soup = update_function(soup)
         
     return soup

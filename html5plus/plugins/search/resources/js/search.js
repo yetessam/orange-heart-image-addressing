@@ -11,7 +11,7 @@ function closeDropdown(ctl){
 
 // Function to initialize the dropdown functionality
 function initializeDropdown() {
-
+  debugger;
   const searchBox = document.getElementById('search-box');
   const dropdownContainer = document.getElementById('dropdown-container');
   const dropdownContent = document.getElementById('dropdown-content');

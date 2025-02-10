@@ -38,8 +38,8 @@ class Plugin(ABC):
         )
             
            
-  
-    def process(self, html_content: str ) -> str:
+     
+    def process(self, html_content, parent ):
         """
         Process the HTML content.  
         HTMLProcessor Object level plugin code. 
@@ -52,7 +52,14 @@ class Plugin(ABC):
             The processed HTML content.
         """
         return html_content
-    
+   
+   
+    def css_js_resources(self):
+        """Prep and copy plugin resources."""
+        self.copy_resources(self.target)
+        self.update_global_stylesheet()  
+         
+     
     @abstractmethod
     def run(self):
         """Run the project-level flow."""
@@ -70,9 +77,14 @@ class Plugin(ABC):
         logger = self.logger 
         
         try:
+            
+            if not Path(self.resources_css).exists():
+                return
+            
             if not Path(self.global_stylesheet).exists():
                 raise FileNotFoundError(f"Global stylesheet not found: {self.global_stylesheet}")
             
+           
             with open(self.global_stylesheet, "r") as file:
                 content = file.read()
             
@@ -81,7 +93,7 @@ class Plugin(ABC):
 
             for stylesheet in stylesheets:              
 
-                import_string = f'@import url("{stylesheet}"); /* Imported by SearchPlugin */\n'
+                import_string = f'@import url("{stylesheet}"); /* Imported by {type(self)} */\n'
                 if import_string not in content:
                     with open(self.global_stylesheet, "w") as file:
                         file.write(import_string + content)

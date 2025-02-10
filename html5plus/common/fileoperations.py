@@ -2,17 +2,15 @@ import os
 import shutil
 
 from .logging import logger
-from pathlib import Path 
 
 
 def get_relative_path(filepath, directory ):
     # root_relative is the path to base dir for the current file
-    fpath = Path(filepath).resolve()
-    fdir = fpath.parent
-    dpath = Path(directory).resolve()
-    return fdir.relative_to(dpath)
-    
-
+    relative_path =  os.path.relpath(directory, filepath)
+    if relative_path.startswith('../'):
+        relative_path = relative_path[3:]  # Remove the first 3 characters ("../")
+    return relative_path
+   
 def read_html_file(filepath, logger):
     try:	
         with open(filepath, 'r', encoding='utf-8') as file:
