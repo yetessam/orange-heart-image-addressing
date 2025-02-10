@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="deploy">
   <title>Deployment</title>
-  <shortdesc>Decentralized web publishing requires content to be published, pinned, and hosted on the decentralized storage.</shortdesc>
+  <shortdesc>Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on  decentralized storage.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -15,23 +15,27 @@
   </prolog>
 
   <conbody>
-    <p>Most enterprise content publishing processes will remain the same when moving to the dweb.</p>
-    <p>One shift is the use of decentralized storage using IFPS and that content should be pinned to ensure its availability.</p>
+    <p>Most enterprise content publishing processes remain the same when moving to the dweb.</p>
+    <p>The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.</p>
+    <p>Fleek provides a unique IPFS gateway URL  <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. This is how users access the site and 
+potentially I could use a custom domain or static IPNS namespace identifier.</p>
+    <p>Alternatively, I could (and probably will) use an app for publishing.</p>
 
-    <p>This current site's uses automation where changes  pushed to the prod branch, result in Fleek deployment.</p>
-    <p>Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content it to keep it available. </p>
-    <p>Fleek provides a unique IPFS gateway URL  <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>.</p>
+
+    <p>When changes are pushed to a Github prod branch,  Fleek deployment starts.</p>
+    
 
 
     <fig>
       <title>Fleek deployment status</title>
-      <desc>The screenshot displays the Fleek dashboard, showing a successful step-by-step deployment process. It includes stages such as cloning the Git repository, building the site, creating a check run, publishing the content to IPFS, building logs, and finalizing the release.</desc>
+      <desc>Successful step-by-step deployment process cloned the Git repository, built the site, created a check run, published the content to IPFS, built logs, and finalized the release.</desc>
       <image href="../images/fleek_deploy.png" placement="break">
         <alt>Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release</alt>
       </image>
     </fig>
 
-     <p>Next steps could be using a custom domain or static IPNS namespace identifier. 
-     Alternatively, we could be publishing dweb or regular apps using the same stack. </p>
-  </conbody>
+    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.
+There are many other platforms that can be used to deploy to dweb and part of the move to decentralization is moving away from "one ring to rule them all" thinking.
+In my highly subjective opinion, Open AI currently outperforms Google in helping identify emergent dweb deployment options.
+</p>  </conbody>
 </concept>
