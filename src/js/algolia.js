@@ -11,8 +11,7 @@ const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY);
 // Initialize InstantSearch.js with the search client
 const search = instantsearch({
   searchClient: searchClient, // Providing the search client
-  indexName: ALGOLIA_INDEX_NAME,
-  routing: true, // Optional: Enables URL-based routing for search queries
+  indexName: ALGOLIA_INDEX_NAME
 });
 
 // SearchBox widget for capturing user input
@@ -73,7 +72,6 @@ search.addWidget(
 
 // Start the search instance
 function startSearch() {
-  debugger;
   search.start();
 }
 
