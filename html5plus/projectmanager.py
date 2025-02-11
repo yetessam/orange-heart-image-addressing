@@ -20,6 +20,7 @@ class ProjectManager:
         self.logger = None
         self.html5pluspath = None 
         self.plugins = []
+        self.plugins_js_DOMContentLoaded = None
         self.resources = [] 
         self.temp_dir = None
         self.global_custom_css = None 
@@ -38,7 +39,7 @@ class ProjectManager:
         
         self.logger.info("Project cleanup complete.")        
            
-        
+     
     def import_plugins(self, plugin_mapping):
         """
         Dynamically import plugins from their respective folders.

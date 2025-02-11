@@ -24,7 +24,6 @@ def add_bulma_script(soup, nav, relative_path, logger):
 def apply_navbar_classes(nav, logger):
     """Apply Bulma classes to the <nav> tag."""
     nav['class'] = 'navbar'
-    nav['role'] = 'navigation'
     nav['aria-label'] = 'main navigation'
     logger.debug("Applied Bulma classes to <nav> tag.")
 
@@ -34,11 +33,9 @@ def create_navbar_brand(soup):
     """Create the navbar brand div with the hamburger menu."""
     navbar_brand = soup.new_tag('div', **{'class': 'navbar-brand'})
 
-
-
     # Define and parse the hamburger menu HTML
     hamburger_menu_html = """
-    <a role="button" class="navbar-burger is-boxed" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+    <a role="button" class="navbar-burger is-boxed" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -51,22 +48,46 @@ def create_navbar_brand(soup):
     return navbar_brand
 
 
-def create_navbar_menu(soup, nav, logger):
-    """Create the navbar menu structure."""
-    navbar_menu = soup.new_tag('div', **{'class': 'navbar-menu', 'id': 'navbarMenu'})
+def create_navbar_end(soup):
+     
+    # Define navbar end
+    end_html = """
+    <!-- this is the end -->
+    """
+    end_tag = BeautifulSoup(end_html, 'html.parser')
 
-    # Move list items to the new structure
+    return end_tag
+
+
+def create_navbar_menu_start_end(soup, nav, logger):
+    
+    # Assemble the navbar menu structure
+    navbar_menu = create_navbar_menu(soup)
+    
+    # Rename ul tag as navbar-start div  
     navbar_start = nav.find('ul')
     if navbar_start:
         navbar_start.name = 'div'
         navbar_start['class'] = 'navbar-start'
         navbar_start = set_navbar_classes(soup, navbar_start)
         logger.debug("Reorganized <nav> structure with Bulma classes.")
-
-    # Assemble the navbar menu structure
+        
+    navbar_end = soup.new_tag('div', **{'class': 'navbar-end', 'id': 'navbarEnd'})
+    # remove navbar start and add into navbar_menu
     navbar_menu.append(navbar_start)
+    navbar_menu.append(navbar_end)
+    
+    return navbar_menu   
+  
+    
 
-    return navbar_menu
+def create_navbar_menu(soup):
+    """Create the navbar menu structure.
+    
+       Create a new div with id navbarMenu which will be used by the burger javascript 
+       
+    """
+    return soup.new_tag('div', **{'class': 'navbar-menu', 'id': 'navbarMenu'})
 
 
 def modify_navbar( html_content, HTMLP):
@@ -82,7 +103,6 @@ def modify_navbar( html_content, HTMLP):
     
     if nav is None:
         logger.info(f"Expected an HTML <nav> element in {filepath}")
-        logger.debug("Navbar not found. ")
         raise ValueError(f"Expected an HTML <nav> element in {filepath}.")
     
     if nav and nav.get('id') == 'navbar-bulma':
@@ -90,26 +110,19 @@ def modify_navbar( html_content, HTMLP):
         return html_content
 
     try: 
-          
+        
         # Apply Bulma classes to the <nav> tag
         apply_navbar_classes(nav, logger)
-        navbar_brand = create_navbar_brand(soup)
-        nav.append(navbar_brand)
-
-        # Create and append the navbar menu structure
-        navbar_menu = create_navbar_menu(soup, nav, logger)
-        nav.append(navbar_menu)
-
-        
-        navbar_brand = create_navbar_brand(soup)
-        
+        nav.append(create_navbar_brand(soup))   # brand div is optional 
+        nav.append( create_navbar_menu_start_end(soup,nav,logger)) # navbar menu is required
+            
         # Add JavaScript for Bulma
         add_bulma_script(soup, nav, root_dir, logger)
 
         # Mark the navbar as modified and avoid reprocessing
         nav['id'] = 'navbar-bulma'
         logger.info("Modify navbar (added Bulma inline script after <nav> with id='navbar-bulma')")
-        
+            
     except Exception as e:
         logger.error(f"Failed to modify navbar in {filepath}: {e}")
         raise ValueError(f"Failed to modify navbar in {filepath}: {e}") from e
@@ -135,7 +148,7 @@ def set_navbar_classes(soup, list_element):
     Returns:
         list_element 
     """
-    # Set all the nav-bar items first
+    # Set all the navbar items first
     for li in list_element.find_all('li', recursive=True):
         a = li.find('a')
         if a:

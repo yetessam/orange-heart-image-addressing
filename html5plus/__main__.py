@@ -20,6 +20,7 @@ def main():
     project = ProjectManager(out_dir, src_dir, res_dir, debug_mode)
     project.initialize() # Project init creates temp directory 
     
+    
     # Add plugins after project has been initialized since that's what sets up 
     # the logging and temp folders. 
     # Now, add as many plugs in as you want and pass through project level properties
@@ -28,17 +29,21 @@ def main():
     # Order is significant as you need to build the navbar before addig the search box to it
     
     PLUGIN_MAPPING = {
-       
-        "ui": ("ui", "UIPlugin"),
-        "navigation": ("navigation", "NavPlugin"),
-         "search": ("search", "SearchPlugin"),
-    }
-    
+       "ui": ("ui", "UIPlugin"),
+       "navigation": ("navigation", "NavPlugin"),
+       "search": ("search", "SearchPlugin")
+        
+    }  
+     #"ui": ("ui", "UIPlugin"),
+    #  "navigation": ("navigation", "NavPlugin"),
+     #"search": ("search", "SearchPlugin"),
+    # family links
     plugins = project.import_plugins(PLUGIN_MAPPING)
     
     for plugin in plugins:  # Initialize
         plugin.initialize()     # runs once on each plugin
-    
+   
+   
     project.run()
     project.post_processing() 
     project.cleanup()

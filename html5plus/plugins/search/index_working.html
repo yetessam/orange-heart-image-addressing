@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search and Dropdown Prototype</title>
+  
+  <!-- Include Bulma CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+
+  <style>
+
+   .test_color {
+    min-width: 100%;
+    /* background-color: blueviolet;
+    position: absolute;
+    top: 4em;   /* Move it 10px higher, pushing it above the search box */
+    z-index: 100;
+    
+     */
+
+   }
+
+   .ais-Hits-list {
+    list-style-type: none;
+    padding: 0;
+
+    max-height: 300px;   /* Set the maximum height */
+    overflow-y: auto;    /* Enable vertical scrolling */
+    padding-right: 1rem; /* Add space for scrollbar */ 
+   }
+
+    .ais-Hits-item {
+      padding: 0.5rem;
+    }
+
+    /* Remove underline from links inside ais-Hits-item */
+    .ais-Hits-item a {
+      text-decoration: none !important;  /* Use !important to override any competing styles */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Dropdown Container (injected by search.js) -->
+
+<!-- Algolia Search Section -->
+  <!-- Navbar -->
+  <nav class="navbar is-primary">
+     <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- You can add other navbar items here (e.g., links) -->
+      </div>
+              <!-- Search Box Widget -->
+              <div class="navbar-end">
+                <div class="navbar-item"> 
+                  <div id="search-box">
+                    <input type="search" id="search-input" placeholder="Search...">
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+      
+  </nav>
+
+
+  <div id="dropdown-container" class="columns is-paddingless is-hidden test_color is-full">
+    <div id="dropdown-content" class="column  is-paddingless is-half-desktop is-half-widescreen is-pulled-right ml-auto">
+      <!-- Search results will be injected here by InstantSearch.js -->
+      <div id="hits" class="notification">
+        <!-- Close Button -->
+        <button id="close-results" class="delete is-small"></button>
+        <div id="hits"></div> <!-- Fixed the closing tag here -->
+      </div>
+    </div>
+    <div id="dropdown-footer">
+     <!-- Placeholder for footer, for refining search results or pagination-->
+    </div>
+  </div>
+
+  <!-- Add content below -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Welcome to DWeb </h1>
+      <p>This is a simple navbar with a search box on the far right.</p>
+    </div>
+  </section>
+
+<script src="ScriptPlugin.js"></script>
+
+</body>
+</html>

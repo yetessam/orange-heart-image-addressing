@@ -66,7 +66,33 @@ class Plugin(ABC):
     
         pass 
     
-   
+    def add_cdn_stylesheet(self, URI):
+        """
+        Update the global stylesheet by adding an import statements for a CDN CSS
+         
+        """
+        
+        logger = self.logger 
+        
+        try:
+            
+            if not Path(self.global_stylesheet).exists():
+                raise FileNotFoundError(f"Global stylesheet not found: {self.global_stylesheet}")
+            
+            with open(self.global_stylesheet, "r") as file:
+                content = file.read()
+           
+                import_string = f'@import url("{URI}"); /* Imported by {type(self)} */\n'
+                if import_string not in content:
+                    with open(self.global_stylesheet, "w") as file:
+                        file.write(import_string + content)
+                    logger.info(f"Updated global stylesheet with reference to CDN: {URI}")
+                else:
+                    logger.info(f"Global stylesheet already contains reference to CDN: {URI}")
+
+        except Exception as e:
+            logger.error(f"Failed to update global stylesheet with CDN: {e}")
+             
     def update_global_stylesheet(self) -> None:
         """
         Update the global stylesheet by adding import statements for 
@@ -83,7 +109,6 @@ class Plugin(ABC):
             
             if not Path(self.global_stylesheet).exists():
                 raise FileNotFoundError(f"Global stylesheet not found: {self.global_stylesheet}")
-            
            
             with open(self.global_stylesheet, "r") as file:
                 content = file.read()
@@ -104,7 +129,6 @@ class Plugin(ABC):
         except Exception as e:
             logger.error(f"Failed to update global stylesheet: {e}")
             
-   
             
     @abstractmethod
     def cleanup(self) -> None:

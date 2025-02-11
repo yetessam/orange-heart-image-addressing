@@ -1,4 +1,6 @@
-// scripts/algolia.js
+// Import Algolia search library and InstantSearch.js library
+import algoliasearch from 'https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js';
+import instantsearch from 'https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js';
 
 // Algolia App ID, Search Key, and Index Name
 const ALGOLIA_APP_ID = '905371AINN';
@@ -11,7 +13,8 @@ const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY);
 // Initialize InstantSearch.js with the search client
 const search = instantsearch({
   searchClient: searchClient, // Providing the search client
-  indexName: ALGOLIA_INDEX_NAME
+  indexName: ALGOLIA_INDEX_NAME,
+  routing: true, // Optional: Enables URL-based routing for search queries
 });
 
 // SearchBox widget for capturing user input
@@ -77,3 +80,51 @@ function startSearch() {
 
 // Expose the startSearch function so that it can be called from the main page
 window.startSearch = startSearch;
+
+// Function to open the dropdown
+function openDropdown(ctl){
+  ctl.classList.remove('is-hidden')
+}
+
+// Function to close the dropdown
+function closeDropdown(ctl){
+  ctl.classList.add('is-hidden')
+  
+}
+
+// Function to initialize the dropdown functionality
+function initializeDropdown() {
+
+  const searchBox = document.getElementById('search-box');
+  const dropdownContainer = document.getElementById('dropdown-container');
+  const dropdownContent = document.getElementById('dropdown-content');
+  const closeIcon = document.getElementById('close-results');
+
+  // Open dropdown when the user types or pastes content
+  searchBox.addEventListener('input', () => openDropdown(dropdownContainer));
+  searchBox.addEventListener('focus', () => openDropdown(dropdownContainer));
+
+    
+  // Add 'is-scrollable' class for vertical scroll in the dropdown
+  dropdownContent.classList.add('is-scrollable');
+
+  // Close dropdown when the close button is clicked
+  closeIcon.addEventListener('click', () => closeDropdown(dropdownContainer));
+  // Close dropdown when clicking outside of the dropdown
+  document.addEventListener('click', (e) => {
+    //if (!dropdownContainer.contains(e.target) && e.target !== searchBox) dropdownContent.classList.remove('is-active');
+    if (!dropdownContainer.contains(e.target) && e.target !== searchBox) closeDropdown(dropdownContainer);
+  });
+
+  // Prevent closing the dropdown when clicking inside
+  dropdownContent.addEventListener('click', e => e.stopPropagation());
+}
+
+// Expose the initializeDropdown function for external calls
+window.initializeDropdown = initializeDropdown;
+
+// Initialize components once the DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize dropdown from search.js
+  initializeDropdown();
+

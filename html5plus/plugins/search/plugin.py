@@ -2,7 +2,7 @@ from ..plugin import Plugin
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-from .search import modify_navbar_search
+from .search import insert_search_hits
 from .algolia_operations import apply_algolia_verification_metatag, apply_algolia_scripts
 
 
@@ -25,6 +25,8 @@ class SearchPlugin(Plugin):
         self.resources = self.pluginpath / "resources"
         self.resources_css = self.resources / "css"
         self.resources_js = self.resources / "js"
+        self.search_anchor = "navbarEnd" 
+        
           
     def apply_algolia_scripts(self, soup: BeautifulSoup):
         return apply_algolia_scripts(soup)
@@ -32,8 +34,8 @@ class SearchPlugin(Plugin):
     def apply_algolia_verification_metatag(self, soup: BeautifulSoup):
         return apply_algolia_verification_metatag(soup)
            
-    def modify_navbar_search(self, soup: BeautifulSoup):
-        return modify_navbar_search(soup)
+    def insert_search_hits(self, soup: BeautifulSoup, str_search_div):
+        return insert_search_hits(soup, self.logger, str_search_div)
     
     
     def initialize(self) -> None:  
@@ -56,9 +58,12 @@ class SearchPlugin(Plugin):
         soup = BeautifulSoup(html_content, "html.parser")
         # Add verification meta so that the page will be recognized
         soup = apply_algolia_verification_metatag(soup)
-        soup = apply_algolia_scripts(soup, HTMLP)
-         
-        soup = self.modify_navbar_search(soup) # update_html
+        soup = apply_algolia_scripts(soup, HTMLP) 
+        soup = self.insert_search_hits(soup, self.search_anchor) 
+        
+        # Instant Search 
+        # self.add_cdn_stylesheet("https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/reset-min.css")
+           
         return str(soup)
     
     def run(self):
@@ -66,8 +71,7 @@ class SearchPlugin(Plugin):
     
         try:
             self.css_js_resources()
-            
-                
+                     
         except Exception as e:
             self.logger.error(f"SearchPlugin runtime exception: {e}")
             sys.exit(1)

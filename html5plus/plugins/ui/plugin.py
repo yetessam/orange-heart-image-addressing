@@ -48,6 +48,7 @@ class UIPlugin(Plugin):
         # Create a BeautifulSoup object
         soup = BeautifulSoup(html_content, "html.parser")
         soup = self.apply_bulma_classes(soup, HTMLP.logger) # update_html
+        
         return str(soup)
     
     def run(self):

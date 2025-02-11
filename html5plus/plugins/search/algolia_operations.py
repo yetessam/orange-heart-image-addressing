@@ -15,43 +15,36 @@ def apply_algolia_verification_metatag(soup):
 def apply_algolia_scripts(soup, HTMLP):
     """
         Adds the Algolia search scripts to the soup object using the add_script_tag helper function.
+    
+        If there's a problem with the integrity attribute value, the Search box will not be created at all.
+        
+        To Do:   can we check for whether an error is being thrown by Instant Search to indicate that there's a problem,
+        right now it fails gracefully and quietly and there is an very generic sha512 token error in the Console log in Developer Tools.
     """
-    return soup 
- 
+
     # External CDN scripts
     scripts = [
-       
-        
-        {
-            "src": "https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js",
-            "type": "text/javascript",
-           
-        },
-         {   "src": "https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js",
-            "type": "text/javascript",
-             "integrity": "sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==",
+        {   "src": "https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js" } ,
+        { 
             "crossorigin": "anonymous",
-            "referrerpolicy": "no-referrer"
-            
+            "referrerpolicy": "no-referrer",
+            "src": "https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js",  
+            "integrity":"sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcgUeg=="
             }
     ]
     # Local scripts 
    
-    js_path = os.path.join(HTMLP.root_relative, 'js', 'search.js') 
-    
-    scripts.append(  {"src": f"{js_path}",
-                      "type": "text/javascript"})
-
     js_path = os.path.join(HTMLP.root_relative, 'js', 'algolia.js') 
-   
-    scripts.append(  {"src": f"{js_path}",
-                      "type": "text/javascript"})
- 
-    comments = [" Algolia Search library ", 
-                " InstantSearch.js Library ", 
-                
-                " Algolia and InstantSearch setup ",
-                " Dropdown functionality "]
+    scripts.append({"src": f"{js_path}"})
+    
+    js_path = os.path.join(HTMLP.root_relative, 'js', 'search.js') 
+    scripts.append(  {"src": f"{js_path}"})
+
+    comments = [
+        " Algolia Search library ", 
+        " InstantSearch.js Library ", 
+        " Algolia and InstantSearch setup ",
+        " Dropdown functionality "]
       
      # Make the script tags for the Aloglia search    
     for script, comment in zip(scripts,comments):
