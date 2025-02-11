@@ -20,7 +20,7 @@ I authored most of the content and have indicated where content was written by G
     <simpletable>
       <sthead>
         <stentry>Assistance Type</stentry>
-        <stentry>Example (s)</stentry>
+        <stentry>Example(s)</stentry>
         <stentry>Technology</stentry>
       </sthead>
       <strow>
@@ -44,7 +44,7 @@ I authored most of the content and have indicated where content was written by G
           <ul>
             <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
             <li>Use AI suggestions to get to 2 star Linked Data.</li>
-            <li>Used the following prompts into Deep Seek to get a plugin design 
+            <li>Used the following prompts into DeepSeek-R3 to get a plugin design 
                <pre>1.  Add functionality to an content pipeline that is processing HTML5.   
                     2.  Plugins should be loaded once at startup.   
                     3.  Plugins will be static for now and should be able to use a properties file and environmental variables (for secrets).     
@@ -60,7 +60,7 @@ I authored most of the content and have indicated where content was written by G
                    10.   I do need a template for plugin development and we should use the ui feature as an example.
              </pre>
         </li>
-          </ul>
+      </ul>
         </stentry>
         <stentry>
              Open AI GPT-3.5, DeepSeek-V3, DeepSeek-R1.
@@ -69,7 +69,6 @@ I authored most of the content and have indicated where content was written by G
       
       <strow>
         <stentry>Programming</stentry>
-
         <stentry>
           <ul>
             <li>Troubleshooting error messages  </li>
@@ -79,7 +78,8 @@ I authored most of the content and have indicated where content was written by G
           </ul>
         </stentry>
         <stentry>
-              Open AI GPT-4o,GPT-4, GPT-3.5, GitHub Copilot, Anthropic Claude 3.5 Sonnet, VS Code Copilot, Microsoft Copilot
+              Open AI GPT-4o,GPT-4, GPT-3.5, GitHub Copilot, Anthropic Claude 3.5 Sonnet, VS Code Copilot, Microsoft Copilot all performed well.
+              Llama.  TBD: Gemma, Mistral, SmolLM2.
         </stentry>
       </strow>
       <strow>
@@ -94,8 +94,7 @@ I authored most of the content and have indicated where content was written by G
           </ul>
         </stentry>
         <stentry>
-            Open AI GPT-4o, GitHub Copilot, VS Code Copilot
-              
+            Open AI GPT-4o, GitHub Copilot, VS Code Copilot      
         </stentry>
       </strow>
     </simpletable>
