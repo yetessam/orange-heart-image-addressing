@@ -17,7 +17,7 @@
  <body id="faq">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
-    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbar-menu" role="button">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
      <span aria-hidden="true">
      </span>
      <span aria-hidden="true">
@@ -75,13 +75,8 @@
       </div>
      </div>
     </div>
-    <div class="navbar-end">
-     <!-- Search Box aligned to the right -->
-     <div class="navbar-item">
-      <!-- Search Box Widget -->
-      <div id="search-box">
-       Search
-      </div>
+    <div class="navbar-end" id="navbarEnd">
+     <div id="search-box">
      </div>
     </div>
    </div>
@@ -93,9 +88,6 @@
      <!-- Close Button -->
      <button class="delete is-small" id="close-results">
      </button>
-     <div id="hits">
-     </div>
-     <!-- Fixed the closing tag here -->
     </div>
    </div>
    <div id="dropdown-footer">
@@ -235,5 +227,27 @@
     </div>
    </div>
   </footer>
+  <!-- Algolia Search library -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
+  </script>
+  <!-- InstantSearch.js Library -->
+  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcgUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
+  </script>
+  <!-- Algolia and InstantSearch setup -->
+  <script src="../js/algolia.js">
+  </script>
+  <!-- Dropdown functionality -->
+  <script src="../js/search.js">
+  </script>
+  <!-- Initialize components once the DOM is ready -->
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+        // Initialize dropdown from search.js
+        initializeDropdown();
+
+        // Start Algolia search from algolia.js
+        startSearch();  // This starts the search instance
+    });
+  </script>
  </body>
 </html>
