@@ -17,14 +17,9 @@
   <conbody>
     <p>Most enterprise content publishing processes remain the same when moving to the dweb.</p>
     <p>The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.</p>
-    <p>Fleek provides a unique IPFS gateway URL  <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. This is how users access the site and 
-potentially I could use a custom domain or static IPNS namespace identifier.</p>
-
-
-
-    <p>When changes are pushed to a Github prod branch,  Fleek deployment starts.</p>
-    
-
+    <p>Fleek provides a unique IPFS gateway which allows users to access the content through URLs rather than content identifiers. 
+    As a result, user access the site through <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. 
+    At this point, you can determine if you want to use a static IPNS namespace identifier or use your existing Web 1.0 custom domain.</p>
 
     <fig>
       <title>Fleek deployment status</title>
@@ -34,8 +29,9 @@ potentially I could use a custom domain or static IPNS namespace identifier.</p>
       </image>
     </fig>
 
-    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.     Alternatively, we could be publishing dweb or regular apps using the same stack. 
-</p>
+    <p>When changes were merged into my Github prod branch, Fleek deployment started.</p>
+    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it. </p>
 <p>Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.  IPFS has its own solutions including a CLI that can be used to deploy to dweb.  Generative AI, Open AI in particular, is adept at identifying emergent dweb deployment options.
+One final thing to note is that we could be publishing dapps (decentralized web apps), regular apps or other digital assets using the same stack. 
 </p>  </conbody>
 </concept>
