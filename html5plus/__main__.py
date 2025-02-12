@@ -31,7 +31,8 @@ def main():
     PLUGIN_MAPPING = {
        "ui": ("ui", "UIPlugin"),
        "navigation": ("navigation", "NavPlugin"),
-       "search": ("search", "SearchPlugin")
+       "search": ("search", "SearchPlugin"),
+       "familylinks":("familylinks", "FamilyLinksPlugin")
         
     }  
      #"ui": ("ui", "UIPlugin"),
