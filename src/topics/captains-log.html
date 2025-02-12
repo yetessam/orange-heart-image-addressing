@@ -7,23 +7,18 @@
   <meta content="DITA-OT" name="generator"/>
   <meta content="Brief notes capturing technical progress, challenges, solutions and events." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
    Captain's Log
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
-  </script>
-  <script src="js/search.js">
-  </script>
  </head>
  <body id="captains-log">
-  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
-    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
      <span aria-hidden="true">
      </span>
      <span aria-hidden="true">
@@ -32,7 +27,7 @@
      </span>
     </a>
    </div>
-   <div class="navbar-menu" id="navbarBasicExample">
+   <div class="navbar-menu" id="navbarMenu">
     <div class="navbar-start">
      <a class="navbar-item" href="../index.html">
       Home
@@ -49,7 +44,7 @@
       </a>
       <div class="navbar-dropdown is-hoverable">
        <a class="navbar-item" href="../topics/addressing.html">
-        Addressing and Resilience
+        Addressing
        </a>
        <a class="navbar-item" href="../topics/content-addressing.html">
         Content Addressing
@@ -79,13 +74,7 @@
       </div>
      </div>
     </div>
-    <div class="navbar-end">
-     <!-- Search Box aligned to the right -->
-     <div class="navbar-item">
-      <!-- Search Box Widget -->
-      <div id="search-box">
-      </div>
-     </div>
+    <div class="navbar-end" id="navbarEnd">
     </div>
    </div>
   </nav>
@@ -101,6 +90,12 @@
       Brief notes capturing technical progress, challenges, solutions and events.
      </p>
      <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       Feb 7, 2025
+      </dt>
+      <dd class="dd">
+       Switching to object oriented plugsin
+      </dd>
       <dt class="dt dlterm has-text-weight-semibold">
        Monday Jan 27, 2025
       </dt>
@@ -524,7 +519,7 @@ It could also be easily extended to remap by class name.  For now, stick to elem
      </dl>
     </div>
     <nav class="related-links" role="navigation">
-     <div class="familylinks">
+     <div class="familylinks pt-5">
       <div class="parentlink">
        <strong>
         Parent topic:
@@ -533,21 +528,23 @@ It could also be easily extended to remap by class name.  For now, stick to elem
         Discover Dweb
        </a>
       </div>
-      <div class="previouslink">
-       <strong>
-        Previous topic:
-       </strong>
-       <a class="link is-link" href="content-addressing.html" title="Content addressing identifiers provide provenance for digital assets. Leveraging cryptographic hashing, assets are identified uniquely by their contents.">
-        Content Addressing
-       </a>
-      </div>
-      <div class="nextlink">
-       <strong>
-        Next topic:
-       </strong>
-       <a class="link is-link" href="deploy.html" title="Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.">
-        Deployment
-       </a>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+        <a class="link is-link" href="content-addressing.html" title="Content addressing identifiers provide provenance for digital assets. Leveraging cryptographic hashing, assets are identified uniquely by their contents.">
+         <span class="mr-2 translate-y-px">
+          ←
+         </span>
+         Content Addressing
+        </a>
+       </div>
+       <div class="level-right">
+        <a class="link is-link" href="deploy.html" title="Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on decentralized storage.">
+         Deployment
+         <span class="ml-2 translate-y-px">
+          →
+         </span>
+        </a>
+       </div>
       </div>
      </div>
     </nav>
@@ -557,7 +554,7 @@ It could also be easily extended to remap by class name.  For now, stick to elem
    <div class="footer">
     <div class="content has-text-primary is-centered">
      <p>
-      © 2024 Orange Heart Project. This work is licensed under the
+      © 2025 Orange Heart Project. This work is licensed under the
       <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
        CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
       </a>

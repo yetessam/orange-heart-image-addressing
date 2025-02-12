@@ -7,23 +7,18 @@
   <meta content="DITA-OT" name="generator"/>
   <meta content="Content addressing identifiers provide provenance for digital assets. Leveraging cryptographic hashing, assets are identified uniquely by their contents." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
    Content Addressing
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcGUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
-  </script>
-  <script src="js/search.js">
-  </script>
  </head>
  <body id="cids">
-  <nav aria-label="main navigation" class="navbar is-spaced" id="navbar-bulma" role="navigation">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
-    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarBasicExample" role="button">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
      <span aria-hidden="true">
      </span>
      <span aria-hidden="true">
@@ -32,7 +27,7 @@
      </span>
     </a>
    </div>
-   <div class="navbar-menu" id="navbarBasicExample">
+   <div class="navbar-menu" id="navbarMenu">
     <div class="navbar-start">
      <a class="navbar-item" href="../index.html">
       Home
@@ -49,7 +44,7 @@
       </a>
       <div class="navbar-dropdown is-hoverable">
        <a class="navbar-item" href="../topics/addressing.html">
-        Addressing and Resilience
+        Addressing
        </a>
        <a class="navbar-item" href="../topics/content-addressing.html">
         Content Addressing
@@ -79,13 +74,7 @@
       </div>
      </div>
     </div>
-    <div class="navbar-end">
-     <!-- Search Box aligned to the right -->
-     <div class="navbar-item">
-      <!-- Search Box Widget -->
-      <div id="search-box">
-      </div>
-     </div>
+    <div class="navbar-end" id="navbarEnd">
     </div>
    </div>
   </nav>
@@ -148,7 +137,7 @@ Content's  authenticity can be easily verified by running the image through a ha
      </section>
     </div>
     <nav class="related-links" role="navigation">
-     <div class="familylinks">
+     <div class="familylinks pt-5">
       <div class="parentlink">
        <strong>
         Parent topic:
@@ -157,21 +146,23 @@ Content's  authenticity can be easily verified by running the image through a ha
         Discover Dweb
        </a>
       </div>
-      <div class="previouslink">
-       <strong>
-        Previous topic:
-       </strong>
-       <a class="link is-link" href="addressing.html" title="Addressing and Resilient Technologies use a combination of findability protocols to locate and retrieve content. Let's introduce the concept of findability protocols, resilience, and web addressing methods, then look at how IPFS content addressing works to make the web more resilient.">
-        Addressing and Resilience
-       </a>
-      </div>
-      <div class="nextlink">
-       <strong>
-        Next topic:
-       </strong>
-       <a class="link is-link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
-        Captain's Log
-       </a>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+        <a class="link is-link" href="addressing.html" title="Humans and computers find things using addresses. We use heaps of different findability protocols to locate and retrieve content. Let's introduce the concept of findability protocols, resilience, and web addressing methods, then look at how IPFS content addressing works to make the web more resilient.">
+         <span class="mr-2 translate-y-px">
+          ←
+         </span>
+         Addressing
+        </a>
+       </div>
+       <div class="level-right">
+        <a class="link is-link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
+         Captain's Log
+         <span class="ml-2 translate-y-px">
+          →
+         </span>
+        </a>
+       </div>
       </div>
      </div>
     </nav>
@@ -181,7 +172,7 @@ Content's  authenticity can be easily verified by running the image through a ha
    <div class="footer">
     <div class="content has-text-primary is-centered">
      <p>
-      © 2024 Orange Heart Project. This work is licensed under the
+      © 2025 Orange Heart Project. This work is licensed under the
       <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
        CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
       </a>
