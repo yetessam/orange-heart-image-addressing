@@ -44,7 +44,7 @@ I authored most of the content and have indicated where content was written by G
           <ul>
             <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
             <li>Use AI suggestions to get to 2 star Linked Data.</li>
-            <li>Basic abstract layer of plugin design was produced through prompts  <xref href="#prompts" format="dita"/>DeepSeek-R1 prompts</xref>.
+            <li>Basic abstract layer of plugin design was produced through prompts  <xref href="#prompts" format="dita"/>DeepSeek-R1 prompts</xref>.</li>
         </li>
       </ul>
         </stentry>
