@@ -54,13 +54,16 @@ def apply_algolia_scripts(soup, HTMLP):
     script_html = """
     <!-- Initialize components once the DOM is ready -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    
+ 
+    
+    //document.addEventListener('DOMContentLoaded', function() {
         // Initialize dropdown from search.js
-        initializeDropdown();
+       // initializeDropdown();
 
         // Start Algolia search from algolia.js
-        startSearch();  // This starts the search instance
-    });
+        //startSearch();  // This starts the search instance
+  //  });
     </script> 
 
     """

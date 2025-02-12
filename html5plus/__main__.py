@@ -27,11 +27,12 @@ def main():
     # Instatiate and initialize UIPlugin and pass through the logger and temp 
     
     # Order is significant as you need to build the navbar before addig the search box to it
+     # Search div layout isn't ready for primetime
+     # "search": ("search", "SearchPlugin"),
     
     PLUGIN_MAPPING = {
        "ui": ("ui", "UIPlugin"),
-       "navigation": ("navigation", "NavPlugin"),
-       "search": ("search", "SearchPlugin"),
+       "navigation": ("navigation", "NavPlugin"), 
        "familylinks":("familylinks", "FamilyLinksPlugin")
         
     }  

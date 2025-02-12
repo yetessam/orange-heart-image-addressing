@@ -6,6 +6,7 @@ bulma_classes = {
     'h3': 'title',
     'figdesc': 'box',
     'div.body': 'container',
+    'div.familylinks': 'pt-5',
     'a': 'is-link',
     'button': 'button is-link',
     'ul': 'list is-hoverable',
