@@ -86,7 +86,7 @@ I authored most of the content and have indicated where content was written by G
     </simpletable>
 
 <section id="prompts"><title>DeepSeek-R1 Prompts</title>
-<p> <pre outputclass=">
+<p> <pre>
                     1.  Add functionality to an content pipeline that is processing HTML5.   
                     2.  Plugins should be loaded once at startup.   
                     3.  Plugins will be static for now and should be able to use a properties file and environmental variables (for secrets).     
