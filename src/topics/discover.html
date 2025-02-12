@@ -7,7 +7,6 @@
   <meta content="DITA-OT" name="generator"/>
   <meta content="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
    Discover Dweb
   </title>
@@ -76,24 +75,9 @@
      </div>
     </div>
     <div class="navbar-end" id="navbarEnd">
-     <div id="search-box">
-     </div>
     </div>
    </div>
   </nav>
-  <div class="columns is-paddingless is-hidden is-full" id="dropdown-container">
-   <div class="column is-paddingless is-half-desktop is-half-widescreen is-pulled-right ml-auto" id="dropdown-content">
-    <!-- Search results will be injected here by InstantSearch.js -->
-    <div class="notification" id="hits">
-     <!-- Close Button -->
-     <button class="delete is-small" id="close-results">
-     </button>
-    </div>
-   </div>
-   <div id="dropdown-footer">
-    <!-- Placeholder for footer, for refining search results or pagination-->
-   </div>
-  </div>
   <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main class="container p-5" role="main">
@@ -209,27 +193,5 @@
     </div>
    </div>
   </footer>
-  <!-- Algolia Search library -->
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.3/dist/algoliasearch.umd.min.js">
-  </script>
-  <!-- InstantSearch.js Library -->
-  <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcgUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
-  </script>
-  <!-- Algolia and InstantSearch setup -->
-  <script src="../js/algolia.js">
-  </script>
-  <!-- Dropdown functionality -->
-  <script src="../js/search.js">
-  </script>
-  <!-- Initialize components once the DOM is ready -->
-  <script>
-   document.addEventListener('DOMContentLoaded', function() {
-        // Initialize dropdown from search.js
-        initializeDropdown();
-
-        // Start Algolia search from algolia.js
-        startSearch();  // This starts the search instance
-    });
-  </script>
  </body>
 </html>
