@@ -42,9 +42,9 @@ I authored most of the content and have indicated where content was written by G
         <stentry>Design</stentry>
         <stentry>
           <ul>
-            <li>Vetted early stage designs and fed it the design document a few times and got feedback</li>
-            <li>Use AI suggestions to get to 2 star Linked Data.</li>
-            <li>Basic abstract layer of plugin design was produced through prompts  <xref href="#prompts" format="dita"/>DeepSeek-R1 prompts</xref>.</li>
+            <li>Vetted early stage designs.  Fed the design document a few times and got feedback</li>
+            <li>Used AI suggestions to get to 2 star Linked Data</li>
+            <li>Coded the first abstract layer for the Plugin object by feeding in my existing code and the providing   <xref href="#prompts" format="dita">DeepSeek-R1 prompts</xref>.</li>
    
       </ul>
         </stentry>
