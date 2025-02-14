@@ -168,6 +168,27 @@
                 https://github.com/meilisearch/integration-guides?tab=readme-ov-file
        </p>
       </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Doesn't website content change all the time?  How does that work if content is being stored on blockchain?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        At the decentralized storage level, the content is immutable. The content is stored on blockchain where the cryptographic hash is used to address the content.
+       </p>
+       <p class="p">
+        However, static IPNS namespace identifiers are mutable pointers to stored content.  As content is updated, those pointers can update themselvesl
+       </p>
+       <p class="p">
+       </p>
+       <p class="p">
+        Standard URIs will continue to be the way that users interact with the web, and URIs resolve to the latest content via IPNS.
+       </p>
+       <p class="p">
+        One final clarification is that blockchain is mostly going to be used to store pointers or metadata about content, rather than the actual content. 
+Ledgers aren't designed to be storing  large amount of enterprise website data, although it is technically possible.   The more 
+common use case for blockchain is storing metadata and pointers, rather than the actual content.
+       </p>
+      </dd>
      </dl>
     </div>
     <nav class="related-links" role="navigation">
