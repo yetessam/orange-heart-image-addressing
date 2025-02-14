@@ -51,11 +51,9 @@ def copy_resources(source_dir, target_dir):
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Pass through the DITA OT output folder, the target src folder and the Python resources folder')
-    parser.add_argument('--out_dir', type=str, required=True, help="DITA OT folder where the HTML files are build, normally called 'out'")
-    parser.add_argument('--src_dir', type=str, required=True, help='After processing, this folder contains the Bulma-ready HTML.')
-    parser.add_argument('--res_dir', type=str, required=True, help='This folder contains additional resource files such as css or icons.')
+    parser = argparse.ArgumentParser(description="Process HTML5 output to update with additional UI/responsive/linking features.")
+    parser.add_argument("--out-dir", type=str, required=True, help="DITA OT output directory")
+    parser.add_argument("--src-dir", type=str, required=True, help="Processed HTML5 source directory")
+    parser.add_argument("--res-dir", type=str, required=False, help="Resources directory such as css or icons.")
+    parser.add_argument("-d", "--debug-mode", action="store_true", default=False, help="Enable debug mode")
     return parser.parse_args()
-
-
-
