@@ -80,7 +80,7 @@
 <p>Standard URIs will continue to be the way that users interact with the web, and URIs resolve to the latest content via IPNS.</p>
 <p>One final clarification is that blockchain is mostly going to be used to store pointers or metadata about content, rather than the actual content. 
 Ledgers aren't designed to be storing  large amount of enterprise website data, although it is technically possible.   The more 
-common use case for blockchain is storing metadata and pointers, rather than the actual content.
+common use case for blockchain is storing metadata and pointers, rather than the actual content. For more information, see <xref href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" type="html" scope="external">Mutability in IPFS</xref>.
 </p>
           </dd>
           </dlentry>  
