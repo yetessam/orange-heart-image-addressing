@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="addressing">
-  <title>Addressing</title>
-  <shortdesc>Humans and computers find things using addresses.   
-    We use heaps of different findability protocols to locate and retrieve content.
-  Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.</shortdesc>
+  <title>Findability Use Cases</title>
+  <shortdesc>Do we really need another findabiity protocol? What real-life use cases can Dweb CIDs support. </shortdesc>
    <prolog>
     <metadata>
       <keywords>
@@ -21,7 +19,6 @@
         <li>Street addresses</li>
         <li>White canes</li>
         <li>Physical landmarks</li>
-        <li>Dewey decimal system </li>
         <li>Dewey decimal system </li>
         <li>Geographic systems such as longitude and latitude</li>
         <li>Sonar</li>
