@@ -60,7 +60,7 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           pip install -r html5plus/requirements.txt
-          python -m html5plus --out_dir $(pwd)/out --src_dir $(pwd)/src --res_dir $(pwd)/html5plus/resources
+          python -m html5plus --out-dir $(pwd)/out --src-dir $(pwd)/src --res-dir $(pwd)/html5plus/resources
 
       - name: List directory contents after running Python script
         run: |
