@@ -5,6 +5,13 @@
   </shortdesc>
   <conbody>
     <dl>
+
+  <dlentry>
+        <dt>Feb 15, 2025</dt>
+        <dd>Fixed a bug in the UI plugin, changed program parameters to use dashes, no underscores
+and you can optionally pass through a debug flag -d or -debug
+        </dd>
+      </dlentry>
    <dlentry>
 
         <dt>Feb 7, 2025</dt>
