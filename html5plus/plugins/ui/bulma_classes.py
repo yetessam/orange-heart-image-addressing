@@ -16,9 +16,9 @@ bulma_classes = {
     'li': 'list-item',
     'lq': 'notification',
    
-    'ol.olchildlinks': 'grid',
-    'li.olchildlinks': 'cell pagination-link ',
-    '.olchildlink a': 'is-link subtitle is-5',
+    'ol.olchildlinks': 'grid has-4-cols-desktop has-auto-count',
+    'li.olchildlinks': 'cell',
+    '.olchildlink a': 'subtitle is-5',
      
     'a.prevlink': 'button',
     'a.nextlink':'button', 
