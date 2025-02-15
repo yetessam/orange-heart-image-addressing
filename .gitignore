@@ -3,3 +3,5 @@
 
 # Ignore Vim swap files
 *.swp
+.vscode/launch.json
+*/__pycache__
