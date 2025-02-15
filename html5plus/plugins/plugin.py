@@ -114,17 +114,19 @@ class Plugin(ABC):
                 content = file.read()
             
             # Scan the resources/css directory for stylesheets
+           
             stylesheets = [f.name for f in self.resources_css.iterdir() if f.is_file() and f.suffix == ".css"]
-
-            for stylesheet in stylesheets:              
-
-                import_string = f'@import url("{stylesheet}"); /* Imported by {type(self)} */\n'
-                if import_string not in content:
-                    with open(self.global_stylesheet, "w") as file:
-                        file.write(import_string + content)
-                    logger.info(f"Updated global stylesheet with import: {stylesheet}")
-                else:
-                    logger.info(f"Global stylesheet already contains import: {stylesheet}")
+            import_string=""
+            for stylesheet in stylesheets:   
+                import_uri =f'@import url("{stylesheet}"); /* Imported by {type(self)} */\n'
+                           
+                if import_uri in content:  # don't add it if it's already there
+                    continue 
+               
+                content = import_uri + content 
+                
+            with open(self.global_stylesheet, "w") as file:
+                    file.write(content) 
 
         except Exception as e:
             logger.error(f"Failed to update global stylesheet: {e}")

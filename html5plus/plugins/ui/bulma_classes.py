@@ -26,7 +26,6 @@ bulma_classes = {
     'div.prevlink': 'level-left',
     'div.nextlink':'level-right', 
     'dt': 'has-text-weight-semibold',
-    'nav.navbar':'is-primary',
      
     'note': 'notification is-primary',
     'image' : 'is-rounded is-bordered',
