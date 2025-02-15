@@ -13,7 +13,7 @@
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body id="discover-dweb-tech">
+ <body class="content" id="discover-dweb-tech">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -43,20 +43,17 @@
        Discover Dweb
       </a>
       <div class="navbar-dropdown is-hoverable">
-       <a class="navbar-item" href="../topics/addressing.html">
-        Addressing
-       </a>
        <a class="navbar-item" href="../topics/content-addressing.html">
         Content Addressing
-       </a>
-       <a class="navbar-item" href="../topics/captains-log.html">
-        Captain's Log
        </a>
        <a class="navbar-item" href="../topics/deploy.html">
         Deployment
        </a>
        <a class="navbar-item" href="../topics/faq.html">
         Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
        </a>
       </div>
      </div>
@@ -81,7 +78,7 @@
   <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main class="container p-5" role="main">
-   <article aria-labelledby="ariaid-title1" class="content" role="article">
+   <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
      Discover Dweb
     </h1>
@@ -100,51 +97,52 @@
      <p class="p">
       Technology stack: DITA XML, DITA Open Toolkit, Github, Python, Fleek, and IPFS.
      </p>
-     <p class="p">
-      Disclaimer: I am affiliated with the Dweb movement.  I am not affiliated with Protocol Labs, Filecoin, Fleek, Github, or any of their associated projects. 
-   I have not been paid or compensated by any entity to create or maintain this website. All content on this site is independent and created solely for informational purposes.
-     </p>
+     <div class="note note note_note notification is-info">
+      <span class="note__title">
+       Note:
+      </span>
+      <div class="note__body">
+       I support the
+       <a class="xref is-link" href="https://getdweb.net/principles/" rel="external noopener" target="_blank">
+        Dweb principles
+       </a>
+       and am not affiliated with Protocol Labs, Filecoin, Fleek, or GitHub. This site is independent, unpaid, and for informational purposes only.
+      </div>
+     </div>
     </div>
     <nav class="related-links" role="navigation">
-     <ol class="olchildlinks list is-hoverable">
+     <ol class="olchildlinks list is-hoverable grid">
       <li class="link olchildlink list-item">
-       <a class="is-link" href="addressing.html">
-        Addressing
-       </a>
-       <br/>
-       Humans and computers find things using addresses.        We use heaps of different findability protocols to locate and retrieve content.   Let's introduce the concept of findability protocols, resilience, and web addressing methods, then  look at how IPFS content addressing works to make the web more resilient.
-      </li>
-      <li class="link olchildlink list-item">
-       <a class="is-link" href="content-addressing.html">
+       <a class="is-link is-link subtitle is-5" href="content-addressing.html">
         Content Addressing
        </a>
        <br/>
        Content addressing identifiers provide provenance for digital assets.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.
       </li>
       <li class="link olchildlink list-item">
-       <a class="is-link" href="captains-log.html">
-        Captain's Log
-       </a>
-       <br/>
-       Brief notes capturing technical progress, challenges, solutions and events.
-      </li>
-      <li class="link olchildlink list-item">
-       <a class="is-link" href="deploy.html">
+       <a class="is-link is-link subtitle is-5" href="deploy.html">
         Deployment
        </a>
        <br/>
        Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on  decentralized storage.
       </li>
       <li class="link olchildlink list-item">
-       <a class="is-link" href="faq.html">
+       <a class="is-link is-link subtitle is-5" href="faq.html">
         Dwebsite FAQ
        </a>
        <br/>
        Short questions and answers on content creation and publishing with the decentralized web.
       </li>
+      <li class="link olchildlink list-item">
+       <a class="is-link is-link subtitle is-5" href="captains-log.html">
+        Captain's Log
+       </a>
+       <br/>
+       Brief notes capturing technical progress, challenges, solutions and events.
+      </li>
      </ol>
      <div class="linklist relinfo">
-      <strong>
+      <strong class="">
        Related information
       </strong>
       <br/>
