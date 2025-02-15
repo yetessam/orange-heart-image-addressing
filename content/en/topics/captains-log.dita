@@ -5,6 +5,12 @@
   </shortdesc>
   <conbody>
     <dl>
+
+  <dlentry>
+        <dt>Saturday Feb 15, 2025</dt>
+        <dd>Integrated plugins for UI, Prev/Next Links and fixed a UI bug. 
+        </dd>
+      </dlentry>
    <dlentry>
         <dt>Monday Jan 27, 2025</dt>
         <dd>Calling Algolia via crawler.yml on push to prod.
