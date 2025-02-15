@@ -17,7 +17,7 @@
                 <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
                 
 	</topicref>
-	<topicref href="topics/about.dita" format="dita" type="concept">
+	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
  		<topicref href="topics/bio.dita" format="dita" type="concept"/>
  		<topicref href="topics/ai-usage.dita" format="dita" type="concept"/> 		
         </topicref>
