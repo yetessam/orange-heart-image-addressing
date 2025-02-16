@@ -3,28 +3,21 @@
 <map>
 	<title>Orange Heart DWeb Project</title>
 	<topicref href="index.dita" format="dita" type="concept"/>
-
-	<topicref href="topics/orange-heart.dita" format="dita" type="concept">
-		
-	</topicref>	
-	<topicref href="topics/gallery.dita"  format="dita" type="concept"/> 
-        <topicref href="topics/discover.dita"  format="dita" type="concept" collection-type="sequence">
-		<!--<topicref href="topics/addressing.dita" format="dita" type="concept"> 
-                </topicref>-->
-                <topicref href="topics/content-addressing.dita" format="dita" type="concept"/> 
-		<topicref href="topics/deploy.dita" format="dita" type="concept"/>  
-		<topicref href="topics/faq.dita" format="dita" type="concept"/> 
-                <topicref href="topics/captains-log.dita" format="dita" type="concept"/> 
-                
+	<topicref href="topics/orange-heart.dita" format="dita" type="concept"/>
+	<topicref href="topics/gallery.dita" format="dita" type="concept"/>
+	<topicref href="topics/discover.dita" format="dita" type="concept" collection-type="sequence">
+		<!--<topicref href="topics/addressing.dita" format="dita" type="concept"></topicref>-->
+		<topicref href="topics/content-addressing.dita" format="dita" type="concept"/>
+		<topicref href="topics/deploy.dita" format="dita" type="concept"/>
+		<topicref href="topics/faq.dita" format="dita" type="concept"/>
+		<topicref href="topics/captains-log.dita" format="dita" type="concept"/>
 	</topicref>
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
- 		<topicref href="topics/bio.dita" format="dita" type="concept"/>
- 		<topicref href="topics/ai-usage.dita" format="dita" type="concept"/> 		
-        </topicref>
-		
+		<topicref href="topics/bio.dita" format="dita" type="concept"/>
+		<topicref href="topics/ai-usage.dita" format="dita" type="concept"/>
+	</topicref>
 	<reltable>
 		<title>Source and target: Links that apply only to HTML version of distribution documentation</title>
-		<!-- Links common to all output formats are defined in nested submaps   -->
 		<relheader>
 			<relcolspec linking="sourceonly"/>
 			<relcolspec linking="targetonly"/>
@@ -34,53 +27,45 @@
 				<topicref href="topics/discover.dita" format="dita" type="concept"/>
 			</relcell>
 			<relcell>
-			<topicref href="https://getdweb.net/principles/" format="html" scope="external">
-				<topicmeta>
-						<navtitle>DWeb Principles</navtitle>
-					</topicmeta>
-			</topicref> 
-			<topicref href="https://github.com/yetessam/orange-heart-image-addressing" format="html" scope="external">
-				<topicmeta>
-						<navtitle>Github repository: https://github.com/yetessam/orange-heart-image-addressing</navtitle>
-					</topicmeta>
-			</topicref> 
-			<topicref href="https://fleek.xyz/" format="html" scope="external">
-				<topicmeta>
-						<navtitle>Fleek</navtitle>
-					</topicmeta>
-			</topicref> 
-	<topicref href="https://www.dita-ot.org/" format="html" scope="external">
-				<topicmeta>
-						<navtitle>DITA Open Toolkit</navtitle>
-					</topicmeta>
-			</topicref> 
+				<topicref href="https://getdweb.net/principles/" format="html" scope="external">
+					<topicmeta><navtitle>DWeb Principles</navtitle></topicmeta>
+				</topicref>
+				<topicref href="https://github.com/yetessam/orange-heart-image-addressing" format="html" scope="external">
+					<topicmeta><navtitle>Github repository: https://github.com/yetessam/orange-heart-image-addressing</navtitle></topicmeta>
+				</topicref>
+				<topicref href="https://fleek.xyz/" format="html" scope="external">
+					<topicmeta><navtitle>Fleek</navtitle></topicmeta>
+				</topicref>
+				<topicref href="https://www.dita-ot.org/" format="html" scope="external">
+					<topicmeta><navtitle>DITA Open Toolkit</navtitle></topicmeta>
+				</topicref>
 			</relcell>
 		</relrow>
-		<relrow>
-			<relcell>
-				<topicref href="topics/addressing.dita"/>
-			</relcell>
-			<relcell>
-			
-			<topicref href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" format="html" scope="external">
-				<topicmeta>
-						<navtitle>A Practical Explainer for IPFS Gateways - Part 2</navtitle>
-					</topicmeta>
-			</topicref> 
-			</relcell>
-		</relrow>
-		<relrow>
-			<relcell>
 	
-			<!--  <topicref href="addressing.dita"/> -->
-			
-			</relcell>
+		<relrow>
+			<relcell><topicref href="topics/content-addressing.dita" format="dita" type="concept"/></relcell>
 			<relcell>
-				<!-- 
-		<topicref href="target.dita"/>
-				-->
-
+			    <topicref href="https://ipfs.tech/" format="html" scope="external">
+			        <topicmeta>
+			            <navtitle>IPFS</navtitle>
+			        </topicmeta>
+			    </topicref>
+			    <topicref href="https://cid.ipfs.tech/" format="html" scope="external">
+			        <topicmeta>
+			            <navtitle>IPFS CID Inspector</navtitle>
+			        </topicmeta>
+			    </topicref>
+			    <topicref href="https://docs.ipfs.tech/install/" format="html" scope="external">
+			        <topicmeta>
+			            <navtitle>IPFS Docs</navtitle>
+			        </topicmeta>
+			    </topicref>
+			    <topicref href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" format="html" scope="external">
+			        <topicmeta>
+			            <navtitle>A Practical Explainer for IPFS Gateways - Part 2</navtitle>
+			        </topicmeta>
+			    </topicref>
 			</relcell>
-		</relrow>
+</relrow>
 	</reltable>
 </map>
