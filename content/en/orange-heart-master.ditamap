@@ -76,10 +76,10 @@
 			
 			</relcell>
 			<relcell>
-                                <topicref scope="external" type="html" href="https://cid.ipfs.tech/">IPFS CID Inspector</xref>
+				<topicref scope="external" type="html" href="https://ipfs.tech/"/>IPFS</xref>
+	                        <topicref scope="external" type="html" href="https://cid.ipfs.tech/">IPFS CID Inspector</xref>
  				<topicref scope="external" type="html" href="https://docs.ipfs.tech/install//">IPFS Docs</xref>
-				<topicref scope="external" type="html" href="https://fleek.network/whitepaper.pdf"/>Decentralized Edge Platform White Paper</xref>
-	                       
+				
 			</relcell>
 		</relrow>
 	</reltable>
