@@ -18,15 +18,18 @@
  <p>You can take any type of digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image. 
 The hash is then used to construct a multi-hash starts with a self-describing metadata followed by the cryptographic hash of the data. 
-
 </p>
 <p>
 
-For example, if we take this website's logo <!-- add logo --> and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+For example, if we take this website's logo <!-- add logo --> and push it thorugh a hash, the result will be xxx. 
+
+For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself. 
+
+If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change. 
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
 
-This CID in the decentralized web can be used as the asset's location address.
+The constructed CID in the decentralized web can be used as the asset's location address.  
 
 I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
 
@@ -36,11 +39,9 @@ All the links to this image are guaranteed to present you with the exact same, u
 
 
 
-  <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
-This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
-Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
-   
-   
+  <p>Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me. 
+   Dweb dovetails nicely with edge AI and where data is stored and retrieved closer to the user.</p>
+  <p>Finally, content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
   <p>CIDs are text-based, unique properties of the content object.</p>
   <p>If you've published a website and have a different version of the content, its CID will change.
   <p>The use case for the "most recent" version of an asset/resource/website is handled by using static namespace identifiers whose pointers can point to different CIDS over time. 
