@@ -43,8 +43,7 @@ All the links to this image are guaranteed to present you with the exact same, u
    Dweb dovetails nicely with edge AI and where data is stored and retrieved closer to the user.</p>
   <p>Finally, content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
   <p>CIDs are text-based, unique properties of the content object.</p>
-  <p>If you've published a website and have a different version of the content, its CID will change.
-  <p>The use case for the "most recent" version of an asset/resource/website is handled by using static namespace identifiers whose pointers can point to different CIDS over time. 
+   <p>The use case for the "most recent" version of an asset/resource/website is handled by using static namespace identifiers whose pointers can point to different CIDS over time. 
   Which means that Dweb can support the same functionality as Web 1.0.   
 </p> 
 
