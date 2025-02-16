@@ -45,13 +45,13 @@
 		<relrow>
 			<relcell><topicref href="topics/content-addressing.dita" format="dita" type="concept"/></relcell>
 			<relcell>
-				<topicref scope="external" type="html" href="https://ipfs.tech/">IPFS</xref>
-				<topicref scope="external" type="html" href="https://cid.ipfs.tech/">IPFS CID Inspector</xref>
-				<topicref scope="external" type="html" href="https://docs.ipfs.tech/install/">IPFS Docs</xref>
+				<xref scope="external" format="html" href="https://ipfs.tech/">IPFS</xref>
+				<xref scope="external" format="html" href="https://cid.ipfs.tech/">IPFS CID Inspector</xref>
+				<xref scope="external" format="html" href="https://docs.ipfs.tech/install/">IPFS Docs</xref>
 
-				<topicref href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" format="html" scope="external">
+				<xref href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" format="html" scope="external">
 					<topicmeta><navtitle>A Practical Explainer for IPFS Gateways - Part 2</navtitle></topicmeta>
-				</topicref>
+				</xref>
 			</relcell>
 		</relrow>
 	</reltable>
