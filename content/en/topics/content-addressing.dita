@@ -16,7 +16,8 @@
 <p>Content address identifiers (CID)s are derived by using an asset's cryptographic hash as its unique identifier.
 </p>
  <p>You can take any type of digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
- series of numbers and letters for this exact image.   
+ series of numbers and letters for this exact image. 
+The hash is then used to construct a multi-hash starts with a self-describing metadata followed by the cryptographic hash of the data. 
 
 </p>
 <p>
@@ -40,13 +41,15 @@ This dovetails nicely with edge AI which is becoming increasing popular and also
 Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.</p>
    
    
-  <p>CIDs are text-based, unique properties of the content object. </p>
+  <p>CIDs are text-based, unique properties of the content object.</p>
   <p>If you've published a website and have a different version of the content, its CID will change.
-  How we handle link management and other notions such </p>
-  <p>How is the use case handled for the "most recent" version of an asset/resource/website?</p> 
+  <p>The use case for the "most recent" version of an asset/resource/website is handled by using static namespace identifiers whose pointers can point to different CIDS over time. 
+  Which means that Dweb can support the same functionality as Web 1.0.   
+</p> 
 
 <section><title>Try it out </title>
 <ul>
+  
  <li>View on an IPFS gateway </li>
  <li>Install IPFS and then use the following command:  
  </li>
