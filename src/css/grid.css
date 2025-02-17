@@ -1,0 +1,49 @@
+/* Container for the grid layout */
+body {
+    display: grid;
+    grid-template-areas:
+        "heading heading"
+        "mainbody navrelated"
+        "navbottom navbottom";
+        
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr auto; /* Adjust rows as needed */
+   }
+
+#navbar-bulma {
+    grid-area: heading;
+
+}
+
+footer {
+    grid-area: navbottom;
+
+}
+/* Assign elements to grid areas */
+#ariaid-title1 {
+    grid-area: heading;
+    border-color: lightblue; /* Optional: for visual distinction */
+  
+}
+
+/* Needs to be set on body class */ 
+.body { 
+    grid-area: mainbody;
+    border-color: lightgreen; /* Optional: for visual distinction */
+    padding: 10px;
+}
+
+#navrelated {
+    grid-area: navrelated;
+    border-color: lightcoral; /* Optional: for visual distinction */
+    
+}
+
+.familylinks {
+    grid-area: navbottom;
+    border-color: lightyellow; /* Optional: for visual distinction */
+   
+}
+
+
+     
