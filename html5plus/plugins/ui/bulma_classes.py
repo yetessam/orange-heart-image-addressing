@@ -27,11 +27,10 @@ bulma_classes = {
     'div.nextlink':'level-right', 
     'dt': 'has-text-weight-semibold',
      
-    'note': 'notification is-primary',
+    'note': 'notification',
+    '.note': 'notification',
     'image' : 'is-rounded is-bordered',
-    'div.note' : 'notification is-info',
-    'div.relinfo': '',
-    '.relinfo strong': '',
+    '.relinfo': '',
     'gallery' : 'columns is-multiline is-variable is-8', 
     'sectiontitle' : 'is-size-4 has-text-weight-semibold',
 }
