@@ -1,14 +1,19 @@
 /* Container for the grid layout */
-body {
-    display: grid;
+
+/* Dependency:  need to add a plugin to DITA OT to decouple related-links */
+
+
+/* { border: 1px dashed; }*/
+article {
+    display: grid !important;
     grid-template-areas:
         "heading heading"
-        "mainbody navrelated"
-        "navbottom navbottom";
+        "content relinfo"
+        "footer footer";
         
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto 1fr auto; /* Adjust rows as needed */
-   }
+    grid-template-columns: 3fr 1fr; 
+    grid-template-rows: auto auto auto;
+}
 
 #navbar-bulma {
     grid-area: heading;
@@ -16,7 +21,7 @@ body {
 }
 
 footer {
-    grid-area: navbottom;
+    grid-area: footer;
 
 }
 /* Assign elements to grid areas */
@@ -28,19 +33,21 @@ footer {
 
 /* Needs to be set on body class */ 
 .body { 
-    grid-area: mainbody;
+    grid-area: content;
     border-color: lightgreen; /* Optional: for visual distinction */
-    padding: 10px;
+
 }
 
-#navrelated {
-    grid-area: navrelated;
+.relinfo {
+    grid-area: relinfo;
     border-color: lightcoral; /* Optional: for visual distinction */
     
 }
 
-.familylinks {
-    grid-area: navbottom;
+
+
+.olchildlinks {
+    grid-area: content !important;
     border-color: lightyellow; /* Optional: for visual distinction */
    
 }
