@@ -1,8 +1,4 @@
-
-
 /* Container for the grid layout */
-
-
 body {
     display: grid;
     grid-template-areas:
@@ -11,8 +7,6 @@ body {
         "navbottom navbottom";
         
     grid-template-columns: 1fr; 
-
-    
     grid-template-rows: auto 1fr auto; /* Adjust rows as needed */
    }
 
@@ -28,7 +22,7 @@ footer {
 /* Assign elements to grid areas */
 #ariaid-title1 {
     grid-area: heading;
-    background-color: lightblue; /* Optional: for visual distinction */
+    border-color: lightblue; /* Optional: for visual distinction */
   
 }
 
@@ -50,3 +44,6 @@ footer {
     border-color: lightyellow; /* Optional: for visual distinction */
    
 }
+
+
+     
