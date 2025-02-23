@@ -12,11 +12,13 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Here are various examples of prompts that I've used to help models understand the tasks that I'd like them to accomplish. 
+    <p>Here are various examples of prompts that I've used to help models understand the tasks that they need to accomplish. 
         
-      <section id="prompts1"><title>DeepSeek-R1 Prompts</title>
-      <p> <pre>
-      1.  Add functionality to an content pipeline that is processing HTML5.   
+      <section id="prompts1"><title>Design Prompts</title>
+      <p>The following prompt was used to design the python plugins for the html5plus tool that runs 
+when this site's content is updated.   
+     <pre>
+      1.  Add functionality to a content pipeline that is processing HTML5.   
       2.  Plugins should be loaded once at startup.   
       3.  Plugins will be static for now and should be able to use a properties file and environmental variables (for secrets).     
           Don't need to validate the configurations right now.   
@@ -31,8 +33,10 @@
       10.   I do need a template for plugin development and we should use the ui feature as an example.
       </pre></p>
       </section>
-   <section id="prompts1"><title>AI AgentPrompt</title>
-      <p> <pre>  
+   <section id="prompts2"><title>AI Content Agent Prompt</title>
+      <p>Providing prompts programmatically allows for better prompt management and transparency. The following example is fed 
+through to an AI code agent through a configuration file.</p>
+      <codeblock><![CDATA[  
   You are a content expert who helps users validate whether content is respectful and appropriate.  
   Additionally, you can analyze music lyrics  to determine if they are respectful and provide general information such as the current time. 
   
@@ -54,7 +58,7 @@
   During each intermediate step, you can use 'print()' to save whatever important information you will then need.
   These print outputs will then appear in the 'Observation:' field, which will be available as input for the next step.
   In the end you have to return a final answer using the `final_answer` tool.
-        </pre></p>
+  ]]></codeblock></p>
       </section>
 
   </conbody>
