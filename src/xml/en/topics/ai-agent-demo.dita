@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="ai_demo">
-  <title>AI Agent Demo</title>
+  <title>AI Agent Demonstration</title>
    <shortdesc></shortdesc>
   <prolog>
     <metadata>
@@ -11,14 +11,16 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>Here's link to my AI Agent that's being hosted at my Hugging Face Spaces space.  AI Agent.  I've intentionally used verbose mode to surface and make visible the
-  various steps that the code agent takes before preparing the final answer.
-  
+  <p>The following Content Agent is an AI agent written in Python that's hosted on my Hugging Face Spaces.  
+   It has been provided with access to an NLP library that classifies text and then provides a verbose interface through the process of setting up a task, running code, thinking about the next steps and making observations. 
+
+   </p>
+
    <object outputclass="iframe-container" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
       <param name="src" value="https://huggingface.co/spaces/yetessam/ContentClassifier" />
+      <param name="type" value="text/html" />
     </object>
-
-
+  
   </p>
 </conbody>
 </concept>
