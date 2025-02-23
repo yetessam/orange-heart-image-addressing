@@ -11,12 +11,12 @@
 		<topicref href="topics/deploy.dita" format="dita" type="concept"/>
 		<topicref href="topics/faq.dita" format="dita" type="concept"/>
 		<topicref href="topics/captains-log.dita" format="dita" type="concept"/>
-		<mapref href="topics/ai.ditamap" format="ditamap" type="concept"/>
+		<mapref href="topics/ai/ai.ditamap" format="ditamap" type="concept"/>
 	</topicref>
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
 		<topicref href="topics/bio.dita" format="dita" type="concept"/>
 		
-		<topicref href="topics/ai-agent-demo.dita" format="dita" type="concept"/>
+	
 	</topicref>
 	<reltable>
 		<title>Source and target: Links that apply only to HTML version of distribution documentation</title>
