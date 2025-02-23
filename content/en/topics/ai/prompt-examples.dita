@@ -12,8 +12,6 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>Here are various examples of prompts that I've used to help models understand the tasks that they need to accomplish. 
-        
       <section id="prompts1"><title>Design Prompts</title>
       <p>The following prompt was used to design the python plugins for the html5plus tool that runs 
 when this site's content is updated.   
@@ -59,6 +57,6 @@ through to an AI code agent through a configuration file.
   These print outputs will then appear in the 'Observation:' field, which will be available as input for the next step.
   In the end you have to return a final answer using the `final_answer` tool.
   ]]></codeblock></p>
-      </section>
+    </section>
   </conbody>
 </concept>
