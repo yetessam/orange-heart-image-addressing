@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="ai_demo">
-  <title>AI Agent Demonstration</title>
-   <shortdesc></shortdesc>
+  <title>Content AI Agent Demo</title>
+   <shortdesc>Content Agent is an AI Agent Python app that uses an model with additional tooling  to determine whether input text is polite.
+   </shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -11,15 +12,15 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account. 
-  Content Agent is a Python app that set's up a Gradio UI, that calls an existing model, sets up prompts
-and passes the code agent tools.    Intel Polite Guard NLP library is being used to evaluate whether input text is polite. </p>
+  <p>Content Agent is AI agent hosted on my Hugging Face Spaces account.   You can try out the live demo which sets up a user interface using Gradio,  calls an existing model, sets up prompts
+and passes the code agent tools.   The primary tool is Intel's Polite Guard NLP library which is used to classify input text.</shortdesc></p>
 <p>Gen AI models are already pre-trained to process language and avoid harmful interactions.  
 However, specifying tools and functions for the AI to use provides greater accuracy, accountability, and transparency.    
-Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a more flexible approach since it is simpler to swap out a tool, than to replace a model.
-Especially as time goes on, there may be increasing costs to swapping out AIs.   It seems wiser to select tools than to rely on base model behaviour.</p>
+Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a smarter approach since it is simpler to swap out a tool, than to replace a model.
+As there's little standardization across models, I think it's a safer decision to provide models with specific tools and data sets upon which it can make decisions. 
+</p>
 
-  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
+  <p>Content Classifier Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
    Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
 
  </p>
@@ -40,5 +41,8 @@ Especially as time goes on, there may be increasing costs to swapping out AIs.  
    As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
 
 </p>
+<p>See  <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to about create your first AI Agent.
+</p>
+
 </conbody>
 </concept>
