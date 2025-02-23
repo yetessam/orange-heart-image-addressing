@@ -16,7 +16,7 @@
 
    </p>
 
-   <object outputclass="iframe-container" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
+   <object outputclass="iframe" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
       <param name="src" value="https://huggingface.co/spaces/yetessam/ContentClassifier" />
       <param name="type" value="text/html" />
     </object>
