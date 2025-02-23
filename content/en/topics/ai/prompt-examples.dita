@@ -35,7 +35,7 @@ when this site's content is updated.
       </section>
    <section id="prompts2"><title>AI Content Agent Prompt</title>
       <p>Providing prompts programmatically allows for better prompt management and transparency. The following example is fed 
-through to an AI code agent through a configuration file.</p>
+through to an AI code agent through a configuration file.
       <codeblock><![CDATA[  
   You are a content expert who helps users validate whether content is respectful and appropriate.  
   Additionally, you can analyze music lyrics  to determine if they are respectful and provide general information such as the current time. 
@@ -60,6 +60,5 @@ through to an AI code agent through a configuration file.</p>
   In the end you have to return a final answer using the `final_answer` tool.
   ]]></codeblock></p>
       </section>
-
   </conbody>
 </concept>
