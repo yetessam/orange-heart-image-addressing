@@ -11,17 +11,16 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>The following Content Agent is an AI agent written in Python that's hosted on my Hugging Face Spaces.
-   It has been provided with prompts and code examples sothat it knows to use the Intel Polite Guard library to evaluate
-   whether or not text is polite. </p>
-  <p>As with all AI agents, the model has already been trained to avoid harmful interactions and has a base understanding of whether
-or not content is polite without ever calling the additional tooling.</p>
-  <p>What is the purpose of using additional tooling when an Agent is already
-able to roughly perform a task?   More sources creates checks and balances, but even more so, the development team would know exactly what version of a tool, 
-what functions are being called so that there's accountability and transparency. 
-</p>
-<p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided prompts to use a structured process of setting up a task, running code, thinking about the next steps and making observations. 
-</p>
+  <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account.  Although most models have already been 
+trained to avoid harmful interactions and have a good grasp of language, this agent is provided with the Intel Polite Guard library tool and then
+prompted to use that tooling to evaluate
+whether or not text is polite. </p>
+  <p>Even though Gen AI models can already perform language processing, defining specific tools and functions for the AI to use
+ provides greater accuracy, accountability, and transparency.   
+ </p>
+  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided prompts to use a structured process of setting up a task, running code, thinking about the next steps and making observations. 
+ Even with this tool, the AI agent is still introducing its own perspective and decisions making into the process.
+ In particular, the prompt ask the model to make suggestions to improve text which are 100% coming from the model rather than the Polite Guard tool.</p>
 <p>
 <fig>
 <title>Content Classifier Agent</title>
