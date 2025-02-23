@@ -13,12 +13,14 @@
   <conbody>
   <p>The following Content Agent is an AI agent written in Python that's hosted on my Hugging Face Spaces.  
    It has been provided with access to an NLP library that classifies text and then provides a verbose interface through the process of setting up a task, running code, thinking about the next steps and making observations. 
-  
+
+   </p>
+
    <object outputclass="iframe-container" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
       <param name="src" value="https://huggingface.co/spaces/yetessam/ContentClassifier" />
       <param name="type" value="text/html" />
     </object>
-
+  
   </p>
 </conbody>
 </concept>
