@@ -12,8 +12,8 @@
   </prolog>
   <conbody>
   <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account. 
-  Content Agent is an app that's created by pulling together a Gradio UI, calling an existing model, setting up prompts
-and tools.    Intel Polite Guard NLP library is being used to evaluate whether input text is polite. </p>
+  Content Agent is a Python app that set's up a Gradio UI, that calls an existing model, sets up prompts
+and passes the code agent tools.    Intel Polite Guard NLP library is being used to evaluate whether input text is polite. </p>
 <p>Gen AI models are already pre-trained to process language and avoid harmful interactions.  
 However, specifying tools and functions for the AI to use provides greater accuracy, accountability, and transparency.    
 Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a more flexible approach since it is simpler to swap out a tool, than to replace a model.
