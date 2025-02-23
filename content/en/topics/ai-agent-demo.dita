@@ -15,7 +15,7 @@
    It has been provided with access to an NLP library that classifies text and then provides a verbose interface through the process of setting up a task, running code, thinking about the next steps and making observations. 
  
    <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">
-      <image href="../images/content_classifie.png" />
+      <image href="../images/content_classifie.png" width="100%" />
     </xref>
   </p>
 </conbody>
