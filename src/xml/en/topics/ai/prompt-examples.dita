@@ -31,7 +31,7 @@ when this site's content is updated.
       10.   I do need a template for plugin development and we should use the ui feature as an example.
       </pre></p>
       </section>
-   <section id="prompts2"><title>AI Content Agent Prompt</title>
+   <section id="content-agent"><title>Content Classifier Agent Prompt</title>
       <p>Providing prompts programmatically allows for better prompt management and transparency. The following example is fed 
 through to an AI code agent through a configuration file.
       <codeblock><![CDATA[  

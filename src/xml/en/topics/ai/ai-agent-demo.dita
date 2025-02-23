@@ -11,25 +11,28 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account.  Although most models have already been 
-trained to avoid harmful interactions and have a good grasp of language, this agent is provided with the Intel Polite Guard library tool and then
-prompted to use that tooling to evaluate
-whether or not text is polite. </p>
+  <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account.  AI models 
+are generally trained to process language and avoid harmful interactions.   
+However, that training is rarely transparent, unless the AI happens to be open-source.  
+For this demo, an AI agent is being called using Python and then provided with the Intel Polite Guard library tool.
+It is prompted to use Polite Guard to evaluate whether or not text is polite. </p>
   <p>Even though Gen AI models can already perform language processing, defining specific tools and functions for the AI to use
  provides greater accuracy, accountability, and transparency.   
  </p>
-  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided prompts to use a structured process of setting up a task, running code, thinking about the next steps and making observations. 
- Even with this tool, the AI agent is still introducing its own perspective and decisions making into the process.
- In particular, the prompt ask the model to make suggestions to improve text which are 100% coming from the model rather than the Polite Guard tool.</p>
-<p>
+  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
+   Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
+   There's continued work to be done to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly, ensuring that phrases are evaluated based on the quantitative score provided by Polite Guard rather than its own assessments.
+  
+   Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
+   As <xref href="prompt-examples.dita#content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
+ 
 <fig>
 <title>Content Classifier Agent</title>
-<desc>Live demo is running at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
+<desc>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
 </desc>
  <image href="../../images/content_classifie.png" placement="break">
    <alt>Content Classifier App</alt>
 </image>
-
 </fig>
 </p>
 </conbody>
