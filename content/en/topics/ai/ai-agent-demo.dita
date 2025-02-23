@@ -27,7 +27,7 @@ what functions are being called so that there's accountability and transparency.
 <title>Content Classifier Agent</title>
  <image href="../../images/content_classifie.png" placement="break">
  <alt>Content Classifier App</alt>
- </alt>
+ 
  </image>
 <desc>Live demo is running at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
 </desc>
