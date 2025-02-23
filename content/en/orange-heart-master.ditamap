@@ -15,6 +15,7 @@
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
 		<topicref href="topics/bio.dita" format="dita" type="concept"/>
 		<topicref href="topics/ai-usage.dita" format="dita" type="concept"/>
+		<topicref href="topics/ai-agent-demo.dita" format="dita" type="concept"/>
 	</topicref>
 	<reltable>
 		<title>Source and target: Links that apply only to HTML version of distribution documentation</title>
