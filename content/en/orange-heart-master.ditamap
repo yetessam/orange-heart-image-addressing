@@ -11,8 +11,9 @@
 		<topicref href="topics/deploy.dita" format="dita" type="concept"/>
 		<topicref href="topics/faq.dita" format="dita" type="concept"/>
 		<topicref href="topics/captains-log.dita" format="dita" type="concept"/>
-		<mapref href="topics/ai/ai.ditamap" format="ditamap" type="concept"/>
+		
 	</topicref>
+	<mapref href="topics/ai/ai.ditamap" format="ditamap" type="concept" collection-type="sequence"/>
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
 		<topicref href="topics/bio.dita" format="dita" type="concept"/>
 		
