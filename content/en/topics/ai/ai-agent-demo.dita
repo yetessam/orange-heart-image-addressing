@@ -33,14 +33,12 @@ As there's little standardization across models, I think it's a safer decision t
 </image>
 </fig>
 </p>  
-<p>
-  It needs continued work to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly.  The goal is to have phrases are evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments.
+<p>It needs continued work to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly.  The goal is to have phrases are evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments.
    Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
    As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
 </p>
 <p>The Python code is available in the Files section.  It sets up a Gradio user interface,  calls in the existing model, sets up prompts
-and passes the code agent the tool.  
-<p>See  <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to about create your first AI Agent.
+and passes the code agent the tool.  See  <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to about create your first AI Agent.
 </p>
 
 </conbody>
