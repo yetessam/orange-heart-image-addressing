@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ai">
+  <title>AI</title>
+  <shortdesc>Generative AI and AI Agents</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>AI</indexterm>
+        <indexterm>AI Agents</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody></conbody>
+</concept>
