@@ -11,13 +11,20 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>The following Content Agent is an AI agent written in Python that's hosted on my Hugging Face Spaces.  
-   It has been provided with access to an NLP library that classifies text and then provides a verbose interface through the process of setting up a task, running code, thinking about the next steps and making observations. 
- 
- </p>
+  <p>The following Content Agent is an AI agent written in Python that's hosted on my Hugging Face Spaces.
+   It has been provided with prompts and code examples sothat it knows to use the Intel Polite Guard library to evaluate
+   whether or not text is polite. </p>
+  <p>As with all AI agents, the model has already been trained to avoid harmful interactions and has a base understanding of whether
+or not content is polite without ever calling the additional tooling.</p>
+  <p>What is the purpose of using additional tooling when an Agent is already
+able to roughly perform a task?   More sources creates checks and balances, but even more so, the development team would know exactly what version of a tool, 
+what functions are being called so that there's accountability and transparency. 
+</p>
+<p>The Content Agent was provided with access to the Polite Guard NLP library that classifies text and then was provided prompts to use a structured process of setting up a task, running code, thinking about the next steps and making observations. 
+</p>
 <p>
 <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">
-      <image href="../images/content_classifie.png" width="100%" />
+      <image href="../../images/content_classifie.png" width="100%" />
     </xref>
   </p>
 </conbody>
