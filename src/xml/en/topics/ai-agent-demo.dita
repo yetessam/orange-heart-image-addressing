@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="ai_demo">
+  <title>AI Agent Demo</title>
+   <shortdesc></shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>AI</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <conbody>
+  <p>Here's link to my AI Agent that's being hosted at my Hugging Face Spaces space.  AI Agent.  I've intentionally used verbose mode to surface and make visible the
+  various steps that the code agent takes before preparing the final answer.
+  
+   <object outputclass="iframe-container" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
+      <param name="src" value="https://huggingface.co/spaces/yetessam/ContentClassifier" />
+    </object>
+
+
+  </p>
+</conbody>
+</concept>
