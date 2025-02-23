@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+	<title>AI Content</title>
+  <topichead>
+    <topicmeta><navtitle>AI</navtitle></topicmeta>
+    <topicref href="ai-agent-demo.dita"/>
+    <topicref href="ai-usage.dita"/>
+    <topicref href="prompt-examples.dita"/>
+  </topichead>
+</map>
