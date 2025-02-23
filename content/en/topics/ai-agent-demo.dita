@@ -11,10 +11,12 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>Here's link to my AI Agent.  I've intentionally used verbose mode to surface and make visible the
+  <p>Here's link to my AI Agent that's being hosted at my Hugging Face Spaces space.  AI Agent.  I've intentionally used verbose mode to surface and make visible the
   various steps that the code agent takes before preparing the final answer.
   
-  https://huggingface.co/spaces/yetessam/ContentClassifier
+   <object outputclass="iframe-container" data="https://huggingface.co/spaces/yetessam/ContentClassifier" type="text/html" width="600" height="400">
+      <param name="src" value="https://huggingface.co/spaces/yetessam/ContentClassifier" />
+    </object>
 
 
   </p>
