@@ -25,15 +25,14 @@ It is prompted to use Polite Guard to evaluate whether or not text is polite. </
   
    Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
    As <xref href="prompt-examples.dita#content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
-<p>
+ 
 <fig>
 <title>Content Classifier Agent</title>
-<desc>Live demo is running at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
+<desc>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
 </desc>
  <image href="../../images/content_classifie.png" placement="break">
    <alt>Content Classifier App</alt>
 </image>
-
 </fig>
 </p>
 </conbody>
