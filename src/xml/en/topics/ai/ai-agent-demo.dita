@@ -12,8 +12,18 @@
   </prolog>
   <conbody>
   <p>Content Agent is an AI agent hosted on my Hugging Face Spaces account. 
-For this demo, an AI agent is being called using Python and then provided with the Intel Polite Guard library tool.
- It is programmatically prompted to use Polite Guard to evaluate whether or not text is polite. </p>
+  Content Agent is an app that's created by pulling together a Gradio UI, calling an existing model, setting up prompts
+and tools.    Intel Polite Guard NLP library is being used to evaluate whether input text is polite. </p>
+<p>Gen AI models are already pre-trained to process language and avoid harmful interactions.  
+However, specifying tools and functions for the AI to use provides greater accuracy, accountability, and transparency.    
+Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a more flexible approach since it is simpler to swap out a tool, than to replace a model.
+Especially as time goes on, there may be increasing costs to swapping out AIs.   It seems wiser to select tools than to rely on base model behaviour.</p>
+
+  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
+   Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
+
+ </p>
+<p>
 <fig>
 <title>Content Classifier Agent</title>
 <desc>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>
@@ -22,16 +32,12 @@ For this demo, an AI agent is being called using Python and then provided with t
    <alt>Content Classifier App</alt>
 </image>
 </fig>
-  <p>Gen AI models are  pre-trained to process language and avoid harmful interactions.  
-Specifying tools and functions for the AI to use provides greater accuracy, accountability, and transparency.    
-H</p>
-  <p>The Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
-   Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
+</p>  
+<p>
    There's continued work to be done to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly, ensuring that phrases are evaluated based on the quantitative score provided by Polite Guard rather than its own assessments.
   
    Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
    As <xref href="prompt-examples.dita#content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
- 
 
 </p>
 </conbody>
