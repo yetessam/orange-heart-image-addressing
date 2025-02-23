@@ -99,17 +99,33 @@
      <p class="shortdesc">
      </p>
      <p class="p">
-      Content Agent is an AI agent hosted on my Hugging Face Spaces account.  AI models 
-are generally trained to process language and avoid harmful interactions.   
-However, that training is rarely transparent, unless the AI happens to be open-source.  
+      Content Agent is an AI agent hosted on my Hugging Face Spaces account. 
 For this demo, an AI agent is being called using Python and then provided with the Intel Polite Guard library tool.
-It is prompted to use Polite Guard to evaluate whether or not text is polite.
+ It is programmatically prompted to use Polite Guard to evaluate whether or not text is polite.
+     </p>
+     <figure class="fig fignone">
+      <figcaption>
+       <span class="fig--title-label">
+        Figure 1.
+       </span>
+       Content Classifier Agent.
+       <span class="desc figdesc">
+        Try out the demo at
+        <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
+         https://huggingface.co/spaces/yetessam/ContentClassifier
+        </a>
+       </span>
+      </figcaption>
+      <br/>
+      <img alt="Content Classifier App" class="image" src="../../images/content_classifie.png"/>
+      <br/>
+     </figure>
+     <p class="p">
+      Gen AI models are  pre-trained to process language and avoid harmful interactions.  
+Specifying tools and functions for the AI to use provides greater accuracy, accountability, and transparency.    
+H
      </p>
      <p class="p">
-      Even though Gen AI models can already perform language processing, defining specific tools and functions for the AI to use
- provides greater accuracy, accountability, and transparency.
-     </p>
-     <div class="p">
       The Content Agent was provided with access to the
       <a class="xref is-link" href="https://huggingface.co/Intel/polite-guard" rel="external noopener" target="_blank">
        Polite Guard
@@ -124,24 +140,7 @@ It is prompted to use Polite Guard to evaluate whether or not text is polite.
        prompting
       </a>
       instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
-      <figure class="fig fignone">
-       <figcaption>
-        <span class="fig--title-label">
-         Figure 1.
-        </span>
-        Content Classifier Agent.
-        <span class="desc figdesc">
-         Try out the demo at
-         <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
-          https://huggingface.co/spaces/yetessam/ContentClassifier
-         </a>
-        </span>
-       </figcaption>
-       <br/>
-       <img alt="Content Classifier App" class="image" src="../../images/content_classifie.png"/>
-       <br/>
-      </figure>
-     </div>
+     </p>
     </div>
    </article>
   </main>
