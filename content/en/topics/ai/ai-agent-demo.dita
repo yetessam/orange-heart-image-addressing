@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="ai_demo">
-  <title>Content AI Agent Demo</title>
-   <shortdesc>Content Agent is an AI Agent Python app that uses an model with additional tooling  to determine whether input text is polite.
+  <title>Content Agent</title>
+   <shortdesc>Content Agent can be used to classify input text and determine whether the text is polite. 
    </shortdesc>
   <prolog>
     <metadata>
@@ -12,34 +12,42 @@
     </metadata>
   </prolog>
   <conbody>
-  <p>Content Agent is AI agent hosted on my Hugging Face Spaces account.  Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.
-As part of your chat, submit text to the chat agent and see how it evaluates the content. 
-</p>
-<p>Usually Gen AI models are pre-trained to process language and avoid harmful interactions.  
-However, specifying tools and functions for the AI to use for text classification provides greater accuracy, accountability, and transparency.    
-Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a smarter approach since it is simpler to swap out a tool than to replace the model.
-As there's little standardization across models, I think it's a safer decision to provide models with specific tools and data sets upon which it can make decisions since we may not actually know the actual costs associated with swapping out models in the future. 
+<p>Determining whether or not content is polite is a highly subjective and culturally biased task.   Recently, Intel released an NLP library called Polite Guard that is able to 
+classifiy and score text.   This AI Agent is going to use its own reasoning with the additional help from Polite Guard to determine whether or not
+content is polite.   
 </p>
 
-  <p>Content Classifier Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
-   Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
- </p>
+<p>Generative AI is pre-trained to process language and avoid harmful interactions.   That process isn't particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure the Agent to call a specific toolset and library as input into its decision making. 
+Polite Guard's labelling system and classification scores are then used by the AI to make determinations on whether the content is polite, somewhat polite, neutral or impolite. 
+</p>
+
+<p>
+Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
+Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
+Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent. 
+</p>
+
+<p>
+<p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.
+ Submit text to the chat agent and see how it evaluates the content. 
+</p>
+  
 <p>
 <fig>
 <title>Content Classifier Agent</title>
-<desc></desc>
+<desc>Written in Python and hosted on Hugging Face Spaces. Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>. As part of your chat, submit text to the chat agent and see how it evaluates the content.
+</desc>
  <image href="../../images/content_classifie.png" placement="break">
    <alt>Content Classifier App</alt>
 </image>
 </fig>
 </p>  
-<p>It needs continued work to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly.  The goal is to have phrases are evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments.
-   Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
-   As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref>  instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool. 
-</p>
-<p>The Python code is available in the Files section.  It sets up a Gradio user interface,  calls in the existing model, sets up prompts
-and passes the code agent the tool.  See  <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to about create your first AI Agent.
+
+<p>Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
 </p>
 
-</conbody>
-</concept>
+<p>The Python code is available in the Files section. It sets up a Gradio user interface, calls in the existing model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
+
+<p>One last thought:  tools do and will continue to mislabel problematic content as "polite".    
+Audience, culture and history are the true linguistic determinators of whether content or not is respectful.
+</p> </concept>
