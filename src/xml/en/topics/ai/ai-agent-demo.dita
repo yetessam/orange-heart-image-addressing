@@ -26,19 +26,19 @@ content is polite.
 </fig>
 </p>  
 
-<p>Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure the Agent to call a specific toolset and connect specific libraries to AI Agents.
+<p>Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">agent</xref> to call a specific toolset and connect specific libraries to AI Agents.
 AI agents can be provided with any number of tools to assist in decision making.</p>
 
 <p>
 Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
 </p>
 
-<p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.
- Submit text to the chat agent and see how it evaluates the content. 
+<p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
 </p>
-<p>
-Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
-Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent. 
+<p>Having an AI agent use tool to get specific answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing where specific answers are coming from, whether that is through open API calls or reading answers from a knowledge basee. 
+Today, configuring an  AI code agent with specific tools and component libraries takes very little work at the start of a project.  
+This approach is far more open and transparent and creates a more stable and trustable method to use existing knowledge bases.
+There is so much room for innovation without having to rely on fine tuning the entire LLM.
 </p>
 <p>Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
 When the AI encounters content, it call the function to get back a label and score.  
@@ -55,10 +55,10 @@ Content AI factors in whether Polite Guard has labelled the text as polite, some
 </fig>
 </p>  
 
-<p>Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
+<p>Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
 </p>
 
-<p>The Python code is available in the Files section. It sets up a Gradio user interface, calls in the existing model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
+<p>The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
 <note>Determining whether or not content is polite is a highly subjective and culturally biased task.  
 All tools do and will continue to mislabel problematic content as "polite".   Opinions of marginalized groups, audience, language, culture, power dynamics, and history are a few of the many determinators of whether content is respectful.
 </note>
