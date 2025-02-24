@@ -5,7 +5,11 @@
   </shortdesc>
   <conbody>
     <dl>
-
+ <dlentry>
+    <dt>Monday Feb 24, 2025</dt>
+    <dd>Blog post from ODI <xref source="external" type="html" href="https://theodi.org/news-and-events/blog/if-deepseek-wants-to-be-a-real-disruptor-it-should-go-much-further-on-data-transparency/">If DeepSeek wants to be a real disruptor, it should go much further on data transparency
+We need more transparency, from all model providers.</xref></dd>
+  </dlentry>
   <dlentry>
         <dt>Feb 15, 2025</dt>
         <dd>Fixed a bug in the UI plugin, changed program parameters to use dashes, no underscores
