@@ -133,8 +133,7 @@ content is polite.
      </div>
      <p class="p">
       Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure the Agent to call a specific toolset and connect specific libraries to AI Agents.
-AI agents can be provided with any number of tools to assist in decision making. 
-In this chat app, Polite Guard is added as a tool.
+AI agents can be provided with any number of tools to assist in decision making.
      </p>
      <p class="p">
       Content Agent was provided with access to the
@@ -142,13 +141,31 @@ In this chat app, Polite Guard is added as a tool.
        Polite Guard
       </a>
       NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
-Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
+     </p>
+     <div class="p">
+      <figure class="fig fignone">
+       <figcaption>
+        <span class="fig--title-label">
+         Figure 2.
+        </span>
+        User Interaction.
+        <span class="desc figdesc">
+         The Agent has been configured to be fairly to enable the user visibilty into the decision making process.
+        </span>
+       </figcaption>
+       <br/>
+       <img alt="Content Classifier Agent User interface provides a view into the process AI uses to come to its final answers." class="image" src="../../images/content_agent.png"/>
+       <br/>
+      </figure>
+     </div>
+     <p class="p">
+      Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
 Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent.
      </p>
      <p class="p">
       Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
-Then when the AI encounters content, it should call the function to get back back a label and score.  
-Content AI is then supposed to take into account whether Polite Guard has labelled the as polite, somewhat polite, neutral, or impolite.
+When the AI encounters content, it call the function to get back a label and score.  
+Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite.
      </p>
      <p class="p">
       Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As
