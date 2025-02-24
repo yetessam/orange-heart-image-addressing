@@ -15,15 +15,10 @@
 <p>Intel released an NLP library called Polite Guard that is able to classifiy and score text.   Content Agent is going to use its own reasoning with the additional help from Polite Guard to determine whether or not
 content is polite.   
 </p>
-
-<p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.
- Submit text to the chat agent and see how it evaluates the content. 
-</p>
-
 <p>
 <fig>
 <title>Content Classifier Agent</title>
-<desc>Written in Python and hosted on Hugging Face Spaces. Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>. As part of your chat, submit text to the chat agent and see how it evaluates the content.
+<desc>Hugging Face Spaces tile hosting the Content Agent app 
 </desc>
  <image href="../../images/content_classifie.png" placement="break">
    <alt>Content Classifier App</alt>
@@ -37,6 +32,18 @@ AI agents can be provided with any number of tools to assist in decision making.
 <p>
 Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
 </p>
+
+<p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.
+ Submit text to the chat agent and see how it evaluates the content. 
+</p>
+<p>
+Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
+Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent. 
+</p>
+<p>Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
+When the AI encounters content, it call the function to get back a label and score.  
+Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite. 
+</p>
 <p>
 <fig>
 <title>User Interaction</title>
@@ -47,15 +54,6 @@ Content Agent was provided with access to the <xref href="https://huggingface.co
 </image>
 </fig>
 </p>  
-
-<p>
-Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
-Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent. 
-</p>
-<p>Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
-When the AI encounters content, it call the function to get back a label and score.  
-Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite. 
-</p>
 
 <p>Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
 </p>
