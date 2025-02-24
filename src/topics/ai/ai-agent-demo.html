@@ -103,14 +103,6 @@
       Intel released an NLP library called Polite Guard that is able to classifiy and score text.   Content Agent is going to use its own reasoning with the additional help from Polite Guard to determine whether or not
 content is polite.
      </p>
-     <p class="p">
-      Try out the demo at
-      <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
-       https://huggingface.co/spaces/yetessam/ContentClassifier
-      </a>
-      .
- Submit text to the chat agent and see how it evaluates the content.
-     </p>
      <div class="p">
       <figure class="fig fignone">
        <figcaption>
@@ -119,11 +111,7 @@ content is polite.
         </span>
         Content Classifier Agent.
         <span class="desc figdesc">
-         Written in Python and hosted on Hugging Face Spaces. Try out the demo at
-         <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
-          https://huggingface.co/spaces/yetessam/ContentClassifier
-         </a>
-         . As part of your chat, submit text to the chat agent and see how it evaluates the content.
+         Hugging Face Spaces tile hosting the Content Agent app
         </span>
        </figcaption>
        <br/>
@@ -142,6 +130,23 @@ AI agents can be provided with any number of tools to assist in decision making.
       </a>
       NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
      </p>
+     <p class="p">
+      Try out the demo at
+      <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
+       https://huggingface.co/spaces/yetessam/ContentClassifier
+      </a>
+      .
+ Submit text to the chat agent and see how it evaluates the content.
+     </p>
+     <p class="p">
+      Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
+Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent.
+     </p>
+     <p class="p">
+      Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
+When the AI encounters content, it call the function to get back a label and score.  
+Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite.
+     </p>
      <div class="p">
       <figure class="fig fignone">
        <figcaption>
@@ -158,15 +163,6 @@ AI agents can be provided with any number of tools to assist in decision making.
        <br/>
       </figure>
      </div>
-     <p class="p">
-      Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
-Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent.
-     </p>
-     <p class="p">
-      Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
-When the AI encounters content, it call the function to get back a label and score.  
-Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite.
-     </p>
      <p class="p">
       Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As
       <a class="xref is-link" href="prompt-examples.html#prompts__content-agent">
