@@ -120,7 +120,11 @@ content is polite.
       </figure>
      </div>
      <p class="p">
-      Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure the Agent to call a specific toolset and connect specific libraries to AI Agents.
+      Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an
+      <a class="xref is-link" href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" rel="external noopener" target="_blank">
+       agent
+      </a>
+      to call a specific toolset and connect specific libraries to AI Agents.
 AI agents can be provided with any number of tools to assist in decision making.
      </p>
      <p class="p">
@@ -135,12 +139,13 @@ AI agents can be provided with any number of tools to assist in decision making.
       <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
        https://huggingface.co/spaces/yetessam/ContentClassifier
       </a>
-      .
- Submit text to the chat agent and see how it evaluates the content.
+      .  Submit text to the chat agent and see how it evaluates the content.
      </p>
      <p class="p">
-      Having the AI agent call a tool, rather than determine on its own whether content is acceptable, also means that it is simpler to add new features or upgrade through modifying the tooling.
-Feeding AI Agent with specific tools and component libraries might take a bit more work at the start of a project, but is far more open and transparent.
+      Having an AI agent use tool to get specific answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing where specific answers are coming from, whether that is through open API calls or reading answers from a knowledge basee. 
+Today, configuring an  AI code agent with specific tools and component libraries takes very little work at the start of a project.  
+This approach is far more open and transparent and creates a more stable and trustable method to use existing knowledge bases.
+There is so much room for innovation without having to rely on fine tuning the entire LLM.
      </p>
      <p class="p">
       Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
@@ -164,14 +169,14 @@ Content AI factors in whether Polite Guard has labelled the text as polite, some
       </figure>
      </div>
      <p class="p">
-      Continued work is needed to ensure the agent  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As
+      Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As
       <a class="xref is-link" href="prompt-examples.html#prompts__content-agent">
        prompting
       </a>
       instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
      </p>
      <p class="p">
-      The Python code is available in the Files section. It sets up a Gradio user interface, calls in the existing model, sets up prompts and passes the code agent the tool. See
+      The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See
       <a class="xref is-link" href="https://huggingface.co/agents-course" rel="external noopener" target="_blank">
        Agents Course
       </a>
