@@ -1,0 +1,189 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Content Agent is an AI Agent Python app that uses an model with additional tooling to determine whether input text is polite." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Content AI Agent Demo
+  </title>
+  <link href="../../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class="container" id="ai_demo">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarMenu">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../../topics/captains-log.html">
+        Captain's Log
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/ai/ai-agent-demo.html">
+        Content AI Agent Demo
+       </a>
+       <a class="navbar-item" href="../../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/bio.html">
+        Bio
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-end" id="navbarEnd">
+    </div>
+   </div>
+  </nav>
+  <script src="../../js/navbar.js" type="text/javascript">
+  </script>
+  <main role="main">
+   <article aria-labelledby="ariaid-title1" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Content AI Agent Demo
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Content Agent is an AI Agent Python app that uses an model with additional tooling  to determine whether input text is polite.
+     </p>
+     <p class="p">
+      Content Agent is AI agent hosted on my Hugging Face Spaces account.  Try out the demo at
+      <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
+       https://huggingface.co/spaces/yetessam/ContentClassifier
+      </a>
+      .
+As part of your chat, submit text to the chat agent and see how it evaluates the content.
+     </p>
+     <p class="p">
+      Usually Gen AI models are pre-trained to process language and avoid harmful interactions.  
+However, specifying tools and functions for the AI to use for text classification provides greater accuracy, accountability, and transparency.    
+Having the AI agent call a tool, rather than determine on its own whether content is acceptable, is a smarter approach since it is simpler to swap out a tool than to replace the model.
+As there's little standardization across models, I think it's a safer decision to provide models with specific tools and data sets upon which it can make decisions since we may not actually know the actual costs associated with swapping out models in the future.
+     </p>
+     <p class="p">
+      Content Classifier Agent was provided with access to the
+      <a class="xref is-link" href="https://huggingface.co/Intel/polite-guard" rel="external noopener" target="_blank">
+       Polite Guard
+      </a>
+      NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls.
+   Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
+     </p>
+     <div class="p">
+      <figure class="fig fignone">
+       <figcaption>
+        <span class="fig--title-label">
+         Figure 1.
+        </span>
+        Content Classifier Agent.
+        <span class="desc figdesc">
+        </span>
+       </figcaption>
+       <br/>
+       <img alt="Content Classifier App" class="image" src="../../images/content_classifie.png"/>
+       <br/>
+      </figure>
+     </div>
+     <p class="p">
+      It needs continued work to ensure that the agent will “listen” to the polite_guard tool and adjust its classification accordingly.  The goal is to have phrases are evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments.
+   Even where the AI does take the Polite Guard scoring into account,  the AI agent is still introducing its own perspective and decisions making into the process.
+   As
+      <a class="xref is-link" href="prompt-examples.html#prompts__content-agent">
+       prompting
+      </a>
+      instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
+     </p>
+     <p class="p">
+      The Python code is available in the Files section.  It sets up a Gradio user interface,  calls in the existing model, sets up prompts
+and passes the code agent the tool.  See
+      <a class="xref is-link" href="https://huggingface.co/agents-course" rel="external noopener" target="_blank">
+       Agents Course
+      </a>
+      to learn how to about create your first AI Agent.
+     </p>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks pt-5">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="ai.html" title="Generative AI and AI Agents">
+        AI
+       </a>
+      </div>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+       </div>
+       <div class="level-right">
+       </div>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

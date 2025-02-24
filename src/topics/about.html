@@ -13,7 +13,7 @@
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body class="content" id="about">
+ <body class="container" id="about">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -57,6 +57,22 @@
        </a>
       </div>
      </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/ai/ai-agent-demo.html">
+        Content AI Agent Demo
+       </a>
+       <a class="navbar-item" href="../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
      <div class="active navbar-item has-dropdown is-hoverable">
       <a class="navbar-item" href="../topics/about.html">
        About
@@ -64,9 +80,6 @@
       <div class="navbar-dropdown is-hoverable">
        <a class="navbar-item" href="../topics/bio.html">
         Bio
-       </a>
-       <a class="navbar-item" href="../topics/ai-usage.html">
-        AI Usage
        </a>
       </div>
      </div>
@@ -77,7 +90,7 @@
   </nav>
   <script src="../js/navbar.js" type="text/javascript">
   </script>
-  <main class="container p-5" role="main">
+  <main role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
      About
@@ -91,27 +104,20 @@
       Why stencils?   They're a visual language.  They are reusable.  It's a fast form of art that doesn't require studio space.
      </p>
      <p class="p">
-      The stencil isn't just reused, it is repurposed.    I have been carrying around this paper plate for a long time.  
+      This project repurposes a heart-shaped stencil created as a response to gun violence in San Francisco's Mission District.   I have been carrying around this paper plate for a long time.  
      It's been used to make holiday cards, make art pieces and gifts,  cover up "HATE",  lament gun violence on Capp st, defy bullies, all of this from a cookie cutter stencil. 
      Online the photos in the gallery, it's used to create a heart-shaped perspective. 
      Over time, its edges have softened and developed cracks and that's okay.
      </p>
     </div>
     <nav class="related-links" role="navigation">
-     <ol class="olchildlinks list is-hoverable grid">
+     <ol class="olchildlinks list is-hoverable grid has-4-cols-desktop has-auto-count">
       <li class="link olchildlink list-item">
-       <a class="is-link is-link subtitle is-5" href="bio.html">
+       <a class="is-link subtitle is-5" href="bio.html">
         Bio
        </a>
        <br/>
        Biography
-      </li>
-      <li class="link olchildlink list-item">
-       <a class="is-link is-link subtitle is-5" href="ai-usage.html">
-        AI Usage
-       </a>
-       <br/>
-       Discover how Artificial Intelligence (AI) was used in this project.
       </li>
      </ol>
     </nav>
@@ -119,21 +125,13 @@
   </main>
   <footer role="contentinfo">
    <div class="footer">
-    <div class="content has-text-primary is-centered">
-     <p>
-      © 2025 Orange Heart Project. This work is licensed under the
-      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
-       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-      </a>
-      .
-     </p>
-     <p>
-      IPFS
-      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
-       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
-      </a>
-     </p>
-    </div>
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
    </div>
   </footer>
  </body>

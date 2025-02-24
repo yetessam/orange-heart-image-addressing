@@ -13,7 +13,7 @@
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body class="content" id="cids">
+ <body class="container" id="cids">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -58,15 +58,28 @@
       </div>
      </div>
      <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/ai/ai-agent-demo.html">
+        Content AI Agent Demo
+       </a>
+       <a class="navbar-item" href="../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
       <a class="navbar-item" href="../topics/about.html">
        About
       </a>
       <div class="navbar-dropdown is-hoverable">
        <a class="navbar-item" href="../topics/bio.html">
         Bio
-       </a>
-       <a class="navbar-item" href="../topics/ai-usage.html">
-        AI Usage
        </a>
       </div>
      </div>
@@ -77,7 +90,7 @@
   </nav>
   <script src="../js/navbar.js" type="text/javascript">
   </script>
-  <main class="container p-5" role="main">
+  <main role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
      Content Addressing
@@ -91,33 +104,37 @@
      </p>
      <p class="p">
       You can take any type of digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
- series of numbers and letters for this exact image.
+ series of numbers and letters for this exact image. 
+The hash is then used to construct a multi-hash starts with a self-describing metadata followed by the cryptographic hash of the data.
      </p>
      <p class="p">
-      For example, if we take this website's logo  and push it thorugh a hash, it's CID will be xxx.   If you even make a minor change to the file, something that isn't perceptible to the eye. 
+      For example, if we take this website's logo  and push it thorugh a hash, the result will be xxx. 
+
+For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself. 
+
+If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change. 
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
 
-This CID in the decentralized web can be used as the asset's location address.
+The constructed CID in the decentralized web can be used as the asset's location address.  
 
 I can potentially share a link to this image and its quite possible that there are multiple copies of the same image on the dweb.  
 
 All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
      </p>
      <p class="p">
-      Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me.  
-This dovetails nicely with edge AI which is becoming increasing popular and also is based on retrieving and storing data closer to the user.  
-Content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.
+      Additionally, as this is a globally unique ID, if I request this image, it can be retrieved from multiple locations.  Ideally, the closest place to me. 
+   Dweb dovetails nicely with edge AI and where data is stored and retrieved closer to the user.
+     </p>
+     <p class="p">
+      Finally, content's  authenticity can be easily verified by running the image through a hash and verifying that it is indeed the same image.
      </p>
      <p class="p">
       CIDs are text-based, unique properties of the content object.
      </p>
      <p class="p">
-      If you've published a website and have a different version of the content, its CID will change.
-  How we handle link management and other notions such
-     </p>
-     <p class="p">
-      How is the use case handled for the "most recent" version of an asset/resource/website?
+      The use case for the "most recent" version of an asset/resource/website is handled by using static namespace identifiers whose pointers can point to different CIDS over time. 
+  Which means that Dweb can support the same functionality as Web 1.0.
      </p>
      <section class="section">
       <h2 class="title sectiontitle">
@@ -156,26 +173,46 @@ Content's  authenticity can be easily verified by running the image through a ha
        </div>
       </div>
      </div>
+     <div class="linklist relinfo">
+      <strong>
+       Related information
+      </strong>
+      <br/>
+      <ul class="linklist list is-hoverable">
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://ipfs.tech/" rel="external noopener" target="_blank">
+         IPFS
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://cid.ipfs.tech/" rel="external noopener" target="_blank">
+         IPFS CID Inspector
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://docs.ipfs.tech/install/" rel="external noopener" target="_blank">
+         IPFS Docs
+        </a>
+       </li>
+       <li class="linklist list-item">
+        <a class="link is-link" href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" rel="external noopener" target="_blank">
+         A Practical Explainer for IPFS Gateways - Part 2
+        </a>
+       </li>
+      </ul>
+     </div>
     </nav>
    </article>
   </main>
   <footer role="contentinfo">
    <div class="footer">
-    <div class="content has-text-primary is-centered">
-     <p>
-      © 2025 Orange Heart Project. This work is licensed under the
-      <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
-       CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-      </a>
-      .
-     </p>
-     <p>
-      IPFS
-      <a class="is-link" href="https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/" target="_blank">
-       https://ipfs.io/ipfs/QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145/
-      </a>
-     </p>
-    </div>
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
    </div>
   </footer>
  </body>
