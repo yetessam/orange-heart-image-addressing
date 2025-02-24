@@ -51,5 +51,7 @@ Content AI is then supposed to take into account whether Polite Guard has labell
 
 <p>The Python code is available in the Files section. It sets up a Gradio user interface, calls in the existing model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
 <note>Determining whether or not content is polite is a highly subjective and culturally biased task.  
-All tools do and will continue to mislabel problematic content as "polite".    Audience, culture and history are the critical linguistic determinators of whether content or not is respectful, as are the opinions of marginalized groups.
-</note> </concept>
+All tools do and will continue to mislabel problematic content as "polite".   Opinions of marginalized groups, audience, language, culture, power dynamics, and history are a few of the many determinators of whether content is respectful.
+</note>
+</conbody>
+</concept>
