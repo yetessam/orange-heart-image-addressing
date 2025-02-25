@@ -25,8 +25,8 @@
 </fig>
 </p>  
 
-<p>Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">agent</xref> to call a specific toolset and connect specific libraries to AI Agents.
-AI agents can be provided with any number of tools to assist in decision making.</p>
+<p>Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">agent</xref> with the specific tool that you want it to use. 
+AI agents can be presented with specific scenarios as well as the exact tool or library that it should use to assist its decision making.</p>
 
 <p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
 </p>
