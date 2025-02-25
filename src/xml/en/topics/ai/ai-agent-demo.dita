@@ -12,11 +12,17 @@
     </metadata>
   </prolog>
   <conbody>
-<p>Having an AI agent use tool to get specific answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing where specific answers are coming from, whether that is through open API calls or reading answers from a knowledge basee. 
-Today, configuring an  AI code agent with specific tools and component libraries takes very little work at the start of a project.  
-This approach is far more open and transparent and creates a more stable and trustable method to use existing tooling.
+<p>Generative AI is pre-trained and can already  process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">agent</xref> with the specific tool that you want it to use. 
+AI agents can be presented with specific scenarios as well as the exact tool or library that it should use to assist its decision making.</p>
+
+<p>Having an AI agent use the tool you specify to get answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing that the AI is using a trusted API, data store or knowledge base to retrieve data. 
+Today, configuring an  AI code agent to use specific tools and component libraries takes very little work.
+
+This approach is far more open and transparent approach to AI, especially if you already have access to a library of stable and trusted digital tools. 
 </p>
-<p>Intel released an NLP library called Polite Guard that classifies and scores text.   Content Agent uses its own reasoning with Polite Guard's classifications to determine whether content is polite.   
+
+<p>My first AI tool is called Content Agent.  It is hosted on Hugging Face and uses the smolagents Python library to create a code agent that is passed the Intel Polite Guard text classification tool. 
+Intel recently released an Open-Source project called Polite Guard that classifies and scores text.   Content Agent uses its own reasoning coupled with Polite Guard's classifications to determine whether content is polite.   
 </p>
 <p>
 <fig>
@@ -29,8 +35,6 @@ This approach is far more open and transparent and creates a more stable and tru
 </fig>
 </p>  
 
-<p>Generative AI is pre-trained to process language and avoid harmful interactions.   The content on which the AI is trained is not particularly transparent.  One way to provide greater accuracy, accountability, and transparency is to configure an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">agent</xref> with the specific tool that you want it to use. 
-AI agents can be presented with specific scenarios as well as the exact tool or library that it should use to assist its decision making.</p>
 
 <p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
 </p>
