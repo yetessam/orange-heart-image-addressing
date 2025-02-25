@@ -127,13 +127,6 @@
 AI agents can be provided with any number of tools to assist in decision making.
      </p>
      <p class="p">
-      Content Agent was provided with access to the
-      <a class="xref is-link" href="https://huggingface.co/Intel/polite-guard" rel="external noopener" target="_blank">
-       Polite Guard
-      </a>
-      NLP library that classifies text and then was provided with sample functions to teach it how to make the function calls. Additionally, the agent has been instructed to use a structured process of setting up a task, thinking about the problem, running code using this tool, and making observations before providing an answer to the user.
-     </p>
-     <p class="p">
       Try out the demo at
       <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
        https://huggingface.co/spaces/yetessam/ContentClassifier
@@ -147,9 +140,18 @@ This approach is far more open and transparent and creates a more stable and tru
 There is so much room for innovation without having to rely on fine tuning the entire LLM.
      </p>
      <p class="p">
-      Using saved prompts, the AI is provided with examples on when it should make direct function calls to Polite Guard.   
-When the AI encounters content, it call the function to get back a label and score.  
-Content AI factors in whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite.
+      Content Agent was provided with access to the
+      <a class="xref is-link" href="https://huggingface.co/Intel/polite-guard" rel="external noopener" target="_blank">
+       Polite Guard
+      </a>
+      NLP library and sample functions to teach it how to make the function calls.
+     </p>
+     <p class="p">
+      Using saved prompts, the AI is told to structured process.  It must set up tasks, think about problems, run tools, and make observations before providing an answer.
+In addition to being told what processes to use, the agent is provided with examples on when it should make direct function calls to Polite Guard.   
+As a result, when the AI encounters content, it call the text classification function to get back a label and score.  
+Content Agent can see whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite. 
+The agent is then supposed to take into account this information before getting back to the user.
      </p>
      <div class="p">
       <figure class="fig fignone">
