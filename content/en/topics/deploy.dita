@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="deploy">
   <title>Deployment</title>
-  <shortdesc>Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on  decentralized storage.</shortdesc>
+  <shortdesc>Deploying to the dweb implies that content is be published, pinned, and hosted on decentralized storage.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -16,7 +16,7 @@
 
   <conbody>
     <p>Most enterprise content publishing processes remain the same when moving to the dweb.</p>
-    <p>The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.</p>
+    <p>Decentralized storage can use IFPS and needs to ensure that content is pinned to ensure its availability.</p>
     <p>Fleek provides a unique IPFS gateway which allows users to access the content through URLs rather than content identifiers. 
     As a result, user access the site through <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. 
     At this point, you can apply your domain name.</p>  
