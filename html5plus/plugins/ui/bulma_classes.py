@@ -32,5 +32,7 @@ bulma_classes = {
     '.relinfo': '',
     'gallery' : 'columns is-multiline is-variable is-8', 
     'sectiontitle' : 'is-size-4 has-text-weight-semibold',
+    
+    'simpletable' : 'table'
 }
 
