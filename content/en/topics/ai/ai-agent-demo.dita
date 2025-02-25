@@ -37,7 +37,7 @@ There is so much room for innovation without having to rely on fine tuning the e
 </p>
 <p>Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library and sample functions to teach it how to make the function calls.  
 </p>
-<p>Using saved prompts, the AI is told to structured process.  It must set up tasks, think about problems, run tools, and make observations before providing an answer.
+<p>Using saved prompts, the AI is told to use a Thought-Act-Observe cycle.  It must set up tasks, think about problems, run tools, and make observations before providing an answer.
 In addition to being told what processes to use, the agent is provided with examples on when it should make direct function calls to Polite Guard.   
 As a result, when the AI encounters content, it call the text classification function to get back a label and score.  
 Content Agent can see whether Polite Guard has labelled the text as polite, somewhat polite, neutral, or impolite. 
