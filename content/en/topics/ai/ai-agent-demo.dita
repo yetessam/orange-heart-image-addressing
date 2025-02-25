@@ -59,8 +59,8 @@ The agent is then supposed to take into account this information before getting 
 </p>
 
 <p>The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
-<note>Determining whether or not content is polite is a highly subjective and culturally biased task.  
-All tools do and will continue to mislabel problematic content as "polite".   Opinions of marginalized groups, audience, language, culture, power dynamics, and history are a few of the many determinators of whether content is respectful.
+<note>Determining whether or not content is polite or respectful to specific audiences is highly subjective and culturally biased.   
+A second acknowledgement is that technology has a tendency to codify and entrench existing biases under the guise of neutrality.  
 </note>
 </conbody>
 </concept>
