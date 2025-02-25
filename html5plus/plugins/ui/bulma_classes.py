@@ -1,6 +1,6 @@
 bulma_classes = {
     
-    'body': 'container',
+    'body': 'container p-4',
     
     'h1': 'title',
     'h2': 'title',
