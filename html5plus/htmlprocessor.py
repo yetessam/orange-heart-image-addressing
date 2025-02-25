@@ -2,7 +2,6 @@
 from bs4 import BeautifulSoup
 from .common.fileoperations import read_html_file, write_html_file
 
-
 from .update_html import (
     create_picture_tags, create_responsive, update_head
 )

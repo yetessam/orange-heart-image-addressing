@@ -34,15 +34,16 @@ def apply_algolia_scripts(soup, HTMLP):
     ]
     # Local scripts 
    
-    js_path = os.path.join(HTMLP.root_relative, 'js', 'algolia.js') 
-    scripts.append({"src": f"{js_path}"})
     
     js_path = os.path.join(HTMLP.root_relative, 'js', 'search.js') 
     scripts.append(  {"src": f"{js_path}"})
 
+    js_path = os.path.join(HTMLP.root_relative, 'js', 'algolia.js') 
+    scripts.append({"src": f"{js_path}"})
+    
     comments = [
-        " Algolia Search library ", 
         " InstantSearch.js Library ", 
+        " Algolia Search library ", 
         " Algolia and InstantSearch setup ",
         " Dropdown functionality "]
       
@@ -54,18 +55,16 @@ def apply_algolia_scripts(soup, HTMLP):
     script_html = """
     <!-- Initialize components once the DOM is ready -->
     <script>
-    
- 
-    
-    //document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         // Initialize dropdown from search.js
-       // initializeDropdown();
+        initializeDropdown();
 
         // Start Algolia search from algolia.js
-        //startSearch();  // This starts the search instance
-  //  });
+    
+        startSearch();  // This starts the search instance
+    });
     </script> 
-
+    
     """
 
     script_soup = BeautifulSoup(script_html, 'html.parser')

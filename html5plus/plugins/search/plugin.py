@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from .search import insert_search_hits
 from .algolia_operations import apply_algolia_verification_metatag, apply_algolia_scripts
 
-
 import logging
 import sys
 
@@ -62,7 +61,7 @@ class SearchPlugin(Plugin):
         soup = self.insert_search_hits(soup, self.search_anchor) 
         
         # Instant Search 
-        # self.add_cdn_stylesheet("https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/reset-min.css")
+        self.add_cdn_stylesheet("https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/reset-min.css")
            
         return str(soup)
     

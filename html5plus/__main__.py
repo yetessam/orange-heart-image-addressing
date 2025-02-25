@@ -36,6 +36,7 @@ def main():
             "ui": ("ui", "UIPlugin"),
             "navigation": ("navigation", "NavPlugin"),
             "familylinks": ("familylinks", "FamilyLinksPlugin"),
+            "search": ("search", "SearchPlugin")
         }
 
         # Import and initialize plugins
