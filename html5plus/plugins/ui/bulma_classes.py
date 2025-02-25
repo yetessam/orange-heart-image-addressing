@@ -31,6 +31,7 @@ bulma_classes = {
     'image' : 'is-rounded is-bordered',
     '.relinfo': '',
     'gallery' : 'columns is-multiline is-variable is-8', 
+    'section': 'p-0',
     'sectiontitle' : 'is-size-4 has-text-weight-semibold',
     
     'simpletable' : 'table'
