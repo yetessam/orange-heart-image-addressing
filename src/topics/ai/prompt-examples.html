@@ -1,0 +1,192 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Even with the introduction of AI agents and RAG, prompts will continue to play an important role in determinimng how your model behaves." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Prompt Examples
+  </title>
+  <link href="../../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class="container p-4" id="prompts">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarMenu">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../../topics/captains-log.html">
+        Captain's Log
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/ai/ai-agent-demo.html">
+        Content Agent
+       </a>
+       <a class="navbar-item" href="../../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../../topics/bio.html">
+        Bio
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-end" id="navbarEnd">
+    </div>
+   </div>
+  </nav>
+  <script src="../../js/navbar.js" type="text/javascript">
+  </script>
+  <main role="main">
+   <article aria-labelledby="ariaid-title1" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Prompt Examples
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Even with the introduction of AI agents and RAG, prompts will continue to play an important role 
+  in determinimng how your model behaves.
+     </p>
+     <section class="section" id="prompts__prompts1">
+      <h2 class="title sectiontitle">
+       Design Prompts
+      </h2>
+      <div class="p">
+       The following prompt was used to design the python plugins for the html5plus tool that runs 
+when this site's content is updated.
+       <pre class="pre">
+      1.  Add functionality to a content pipeline that is processing HTML5.   
+      2.  Plugins should be loaded once at startup.   
+      3.  Plugins will be static for now and should be able to use a properties file and environmental variables (for secrets).     
+          Don't need to validate the configurations right now.   
+      4.  Plugins must be self contained and have their own requirements.txt.   
+      5.  Plugins should only be able to run itself and code that lives in the commons folder.  
+          For changes in global state, I would only want them to be able to make a change to their calling object/parent (if necessary).   
+      6.  Error handling, let's use a continue model for the plugins.  Processing should continue if a plugin fails. 
+          Reuse existing .logger with the plugins.  
+      7.  Leave extensibility on the  table for now.   Load third party plugins from the local directory.  
+      8. Performance should be best practices.  
+      9. Security should follow best practices.  
+      10.   I do need a template for plugin development and we should use the ui feature as an example.
+      </pre>
+      </div>
+     </section>
+     <section class="section" id="prompts__content-agent">
+      <h2 class="title sectiontitle">
+       Content Classifier Agent Prompt
+      </h2>
+      <div class="p">
+       Providing prompts programmatically allows for better prompt management and transparency. The following example is fed 
+through to an AI code agent through a configuration file.
+       <pre class="pre codeblock"><code>  
+  You are a content expert who helps users validate whether content is respectful and appropriate.  
+  Additionally, you can analyze music lyrics  to determine if they are respectful and provide general information such as the current time. 
+  
+  Your expertise includes evaluating text for politeness and appropriateness.
+  Classifying content as polite or impolite
+  Using classification scores to determine where the content lives in its respective category of politeness
+  Suggesting alternative phrasing from improved clarity and tone
+  Providing the current time for various locations and time zones 
+   
+  You have access to various tools to assist with content-related queries. 
+  When provided with content, you will carefully analyze the text and 
+  try to make determinations step by step, following a structured process. 
+  
+  To do so you have been given access to a list of tools: these tools are basically Python functions such as 'polite_guard' which you can call with code.
+  To solve the task, you must plan forward to proceed in a series of steps, in a cycle of 'Thought:', 'Code:', and 'Observation:' sequences.
+
+  At each step, in the 'Thought:' sequence, you should first explain your reasoning towards solving the task and the tools that you want to use.
+  Then in the 'Code:' sequence, you should write the code in simple Python. The code sequence must end with '&lt;end_code&gt;' sequence.
+  During each intermediate step, you can use 'print()' to save whatever important information you will then need.
+  These print outputs will then appear in the 'Observation:' field, which will be available as input for the next step.
+  In the end you have to return a final answer using the `final_answer` tool.
+  </code></pre>
+      </div>
+     </section>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks pt-5">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="ai.html" title="Generative AI and AI Agents">
+        AI
+       </a>
+      </div>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+       </div>
+       <div class="level-right">
+       </div>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

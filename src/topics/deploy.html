@@ -1,0 +1,186 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on decentralized storage." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Deployment
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class="container p-4" id="deploy">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarMenu">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/ai/ai-agent-demo.html">
+        Content Agent
+       </a>
+       <a class="navbar-item" href="../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/bio.html">
+        Bio
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-end" id="navbarEnd">
+    </div>
+   </div>
+  </nav>
+  <script src="../js/navbar.js" type="text/javascript">
+  </script>
+  <main role="main">
+   <article aria-labelledby="ariaid-title1" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Deployment
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on  decentralized storage.
+     </p>
+     <p class="p">
+      Most enterprise content publishing processes remain the same when moving to the dweb.
+     </p>
+     <p class="p">
+      The main charactertisic is the use of decentralized storage using IFPS and ensuring content is pinned to ensure its availability.
+     </p>
+     <p class="p">
+      Fleek provides a unique IPFS gateway which allows users to access the content through URLs rather than content identifiers. 
+    As a result, user access the site through
+      <code class="ph codeph">
+       https://delicate-glitter-6121.on-fleek.app/
+      </code>
+      . 
+    At this point, you can apply your domain name.
+     </p>
+     <figure class="fig fignone">
+      <figcaption>
+       <span class="fig--title-label">
+        Figure 1.
+       </span>
+       Fleek deployment status.
+       <span class="desc figdesc">
+        Successful step-by-step deployment process cloned the Git repository, built the site, created a check run, published the content to IPFS, built logs, and finalized the release.
+       </span>
+      </figcaption>
+      <br/>
+      <img alt="Fleek deployment status showing deployment process from cloning the git repo to publishing on IPFS to release" class="image" src="../images/fleek_deploy.png"/>
+      <br/>
+     </figure>
+     <p class="p">
+      When changes were merged into my Github prod branch, Fleek deployment started.
+     </p>
+     <p class="p">
+      Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it.
+     </p>
+     <p class="p">
+      Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.  IPFS has its own solutions including a CLI that can be used to deploy to dweb.  Generative AI, Open AI in particular, is adept at identifying emergent dweb deployment options.
+One final thing to note is that we could be publishing dapps (decentralized web apps), regular apps or other digital assets using the same stack.
+     </p>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks pt-5">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="discover.html" title="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb.">
+        Discover Dweb
+       </a>
+      </div>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+        <a class="link is-link" href="content-addressing.html" title="Content addressing identifiers provide provenance for digital assets. Leveraging cryptographic hashing, assets are identified uniquely by their contents.">
+         <span class="mr-2 translate-y-px">
+          ←
+         </span>
+         Content Addressing
+        </a>
+       </div>
+       <div class="level-right">
+        <a class="link is-link" href="faq.html" title="Short questions and answers on content creation and publishing with the decentralized web.">
+         Dwebsite FAQ
+         <span class="ml-2 translate-y-px">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

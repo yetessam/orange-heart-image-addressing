@@ -1,0 +1,252 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="(C) Copyright 2025" name="copyright"/>
+  <meta content="DITA-OT" name="generator"/>
+  <meta content="Short questions and answers on content creation and publishing with the decentralized web." name="description"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dwebsite FAQ
+  </title>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body class="container p-4" id="faq">
+  <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
+   <div class="navbar-brand">
+    <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+     <span aria-hidden="true">
+     </span>
+    </a>
+   </div>
+   <div class="navbar-menu" id="navbarMenu">
+    <div class="navbar-start">
+     <a class="navbar-item" href="../index.html">
+      Home
+     </a>
+     <a class="navbar-item" href="../topics/orange-heart.html">
+      Project
+     </a>
+     <a class="navbar-item" href="../topics/gallery.html">
+      Gallery
+     </a>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/discover.html">
+       Discover Dweb
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/content-addressing.html">
+        Content Addressing
+       </a>
+       <a class="navbar-item" href="../topics/deploy.html">
+        Deployment
+       </a>
+       <a class="navbar-item" href="../topics/faq.html">
+        Dwebsite FAQ
+       </a>
+       <a class="navbar-item" href="../topics/captains-log.html">
+        Captain's Log
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/ai/ai.html">
+       AI
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/ai/ai-agent-demo.html">
+        Content Agent
+       </a>
+       <a class="navbar-item" href="../topics/ai/ai-usage.html">
+        AI Usage
+       </a>
+       <a class="navbar-item" href="../topics/ai/prompt-examples.html">
+        Prompt Examples
+       </a>
+      </div>
+     </div>
+     <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-item" href="../topics/about.html">
+       About
+      </a>
+      <div class="navbar-dropdown is-hoverable">
+       <a class="navbar-item" href="../topics/bio.html">
+        Bio
+       </a>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-end" id="navbarEnd">
+    </div>
+   </div>
+  </nav>
+  <script src="../js/navbar.js" type="text/javascript">
+  </script>
+  <main role="main">
+   <article aria-labelledby="ariaid-title1" role="article">
+    <h1 class="title topictitle1" id="ariaid-title1">
+     Dwebsite FAQ
+    </h1>
+    <div class="body conbody container">
+     <p class="shortdesc">
+      Short questions and answers on content creation and publishing with the decentralized web.
+     </p>
+     <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       How was this dwebsite made?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Started with a design doc and a log to capture decisions and briefly document the general process.
+       </p>
+       <p class="p">
+        Source content was intentionally written in OASIS Open DITA XML.  
+             Dweb YVR Chat is a React app running on its own node. 
+           markdown/pdf/html/video.
+       </p>
+       <p class="p">
+        It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
+             
+           Current version is DITA Open Toolkit DITA-OT 4.2.4 which is being used through Github Actions.
+       </p>
+       <p class="p">
+        Python preps the HTML5 so it plays nicely with Bulma CSS.
+       </p>
+       <p class="p">
+        Bulma CSS on a CDN provides responsive layout and UX
+       </p>
+       <p class="p">
+        Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Do I need to use Content Identifiers in my XML/Markdown/HTML?
+      </dt>
+      <dd class="dd">
+       Nope.  Don't even try.  There's zero benefit AFAIC.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       What processes need to change if you want to publish content to IFPS?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+         Having Fleek handle the entire IPFS layer is a happy path.
+       </p>
+       <p class="p">
+        With legacy systems, there would need to be larger business incentives or regulations in order to get past the inertia that sets in once you're using enterprise solutions.
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How much do I need to think about security or encryption?  Or is it auto-magical?
+      </dt>
+      <dd class="dd">
+       Auto-magical HTTPS via Fleek.  DDOS protection via edge/node replication https://dev.to/fleek/release-update-new-dns-configuration-with-cdn-perks-ddos-protection-3lmm
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I deploy a dweb site?
+      </dt>
+      <dd class="dd">
+       Select a platform provider or you can publish directly onto IPFS yourself.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       How do I make the references to graphics, should I be using CIDs rather than URLs?
+      </dt>
+      <dd class="dd">
+       No, stick to meaningful and human-readable names.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Search??
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Search is a rabbit hole.
+       </p>
+       <p class="p">
+        My search input uses InstantSearch.js for the GUI and using an Algolia cloud index.
+       </p>
+       <p class="p">
+        Research notes:  Elastic and Algolia indexed and searched the dweb site as expected, also considered Meili
+                https://github.com/meilisearch/integration-guides?tab=readme-ov-file
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Doesn't website content change all the time?  How does that work if content is being stored on blockchain?
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        At the decentralized storage level, the content is immutable. The content is stored on blockchain where the cryptographic hash is used to address the content.
+       </p>
+       <p class="p">
+        However, static IPNS namespace identifiers are mutable pointers to stored content.  As content is updated, those pointers can update themselvesl
+       </p>
+       <p class="p">
+       </p>
+       <p class="p">
+        Standard URIs will continue to be the way that users interact with the web, and URIs resolve to the latest content via IPNS.
+       </p>
+       <p class="p">
+        One final clarification is that blockchain is mostly going to be used to store pointers or metadata about content, rather than the actual content. 
+Ledgers aren't designed to be storing  large amount of enterprise website data, although it is technically possible.   The more 
+common use case for blockchain is storing metadata and pointers, rather than the actual content. For more information, see
+        <a class="xref is-link" href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" rel="external noopener" target="_blank">
+         Mutability in IPFS
+        </a>
+        .
+       </p>
+      </dd>
+     </dl>
+    </div>
+    <nav class="related-links" role="navigation">
+     <div class="familylinks pt-5">
+      <div class="parentlink">
+       <strong>
+        Parent topic:
+       </strong>
+       <a class="link is-link" href="discover.html" title="Welcome to the decentralized web. Dweb technology experimentation resulted in this website. Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb.">
+        Discover Dweb
+       </a>
+      </div>
+      <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
+       <div class="level-left">
+        <a class="link is-link" href="deploy.html" title="Deploying to the dweb for the enterprise requires content to be published, pinned, and hosted on decentralized storage.">
+         <span class="mr-2 translate-y-px">
+          ←
+         </span>
+         Deployment
+        </a>
+       </div>
+       <div class="level-right">
+        <a class="link is-link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
+         Captain's Log
+         <span class="ml-2 translate-y-px">
+          →
+         </span>
+        </a>
+       </div>
+      </div>
+     </div>
+    </nav>
+   </article>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer">
+    <p>
+     © 2025 Orange Heart Project. This work is licensed under the
+     <a class="is-link" href="https://creativecommons.org/publicdomain/zero/1.0/">
+      CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+     </a>
+     .
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
