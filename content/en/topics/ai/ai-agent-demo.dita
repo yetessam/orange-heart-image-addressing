@@ -12,6 +12,10 @@
     </metadata>
   </prolog>
   <conbody>
+<p>Having an AI agent use tool to get specific answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing where specific answers are coming from, whether that is through open API calls or reading answers from a knowledge basee. 
+Today, configuring an  AI code agent with specific tools and component libraries takes very little work at the start of a project.  
+This approach is far more open and transparent and creates a more stable and trustable method to use existing tooling.
+</p>
 <p>Intel released an NLP library called Polite Guard that classifies and scores text.   Content Agent uses its own reasoning with Polite Guard's classifications to determine whether content is polite.   
 </p>
 <p>
@@ -30,11 +34,7 @@ AI agents can be presented with specific scenarios as well as the exact tool or 
 
 <p>Try out the demo at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
 </p>
-<p>Having an AI agent use tool to get specific answers through APIs enables you to to add new features in an efficient way.  You can be secure in knowing where specific answers are coming from, whether that is through open API calls or reading answers from a knowledge basee. 
-Today, configuring an  AI code agent with specific tools and component libraries takes very little work at the start of a project.  
-This approach is far more open and transparent and creates a more stable and trustable method to use existing knowledge bases.
-There is so much room for innovation without having to rely on fine tuning the entire LLM.
-</p>
+
 <p>Content Agent was provided with access to the <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref> NLP library and sample functions to teach it how to make the function calls.  
 </p>
 <p>Using saved prompts, the AI is told to use a Thought-Act-Observe cycle.  It must set up tasks, think about problems, run tools, and make observations before providing an answer.
