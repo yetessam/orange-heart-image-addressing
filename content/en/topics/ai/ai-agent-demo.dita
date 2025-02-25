@@ -12,8 +12,7 @@
     </metadata>
   </prolog>
   <conbody>
-<p>Intel released an NLP library called Polite Guard that is able to classifiy and score text.   Content Agent is going to use its own reasoning with the additional help from Polite Guard to determine whether or not
-content is polite.   
+<p>Intel released an NLP library called Polite Guard that classifies and scores text.   Content Agent uses its own reasoning with Polite Guard's classifications to determine whether content is polite.   
 </p>
 <p>
 <fig>
