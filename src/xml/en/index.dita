@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="home-landing-page" outputclass="landing-page hero">
+<concept id="home" outputclass="landing-page hero">
   <title>Welcome to the Orange Heart Project</title>
   <titlealts><navtitle>Home</navtitle></titlealts>
      <conbody>
         <div outputclass="columns is-vcentered">
-         
           <div outputclass="column is-three-fifths">
              <fig outputclass="image is-4by3">
                   <figgroup outputclass="picture">
@@ -17,8 +16,7 @@
                   </figgroup>  
                </fig>
             </div>
-            <div outputclass="column">
-            
+            <div outputclass="column"> 
           </div>
       </div>
   </conbody>
