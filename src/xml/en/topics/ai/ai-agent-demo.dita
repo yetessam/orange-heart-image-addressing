@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="ai_demo">
   <title>Content Agent</title>
-   <shortdesc>Content Agent can be used to classify input text and determine whether the text is polite. 
+   <shortdesc>Content Agent is a virtual editing and content moderation agent. 
    </shortdesc>
   <prolog>
     <metadata>
