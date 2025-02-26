@@ -5,7 +5,6 @@
   <titlealts><navtitle>Home</navtitle></titlealts>
      <conbody>
         <div outputclass="columns is-vcentered">
-         
           <div outputclass="column is-three-fifths">
              <fig outputclass="image is-4by3">
                   <figgroup outputclass="picture">
@@ -17,8 +16,7 @@
                   </figgroup>  
                </fig>
             </div>
-            <div outputclass="column">
-            
+            <div outputclass="column"> 
           </div>
       </div>
   </conbody>
