@@ -1,17 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="wft">
-  <title>yo</title>
-  <shortdesc>yo
-  </shortdesc>
-  <prolog>
-    <metadata>
-      <keywords>
-        <indexterm>Yas</indexterm>
-        <indexterm>Etessam</indexterm>
-    </keywords>
-</metadata>
-  </prolog>
-  <conbody>
-      <p>hello world </p>
-    </conbody>
-  </concept>
+<concept id="home-landing-page" outputclass="landing-page hero">
+  <title>Welcome to the Orange Heart Project</title>
+  <titlealts><navtitle>Home</navtitle></titlealts>
+     <conbody>
+        <div outputclass="columns is-vcentered">
+         
+          <div outputclass="column is-three-fifths">
+             <fig outputclass="image is-4by3">
+                  <figgroup outputclass="picture">
+                     <image outputclass="desktop" href="images/gallery/daisy-desktop.png" otherprops="QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145"/>
+                     <image outputclass="tablet" href="images/gallery/daisy-tablet.png">
+                        <alt>White daisies in a field peeking through an orange heart opening.</alt>
+                     </image>
+                     <image outputclass="mobile" href="images/gallery/daisy-mobile.png"/>
+                  </figgroup>  
+               </fig>
+            </div>
+            <div outputclass="column">
+            
+          </div>
+      </div>
+  </conbody>
+</concept>
