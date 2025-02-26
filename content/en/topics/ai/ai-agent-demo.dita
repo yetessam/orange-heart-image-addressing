@@ -15,14 +15,10 @@
 
 <p>Generative AI is pre-trained to process language and avoid harmful interactions.   In most cases, making determinations about language is handled entirely by AI. 
 </p>
-What if you wanted to make sure that you had better accuracy, accountability, and transparency about whether content is professional and respectful?  
-Perhaps, you'd even want your AI to be aware of your style guide. 
-
-</p>
-<p>One solution is to use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> on top of your LLM.  You can be secure in knowing that the AI is using trusted code modules, APIs, data stores or knowledge bases to retrieve information. 
-</p>
-
-<p>As Intel recently released <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref>
+<p>What if you wanted to make sure that you had better accuracy, more accountability, and transparency about whether content is professional and respectful? 
+Honestly, if I could, I would hire an editor.  They are worth their weight in gold. 
+Certainly an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref>  could be a helpful assistant in evaluating content.
+<p>Intel recently released <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref>
  which is an open-source tool that classifies and scores English text.
 Given input text, Polite Guard is able to label the text as polite, somewhat polite, neutral, or impolite. 
 <p>Using the smolagents library, I created an AI agent called Content Agent that's hosted on Hugging Face and is able to augement its normal
@@ -41,10 +37,9 @@ capabilities with politeness scores and labels from Polite Guard.</p>
 <p>You can feed in content and see how it is rated at at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
 </p>
 
-
-<p>Content Agent is prompted to operate using Thought-Act-Observe cycles.  It must set up tasks, think about problems, run tools, and make observations before providing an answer.
-The prompts instruct Content Agent to use Polite Guard rather than  relying on soley on its own reasoning.
-Additionally, it is provided with sample function calls so it knows exactly how to call the tool. 
+<p>Content Agent has been prompted to operate using Thought-Act-Observe cycles.   It must set up tasks, think about problems, run tools, and make observations before providing an answer.
+This cuts down on hallucinations. 
+Content Agent has also been prompted to use Polite Guard rather than soley relying on its own reasoning.
 As a result, when the AI encounters content, it call the text classification function and gets back a label and score.  
 </p>
 <p>
@@ -58,7 +53,7 @@ As a result, when the AI encounters content, it call the text classification fun
 </fig>
 </p>  
 
-<p>Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text, all of those language suggestions are 100% coming from the model, not from the classification tool.
+<p>Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="concept" format="dita">prompting</xref> instructs it to improve text,  its language suggestions come from the model, not from the classification tool.
 </p>
 
 <p>The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course">Agents Course</xref> to learn how to create your first AI Agent.</p>
