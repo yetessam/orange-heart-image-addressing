@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
-<concept id="home" outputclass="landing-page hero">
+<concept id="home">
   <title>Welcome to the Orange Heart Project</title>
-  <titlealts><navtitle>Home</navtitle></titlealts>
      <conbody>
-        <div outputclass="columns is-vcentered">
-          <div outputclass="column is-three-fifths">
              <fig outputclass="image is-4by3">
                   <figgroup outputclass="picture">
                      <image outputclass="desktop" href="images/gallery/daisy-desktop.png" otherprops="QmZxY7jsTAnzwff8skm7AXTkXgwgG3XsJjcBoR85qFJ145"/>
@@ -15,9 +12,5 @@
                      <image outputclass="mobile" href="images/gallery/daisy-mobile.png"/>
                   </figgroup>  
                </fig>
-            </div>
-            <div outputclass="column"> 
-          </div>
-      </div>
   </conbody>
 </concept>
