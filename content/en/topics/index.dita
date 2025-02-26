@@ -1,7 +1,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="wft">
-  <title>WTF</title>
-  <shortdesc>Biography
+  <title>Ha!</title>
+  <shortdesc>howdy
   </shortdesc>
   <prolog>
     <metadata>
@@ -9,8 +9,7 @@
         <indexterm>Yas</indexterm>
         <indexterm>Etessam</indexterm>
     </keywords>
-
-    </metadata>
+</metadata>
   </prolog>
   <conbody>
       <p>hello world </p>
