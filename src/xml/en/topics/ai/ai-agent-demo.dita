@@ -46,9 +46,8 @@ As a result, when the AI encounters content, it call the text classification fun
 </p>
 <p>
 <fig>
-<title>User Interaction</title>
-<desc>The Agent has been configured to be fairly to enable the user visibilty into the decision making process. 
-</desc>
+<title>Content Agent providing your with the final answer.</title>
+<desc></desc>
  <image href="../../images/content_agent.png" placement="break">
    <alt>Content Classifier Agent User interface provides a view into the process AI uses to come to its final answers.</alt>
 </image>
