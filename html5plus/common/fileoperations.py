@@ -6,9 +6,8 @@ from .logging import logger
 
 def get_relative_path(filepath, directory ):
     # root_relative is the path to base dir for the current file
-    relative_path =  os.path.relpath(directory, filepath)
-    if relative_path.startswith('../'):
-        relative_path = relative_path[3:]  # Remove the first 3 characters ("../")
+    r_dir = os.path.dirname(filepath)
+    relative_path =  os.path.relpath(directory, r_dir)
     return relative_path
    
 def read_html_file(filepath, logger):

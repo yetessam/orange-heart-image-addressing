@@ -93,7 +93,7 @@ def create_navbar_menu(soup):
 def modify_navbar( html_content, HTMLP):
     
     filepath = HTMLP.filepath, 
-    root_dir = HTMLP.root_relative
+    relpath = HTMLP.root_relative
 
     logger = HTMLP.logger
     
@@ -117,7 +117,8 @@ def modify_navbar( html_content, HTMLP):
         nav.append( create_navbar_menu_start_end(soup,nav,logger)) # navbar menu is required
             
         # Add JavaScript for Bulma
-        add_bulma_script(soup, nav, root_dir, logger)
+      
+        add_bulma_script(soup, nav, relpath, logger)
 
         # Mark the navbar as modified and avoid reprocessing
         nav['id'] = 'navbar-bulma'
