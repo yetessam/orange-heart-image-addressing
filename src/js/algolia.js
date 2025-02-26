@@ -71,7 +71,7 @@ search.addWidget(
 );
 
 // Start the search instance
-function startSearch() {
+function startSearch(){
   search.start();
 }
 
