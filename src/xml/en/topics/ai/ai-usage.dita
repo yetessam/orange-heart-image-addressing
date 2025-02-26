@@ -13,8 +13,8 @@
     </metadata>
   </prolog>
   <conbody>
-    <p>AI was an excellent learning partner and researcher on the Dweb stack.  Copilots were used for programming tasks such as 
-prototyping, refactoring, rewriting existing functions, debugging and scanning through complex messages and logs.  
+    <p>AI was an excellent learning partner and researcher on the Dweb stack.  Copilots prototyped and refactored code, helped debug, performed
+code reviews and scanned through complex messages and logs.  
 I authored most of the content and have indicated where content was written by Generative AI.
 </p>
     <simpletable>
@@ -80,7 +80,7 @@ I authored most of the content and have indicated where content was written by G
           </ul>
         </stentry>
         <stentry>
-            Open AI GPT-4o, GitHub Copilot, VS Code Copilot      
+            Open AI GPT-4o, GitHub Copilot, VS Code Copilot     
         </stentry>
       </strow>
     </simpletable>
