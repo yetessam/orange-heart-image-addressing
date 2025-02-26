@@ -33,6 +33,6 @@ bulma_classes = {
     'gallery' : 'columns is-multiline is-variable is-8', 
     'section': 'p-0',
     'sectiontitle' : 'is-size-4 has-text-weight-semibold',
-    'table.simpletable' : 'table'
+    'table.simpletable' : 'table mt-3'
 }
 
