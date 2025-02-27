@@ -11,8 +11,8 @@
       </keywords>
     </metadata>
   </prolog><conbody>
- <p> You are currently using dweb and viewing HTML pages on the Interplanetary File System, <xref href="https://ipfs.io/" scope="external">IPFS</xref>.
-  As a result, this entire website's content is decentralized, replicated, and its authenticity and provenance are verifiable.  
+ <p> You are currently using dweb and viewing HTML pages on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).
+  So this's website's content is decentralized, replicated, and its authenticity and provenance are verifiable.  
    </p>
   <p>Technology stack: DITA XML, DITA Open Toolkit, Github, Python, Fleek, and IPFS.</p>
   <note>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.   This site is independent, unpaid, and for informational purposes only.  I am not affiliated with Protocol Labs, Filecoin, Fleek, or GitHub.  </note>
