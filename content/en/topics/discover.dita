@@ -17,14 +17,14 @@
 
 <image href=""></image>
 <div>
- <div>
-   <p class="title">IPFS</p>
-  <p class="title">Fleek </p>
-  <p class="title">Bulma</p>
-  <p class="title">Python</p>
-  <p class="title">DITA Open Toolkit</p>
-  <p class="title">DITA XML</p>
-  <p class="title">Github </p>
+<div>
+  <p outputclass="title">IPFS</p>
+  <p outputclass="title">Fleek </p>
+  <p outputclass="title">Bulma</p>
+  <p outputclass="title">Python</p>
+  <p outputclass="title">DITA Open Toolkit</p>
+  <p outputclass="title">DITA XML</p>
+  <p outputclass="title">Github </p>
  </div>
 </div>
 
