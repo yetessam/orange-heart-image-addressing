@@ -18,16 +18,16 @@
 
 
 ol.olchildlinks {
-    /* border:10pt black; */
     margin-left: 0em;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Ensures at least 2 cells per row */
     gap: 16px; /* Adds spacing between grid items */
+    
 }
 
 
 li.olchildlink {
     list-style-type: none;
-    border-radius: var(--bulma-radius);
+    border-radius: 1vw;
     word-wrap: break-word; /* Ensures text wraps within the cell */
     border: 1px solid ; /* Optional: Adds a border for visual separation */
     padding: 1em;
