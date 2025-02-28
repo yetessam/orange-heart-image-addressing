@@ -14,10 +14,9 @@
  <p> You are currently using dweb and viewing HTML pages on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).
  This website's content is decentralized, replicated, and its authenticity and provenance are verifiable.  
    </p>
-  <object data="../images/node_networks.mp4" type="video/mp4" width="4em" outputclass="is-hidden-mobile" >
-            <param name="autoplay" value="false" />
-            <param name="controls" value="true" />
-  </object>
+  <video href="../images/node_networks.mp4"" width="4em" outputclass="is-hidden-mobile" format="video/mp4" loop="true">
+        
+  </video>
 
   <note>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.   This site is independent, unpaid, and for informational purposes only.  It is not affiliated with Protocol Labs, Filecoin, Fleek, or GitHub.  </note>
 </conbody>
