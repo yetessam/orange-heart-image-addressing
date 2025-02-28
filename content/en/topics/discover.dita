@@ -18,20 +18,8 @@
             <param name="autoplay" value="false" />
             <param name="controls" value="true" />
   </object>
- 
-<div>
-<div>
-  <p outputclass="title">IPFS</p>
-  <p outputclass="title">Fleek </p>
-  <p outputclass="title">Bulma</p>
-  <p outputclass="title">Python</p>
-  <p outputclass="title">DITA Open Toolkit</p>
-  <p outputclass="title">DITA XML</p>
-  <p outputclass="title">Github </p>
- </div>
-</div>
 
-  <note>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.   This site is independent, unpaid, and for informational purposes only.  I am not affiliated with Protocol Labs, Filecoin, Fleek, or GitHub.  </note>
+  <note>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.   This site is independent, unpaid, and for informational purposes only.  It is not affiliated with Protocol Labs, Filecoin, Fleek, or GitHub.  </note>
 </conbody>
   </concept>
        
