@@ -27,6 +27,10 @@ jobs:
         with:
           ref: dev
 
+      - name: Create out folder
+        run: |
+          echo "Creating out folder"
+          mkdir -p out
 
       - name: Download 'out-html5-archive' artifact
         uses: actions/download-artifact@v4
@@ -44,7 +48,7 @@ jobs:
       - name: Extract the 'out' folder
         run: |
           echo "Extracting the artifact..."
-          tar -xzf out-html5-archive.tar.gz
+          tar -xzf out-html5-archive.tar.gz out
           echo "Contents of the directory after extraction:"
           ls -laR
 
