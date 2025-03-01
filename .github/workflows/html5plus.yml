@@ -39,28 +39,6 @@ jobs:
           path: out
 
 
-      
-      - name: Debug downloaded artifact
-        run: |
-          echo "Contents of the directory after downloading the artifact:"
-          cd out 
-          ls -la
-
-      - name: Extract the 'out' folder
-        run: |
-          echo "Extracting the artifact..."
-          tar -xzf out-html5-archive.tar.gz out
-          echo "Contents of the directory after extraction:"
-          ls -laR
-
-  
-      - name: Extract the 'out' folder
-        run: |
-          ls -laR
-          df -h
-          tar -xzf out.tar.gz
-          ls -laR
-
       - name: Create src folder if it doesn't exist
         run: |
           mkdir -p ./src
