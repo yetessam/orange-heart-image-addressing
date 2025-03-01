@@ -36,8 +36,11 @@ Polite Guard's classification labels and scoring.</p>
 </fig>
 </p>  
 
-<p>Content Agent is live at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
-</p>
+
+<note>Content Agent is live at <xref href="https://huggingface.co/spaces/yetessam/ContentClassifier" type="html" scope="external">https://huggingface.co/spaces/yetessam/ContentClassifier</xref>.  Submit text to the chat agent and see how it evaluates the content. 
+</note>
+
+
 
 <p>Content Agent has been prompted to operate using Thought-Act-Observe cycles.   It must set up tasks, think about problems, run tools, and make observations before providing an answer.
 This cuts down on hallucinations. 
