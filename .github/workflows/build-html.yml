@@ -19,13 +19,7 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
-          
-
-          plugins: |
-            net.infotexture.dita-bootstrap
-          input: document.ditamap
-          transtype: html5-bootstrap
-          output-path: out
+        
 
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
