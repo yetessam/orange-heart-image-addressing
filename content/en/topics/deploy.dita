@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="deploy">
-  <title>Deployment</title>
-  <shortdesc>Deploying to the dweb implies that content is be published, pinned, and hosted on decentralized storage.</shortdesc>
+  <title>Deploying</title>
+  <shortdesc>You can deploy to the DWeb by publishing, pinned, and hosting content on decentralized storage.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -15,11 +15,12 @@
   </prolog>
 
   <conbody>
-    <p>Most enterprise content publishing processes remain the same when moving to the dweb.</p>
-    <p>Decentralized storage can use IFPS and needs to ensure that content is pinned to ensure its availability.</p>
-    <p>Fleek provides a unique IPFS gateway which allows users to access the content through URLs rather than content identifiers. 
+    <p>Most enterprise content publishing processes remain the same if you decide to adopt more decentralised technologies.</p>
+    <p>The Interplanetary File System (IFPS) is decentralized storage and as extra insurance to ensure is available comes with the ability to pin content.</p>
+    <p>One of the bridges between Web 1.0 and DWeb is the use of gateways to ensure backwards compatibility and allow browsers to continue to  access  content through URIs rather than content identifiers. 
     As a result, user access the site through <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. 
-    At this point, you can apply your domain name.</p>  
+    Domains and URIs will still remain the more human-friendly way to name online resources, objects, and people.  Even where underlying technologies adopt new
+    conventions such as the use of decentralized ids to identify users, the complexity of token-based ids will remain mostly hidden to users.</p>  
 
     <fig>
       <title>Fleek deployment status</title>
@@ -29,9 +30,11 @@
       </image>
     </fig>
 
-    <p>When changes were merged into my Github prod branch, Fleek deployment started.</p>
-    <p>Fleek deployed the content to IPFS, generateed a new IPFS hash (CID), and pinned it. </p>
-<p>Multiple platforms and services can publish, pin, and host the content to the decentralized IPFS storage.  IPFS has its own solutions including a CLI that can be used to deploy to dweb.  Generative AI, Open AI in particular, is adept at identifying emergent dweb deployment options.
+    <p>When changes are merged into <codeph>prod</codeph> branch, Fleek starts the deployment process.</p>
+    <p>Fleek deploys content to IPFS, generates a new IPFS hashes (CIDs), and pins the content. </p>
+
+<p>Apart from Fleek, many platforms and services can publish, pin, and host  content on decentralized IPFS storage.  Also, IPFS has a CLI that can be used for DWeb deployments.</p>
+<p>Generative AI, Open AI in particular, is adept at identifying emergent DWeb deployment options.
 One final thing to note is that we could be publishing dapps (decentralized web apps), regular apps or other digital assets using the same stack. 
 </p>  </conbody>
 </concept>
