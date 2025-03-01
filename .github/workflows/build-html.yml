@@ -19,6 +19,13 @@ jobs:
         run: |
           echo "Deleting out folder"
           rm -rf out
+          
+
+          plugins: |
+            net.infotexture.dita-bootstrap
+          input: document.ditamap
+          transtype: html5-bootstrap
+          output-path: out
 
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
@@ -28,6 +35,7 @@ jobs:
             dita --version
             echo " dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) "
             dita --input=$(pwd)/content/en/orange-heart-master.ditamap --format=html5 --verbose --propertyfile=$(pwd)/resources/build.properties -Dargs.input.dir=$(pwd) 2>&1 | tee log.txt
+            ls -R 
             
       - name: Upload log file as an artifact
         uses: actions/upload-artifact@v4
@@ -35,18 +43,12 @@ jobs:
           name: build-log-html5-txt
           path: log.txt
 
-      - name: Archive the 'out' folder
-        run: |
-          ls -R out
-          set -e
-          tar -czf out.tar.gz out
-
-      - name: Upload 'out' folder archive
-        uses: actions/upload-artifact@v4
+      - name: Upload DITA Output to a ZIP file
+        uses: actions/upload-artifact@v2
         with:
-          name: out-html5-archive
-          path: out.tar.gz
-
+          name: dita-artifact
+          path: 'out'
+  
       - name: List build output and errors
         run: |
           if grep -qEi 'Error|ERROR' log.txt; then
