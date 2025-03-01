@@ -37,6 +37,7 @@ jobs:
 
       - name: Archive the 'out' folder
         run: |
+          ls -R out
           set -e
           tar -czf out.tar.gz out
 
