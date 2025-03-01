@@ -40,7 +40,7 @@ jobs:
       - name: Upload DITA Output to a ZIP file
         uses: actions/upload-artifact@v4
         with:
-          name: dita-artifact
+          name: out-html5-archive 
           path: 'out'
   
       - name: List build output and errors
