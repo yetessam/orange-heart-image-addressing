@@ -41,6 +41,8 @@ jobs:
 
       - name: Extract the 'out' folder
         run: |
+          ls -laR
+          df -h
           tar -xzf out.tar.gz
           ls -laR
 
