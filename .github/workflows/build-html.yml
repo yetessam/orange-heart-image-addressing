@@ -23,7 +23,8 @@ jobs:
       - name: Create out folder
         run: |
           echo "Creating out folder"
-          mkdir -p out
+          mkdir -p $(pwd)/out
+          ls -la
           
       - name: Build HTML5
         uses: dita-ot/dita-ot-action@master
@@ -58,9 +59,9 @@ jobs:
 
       - name: Delete out folder
         run: |
-          echo "Deleting out folder"
-          sudo chown -R $USER:$USER out
-          rm -rf out
+          #echo "Deleting out folder"
+          #sudo chown -R $USER:$USER out
+          #rm -rf out
 
       - name: Configure git
         run: |
