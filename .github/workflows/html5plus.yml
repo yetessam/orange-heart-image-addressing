@@ -16,12 +16,6 @@ on:
   workflow_dispatch:
   workflow_call: 
 
-#on:
-#  workflow_run:
-#    workflows: ["Build HTML"]
-#    types:
-#      - completed
-
 jobs:
   html5plus:
     name: HTML5 plus takes downloaded OT output and processes it with python
@@ -33,12 +27,28 @@ jobs:
         with:
           ref: dev
 
+
       - name: Download 'out-html5-archive' artifact
         uses: actions/download-artifact@v4
         with:
           name: out-html5-archive
           path: .
 
+
+      
+      - name: Debug downloaded artifact
+        run: |
+          echo "Contents of the directory after downloading the artifact:"
+          ls -la
+
+      - name: Extract the 'out' folder
+        run: |
+          echo "Extracting the artifact..."
+          tar -xzf out-html5-archive.tar.gz
+          echo "Contents of the directory after extraction:"
+          ls -laR
+
+  
       - name: Extract the 'out' folder
         run: |
           ls -laR
