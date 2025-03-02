@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Content Agent is a virtual editing and content moderation agent." name="description"/>
+  <meta content="Content Agent is an AI-based editing and content moderation assistant." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
@@ -41,14 +41,14 @@
      </a>
      <div class="navbar-item has-dropdown is-hoverable">
       <a class="navbar-item" href="../../topics/discover.html">
-       Discover Dweb
+       Discover
       </a>
       <div class="navbar-dropdown is-hoverable">
        <a class="navbar-item" href="../../topics/content-addressing.html">
         Content Addressing
        </a>
        <a class="navbar-item" href="../../topics/deploy.html">
-        Deployment
+        Deploying
        </a>
        <a class="navbar-item" href="../../topics/faq.html">
         Dwebsite FAQ
@@ -120,19 +120,19 @@
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Content Agent is a virtual editing and content moderation agent.
+      Content Agent is an AI-based editing and content moderation assistant.
      </p>
      <p class="p">
       Generative AI is pre-trained to process language and avoid harmful interactions.   In most cases, making determinations about language is handled entirely by AI.
      </p>
      <p class="p">
-      What if you wanted to make sure that you had polite, consistent, accurate and effective content?
+      What if you wanted to make sure that you had effictive, legally sound, consistent, and accurate content?
 Honestly, if I could, I would hire an editor.  They are worth their weight in gold. 
-Although, admittedly an
+Although, admittedly you can use an
       <a class="xref is-link" href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" rel="external noopener" target="_blank">
        AI agent
       </a>
-      could be a helpful assistant in evaluating content.
+      to evaluate content.
      </p>
      <p class="p">
       Intel recently released
@@ -143,8 +143,8 @@ Although, admittedly an
 Given input text, Polite Guard is able to label the text as polite, somewhat polite, neutral, or impolite.
      </p>
      <p class="p">
-      Using the smolagents library, I created an AI agent called Content Agent that's hosted on Hugging Face and is able to augement its normal
-capabilities with politeness scores and labels from Polite Guard.
+      Using the smolagents library, I created an AI agent called Content Agent with augmented content capabilities as it has access to 
+Polite Guard's classification labels and scoring.
      </p>
      <div class="p">
       <figure class="fig fignone">
@@ -162,13 +162,18 @@ capabilities with politeness scores and labels from Polite Guard.
        <br/>
       </figure>
      </div>
-     <p class="p">
-      You can feed in content and see how it is rated at at
-      <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
-       https://huggingface.co/spaces/yetessam/ContentClassifier
-      </a>
-      .  Submit text to the chat agent and see how it evaluates the content.
-     </p>
+     <div class="note note note_note notification">
+      <span class="note__title">
+       Note:
+      </span>
+      <div class="note__body">
+       Content Agent is live at
+       <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
+        https://huggingface.co/spaces/yetessam/ContentClassifier
+       </a>
+       .  Submit text to the chat agent and see how it evaluates the content.
+      </div>
+     </div>
      <p class="p">
       Content Agent has been prompted to operate using Thought-Act-Observe cycles.   It must set up tasks, think about problems, run tools, and make observations before providing an answer.
 This cuts down on hallucinations. 
