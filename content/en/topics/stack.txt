@@ -1,3 +1,4 @@
+<div>
 <div outputclass="card">
   <p outputclass="title">IPFS</p>
 </div>
@@ -19,4 +20,5 @@
   <div outputclass="card">
   <p outputclass="title">Github </p>
  </div>
+</div>
 </div>
