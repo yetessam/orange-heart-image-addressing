@@ -7,6 +7,22 @@
   Images were taken with a damaged although affordable mobile phone. 
   </shortdesc>
   <conbody>
+    <section id="terry">
+      <fig>
+        <title>Terry Fox</title>
+        <desc>Terry Fox viewed through an orange heart stencil.</desc>
+        <figgroup outputclass="picture">
+          <image outputclass="desktop" href="../images/gallery/terry-desktop.png">
+            <alt></alt>
+          </image>
+          <image outputclass="tablet" href="../images/gallery/terry-tablet.png"/>
+          <image outputclass="mobile" href="../images/gallery/terry-mobile.png"/>
+        </figgroup>
+      </fig>
+      <p>Victoria, BC, Canada</p>
+      <p>From the Royal B.C. Museum</p>
+    </section>
+
     <section id="disability-pride">
       <fig>
         <title>July is Disability Pride Month</title>
