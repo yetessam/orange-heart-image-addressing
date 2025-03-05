@@ -8,7 +8,7 @@
   </shortdesc>
   <conbody>
 
-   <div outputclass="cards">
+
     <section id="terry">
       <fig>
         <title>Terry Fox</title>
@@ -38,6 +38,7 @@
         </figgroup>
       </fig>
       <p>Ashland, Oregon, USA</p>
+     <note>
       <p>The following descriptive text was copied from the Ashland Public Library:</p>
       <lq>
         <p>From top to bottom:</p>
@@ -48,10 +49,10 @@
         <p>Red represents physical disabilities.</p>
         <p>The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.</p>
       </lq>
-
+     </note:
     </section>
 
-    <section id="human-rights-dweb-camp-2022-notes">
+    <section id="human-rights-dweb-camp-2022-notes" outputclass="card">
       <fig>
         <title>Human Rights - Dweb Camp 2022 Notes</title>
         <desc>Digital rendering of paint/ink of handwritten notes and paint about a human-rights centered design agency assisting with online safety.</desc>
@@ -69,7 +70,7 @@
       </p>
     </section>
 
-    <section id="elephant-rock">
+    <section id="elephant-rock" outputclass="card">
       <fig>
         <title>Elephantish</title>
         <desc>Close up photograph of Elephant Rocks, a naturally formed geological landmark on the road to Dillon Beach, viewed through an orange heart stencil.  Rock indentations form the elephant's eyes, and the top of its trunk and limbs.
@@ -87,7 +88,7 @@
       <p>Dillon Beach, California, USA</p>
       <p>Marin County landmark used to help provide directions to the beach.   Downhill from the rocks, a highway sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.</p>
     </section>
-    <section id="daisy">
+    <section id="daisy" outputclass="card">
       <fig>
         <title>Daisy Flowers</title>
         <desc>Photograph of white and yellow daisies, viewed through an orange heart stencil.  
@@ -105,7 +106,8 @@
 
     </section>
 
-    <section>
+<!--
+    <section outputclass="card">
       <title>DWeb Camp Notes 2022</title>
       <p>Digitized rendering of handwritten notes and stencilled paper while looking for cybersecurity resources for women's reproductive health. 
             Digitally altered by prompting Chat GPT to "flatten background".</p>
@@ -114,6 +116,7 @@
          
       </fig>
     </section>
-  </div>
+-->
+   
   </conbody>
 </concept>
