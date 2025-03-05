@@ -32,7 +32,12 @@ bulma_classes = {
     '.relinfo': '',
     'gallery' : 'columns is-multiline is-variable is-8', 
     'section': 'p-0',
-    'sectiontitle' : 'is-size-4 has-text-weight-semibold',
-    'table.simpletable' : 'table mt-3'
+    
+    '.cards section': 'p-0 card',
+    '.cards figure  desc': 'card-title',
+    '.cards image ': 'card-image',
+    '.cards p': 'card-content',
+     
+       
 }
 

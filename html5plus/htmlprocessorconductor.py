@@ -35,7 +35,7 @@ class HTMLProcessorConductor:
                 raise FileNotFoundError(f"No HTML files found to process.")
 
             # Process each HTML file
-            counter = 1 
+            counter = 0
             for filepath in html_files:
                 try:
                     # Skip files that are in the array
@@ -55,7 +55,7 @@ class HTMLProcessorConductor:
                     counter = counter + 1 
 
                 except Exception as e:
-                    self.logger.info(f"Error processing file {filepath}: {e}")
+                    self.logger.error(f"Error processing file {filepath}: {e}")
                     #raise # Reraise the exception
                     self.logger.info(f"Continuing HTML processing on the remaining files.")
                     continue  # Continue processing other files even if one fails

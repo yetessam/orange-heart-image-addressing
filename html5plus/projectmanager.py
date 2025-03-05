@@ -110,6 +110,7 @@ class ProjectManager:
            
         except Exception as e:
             self.logger.error(f"ProjectManager run exception: {e}")
+            raise # 
             sys.exit(1)
 
 
