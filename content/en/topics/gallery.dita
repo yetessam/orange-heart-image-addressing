@@ -7,6 +7,8 @@
   Images were taken with a damaged although affordable mobile phone. 
   </shortdesc>
   <conbody outputclass="cards">
+
+   <div outputclass="cards">
     <section id="terry">
       <fig>
         <title>Terry Fox</title>
@@ -112,6 +114,6 @@
          
       </fig>
     </section>
-
+  </div>
   </conbody>
 </concept>
