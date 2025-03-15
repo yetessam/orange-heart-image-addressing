@@ -13,9 +13,8 @@
   </prolog>
   <conbody>
 
-<p>Generative AI is pre-trained to process language and avoid harmful interactions.   In most cases, making determinations about language is handled entirely by AI. 
-</p>
-<p>What if you wanted to make sure that you had effictive, legally sound, consistent, and accurate content?
+<p>Generative AI is pre-trained to process language and avoid harmful interactions. </p>
+<p>What if you need to ensure that you had effective, professional, and consistent content?
 Honestly, if I could, I would hire an editor.  They are worth their weight in gold. 
 Although, admittedly you can use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> to evaluate content.
 </p>
