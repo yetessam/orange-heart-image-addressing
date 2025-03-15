@@ -30,13 +30,13 @@ bulma_classes = {
     '.note': 'notification',
     'image' : 'is-rounded is-bordered',
     '.relinfo': '',
-    'gallery' : 'columns is-multiline is-variable is-8', 
+    'gallery' : 'grid is-col-min-20 is-gap-4', 
     'section': 'p-0',
     
-    '.cards section': 'p-0 card',
-    '.cards figcaption': 'card-title',
-    '.cards image ': 'card-image',
-    '.cards p': 'card-content',
+    '.gallery section': 'p-0 card',
+    '.gallery figcaption': 'card-title',
+    '.gallery image ': 'card-image',
+    '.gallery p': 'card-content',
      
        
 }
