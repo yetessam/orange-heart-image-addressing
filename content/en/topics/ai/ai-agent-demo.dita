@@ -13,10 +13,13 @@
   </prolog>
   <conbody>
 
-<p>Generative AI is pre-trained to have a high level of language comprehension and to avoid harmful interactions. </p>
-<p>What if you need to ensure that you had effective, professional, and consistent content?   
+<p>Generative AI is pre-trained to have a high level of language comprehension and to avoid harmful interactions.  Different AI's have different capabilities and
+it makes it challenging to deploy solutions if they are highly dependent on the host application.</p>
+<p>What if you need to ensure that you had to be able to ensure effective, professional, and consistent content?
   Honestly, if I could, I would hire an editor.  They are worth their weight in gold. 
-Although, admittedly you can use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> to evaluate content using specialized and well-vetted tools.
+</p>
+<p>What if you needed to score and rate your content and track its politeness and professionalism?   
+Rather than leaving the heavy lifting to an LLM, you can use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> to evaluate content using specialized and well-vetted tools.
 </p>
 <p>Intel recently released <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref>
  which is an open-source tool that classifies and scores English text.
