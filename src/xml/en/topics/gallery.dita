@@ -6,8 +6,8 @@
   Each piece examines how different forms of addresses shape our connection to places and communities.
   Images were taken with a damaged although affordable mobile phone. 
   </shortdesc>
-  <conbody outputclass="gallery">
-    <section>
+  <conbody >
+    <section outputclass="gallery">
       <fig id="terry">
         <title>Terry Fox</title>
         <desc>Terry Fox viewed through an orange heart stencil.</desc>
@@ -22,10 +22,8 @@
         <p>From the Royal B.C. Museum</p>
       </fig>
       
-    </section>
-
-    <section id="disability-pride">
-      <fig>
+ 
+      <fig id="disability-pride">
         <title>July is Disability Pride Month</title>
         <desc>Photograph of Disability Pride flag viewed through an orange heart stencil.</desc>
         <figgroup outputclass="picture">
@@ -35,11 +33,11 @@
           <image outputclass="tablet" href="../images/gallery/disability-pride-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/disability-pride-mobile.png"/>
         </figgroup>
-      </fig>
+     
       <p>Ashland, Oregon, USA</p>
      <note>
       <p>The following descriptive text was copied from the Ashland Public Library:</p>
-      <lq>
+      <lq><pre>
         From top to bottom:
         Green is for sensory disabilities, including deafness and blindness.
         Blue represents emotional and psychiatric disabilities, including mental illness, anxiety and depression.
@@ -48,12 +46,11 @@
         Red represents physical disabilities.
         The stripes are displayed on a faded charcoal black background which commemorates and mourns disabled people who've 
         died due to ableism, violence, ableism, violence, negligence, suicide, rebellion, illness and eugenics.
-      </lq>
+      
+      </pre></lq>
      </note>
-    </section>
-
-    <section id="human-rights-dweb-camp-2022-notes" outputclass="card">
-      <fig>
+ </fig>
+      <fig id="human-rights-dweb-camp-2022-notes">
         <title>Human Rights - Dweb Camp 2022 Notes</title>
         <desc>Digital rendering of paint/ink of handwritten notes and paint about a human-rights centered design agency assisting with online safety.</desc>
         <figgroup outputclass="picture">
@@ -65,13 +62,11 @@
           <image outputclass="tablet" href="../images/gallery/human-rights-centered-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/human-rights-centered-mobile.png"/>
         </figgroup>
-      </fig>
+     
       <p>Orange heart outline around handwritten notes about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. Chat GPT 4o was used to flatten the image backgrond. 
       </p>
-    </section>
-
-    <section id="elephant-rock" outputclass="card">
-      <fig>
+    </fig>
+      <fig  id="elephant-rock" >
         <title>Elephantish</title>
         <desc>Close up photograph of Elephant Rocks, a naturally formed geological landmark on the road to Dillon Beach, viewed through an orange heart stencil.  Rock indentations form the elephant's eyes, and the top of its trunk and limbs.
                 The rock formation is viewed through a blurry orange stencil.
@@ -84,12 +79,11 @@
           <image outputclass="tablet" href="../images/gallery/elephant-rock-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/elephant-rock-mobile.png"/>
         </figgroup>
-      </fig>
+     
       <p>Dillon Beach, California, USA</p>
       <p>Marin County landmark used to help provide directions to the beach.   Downhill from the rocks, a highway sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.</p>
-    </section>
-    <section id="daisy" outputclass="card">
-      <fig>
+     </fig>
+      <fig id="daisy">
         <title>Daisy Flowers</title>
         <desc>Photograph of white and yellow daisies, viewed through an orange heart stencil.  
         </desc>
@@ -101,9 +95,9 @@
           <image outputclass="tablet" href="../images/gallery/daisy-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
         </figgroup>
-      </fig>
+     
       <p>Salt Spring Island, British Columbia, Canada</p>
-
+ </fig>
     </section>
 
 <!--
