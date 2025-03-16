@@ -29,12 +29,12 @@ when this site's content is updated.
       7.  Leave extensibility on the  table for now.   Load third party plugins from the local directory.  
       8.  Performance should be best practices.  
       9.  Security should follow best practices.  
-      10. I do need a template for plugin development and we should use the ui feature as an example.
+     10.  I do need a template for plugin development and we should use the ui feature as an example.
       </pre></p>
       </section>
    <section id="content-agent"><title>Content Classifier Agent Prompt</title>
-      <p>Providing prompts programmatically allows for better prompt management and transparency. The following example is fed 
-through to an AI code agent through a configuration file.
+  <p>Providing prompts programmatically allows for better prompt management and transparency.   A configuration file sets up the following
+prompt to ensure that an AI Code Agent understands its role and responsibilities. 
       <codeblock><![CDATA[  
   You are a content expert who helps users validate whether content is respectful and appropriate.  
   Additionally, you can analyze music lyrics  to determine if they are respectful and provide general information such as the current time. 
@@ -57,6 +57,7 @@ through to an AI code agent through a configuration file.
   During each intermediate step, you can use 'print()' to save whatever important information you will then need.
   These print outputs will then appear in the 'Observation:' field, which will be available as input for the next step.
   In the end you have to return a final answer using the `final_answer` tool.
+
   ]]></codeblock></p>
     </section>
     </conbody>
