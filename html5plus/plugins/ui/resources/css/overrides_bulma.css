@@ -6,7 +6,7 @@
 }
 
 img {
-    border-radius: 9999px; /* Equivalent to is-rounded */
+    border-radius: .9em; /* Equivalent to is-rounded */ 
 }
    
 .content .list , 
