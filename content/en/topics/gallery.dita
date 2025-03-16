@@ -7,8 +7,8 @@
   Images were taken with a damaged although affordable mobile phone. 
   </shortdesc>
   <conbody outputclass="gallery">
-    <section id="terry">
-      <fig>
+    <section>
+      <fig id="terry">
         <title>Terry Fox</title>
         <desc>Terry Fox viewed through an orange heart stencil.</desc>
         <figgroup outputclass="picture">
@@ -18,9 +18,10 @@
           <image outputclass="tablet" href="../images/gallery/terry-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/terry-mobile.png"/>
         </figgroup>
+        <p>Victoria, BC, Canada</p>
+        <p>From the Royal B.C. Museum</p>
       </fig>
-      <p>Victoria, BC, Canada</p>
-      <p>From the Royal B.C. Museum</p>
+      
     </section>
 
     <section id="disability-pride">
