@@ -31,13 +31,14 @@ bulma_classes = {
     'image' : 'is-rounded is-bordered',
     '.relinfo': '',
     'gallery' : 'grid is-col-min-20 is-gap-4', 
-    'section': 'p-0',
+   
     
-    '.gallery section': 'p-0 card',
+    'section:not(:has(.gallery section))': 'p-0',
+    
+    '.gallery section': 'card',
     '.gallery figcaption': 'card-title',
     '.gallery image ': 'card-image',
-    '.gallery p': 'card-content',
-     
-       
+    '.gallery p:not(.shortdesc)': 'card-content',
+           
 }
 
