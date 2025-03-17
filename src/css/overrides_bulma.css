@@ -5,6 +5,10 @@
    
 }
 
+img {
+    border-radius: .9em; /* Equivalent to is-rounded */ 
+}
+   
 .content .list , 
 .content ol, 
 .content ul {
