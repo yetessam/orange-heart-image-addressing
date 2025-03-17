@@ -84,4 +84,4 @@ Consider using DITA keys from day one for image addressing so that if we switch 
 - Nextcloud which is decentralized Google Drive
 
 ###  Source Content
-- Using DITA XML for source
+- Using DITA 2.0 XML for source
