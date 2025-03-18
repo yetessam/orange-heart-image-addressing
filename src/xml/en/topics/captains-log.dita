@@ -4,8 +4,8 @@
   <shortdesc>Brief notes capturing technical progress, challenges, solutions and events.
   </shortdesc>
   <conbody>
-    <dl>
-
+<section>
+  <dl>
    <dlentry>
       <dt>Sat March 1, 2025</dt>
       <dd>Tooled around with Ghost https://ghost.org/ and Grist.</dd>
@@ -109,7 +109,11 @@
           Friendly folks and Boris M even cooked brekkie.. super treat!   At least two other people travelled from the islands and everybody got to play around with Feathers Cloud and Automerge to build real-time apps without the Cloud.</p>
         </dd>
       </dlentry>
+   </dl>
+</section>
 
+<section>
+     <dl>
       <dlentry>
         <dt>Aug 15, 2024</dt>
         <dd>
@@ -374,5 +378,6 @@ It could also be easily extended to remap by class name.  For now, stick to elem
         </dd>
       </dlentry>
     </dl>
+</section>
   </conbody>
 </concept>
