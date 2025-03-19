@@ -30,12 +30,12 @@ bulma_classes = {
     '.note': 'notification',
     'image' : 'is-rounded is-bordered',
     '.relinfo': '',
-    '.gallery' : 'grid is-col-min-20 is-gap-4', 
+    
     '.gallery .shortdesc': 'cell is-fullwidth',
     
     'section:not(:has(.gallery section))': 'p-0',
     
-    '.gallery section': 'card',
+    '.gallery figure': 'card',
     '.gallery figcaption': 'card-title',
     '.gallery image': 'card-image is-rounded',
     '.gallery p:not(.shortdesc)': 'card-content'
