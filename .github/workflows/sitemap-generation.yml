@@ -31,7 +31,7 @@ jobs:
 
     - name: Output stats
       run: |
-        cp  ${{ steps.sitemap.outputs.sitemap-path }} src/sitemap.xml
+       
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
@@ -41,11 +41,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        if [[ `git status --porcelain sitemap.xml` ]]; then
+        if [[ `git status --porcelain src/sitemap.xml` ]]; then
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add sitemap.xml
-          git commit -m "Automated sitemap update" sitemap.xml
+          git add src/sitemap.xml
+          git commit -m "Automated sitemap update" src/sitemap.xml
 
           git push
         fi
