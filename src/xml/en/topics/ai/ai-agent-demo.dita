@@ -19,14 +19,14 @@ it makes it challenging to deploy solutions if they are highly dependent on the 
   Honestly, if I could, I would hire an editor.  They are worth their weight in gold. 
 </p>
 <p>What if you needed to score and rate your content and track its politeness and professionalism?   
-Rather than leaving the heavy lifting to an LLM, you can use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> to evaluate content using specialized and well-vetted tools.
+Rather than assuming that any LLM has the correct training for this task, you can use an <xref href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" scope="external">AI agent</xref> to evaluate content using specialized and well-vetted tools.
 </p>
 <p>Intel recently released <xref href="https://huggingface.co/Intel/polite-guard" type="html" scope="external">Polite Guard</xref>
  which is an open-source tool that classifies and scores English text.
 Given input text, Polite Guard is able to label the text as polite, somewhat polite, neutral, or impolite. </p>
 
-<p>Using the smolagents library, I created an AI agent called Content Agent with augmented content capabilities as it has access to 
-Polite Guard's classification labels and scoring.</p> 
+<p>Content Agent was created using the smolagents library.  It's capabilities were augmented by giving it access to the
+Polite Guard classification labels and scoring tool.</p> 
 <p>
 <fig>
 <title>Content Classifier Agent</title>
