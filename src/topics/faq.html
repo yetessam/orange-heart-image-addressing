@@ -157,11 +157,11 @@
        Nope.  Don't even try.  There's zero benefit AFAIC.
       </dd>
       <dt class="dt dlterm has-text-weight-semibold">
-       What processes need to change if you want to publish content to IFPS?
+       How does enterprise authoring and publishing need to change in order to push content to IPFS?
       </dt>
       <dd class="dd">
        <p class="p">
-        Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
+        Authoring can remain the same.   Using Fleek as my platform provider, meant that I could simply auto-deploy from Git.  When experimenting with the DWeb YVR chat app, I used the Fleek CLI.    
          Having Fleek handle the entire IPFS layer is a happy path.
        </p>
        <p class="p">
@@ -206,7 +206,7 @@
       </dt>
       <dd class="dd">
        <p class="p">
-        At the decentralized storage level, the content is immutable. The content is stored on blockchain where the cryptographic hash is used to address the content.
+        At the decentralized storage level, the content is immutable.  You shouldn't assume that the entire site is being stored on-chain.   Decentralized storage is closer to a peer-to-peer model where the same content is stored on IPFS on multiple nodes.  However, the cryptographic hash is used to address the content.
        </p>
        <p class="p">
         However, static IPNS namespace identifiers are mutable pointers to stored content.  As content is updated, those pointers can update themselvesl
