@@ -15,7 +15,7 @@
   </prolog>
 
   <conbody>
-    <p>Most enterprise content publishing processes remain the same if you decide to adopt more decentralised technologies.</p>
+    <p>Most enterprise content management processes remain the same with decentralised technologies.</p>
     <p>The Interplanetary File System (IFPS) is decentralized storage and as extra insurance to ensure is available comes with the ability to pin content.</p>
     <p>One of the bridges between Web 1.0 and DWeb is the use of gateways to ensure backwards compatibility and allow browsers to continue to  access  content through URIs rather than content identifiers. 
     As a result, user access the site through <codeph>https://delicate-glitter-6121.on-fleek.app/</codeph>. 
