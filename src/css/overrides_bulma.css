@@ -13,13 +13,15 @@
 
 }
 
-.card-header-title {
+.card-title {
     display: flex;
     flex-direction: column;
 }
 
 .figdesc {
     order: 1;
+    color: rgb(156, 146, 149);
+    font-weight: normal;
 }
 
 .fig--title-label {
@@ -30,9 +32,8 @@ img {
     border-radius: .9em; /* Equivalent to is-rounded */ 
 }
 
-figdesc {
-    color: rgb(156, 146, 149);
-}
+
+
 .content .list , 
 .content ol, 
 .content ul {
@@ -53,7 +54,7 @@ ol.olchildlinks {
 }
 
 
-li.olchildlink {
+li.olchildlink, .gcard {
     list-style-type: none;
     border-radius: 1vw;
     word-wrap: break-word; /* Ensures text wraps within the cell */
