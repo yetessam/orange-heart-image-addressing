@@ -16,7 +16,10 @@
 img {
     border-radius: .9em; /* Equivalent to is-rounded */ 
 }
-   
+
+figdesc {
+    color: rgb(156, 146, 149);
+}
 .content .list , 
 .content ol, 
 .content ul {
