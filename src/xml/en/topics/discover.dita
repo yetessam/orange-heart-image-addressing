@@ -2,16 +2,16 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="discover-dweb-tech">
   <title>Discover</title>
-   <shortdesc>Welcome to the decentralized web.   DWeb  experimentation resulted in this website.  Navigate through this landing page to access concepts, frequently asked questions and technical shares about the Dweb. 
+   <shortdesc>Welcome to the decentralized web.   DWeb  experimentation resulted in this website.  Navigate through this landing page to access concepts, frequently asked questions and technical shares about decentralized content publishing. 
     </shortdesc>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Dweb landing page</indexterm>
+        <indexterm>DWeb landing page</indexterm>
       </keywords>
     </metadata>
   </prolog><conbody>
- <p> You are currently using DWeb as this HTML is being stored on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).
+ <p> You are currently using DWeb - this HTML is stored on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).
  
 </p>
 <p>
