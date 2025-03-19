@@ -70,7 +70,7 @@
           </dlentry>  
          <dlentry outputclass="message is-info">
            <dt>Doesn't website content change all the time?  How does that work if content is being stored on blockchain?</dt>
-            <dd><p>At the decentralized storage level, the content is immutable. The content is stored on blockchain where the cryptographic hash is used to address the content. </p>
+            <dd><p>At the decentralized storage level, the content is immutable.  You shouldn't assume that the entire site is being stored on-chain.   Decentralized storage is closer to a peer-to-peer model where the same content is stored on IPFS on multiple nodes.  However, the cryptographic hash is used to address the content. </p>
             <p>However, static IPNS namespace identifiers are mutable pointers to stored content.  As content is updated, those pointers can update themselvesl </p>
   <p>            
 <foreign><![CDATA[
