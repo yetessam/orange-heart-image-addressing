@@ -54,7 +54,7 @@ ol.olchildlinks {
 }
 
 
-li.olchildlink {
+li.olchildlink, .gcard {
     list-style-type: none;
     border-radius: 1vw;
     word-wrap: break-word; /* Ensures text wraps within the cell */
