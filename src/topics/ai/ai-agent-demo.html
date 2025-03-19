@@ -132,7 +132,7 @@ it makes it challenging to deploy solutions if they are highly dependent on the 
      </p>
      <p class="p">
       What if you needed to score and rate your content and track its politeness and professionalism?   
-Rather than leaving the heavy lifting to an LLM, you can use an
+Rather than assuming that any LLM has the correct training for this task, you can use an
       <a class="xref is-link" href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" rel="external noopener" target="_blank">
        AI agent
       </a>
@@ -147,8 +147,8 @@ Rather than leaving the heavy lifting to an LLM, you can use an
 Given input text, Polite Guard is able to label the text as polite, somewhat polite, neutral, or impolite.
      </p>
      <p class="p">
-      Using the smolagents library, I created an AI agent called Content Agent with augmented content capabilities as it has access to 
-Polite Guard's classification labels and scoring.
+      Content Agent was created using the smolagents library.  It's capabilities were augmented by giving it access to the
+Polite Guard classification labels and scoring tool.
      </p>
      <div class="p">
       <figure class="fig fignone">
