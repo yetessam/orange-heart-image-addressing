@@ -20,6 +20,8 @@
 
 .figdesc {
     order: 1;
+    color: rgb(156, 146, 149);
+
 }
 
 .fig--title-label {
@@ -30,9 +32,8 @@ img {
     border-radius: .9em; /* Equivalent to is-rounded */ 
 }
 
-figdesc {
-    color: rgb(156, 146, 149);
-}
+
+
 .content .list , 
 .content ol, 
 .content ul {
