@@ -35,8 +35,6 @@ jobs:
 
     - name: Output stats
       run: |
-      
-        cp ${{ steps.sitemap.outputs.sitemap-path }} sitemap.xml
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
