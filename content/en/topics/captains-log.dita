@@ -6,6 +6,14 @@
   <conbody>
 <div id="year2025">
   <dl>
+    <dlentry>
+      <dt>Tues March 18, 2025</dt>
+      <dd>Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
+        
+      </dd>
+    </dlentry>
+ 
+ 
    <dlentry>
       <dt>Sat March 1, 2025</dt>
       <dd>Tooled around with Ghost https://ghost.org/ and Grist.</dd>
