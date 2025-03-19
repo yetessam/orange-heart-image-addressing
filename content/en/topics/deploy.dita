@@ -18,7 +18,7 @@
     <p>This site's content publishing is automated by connected Fleek to a Github CI/CD. Whenever changes are pushed to the prod branch, Fleek runs a deployment.</p>
     <p>The general process is that Fleek deploys the content to IPFS, generates a new IPFS hash (CID), and pins the content to ensure that it remains accessible.</p>
     <p>Fleek provides a unique IPFS gateway URL (e.g., <codeph>https://https://delicate-glitter-6121.on-fleek.app/</codeph>).  It supports providing a custom domain or a static IPNS namespace identifiers.
-Fleek does support building on Fleek, but I'm building on Git and only deploying through Fleek.</p>
+     You can also run a build on Fleek.  I chose to build my site through Github Actions and then deploy through Fleek.</p>
     <p>Below is a screenshot of the deployment status for this project:</p>
 
     <fig>
