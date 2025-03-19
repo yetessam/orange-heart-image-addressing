@@ -35,7 +35,7 @@ bulma_classes = {
     
     'section:not(:has(.gallery section))': 'p-0',
     
-    '.gallery figure': 'card',
+    '.gallery figure': 'card gcard',
     '.gallery figcaption': 'card-title',
     '.gallery image': 'card-image is-rounded',
     '.gallery figure p': 'card-content is-hidden',
