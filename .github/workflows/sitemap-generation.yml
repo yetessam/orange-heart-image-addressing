@@ -21,17 +21,13 @@ jobs:
         fetch-depth: 0    # Need timestamp info
 
         ref: dev
-
-
-    - name: Change dir
-      run: |
-        cd src
         
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://delicate-glitter-6121.on-fleek.app
+        path-to-root: src
 
     - name: Output stats
       run: |
