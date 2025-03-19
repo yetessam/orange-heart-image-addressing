@@ -9,8 +9,21 @@
    
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(15em,1fr)); 
-   grid-gap: 4em
+   grid-gap: 5em
 
+}
+
+.card-header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.figdesc {
+    order: 1;
+}
+
+.fig--title-label {
+    order: 2;
 }
 
 img {
