@@ -59,10 +59,12 @@ As a result, when the AI encounters content, it call the text classification fun
 </fig>
 </p>  
 
-<p>Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="section" format="dita">prompting</xref> instructs it to improve text,  its language suggestions come from the model, not from the classification tool.
+<p>Continued work is needed to ensure the agent always “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, there are instances where the Agent continues to inject its own perspective and decisions making into the process. As <xref href="prompt-examples.dita#prompts/content-agent" type="section" format="dita">prompting</xref> instructs it to improve text,  its language suggestions come from the model, not from the classification tool.
 </p>
 
-<p>The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course" scope="external">Agents Course</xref> to learn how to create your first AI Agent.</p>
+
+
+<p>Smolagents  is a lightweight Python library for setting up agents.   The code is available in the Files section and uses smolagents, Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See <xref href="https://huggingface.co/agents-course" scope="external">Agents Course</xref> to learn how to create your first AI Agent.</p>
 <note>Determining whether or not content is polite or respectful to specific audiences is highly subjective and culturally biased.   
 A second acknowledgement is that technology has a tendency to codify and entrench existing biases under the guise of neutrality.  
 </note>
