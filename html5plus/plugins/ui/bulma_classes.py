@@ -38,7 +38,8 @@ bulma_classes = {
     '.gallery figure': 'card',
     '.gallery figcaption': 'card-title',
     '.gallery image': 'card-image is-rounded',
-    '.gallery p:not(.shortdesc)': 'card-content'
+    '.gallery figure p': 'card-content is-hidden',
+    '.gallery figure note': 'card-content is-hidden',
    
            
 }
