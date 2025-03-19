@@ -5,6 +5,14 @@
    
 }
 
+.gallery {
+   
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(15em,1fr)); 
+   grid-gap: 4em
+
+}
+
 img {
     border-radius: .9em; /* Equivalent to is-rounded */ 
 }
