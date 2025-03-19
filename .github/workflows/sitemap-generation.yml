@@ -22,16 +22,21 @@ jobs:
 
         ref: dev
 
+
+    - name: Change dir
+      run: |
+        cd src
+        
     - name: Generate the sitemap
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://delicate-glitter-6121.on-fleek.app
-    
+
     - name: Output stats
       run: |
-
-        cp ${{ steps.sitemap.outputs.sitemap-path }} src/sitemap.xml
+      
+        cp ${{ steps.sitemap.outputs.sitemap-path }} sitemap.xml
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
