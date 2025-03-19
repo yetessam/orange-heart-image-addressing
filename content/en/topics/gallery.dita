@@ -33,7 +33,7 @@
           <image outputclass="tablet" href="../images/gallery/disability-pride-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/disability-pride-mobile.png"/>
         </figgroup>
-     
+     <div outputclass="is-hidden">
       <p>Ashland, Oregon, USA</p>
      <note>
       <p>The following descriptive text was copied from the Ashland Public Library:</p>
@@ -49,6 +49,7 @@
       
       </pre></lq>
      </note>
+    </div>
  </fig>
       <fig id="human-rights-dweb-camp-2022-notes">
         <title>Human Rights - Dweb Camp 2022 Notes</title>
@@ -62,9 +63,9 @@
           <image outputclass="tablet" href="../images/gallery/human-rights-centered-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/human-rights-centered-mobile.png"/>
         </figgroup>
-     
-      <p>Orange heart outline around handwritten notes about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. Chat GPT 4o was used to flatten the image backgrond. 
-      </p>
+        <div outputclass="is-hidden">
+        <p>Orange heart outline around handwritten notes about a human rights centered design agency based in NYC/Berline with additional notes on dweb values such as diversity and inclusion. Chat GPT 4o was used to flatten the image backgrond. 
+      </p></div>
     </fig>
       <fig  id="elephant-rock" >
         <title>Elephantish</title>
@@ -79,10 +80,11 @@
           <image outputclass="tablet" href="../images/gallery/elephant-rock-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/elephant-rock-mobile.png"/>
         </figgroup>
-     
-      <p>Dillon Beach, California, USA</p>
-      <p>Marin County landmark used to help provide directions to the beach.   Downhill from the rocks, a highway sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.</p>
-     </fig>
+        <div outputclass="is-hidden">
+        <p>Dillon Beach, California, USA</p>
+        <p>Marin County landmark used to help provide directions to the beach.   Downhill from the rocks, a highway sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.</p>
+       </div>
+      </fig>
       <fig id="daisy">
         <title>Daisy Flowers</title>
         <desc>Photograph of white and yellow daisies, viewed through an orange heart stencil.  
@@ -95,8 +97,9 @@
           <image outputclass="tablet" href="../images/gallery/daisy-tablet.png"/>
           <image outputclass="mobile" href="../images/gallery/daisy-mobile.png"/>
         </figgroup>
-     
+     <div outputclass="is-hidden">
       <p>Salt Spring Island, British Columbia, Canada</p>
+</div>
  </fig>
     </section>
 
