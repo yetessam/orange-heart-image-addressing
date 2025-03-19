@@ -19,6 +19,7 @@
 }
 
 .figdesc {
+    border-top: 1px solid rgb(156, 146, 149) ; 
     order: 1;
     color: rgb(156, 146, 149);
     font-weight: normal;
@@ -26,6 +27,7 @@
 
 .fig--title-label {
     order: 2;
+    display:none;
 }
 
 img {

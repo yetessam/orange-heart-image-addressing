@@ -200,14 +200,14 @@ As a result, when the AI encounters content, it call the text classification fun
       </figure>
      </div>
      <p class="p">
-      Continued work is needed to ensure the agent truly  “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, the AI agent is still introducing its own perspective and decisions making into the process. As
+      Continued work is needed to ensure the agent always “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, there are instances where the Agent continues to inject its own perspective and decisions making into the process. As
       <a class="xref is-link" href="prompt-examples.html#prompts__content-agent">
        prompting
       </a>
       instructs it to improve text,  its language suggestions come from the model, not from the classification tool.
      </p>
      <p class="p">
-      The code is available in the Files section. It uses smolagents which is a lightweight Python library for setting up agents, uses Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See
+      Smolagents  is a lightweight Python library for setting up agents.   The code is available in the Files section and uses smolagents, Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See
       <a class="xref is-link" href="https://huggingface.co/agents-course" rel="external noopener" target="_blank">
        Agents Course
       </a>
