@@ -13,10 +13,10 @@
   </prolog><conbody>
     <div id="intro" outputclass="columns">
       <div outputclass="column is-half">
-       <p> You are currently using DWeb - this HTML is stored on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
+       <p> You are currently using DWeb hosted on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
        <p>This website's content is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
-       <p outputclass="h3">I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.</p>  
-       <p>This site is independent, unpaid, and for informational purposes only.  
+       <p>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.</p>  
+       <p>This site is independent, unpaid, and for informational purposes only.</p>
       
       </div>
       <div outputclass="column is-half">
