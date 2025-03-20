@@ -70,7 +70,6 @@
       <fig  id="elephant-rock" >
         <title>Elephantish</title>
         <desc>Rock indentations form the elephant's eyes, and the top of the rock looks like a trunk and limbs.
-                The rock formation is viewed through a blurry orange stencil.
         </desc>
         <figgroup outputclass="picture">
           <image outputclass="desktop" href="../images/gallery/elephant-rock-desktop.png">
@@ -83,8 +82,9 @@
         <div outputclass="is-hidden">
         <p>Dillon Beach, California, USA</p>
         <p>Close up photograph of Elephant Rocks, a naturally formed geological landmark on the road to Dillon Beach.  Marin County landmark is where cars pull over to take a look at the mouth of Tomales Bay.  
-         Closer to town, down from the rocks, a sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.</p>
-       </div>
+           The rock formation is viewed through a blurry orange stencil. Closer to town, down from the rocks, a sign informs drivers that the GPS directions to the beach and campgrounds are incorrect.
+      </p>
+        </div>
       </fig>
       <fig id="daisy">
         <title>Daisy Flowers</title>
