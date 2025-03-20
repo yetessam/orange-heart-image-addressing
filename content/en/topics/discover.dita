@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="discover-dweb-tech">
   <title>Discover</title>
-   <shortdesc>Welcome to the decentralized web.  Scroll down to access concepts, frequently asked questions and technical shares about decentralized content publishing. 
+   <shortdesc>Welcome to the decentralized web.  Access concepts, frequently asked questions and technical shares about decentralized content publishing. 
     </shortdesc>
   <prolog>
     <metadata>
@@ -12,10 +12,11 @@
     </metadata>
   </prolog><conbody>
       <video outputclass="is-pulled-right p-3" href="../images/node_networks.mp4" width="40em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
-       <p> You are currently using viewing HTML5 hosted on  the DWeb on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
-       <p>It is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
+       <p> You are currently using the decentralized web (DWeb) on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
+       <p>The content is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
+       <p>OASIS Darwin Information Typing Architecture (DITA) XML Version 2.0 was used as the source markup language for the website.</p>
        <p>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">DWeb principles</xref>.</p>  
-       <p>OASIS Darwin Information Typing Architecture (DITA) XML Version 2.0 was used as the source markup language for the website. 
+       
        <p>This site is independent, unpaid, and for informational purposes only.</p> 
 </conbody>
 </concept>
