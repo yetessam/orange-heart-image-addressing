@@ -11,12 +11,11 @@
       </keywords>
     </metadata>
   </prolog><conbody>
-        <video outputclass="is-pulled-right p-3" href="../images/node_networks.mp4" width="40em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
+      <video outputclass="is-pulled-right p-3" href="../images/node_networks.mp4" width="40em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
        <p> You are currently using DWeb hosted on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
        <p>This website's content is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
-       <p>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.</p>  
-       <p>This site is independent, unpaid, and for informational purposes only.</p>
-   
+       <p>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">DWeb principles</xref>.</p>  
+       <p>This site is independent, unpaid, and for informational purposes only.</p 
 </conbody>
   </concept>
        
