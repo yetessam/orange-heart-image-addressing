@@ -6,7 +6,6 @@
 }
 
 .gallery {
-   
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(15em,1fr)); 
    grid-gap: 5em
@@ -19,10 +18,11 @@
 }
 
 .figdesc {
-    border-top: 1px solid rgb(156, 146, 149) ; 
     order: 1;
-    color: rgb(156, 146, 149);
+    border-top: 1px solid darkgray;
+    color: darkgray;
     font-weight: normal;
+   
 }
 
 .fig--title-label {
