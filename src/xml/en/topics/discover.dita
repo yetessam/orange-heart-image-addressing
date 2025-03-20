@@ -12,14 +12,14 @@
     </metadata>
   </prolog><conbody>
     <div id="intro" outputclass="columns">
-      <div outputclass="column is-two-thirds">
-       <p> You are currently using DWeb - this HTML is stored on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
+      <div outputclass="column is-half">
+       <p> You are currently using DWeb hosted on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
        <p>This website's content is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
-       <note><p outputclass="h3">I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.</p>   
-            This site is independent, unpaid, and for informational purposes only.  </note>
+       <p>I support the <xref scope="external" href="https://getdweb.net/principles/" type="html">Dweb principles</xref>.</p>  
+       <p>This site is independent, unpaid, and for informational purposes only.</p>
       
       </div>
-      <div outputclass="column is-one-third">
+      <div outputclass="column is-half">
         <video href="../images/node_networks.mp4" width="40em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
       </div>
     </div>
