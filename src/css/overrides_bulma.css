@@ -47,7 +47,8 @@ img {
     border-color: rgb(209, 217, 224);
      }
 
-table td {
+td, td.stentry {
+   
    padding: 0.75rem !important;
 
 }
