@@ -10,7 +10,6 @@
       <dt>Tues March 18, 2025</dt>
       <dd>Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
        Remove src path from sitemap.xml.
-       Log size exceeds max record size in Algolia
       </dd>
     </dlentry>
  
