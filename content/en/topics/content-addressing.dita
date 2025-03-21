@@ -31,7 +31,7 @@ Content addressing dovetails nicely with edge computing principles where data is
 </p> 
 </section>
 <section><title>CID Information Architecture</title>
-<p>CIDs are front-packed with metadata - which in the IPFS world is known as a multi-format.</p>
+<p>CIDs are front-packed with metadata - which in the IPFS world is known as a <xref scope="external" type="html" src="https://github.com/multiformats/multiformats">https://github.com/multiformats/multiformats</xref>.</p>
 </section>
 
 <!--
