@@ -11,7 +11,7 @@
       </keywords>
     </metadata>
   </prolog><conbody>
-      <video outputclass="is-pulled-right p-3" href="../images/node_networks.mp4" width="30em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
+      <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="30em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
        <p> You are currently using the decentralized web (DWeb) on the Interplanetary File System (<xref href="https://ipfs.io/" scope="external">IPFS</xref>).</p>
        <p>The content is decentralized, replicated, and its authenticity and provenance are verifiable.</p>
        <p>OASIS Darwin Information Typing Architecture (DITA) XML Version 2.0 was used as the source markup language for the website.</p>
