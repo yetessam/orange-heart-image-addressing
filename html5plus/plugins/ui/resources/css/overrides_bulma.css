@@ -17,7 +17,7 @@
     flex-direction: column;
 }
 
-.figdesc {
+.gallery .figdesc {
     order: 1;
     border-top: 1px solid darkgray;
     color: darkgray;
