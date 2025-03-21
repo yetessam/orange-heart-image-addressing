@@ -3,7 +3,7 @@
 <map>
 	<title>Orange Heart DWeb Project</title>
 	<topicref href="index.dita" format="dita" type="concept">
-   		<titlealt title-role="navigation">Project</titlealt>
+   		<topicmeta><titlealt title-role="navigation">Project</titlealt></topicmeta>
 	</topicref>
 	<topicref href="topics/orange-heart.dita" format="dita" type="concept">
 	<topicref href="topics/gallery.dita" format="dita" type="concept"/>
