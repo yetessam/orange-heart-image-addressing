@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-   <shortdesc>Content addressing identifiers provide provenance for digital assets.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.    
+   <shortdesc>Content addressing identifiers provide provenance for digital assets.  
   </shortdesc>
   <prolog>
     <metadata>
@@ -13,9 +13,15 @@
     </metadata>
   </prolog>
 <conbody>
-<p>Content address identifiers (CID)s are derived by using an asset's cryptographic hash as its unique identifier.
+<p>Content address identifiers (CID)s use an asset's contents to generate a unique identifier for the digital resource.  Content addressed data is a protocol where the content of a digital asset is used to provide it's address.  
 </p>
- <p>You can take any type of digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
+<!--
+a unique SHA cryptographic hashe.    to  to unique identifier.  Leveraging cryptographic hashing, assets are identified uniquely by their contents.    
+
+</p>
+
+-->
+ <p>Take any digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image. 
 The hash is then used to construct a multi-hash starts with a self-describing metadata followed by the cryptographic hash of the data. 
 </p>
