@@ -4,13 +4,13 @@
   <title>Gallery</title>
   <shortdesc>Heart-centered addressing is touched upon in the following photos.  
   Each piece examines how different forms of addresses shape our connection to places and communities.
-  Images were taken with a damaged although affordable mobile phone. 
+  Images taken with a damaged, low-cost mobile phone. 
   </shortdesc>
   <conbody >
     <section outputclass="gallery">
       <fig id="terry">
         <title>Terry Fox</title>
-        <desc>Terry Fox viewed through an orange heart stencil.</desc>
+        <desc>Photo of a black and white photo of iconic Canadian hero Terry Fox standing by a lake. </desc>
         <figgroup outputclass="picture">
           <image outputclass="desktop" href="../images/gallery/terry-desktop.png">
             <alt></alt>
@@ -52,7 +52,7 @@
     </div>
  </fig>
       <fig id="human-rights-dweb-camp-2022-notes">
-        <title>Human Rights - Dweb Camp 2022 Notes</title>
+        <title>Human Rights - DWeb Camp 2022 Notes</title>
         <desc>Digital rendering of paint/ink of handwritten notes and paint about a human-rights centered design agency assisting with online safety.</desc>
         <figgroup outputclass="picture">
           <image outputclass="desktop" href="../images/gallery/human-rights-centered-desktop.png">
