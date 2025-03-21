@@ -47,6 +47,10 @@ img {
     border-color: rgb(209, 217, 224);
      }
 
+table td {
+   padding: 0.75rem !important;
+
+}
 
 ol.olchildlinks {
     margin-left: 0em;
