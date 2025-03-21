@@ -2,8 +2,8 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-   <shortdesc>Content addressing identifiers identify and retrieve digital assets on the decentralized web. 
-  </shortdesc>
+   <shortdesc>Content addressing identifiers (CIDs) are a standardized way to identify and retrieve digital assets in a decentralized and distributed system.
+ </shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -13,9 +13,20 @@
     </metadata>
   </prolog>
 <conbody>
-<p>Content address identifiers (CID)s use metadata plus an asset's contents to generate a unique identifier for the digital resource.  Content addressed data is a protocol which ensures that unique assets have unique location identifirs on the internet.
- Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
+<section><title>Introduction</title>
+
+<p>Content addressing with decentralized technologies worked to create resisiliance, assures provenance and plays well with <xref scope="external" src="https://www.w3.org/Addressing/URL/URI_Overview.html" type="html">Uniform Resource Identifiers (URIs)</xref>.
+The basic idea behind this form of addressing is that the content itself has unique "fingerprints" which can be cryptographically derived by using a hash. 
+Content addressing is used in InterPlanetary File System (IPFS), Bluesky, and Github.</p>
+
+The following content focuses on general information about content addressing.  When building a system,  consider the information archicture
+and ensure that your development team is using information architecture that will meet the overall system needs including user needs. 
+Assuming that all CIDs are the SHA-256 hash of a file is simply naive.  
 </p>
+<p>Strict standardization would bring a higher level of interoperability, but for now, simply publishing technical documentation about the specific information architecture and metadata
+that your organizaation is using for content identifiers is still helpful. 
+</p>
+
 
 <section><title>Resilient Retrievel</title>
 <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
@@ -84,6 +95,12 @@ Provide provenance for digital assets.
 
 -->
 
+<!-- Benefits 
+to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
+
+ Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
+</p>
+-->
 </conbody>
 </concept>
 
