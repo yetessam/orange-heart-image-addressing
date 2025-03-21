@@ -14,7 +14,7 @@
   </prolog>
 <conbody>
 <p>Content address identifiers (CID)s use metadata plus an asset's contents to generate a unique identifier for the digital resource.  Content addressed data is a protocol which ensures that unique assets have unique location identifirs on the internet.
- Using the content hash as part of the identifier opens up features like being able to independently verify that a digital asset is indeeed the original and authentic asset.
+ Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
 </p>
 
 <section><title>Resilient Retrievel</title>
