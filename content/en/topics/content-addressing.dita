@@ -2,7 +2,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-  <shortdesc>Content addressing identifiers (CIDs) are a standardized way to identify and retrieve digital assets in a decentralized and distributed system.</shortdesc>
+  <shortdesc>Content addressing identifiers (CIDs) are a standardized way to identify and retrieve digital assets in a decentralized systems.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -14,16 +14,19 @@
   <conbody>
     <section>
       <title>Introduction</title>
-      <p>Content has unique "fingerprints" which can be cryptographically derived by using a hash.   Taking this hash and adding metadata to it creates a result that can be used as a locator, or content address, for the content. 
-Content addressing is a self-describing findabiity protocol that uses the contents of the digital assets to generate a unique address that describes the current asset and only that exact asset. 
-This informtion architecture is a  key feature of decentralized, resilient technologies as it supports the ability to store many, duplicate copies of assets which can be independently verified without going through a central authority. 
+      <p>Content addressing is a self-describing findabiity protocol that uses the contents of   assets to generate a unique address for the piece of content. 
+All digital assets, whether they are documents, images, web sites, music, or apps have unique "fingerprints" that can be derived by taking the asets and running it thorugh a crytographic hash.  
+Content addresses take the hash and adding self-describing metaformats, or metadata, that results in a unique content addressing identifer. </p>
+<p>This informtion architecture is a  key feature of decentralized, resilient technologies.    It supports the ability to store many, duplicate copies of assets which can be independently verified without going through a central authority. 
+It is also the basis of supporting data portability so that you know what assets are real, when content has been tampered with and which content is authentic. 
+
 Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance on local devices and off-line systems.
       </p>
       <note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
     </section>
 
     <section>
-      <title>Resilient Retrievel</title>
+      <title>Data Portability and Resilient Retrievel</title>
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
 web will retrieve the closest asset.</p>
       <p>Assets can be stored, duplicated and archived in multiple locations.   Since they are stored in mulitple locations, they can be  retrieved from multiple locations.
@@ -33,67 +36,51 @@ Content addressing dovetails nicely with edge computing principles where data is
     </section>
     
     <section>
-      <title>Content Versioning</title>
-      <p>Different versions of digital assets have different CIDs and to support multiple versions of content, is the global namespace within the IPFS ecosystem.  IPNS provides mutable pointers to immutable CIDs. 
-      Static namespace identifiers will then point to different CIDS over the life cycle of content as that content changes and can handle the use case for the "most recent" version of an asset/resource/app/website. 
-      To learn more about IPNS, see <xref scope="external"  type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
-      </p>
-    </section>
-
-    <section>
       <title>CID Information Architecture</title>
       <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://github.com/multiformats/multiformats">multiformats</xref>.
-      </p>
+      
+       </p>
     </section>
 
 
 <section><title>Provenance</title>
-<p>Content addressing is a way to provide provenance for digital assets.
-</p>
-<p>
-Independent verifiability is assured because the content address  is a result of hashing the content and adding metadata.
-If you make any change to the file, it will no longer 
+<p> 
+Benefits to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
 
-Calculate the cryptographic hash of the asset.
-Provide the metadata on SHA-256 
-</p>
+ Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
 
-    <p>Take any digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
- series of numbers and letters for this exact image.   A CID is constructed by taking self-describing metadata 
-The hash is then used to construct a multi-hash starts with a self-describing metadata followed by the cryptographic hash of the data. 
-    </p>
-    <p>
-For example, if we take this website's logo       <!-- add logo --> and push it thorugh a hash, the result will be xxx. 
 
-For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself. 
+Content addressing is a way to provide provenance for digital assets.  
 
 If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change. 
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
 
+</p>
+<p>Calculate the cryptographic hash of the asset.
+Provide the metadata on SHA-256.
+For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself.  Many of the Web 2.0 platforms make changes to content as you upload it onto their platform.
+</p>
+
+
+<p>
 The constructed CID in the decentralized web can be used as the asset's location address.  
 
 I can potentially share a link to this image and that means that there are 1:n copies of the same image on the dweb.  
-Gateways are the bridg
+ 
 All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
-Since the DWeb was designed to work with the existing web.   
+   
 Provide provenance for digital assets.  
     </p>
   </section>
 
-  <!--
-
- Try it out 
-<ul>
- <li>View on an IPFS gateway </li>
- <li>Install IPFS and then use the following command:  
- </li>
- </ul>
-
-
-Benefits to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
-
- Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
--->
+  <section>
+      <title>Content Versioning</title>
+      <p>Different versions of digital assets will have different CIDs.  Website and content are updated frequently, so this information architecture does need to handle supporting different versions of a digital asset. 
+     The global Interplanetary Name System (IPNS) provides mutable pointers to immutable CIDs. 
+      Static namespace identifiers can then point to  different CIDS over the content life cycle as that content changes and is republished.  IPNS handles the use case to create a way to retrieve the "most recent" version of an asset/resource/app/website. 
+      To learn more about IPNS, see <xref scope="external"  type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
+      </p>
+  </section>
 </conbody>
 </concept>
