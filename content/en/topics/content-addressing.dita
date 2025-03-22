@@ -26,11 +26,13 @@ Content addressing identifiers are used on the InterPlanetary File System (IPFS)
 
     <section>
       <title>Resilient Retrieval and Content Portability</title>
+      <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
 web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations using the same CID.
 
   
 This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
+
 </section>
 
     <section>
