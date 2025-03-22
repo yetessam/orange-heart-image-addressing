@@ -6,16 +6,28 @@
   <conbody>
 <div id="year2025">
   <dl>
-
- 
     <dlentry>
       <dt>March 22-22nd, 2025</dt>
       <dd>ATmosphere Conference 2025 on AT Protocol. 
+       <foreign>
         - publishing vs distribution 
         - web now equals a desktop experience, mobile created distribution models owned by corporations pushing their chosen content to audiences.
         - blockchains is literally where the money went and they don't care at all about content.   Usability issues and honestly, they aren't for content. 
         - "social networks on device literally give you a small view of the world"
     
+        Paul Frazee
+        
+        - not bound to a specific host for your content, can migrate freely and make those changes, important usability decision
+        - scale requires aggregation from a wide range of content 
+        - portability with regard to hosting 
+        - content addressing 
+        
+        -AT proto lexicon was initially RDF based but Bluesky team didn't have enough time.
+        
+        - PDS (Host) publish JSON records and manage keys
+        - App View (Search) is distribution side and applies business model 
+    </foreign>
+
   </dd>
     </dlentry>
  
