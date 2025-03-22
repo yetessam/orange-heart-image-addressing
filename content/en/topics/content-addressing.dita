@@ -36,7 +36,7 @@ Content addressing dovetails nicely with edge computing principles where data is
 </p> 
 </section>
 <section><title>CID Information Architecture</title>
-<p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" src="https://github.com/multiformats/multiformats">multiformats</xref>.</p>
+<p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://github.com/multiformats/multiformats">multiformats</xref>.</p>
 </section>
 
 <!-- 
