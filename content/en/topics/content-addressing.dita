@@ -43,16 +43,12 @@ Content addressing dovetails nicely with edge computing principles where data is
 Independent verifiability is assured because the content address  because is a result of hashing the content and adding metadata.
 If you make any change to the file, it will no longer 
 
-<ol>
-<li>Calculate the cryptographic hash of the asset.</li>
-<li>Provide the metadata on SHA-256 
-<li>
-</ol> 
+Calculate the cryptographic hash of the asset.</li>
+Provide the metadata on SHA-256 
 
-</p>
 
 -->
-</p>
+
 
  <p>Take any digital asset, a string, an image, a document, an entire website and load into a cryptographic hash, or function, the result is a unique
  series of numbers and letters for this exact image.   A CID is constructed by taking self-describing metadata 
@@ -77,25 +73,24 @@ Since the DWeb was designed to work with the existing web.
 Provide provenance for digital assets.  
 
 </p>
+</section>
 
 
 <!--
 
-<section><title>Try it out </title>
+ Try it out 
 <ul>
  <li>View on an IPFS gateway </li>
  <li>Install IPFS and then use the following command:  
  </li>
  </ul>
-</section>
+
 
 -->
 
-<!-- Benefits 
-to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
+<!-- Benefits to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
 
  Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
-</p>
 -->
 </conbody>
 </concept>
