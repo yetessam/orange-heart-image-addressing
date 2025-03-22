@@ -28,18 +28,19 @@ Content addressing identifiers are used on the InterPlanetary File System (IPFS)
       <title>Resilient Retrieval and Content Portability</title>
       <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
-web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations using the same CID.
+web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations as well as mulitple platforms  using the same CID.
 
-  
 This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
 
 </section>
-
-    <section>
+<!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
+<!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
+<section>
       <title>CID Information Architecture</title>
       <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://github.com/multiformats/multiformats">multiformats</xref>.
       
        </p>
+<p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
     </section>
 
 
@@ -69,12 +70,8 @@ For a multi-hash CID, additional metadata is attached, but the key identifier is
 
 <p>
 The constructed CID in the decentralized web can be used as the asset's location address.  
-
-I can potentially share a link to this image and that means that there are 1:n copies of the same image on the dweb.  
- 
 All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
-   
-Provide provenance for digital assets.  
+   This provides provenance for digital assets.  
     </p>
   </section>
 
