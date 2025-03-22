@@ -14,26 +14,27 @@
   <conbody>
     <section>
       <title>Introduction</title>
-      <p>Content addressing is a self-describing findabiity protocol that uses the contents of   assets to generate a unique address for the piece of content. 
-All digital assets, whether they are documents, images, web sites, music, or apps have unique "fingerprints" that can be derived by taking the asets and running it thorugh a crytographic hash.  
-Content addresses take the hash and adding self-describing metaformats, or metadata, that results in a unique content addressing identifer. </p>
-<p>This informtion architecture is a  key feature of decentralized, resilient technologies.    It supports the ability to store many, duplicate copies of assets which can be independently verified without going through a central authority. 
-It is also the basis of supporting data portability so that you know what assets are real, when content has been tampered with and which content is authentic. 
-
-Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance on local devices and off-line systems.
-      </p>
+      <p>Content addressing is a self-describing findabiity protocol that uses the content itself to generate a unique address that can be used to locate and identifier the content. 
+All digital assets, whether they are documents, images, web sites, music, or apps can be run through a cryptographic hash to end up with a unique "fingerprint".  
+Unique content addressing identifiers are comprised of placing together self-describing metaformats, or metadata, with a <codeph>SHA-256</codeph> hash. </p>
+<p>This informtion architecture is a  key feature of decentralized, resilient technologies.    It supports the ability to store multiple, duplicate copies of content which can be independently verified without going through a central authority. 
+It is also the basis of supporting data portability so that it is trivial to determine when assets are real, when content has been tampered with and which content is authentic. 
+Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance of content on local devices and off-line systems.
+</p>
       <note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
     </section>
 
     <section>
-      <title>Data Portability and Resilient Retrievel</title>
+      <title>Resilient Retrieval and Content Portability</title>
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
-web will retrieve the closest asset.</p>
-      <p>Assets can be stored, duplicated and archived in multiple locations.   Since they are stored in mulitple locations, they can be  retrieved from multiple locations.
-Content addressing dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
-      <p>Finally, content's authenticity can be easily verified by running the image through a hash and verifying that there's a mathematical match to the hashed content component of the CID.
-      </p>
-    </section>
+web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations using the same CID.</p>
+
+
+<p>
+Content addressing identifiers dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.
+    Finally, content's authenticity can be easily and independently verified by running the image through a hash and verifying that there's a mathematical match to the hashed content component of the CID.
+   </p>
+    <p>If content is moved from one platform to another, the CIDs will not change.    </p> </section>
     
     <section>
       <title>CID Information Architecture</title>
