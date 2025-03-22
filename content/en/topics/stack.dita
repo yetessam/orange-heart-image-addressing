@@ -4,6 +4,9 @@
    <title>Tech Stack</title>
    <shortdesc>Orange Heart Project demonstrates DWeb technology and explores themes of addressing and belonging.</shortdesc>
    <conbody>
+  <p>
 This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language.   Github Actions orchestrate the build processes and Python is used to add additional configurations to the static HTML5 including responsive Bulma CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the stored on IPFS.   
-  </conbody>
+  </p>
+  <image href="../images/stack.svg"/>
+</conbody>
 </concept>
