@@ -5,16 +5,16 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Content addressing identifiers (CIDs) uniquely identify and retrieve digital assets in decentralized systems." name="description"/>
+  <meta content="Orange Heart Project demonstrates DWeb technology and explores themes of addressing and belonging." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
-   Content Addressing
+   Tech Stack
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body class="container p-4" id="cids">
+ <body class="container p-4" id="stack">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -119,140 +119,16 @@
   <main role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Content Addressing
+     Tech Stack
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Content addressing identifiers (CIDs) uniquely identify and retrieve digital assets in decentralized systems.
+      Orange Heart Project demonstrates DWeb technology and explores themes of addressing and belonging.
      </p>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       Introduction
-      </h2>
-      <p class="p">
-       Content addressing is a self-describing findabiity protocol that generates a unique address based on the content. 
-Any digital asset, such as a document, web page,post, image, web sites, video, audio, or app,  will generate a unique string when hashed cryptographically.
-CIDs provide an alternative addressing scheme along traditional methods.
-      </p>
-      <p class="p">
-       This  architecture is core feature of decentralized technologies, enabling multiple, duplicate copies stored closer to the users  that can be independently verified without going through a central authority. 
-By using self-describing metaformats, it supports data portability, transparency and authenticity. 
-CIDs are used in systems IPFS,  Bluesky, and, Github, and are also compatible with edge computing, where content provenance could be verified on local devices or off-line.
-      </p>
-     </section>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       CID Information Architecture
-      </h2>
-      <p class="p">
-       CIDs are globally unique, self-describing, self-verifiable addresses using metaformats plus an asset's cryptographic hash.
-      CIDs are front-packed with
-       <a class="xref is-link" href="https://multiformats.io/#multiformat-protocols" rel="external noopener" target="_blank">
-        multiformats
-       </a>
-       .
-     followed by the
-       <code class="ph codeph">
-        SHA-256
-       </code>
-       hash:
-      </p>
-      <pre class="pre codeblock"><code>content-type content-address</code></pre>
-      <p class="p">
-       As
-       <code class="ph codeph">
-        SHA-256
-       </code>
-       is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.
-      </p>
-      <div class="note note note_note notification">
-       <span class="note__title">
-        Note:
-       </span>
-       <div class="note__body">
-        IPFS and Bluesky use the same multiformat with
-        <code class="ph codeph">
-         SHA-256
-        </code>
-        encrypted content CIDs.  Git uses a different
-        <code class="ph codeph">
-         SHA-1
-        </code>
-        content addressing scheme .
-       </div>
-      </div>
-     </section>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       Resilient Retrieval and Content Portability
-      </h2>
-      <video autoplay="true" class="video is-pulled-right" controls="true" loop="true" muted="true" src="../images/node_networks.mp4" type="video/mp4" width="320">
-      </video>
-      <p class="p">
-       Content assets are stored in multiple locations, with network protocols retrieving the closest one.   With decentralized models, assets are stored, duplicated and archived across platforms and locations using the same CID. 
-      The network topology of decentralized systems is means that resources can be retrieved from any number of multiple nodes, rather than from a single web server.
-      </p>
-     </section>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       Provenance
-      </h2>
-      <p class="p">
-       Content addressing is a way to provide provenance for digital assets.
-      </p>
-      <p class="p">
-       Using the content hash as part of the identifier opens up features like providing provenance and self-certification of digital assets stored on the DWeb.
-      </p>
-      <p class="p">
-       If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change.
-
-Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change. It's no longer the original image or the original song, so it now has a new identifier.
-      </p>
-      <p class="p">
-       Content's authenticity can be easily and independently verified by running the image through a hash and verifying that there's a mathematical match to the hashed content component of the CID.
-      </p>
-      <p class="p">
-       Self-certification means content can be shared and verified.
-A little bit of scepticims is in order.    In reality, these systems are still emergent and actually verifiying provenance still takes technical know-how which isn't universally accessible.
-Brave Browser is able to browse content using IFPS.     
-Organizations such as ProofMode and the
-       <a class="xref is-link" href="https://contentauthenticity.org/" rel="external noopener" target="_blank">
-        Content Authenticity Initiative
-       </a>
-       who are well versed on provenance issues advocate for multiple methods of provenance verification.  
-That said, the AT protocol and the open social web are emerging and in the future, we might have more applications and platforms using CIDs.
-      </p>
-     </section>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       Examples
-      </h2>
-      <p class="p">
-       Calculate the cryptographic hash of the asset.
-Provide the metadata on SHA-256.
-For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself.  Many of the Web 2.0 platforms make changes to content as you upload it onto their platform.
-      </p>
-      <p class="p">
-       The constructed CID in the decentralized web can be used as the asset's location address.  
-All the links to this image are guaranteed to present you with the exact same, unaltered image since modifiying the image would change its CID.
-   This provides provenance for digital assets.
-      </p>
-     </section>
-     <section class="section p-0">
-      <h2 class="title sectiontitle">
-       Content Versioning
-      </h2>
-      <p class="p">
-       Different versions of digital assets will have different CIDs.  Website and content are updated frequently, so this information architecture does need to handle supporting different versions of a digital asset. 
-     The global Interplanetary Name System (IPNS) provides mutable pointers to immutable CIDs. 
-      Static namespace identifiers can then point to  different CIDS over the content life cycle as that content changes and is republished.  IPNS handles the use case to create a way to retrieve the "most recent" version of an asset/resource/app/website. 
-      To learn more about IPNS, see
-       <a class="xref is-link" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/" rel="external noopener" target="_blank">
-        Understanding and Setting Up IPNS
-       </a>
-       .
-      </p>
-     </section>
+     <p class="p">
+      This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language.   Github Actions orchestrate the build processes and Python is used to add additional configurations to the static HTML5 including responsive Bulma CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the stored on IPFS.
+     </p>
+     <img alt="Static HTML 5 Site Content Development, Build and Deployment" class="image" src="../images/stack.svg"/>
     </div>
     <nav class="related-links" role="navigation">
      <div class="familylinks pt-5">
@@ -266,44 +142,22 @@ All the links to this image are guaranteed to present you with the exact same, u
       </div>
       <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
        <div class="level-left">
+        <a class="link is-link" href="faq.html" title="Short questions and answers on content creation and publishing with the decentralized web.">
+         <span class="mr-2 translate-y-px">
+          ←
+         </span>
+         DWebsite FAQ
+        </a>
        </div>
        <div class="level-right">
-        <a class="link is-link" href="deploy.html" title="You can deploy to the DWeb by publishing, pinned, and hosting content on decentralized storage.">
-         Deploying
+        <a class="link is-link" href="captains-log.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
+         Captain's Log
          <span class="ml-2 translate-y-px">
           →
          </span>
         </a>
        </div>
       </div>
-     </div>
-     <div class="linklist relinfo">
-      <strong>
-       Related information
-      </strong>
-      <br/>
-      <ul class="linklist list is-hoverable">
-       <li class="linklist list-item">
-        <a class="link is-link" href="https://ipfs.tech/" rel="external noopener" target="_blank">
-         https://ipfs.tech/
-        </a>
-       </li>
-       <li class="linklist list-item">
-        <a class="link is-link" href="https://cid.ipfs.tech/" rel="external noopener" target="_blank">
-         https://cid.ipfs.tech/
-        </a>
-       </li>
-       <li class="linklist list-item">
-        <a class="link is-link" href="https://docs.ipfs.tech/install/" rel="external noopener" target="_blank">
-         https://docs.ipfs.tech/install/
-        </a>
-       </li>
-       <li class="linklist list-item">
-        <a class="link is-link" href="https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/" rel="external noopener" target="_blank">
-         https://blog.ipfs.tech/2022-06-30-practical-explainer-ipfs-gateways-2/
-        </a>
-       </li>
-      </ul>
      </div>
     </nav>
    </article>
