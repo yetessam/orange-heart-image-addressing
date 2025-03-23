@@ -19,7 +19,6 @@ CIDs provide an alternative addressing scheme along traditional methods.</p>
 
   <p>This  architecture is core feature of decentralized technologies, enabling multiple, duplicate copies stored closer to the users  that can be independently verified without going through a central authority. 
 By using self-describing metaformats, it supports data portability, transparency and authenticity. 
-
 CIDs are used in systems IPFS,  Bluesky, and, Github, and are also compatible with edge computing, where content provenance could be verified on local devices or off-line.
 </p>
     </section>
@@ -66,7 +65,7 @@ Or if it is a song, changing the recording in some way that's imperceptible to t
 <p>Self-certification means content can be shared and verified.
 A little bit of scepticims is in order.    In reality, these systems are still emergent and actually verifiying provenance still takes technical know-how which isn't universally accessible.
 Brave Browser is able to browse content using IFPS.     
-Organizations such as ProofMode and the <xref scope="external" href="https://contentauthenticity.org/ ">Content Authenticity Initiative</xref> who are well versed on provenance issues advocate for multiple methods of provenance verification.  
+Organizations such as ProofMode and the <xref scope="external" type="html" href="https://contentauthenticity.org/">Content Authenticity Initiative</xref> who are well versed on provenance issues advocate for multiple methods of provenance verification.  
 That said, the AT protocol and the open social web are emerging and in the future, we might have more applications and platforms using CIDs.
 </p>
 </section>
