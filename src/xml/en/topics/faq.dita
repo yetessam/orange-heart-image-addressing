@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="faq">
-  <title>Dwebsite FAQ </title>
+  <title>DWebsite FAQ </title>
    <shortdesc>Short questions and answers on content creation and publishing with the decentralized web.
 </shortdesc>
   <prolog>
@@ -14,22 +14,11 @@
     </metadata>
   </prolog>
   <conbody>
-  
-      <dl>
-       <dlentry  outputclass="">
-        <dt>How was this dwebsite made?</dt>
-        <dd><p>Started with a design doc and a log to capture decisions and briefly document the general process.</p>
-          <p>Source content was intentionally written in OASIS Open DITA XML.  
-             Dweb YVR Chat is a React app running on its own node. 
-           markdown/pdf/html/video.</p>
-          <p>It is transformed to HTML5 using the the latest stable relese of the DITA Open Toolkit. 
-             
-           Current version is DITA Open Toolkit DITA-OT 4.2.4 which is being used through Github Actions.</p> 
-          <p>Python preps the HTML5 so it plays nicely with Bulma CSS.  </p>
-          <p>Bulma CSS on a CDN provides responsive layout and UX</p>
-          <p>Fleek is the platform and application host and get the content onto the InterPlanetary File System (IPFS).</p>
-          </dd>
-      </dlentry>
+     <!-- Dweb YVR Chat is a React app written by <xref scope="external" type="html" href="https://dwebyvr.org/author/david/">David Luecke</xref> running on on Fleek and published to IPFS. 
+           markdown/pdf/html/video. -->
+      
+    <dl>
+    
      <dlentry  outputclass="notification is-info">
         <dt>Do I need to use Content Identifiers in my XML/Markdown/HTML?</dt>
         <dd>Nope.  Don't even try.  There's zero benefit AFAIC. </dd>

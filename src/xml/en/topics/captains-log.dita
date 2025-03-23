@@ -7,6 +7,30 @@
 <div id="year2025">
   <dl>
     <dlentry>
+      <dt>March 22-22nd, 2025</dt>
+      <dd>ATmosphere Conference 2025 on AT Protocol. 
+       <p>Paul Frazee</p>
+       <ul>
+
+        <li>publishing vs distribution </li>
+       <li> web now equals a desktop experience, mobile created distribution models owned by corporations pushing their chosen content to audiences.</li>
+        <li>blockchains is literally where the money went and they don't care at all about content.   Usability issues and honestly, they aren't for content. </li>
+        <li>"social networks on device literally give you a small view of the world"</li>
+       <li>not bound to a specific host for your content, can migrate freely and make those changes, important usability decision</li>
+       <li>scale requires aggregation from a wide range of content </li>
+      <li>portability with regard to hosting </li>
+       <li>content addressing </li>
+        
+       <li>AT proto lexicon was initially RDF based but Bluesky team didn't have enough time.</li>
+        
+      <li>PDS (Host) publish JSON records and manage keys</li>
+       <li>App View (Search) is distribution side and applies business model </li>
+    </ul>
+
+  </dd>
+    </dlentry>
+ 
+    <dlentry>
       <dt>Tues March 18, 2025</dt>
       <dd>Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
        Remove src path from sitemap.xml.
