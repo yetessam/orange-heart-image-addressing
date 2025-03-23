@@ -25,6 +25,22 @@ Content addressing identifiers are used on the InterPlanetary File System (IPFS)
       <note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
     </section>
 
+
+<!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
+<!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
+<!-- https://cid.ipfs.tech/#QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7 -->
+
+<section>
+      <title>CID Information Architecture</title>
+<p>
+Take any digital asset—whether it's a string, an image, a document, or an entire website—and load it into a cryptographic hash function. The result is a unique series of numbers and letters for this exact image.
+ </p>     <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
+     The first set of bytes are comprised of self-describing metaformats, or metadata followed by the  <codeph>SHA-256</codeph> hash. </p>
+<codeblock>content-type content-address.</codeblock>
+       </p>
+<p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
+    </section>
+
     <section>
       <title>Resilient Retrieval and Content Portability</title>
       <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
@@ -37,19 +53,6 @@ This concept dovetails nicely with edge computing principles where data is store
 Network topology--- literally retrieing resource from a web address. 
 
 </section>
-<!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
-<!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
-<!-- https://cid.ipfs.tech/#QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7 -->
-
-<section>
-      <title>CID Information Architecture</title>
-      <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
-     The first set of bytes are comprised of self-describing metaformats, or metadata followed by the  <codeph>SHA-256</codeph> hash. </p>
-<codeblock>content-type content-address.</codeblock>
-       </p>
-<p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
-    </section>
-
 
 <section><title>Provenance</title>
 <p>Content addressing is a way to provide provenance for digital assets.</p>
