@@ -63,7 +63,7 @@ Similarly, if it is a song, changing the recording in some way that's impercepti
    
 
 <p>Self-certification means content can be shared and verified.
-However, some scepticism is warranted.    In reality, these systems are still emergeing and  verifying provenance takes technical know-how which isn't universally accessible.
+Some scepticism is warranted.    In reality, these systems are still emergeing and  verifying provenance takes technical know-how which isn't universally accessible.
 Brave Browser is able to browse content using IPFS.     
 Organizations such as ProofMode and the <xref scope="external" type="html" href="https://contentauthenticity.org/">Content Authenticity Initiative</xref> who are well versed on provenance issues advocate for multiple methods of provenance verification.  
 That said, the AT protocol and the open social web are emerging and in the future, we might have more applications and platforms using CIDs.
@@ -79,16 +79,16 @@ For a multi-hash CID, additional metadata is attached, but the key identifier is
 <p>
 The constructed CID in the decentralized web can be used as the asset's location address.  
 All the links to this image are guaranteed to present you with the exact same, unaltered image since modifying the image would change its CID.
-   This provides provenance for digital assets.  
+This provides provenance for digital assets.  
     </p>
   </section>
 
   <section>
     <title>Content Versioning</title>
     <p>Different versions of digital assets will have different CIDs.  Apps, websites, and content are updated frequently, so this information architecture does need to handle supporting different versions of a digital asset. 
-     The global Interplanetary Name System (IPNS) provides mutable pointers to immutable CIDs. 
-      Static namespace identifiers can then point to  different CIDs over the content lifecycle as that content changes and is republished.  IPNS handles the use case to create a way to retrieve the "most recent" version of an asset/resource/app/website. 
-      To learn more about IPNS, see <xref scope="external" type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
+    The global Interplanetary Name System (IPNS) provides mutable pointers to immutable CIDs. 
+    Static namespace identifiers can then point to  different CIDs over the content lifecycle as that content changes and is republished.  IPNS handles the use case to create a way to retrieve the "most recent" version of an asset/resource/app/website. 
+    To learn more about IPNS, see <xref scope="external" type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
     </p>
   </section>
 </conbody>
