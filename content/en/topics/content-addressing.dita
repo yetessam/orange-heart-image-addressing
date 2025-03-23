@@ -2,65 +2,66 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="cids">
   <title>Content Addressing</title>
-  <shortdesc>Content addressing identifiers (CIDs) are a standardized way to identify and retrieve digital assets in decentralized systems.</shortdesc>
+  <shortdesc>Content addressing identifiers (CIDs) uniquely identify and retrieve digital assets in decentralized systems.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
-        <indexterm>Content Addressing Identifiers</indexterm>
-        <indexterm>CID</indexterm>
+        <indexterm>Content Addressing Identifiers (CID)</indexterm>
       </keywords>
     </metadata>
   </prolog>
   <conbody>
     <section>
       <title>Introduction</title>
-      <p>Content addressing is a self-describing findabiity protocol that uses the content itself to generate a unique address that can be used to locate content. 
-Any digital asset, whether it is  document, web page,post, image, web sites, video, audio, or app will create a unique string when its contents are run through a cryptographic hash.
-These CIDs are another form of addressing along with existing addressing schemes.
+      <p>Content addressing is a self-describing findabiity protocol that generates a unique address based on the content. 
+Any digital asset, such as a document, web page,post, image, web sites, video, audio, or app,  will generate a unique string when hashed cryptographically.
+CIDs provide an alternative addressing scheme along traditional methods.</p>
+
+  <p>This  architecture is core feature of decentralized technologies, enabling multiple, duplicate copies stored closer to the users  that can be independently verified without going through a central authority. 
+By using self-describing metaformats, it supports data portability, transparency and authenticity. 
+
+CIDs are used in systems IPFS,  Bluesky, and, Github, and are also compatible with edge computing, where content provenance could be verified on local devices or off-line.
 </p>
-<p>This information architecture is a key feature of decentralized, resilient technologies.    It supports the ability to store multiple, duplicate copies which are physically stored closer to the users  which can be independently verified without going through a central authority. 
-It is also the basis of supporting data portability so that it is trivial to determine when assets are real, when content has been tampered with and which content is authentic. 
-Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance of content on local devices and off-line systems.
-</p>
-<note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
-</section>
+    </section>
 
 
-<!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
-<!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
-<!-- https://cid.ipfs.tech/#QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7 -->
-
-<section>
+     <section>
       <title>CID Information Architecture</title>
-<p>CIDs are globally unique, self-describing, self-verifiable addresses using metaformats plus an asset's cryptographic hash.
-Where many Web 1 folks refer to this self-describing information as metadata, CIDs are front-packed with <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
-     The first set of bytes are comprised of self-describing metaformats, or metadata followed by the  <codeph>SHA-256</codeph> hash: </p>
-        <codeblock>content-type content-address.</codeblock>
-</p>
-<p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
-</section>
+      <p>CIDs are globally unique, self-describing, self-verifiable addresses using metaformats plus an asset's cryptographic hash.
+      CIDs are front-packed with <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
+     followed by the  <codeph>SHA-256</codeph> hash: </p>
+      <codeblock>content-type content-address</codeblock>
+      <p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
+      </p>
 
-<section>
+    <!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
+    <!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
+    <!-- https://cid.ipfs.tech/#QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7 -->
+
+  
+      <note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs.  Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
+
+    </section>
+
+    <section>
       <title>Resilient Retrieval and Content Portability</title>
-      <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
+      <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
 web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations as well as multiple platforms  using the same CID.
+This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.
+The network topology of decentralized systems is literally about the ability to retrieving a resource from any number of multiple nodes, rather than from a single web server.
+    </p>
+  </section>
 
-
-
-This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
-Network topology--- literally retrieving multiple resources from a web address. 
-</p>
-</section>
-
-<section><title>Provenance</title>
-<p>Content addressing is a way to provide provenance for digital assets.</p>
-<p>Using the content hash as part of the identifier opens up features like providing provenance and self-certification of digital assets stored on the DWeb.</p>
-<p>If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change.
+  <section>
+    <title>Provenance</title>
+    <p>Content addressing is a way to provide provenance for digital assets.</p>
+    <p>Using the content hash as part of the identifier opens up features like providing provenance and self-certification of digital assets stored on the DWeb.</p>
+    <p>If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change.
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change. It's no longer the original image or the original song, so it now has a new identifier.
-</p>
-<p>Self-certification of data means content can be shared across the multiple nodes across the web.
+    </p>
+    <p>Self-certification of data means content can be shared across the multiple nodes across the web.
 
 In other words, it's possible to verify that files are what they say they are.
 Organizations such as ProofMode and the <xref scope="external" href="https://contentauthenticity.org/ ">Content Authenticity Initiative</xref> who are well versed on provenance issues advocate for multiple methods of provenance verification.  
@@ -69,16 +70,16 @@ In theory, we could be living in a world where following a browser link to an im
 In reality, Brave Browser and other browsers with extensions are able to navigate the DWeb.
 
 Most people who are getting served up content from the DWeb are getting it through gateways to ensure backwards compability with Web 1.0. 
-</p>
-<p>
-<!-- 
+    </p>
+    <p>
+      <!-- 
 Calculate the cryptographic hash of the asset.
 Provide the metadata on SHA-256.
 For a multi-hash CID, additional metadata is attached, but the key identifier is the content itself.  Many of the Web 2.0 platforms make changes to content as you upload it onto their platform.
 
 -->
-</p>
-<!-- 
+    </p>
+    <!-- 
 <p>
    Finally, content's authenticity can be easily and independently verified by running the image through a hash and verifying that there's a mathematical match to the hashed content component of the CID.
    </p>
@@ -94,12 +95,12 @@ All the links to this image are guaranteed to present you with the exact same, u
   </section>
 
   <section>
-      <title>Content Versioning</title>
-      <p>Different versions of digital assets will have different CIDs.  Website and content are updated frequently, so this information architecture does need to handle supporting different versions of a digital asset. 
+    <title>Content Versioning</title>
+    <p>Different versions of digital assets will have different CIDs.  Website and content are updated frequently, so this information architecture does need to handle supporting different versions of a digital asset. 
      The global Interplanetary Name System (IPNS) provides mutable pointers to immutable CIDs. 
       Static namespace identifiers can then point to  different CIDS over the content life cycle as that content changes and is republished.  IPNS handles the use case to create a way to retrieve the "most recent" version of an asset/resource/app/website. 
-      To learn more about IPNS, see <xref scope="external"  type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
-      </p>
+      To learn more about IPNS, see <xref scope="external" type="html" href="https://fleek.xyz/blog/learn/understanding-and-setting-up-ipns/">Understanding and Setting Up IPNS</xref>.
+    </p>
   </section>
 </conbody>
 </concept>
