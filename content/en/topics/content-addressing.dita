@@ -14,9 +14,10 @@
   <conbody>
     <section>
       <title>Introduction</title>
-      <p>Content addressing is a self-describing findabiity protocol that uses the content itself to generate a unique address that can be used to locate and identifier the content. 
-All digital assets, whether they are documents, images, web sites, music, or apps can be run through a cryptographic hash to end up with a unique "fingerprint".  
-Unique content addressing identifiers are comprised of placing together self-describing metaformats, or metadata, with a <codeph>SHA-256</codeph> hash. </p>
+      <p>Content addressing is a self-describing findabiity protocol that uses the content itself to generate a unique address that can be used to locate content. 
+Any digital asset, whether it is  document, web page,post, image, web sites, video, audio, or app will create a unique string when its contents are run through a cryptographic hash.
+These CIDs are another form of addressing along with existing addressing schemes.
+
 <p>This informtion architecture is a  key feature of decentralized, resilient technologies.    It supports the ability to store multiple, duplicate copies of content which can be independently verified without going through a central authority. 
 It is also the basis of supporting data portability so that it is trivial to determine when assets are real, when content has been tampered with and which content is authentic. 
 Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance of content on local devices and off-line systems.
@@ -28,35 +29,46 @@ Content addressing identifiers are used on the InterPlanetary File System (IPFS)
       <title>Resilient Retrieval and Content Portability</title>
       <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>  
       <p>Content identified assets are designed to be stored in multiple locations on the web and the network protocols designed to support the decentralized
-web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations as well as mulitple platforms  using the same CID.
+web will retrieve the closest asset.   Content can be stored, duplicated and archived in multiple locations as well as multiple platforms  using the same CID.
+
+
 
 This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
+Network topology--- literally retrieing resource from a web address. 
 
 </section>
 <!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
 <!-- QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7   -->
+<!-- https://cid.ipfs.tech/#QmeYiLU5CEU7Jcp6sSpjMU2N7WgwkDFfbXLCriReSQmFC7 -->
+
 <section>
       <title>CID Information Architecture</title>
-      <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://github.com/multiformats/multiformats">multiformats</xref>.
-      
+      <p>CIDs are front-packed with metadata - which in the DWeb world is known as <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
+     The first set of bytes are comprised of self-describing metaformats, or metadata followed by the  <codeph>SHA-256</codeph> hash. </p>
+<codeblock>content-type content-address.</codeblock>
        </p>
 <p>As <codeph>SHA-256</codeph> is considered highly secure and if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
     </section>
 
 
 <section><title>Provenance</title>
-<p> 
+<p> Using the content hash as part of the identifier opens up features like providing provenance and self-certification.
+
+Self-certification of data means that we can move content around the web, while knowing for sure each file is a du files are what they say there are. 
+For example, if one First Nations group wants to send another First Nations a cultural story which should be kept wihin t
+For example, iIt becomes possible to independently verify that a digital asset is indeeed the original content and has not been tampered with.
+This allows for people, communities and devices to be able to share assets while knowing that they are legitimate and
+
 Benefits to digital assets   metadata and a asset's contents to generate a unique identifier for the digital resource.  
 
- Using the content hash as part of the identifier opens up features like providing provenance.   It becomes possible to independently verify that a digital asset is indeeed the original and have not been tampered with.
-
-
-Content addressing is a way to provide provenance for digital assets.  
+Content addressing is a way to provide provenance for digital assets. 
 
 If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change. 
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change.  It's not longer the original image or the original song, so it's now got a new identifier.
 
+
+s
 </p>
 <p>Calculate the cryptographic hash of the asset.
 Provide the metadata on SHA-256.
