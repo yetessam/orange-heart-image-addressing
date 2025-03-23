@@ -22,8 +22,8 @@ These CIDs are another form of addressing along with existing addressing schemes
 It is also the basis of supporting data portability so that it is trivial to determine when assets are real, when content has been tampered with and which content is authentic. 
 Content addressing identifiers are used on the InterPlanetary File System (IPFS),  Bluesky social, and Github.  It is also a compatible information architecture for edge computing as systems can verify the prevenance of content on local devices and off-line systems.
 </p>
-      <note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
-    </section>
+<note>IPFS and Bluesky use the same multiformat with <codeph>SHA-256</codeph> encrypted content CIDs and that Git uses a different <codeph>SHA-1</codeph> content addressing scheme .</note>
+</section>
 
 
 <!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
@@ -32,8 +32,7 @@ Content addressing identifiers are used on the InterPlanetary File System (IPFS)
 
 <section>
       <title>CID Information Architecture</title>
-<p>
-CIDs are globally unique, self-describing, self-verifiable addresses using metaformats plus an asset's cryptographic hash.
+<p>CIDs are globally unique, self-describing, self-verifiable addresses using metaformats plus an asset's cryptographic hash.
 Where many Web 1 folks refer to this self-describing information as metadata, CIDs are front-packed with <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
      The first set of bytes are comprised of self-describing metaformats, or metadata followed by the  <codeph>SHA-256</codeph> hash: </p>
         <codeblock>content-type content-address.</codeblock>
@@ -50,32 +49,26 @@ web will retrieve the closest asset.   Content can be stored, duplicated and arc
 
 
 This concept dovetails nicely with edge computing principles where data is stored and retrieved closer to the user.</p>
-Network topology--- literally retrieing resource from a web address. 
-
+Network topology--- literally retrieving multiple resources from a web address. 
+</p>
 </section>
 
 <section><title>Provenance</title>
 <p>Content addressing is a way to provide provenance for digital assets.</p>
-<p/>Using the content hash as part of the identifier opens up features like providing provenance and self-certification of digital assets stored on the DWeb.</p>
-
-If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change.
+<p>Using the content hash as part of the identifier opens up features like providing provenance and self-certification of digital assets stored on the DWeb.</p>
+<p>If you even make a minor change to the file, something that isn't perceptible to the eye, that value will change.
 
 Or if it is a song, changing the recording in some way that's imperceptible to the ear, the CID will change. It's no longer the original image or the original song, so it now has a new identifier.
+</p>
 <p>Self-certification of data means content can be shared across the multiple nodes across the web.
 
 In other words, it's possible to verify that files are what they say they are.
 Organizations such as ProofMode and the <xref scope="external" href="https://contentauthenticity.org/ ">Content Authenticity Initiative</xref> who are well versed on provenance issues advocate for multiple methods of provenance verification.  
 
-
-
-
 In theory, we could be living in a world where following a browser link to an image or video, would take you to the CID on IPFS.  
 In reality, Brave Browser and other browsers with extensions are able to navigate the DWeb.
 
 Most people who are getting served up content from the DWeb are getting it through gateways to ensure backwards compability with Web 1.0. 
-
-
-
 </p>
 <p>
 <!-- 
