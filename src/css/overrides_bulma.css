@@ -47,7 +47,12 @@ img {
     border-color: rgb(209, 217, 224);
      }
 
-td, td.stentry {
+video {
+   
+   padding: 3rem !important;
+
+}
+td, td.stentry, .stentry, th {
    
    padding: 0.75rem !important;
 
