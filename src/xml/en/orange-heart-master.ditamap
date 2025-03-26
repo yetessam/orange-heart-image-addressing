@@ -21,7 +21,6 @@
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
 		<topicref href="topics/bio.dita" format="dita" type="concept"/>
 		
-	
 	</topicref>
 	<reltable>
 		<title>Source and target: Links that apply only to HTML version of distribution documentation</title>
@@ -38,7 +37,7 @@
 					<topicmeta><navtitle>DWeb Principles</navtitle></topicmeta>
 				</topicref>
 				<topicref href="https://github.com/yetessam/orange-heart-image-addressing" format="html" scope="external">
-					<topicmeta><navtitle>Github repository: https://github.com/yetessam/orange-heart-image-addressing</navtitle></topicmeta>
+					<topicmeta><navtitle>GitHub repository: https://github.com/yetessam/orange-heart-image-addressing</navtitle></topicmeta>
 				</topicref>
 				<topicref href="https://fleek.xyz/" format="html" scope="external">
 					<topicmeta><navtitle>Fleek</navtitle></topicmeta>
