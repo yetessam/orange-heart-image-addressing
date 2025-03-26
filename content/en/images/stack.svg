@@ -31,11 +31,12 @@
      inkscape:cx="250.13387"
      inkscape:cy="125.06693"
      inkscape:window-width="1312"
-     inkscape:window-height="449"
+     inkscape:window-height="651"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg44" />
+     inkscape:current-layer="svg44"
+     inkscape:lockguides="true" />
   <clipPath
      id="p.0">
     <path
@@ -46,7 +47,7 @@
   <g
      clip-path="url(#p.0)"
      id="g44"
-     transform="scale(0.50054265,0.49973241)">
+     transform="matrix(0.44979728,0,0,0.44676631,31.796678,14.83845)">
     <path
        fill="#000000"
        fill-opacity="0"
