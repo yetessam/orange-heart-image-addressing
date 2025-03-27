@@ -15,7 +15,7 @@
 		<topicref href="topics/faq.dita" format="dita" type="concept"/>
                 <topicref href="topics/stack.dita" format="dita" type="concept"/>
 		<topicref href="topics/clog2024.dita" format="dita" type="concept">
-			<topicref href="topics/clog2025.dita" format="dita" type="concept">
+			<topicref href="topics/clog2025.dita" format="dita" type="concept"/>
 		</topicref>
 		
 	</topicref>
