@@ -5,16 +5,16 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language in an automated pipeline that genrates and moves assets to a decentralized network." name="description"/>
+  <meta content="Brief notes capturing technical progress, challenges, solutions and events." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
-   Stack
+   Log 2025
   </title>
   <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
   <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body class="container p-4" id="stack">
+ <body class="container p-4" id="captains-log">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -122,19 +122,180 @@
   <main role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Stack
+     Log 2025
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language in an automated pipeline that genrates and moves assets to a decentralized network.
+      Brief notes capturing technical progress, challenges, solutions and events.
      </p>
-     <p class="p">
-      Standard OASIS DITA 2.0 maps and topics are used for content development and defining navigation.  Github Actions orchestrate the build processes.
-   The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5, Python is used to  add additional configurations including responsive Bulma CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the resulting content is store and pinned on IPFS.
-     </p>
-     <p class="p">
-     </p>
-     <img alt="Static HTML 5 Site Content Development, Build and Deployment" class="image" src="../images/stack.svg"/>
+     <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       March 22-22nd, 2025
+      </dt>
+      <dd class="dd">
+       ATmosphere Conference 2025 on AT Protocol.
+       <p class="p">
+        Paul Frazee
+       </p>
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         publishing vs distribution
+        </li>
+        <li class="li list-item">
+         web now equals a desktop experience, mobile created distribution models owned by corporations pushing their chosen content to audiences.
+        </li>
+        <li class="li list-item">
+         blockchains is literally where the money went and they don't care at all about content.   Usability issues and honestly, they aren't for content.
+        </li>
+        <li class="li list-item">
+         "social networks on device literally give you a small view of the world"
+        </li>
+        <li class="li list-item">
+         not bound to a specific host for your content, can migrate freely and make those changes, important usability decision
+        </li>
+        <li class="li list-item">
+         scale requires aggregation from a wide range of content
+        </li>
+        <li class="li list-item">
+         portability with regard to hosting
+        </li>
+        <li class="li list-item">
+         content addressing
+        </li>
+        <li class="li list-item">
+         AT proto lexicon was initially RDF based but Bluesky team didn't have enough time.
+        </li>
+        <li class="li list-item">
+         PDS (Host) publish JSON records and manage keys
+        </li>
+        <li class="li list-item">
+         App View (Search) is distribution side and applies business model
+        </li>
+       </ul>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Tues March 18, 2025
+      </dt>
+      <dd class="dd">
+       Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
+       Remove src path from sitemap.xml.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sat March 1, 2025
+      </dt>
+      <dd class="dd">
+       Tooled around with Ghost https://ghost.org/ and Grist.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Friday Feb 28, 2025
+      </dt>
+      <dd class="dd">
+       AI Show and Tell and Learn
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Tuesday Feb 25, 2025
+      </dt>
+      <dd class="dd">
+       Adding the Algolia search feature and minor bug fixing
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Feb 24, 2025
+      </dt>
+      <dd class="dd">
+       Blog post from ODI
+       <a class="xref is-link" href="https://theodi.org/news-and-events/blog/if-deepseek-wants-to-be-a-real-disruptor-it-should-go-much-further-on-data-transparency/" rel="external noopener" target="_blank">
+        If DeepSeek wants to be a real disruptor, it should go much further on data transparency
+     We need more transparency, from all model providers.
+       </a>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Feb 15, 2025
+      </dt>
+      <dd class="dd">
+       Fixed a bug in the UI plugin, changed program parameters to use dashes, no underscores and you can optionally pass through a debug flag -d or -debug
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Feb 7, 2025
+      </dt>
+      <dd class="dd">
+       Switching to object oriented plugsin
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Jan 27, 2025
+      </dt>
+      <dd class="dd">
+       Calling Algolia via crawler.yml on push to prod.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sun Jan 26, 2025
+      </dt>
+      <dd class="dd">
+       The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
+           It isn't the same use case as site search. 
+           Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
+           Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Wed Jan 22, 2025
+      </dt>
+      <dd class="dd">
+       Want multi-level navbars so they are two levels deep. 
+         Python script to add more Bulma classnames and changed the build.properties file for the DOT.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Jan 20, 2025
+      </dt>
+      <dd class="dd">
+       Refactoring and cleanup activities. 
+          Decided to reorg site into nested structures, so updated DITA map to use collection-type.
+          Have to go back and reread the short descs to make sure that are descriptive enough for the Discover landing page.
+          Fixed up workflows for maintainability and so that the names in the gui match the yml.
+          Python cleanup.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Thursday Jan 16, 2025
+      </dt>
+      <dd class="dd">
+       Used Python to look at image metadata and then used exiftool to set metadata in test images. 
+          Want to consider embedding metadata into image files in the pipeline vs delivering JSON file adjacent to the image.
+          Logically, the only thing that you could really embed would be a IPNS since you obviously can't create an image, get the CID and then embed that CID into the file.  
+          InterPlanetary Name System (IPNS) supports mutable pointers to IPFS nodes (immutable).
+       <a class="xref is-link" href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" rel="external noopener" target="_blank">
+        https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs
+       </a>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sunday Jan 12, 2025
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Here's a React live chat app from
+        <a class="xref is-link" href="https://github.com/feathercloud/chat" rel="external noopener" target="_blank">
+         https://github.com/feathercloud/chat
+        </a>
+        .  
+                     You do need to provide your email so that you can be sent a sign-in code to the chat. 
+
+                     I was experimenting with publishing the app to IPFS (using Fleek) and added my own logo to the box, but the chat is the DWeb YVR chat group... so nerd alert :)
+       </p>
+       <object data="https://future-fall-deep.on-fleek.app" height="600px" width="600px">
+       </object>
+       <p class="p">
+        Worked on extending this chat at Dweb YVR event.  
+            I contributed "like" functionality by extending the React chat's Typescript.   Updated the Message data type with David Luecke/daffl to ensure that the handlers were propertly chained together.
+           Good chance I'll use FeatherCloud again since it just works.  Ditto for Automerge, as it took care of the merging and managing the data for the chat.
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Saturday Jan 11, 2025
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        DWeb YVR threw a weekend event at Z-Space with old and new Dweb folks.   
+          Friendly folks and Boris M even cooked brekkie.. super treat!   At least two other people travelled from the islands and everybody got to play around with Feathers Cloud and Automerge to build real-time apps without the Cloud.
+       </p>
+      </dd>
+     </dl>
     </div>
     <nav class="related-links" role="navigation">
      <div class="familylinks pt-5">
@@ -148,16 +309,16 @@
       </div>
       <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
        <div class="level-left">
-        <a class="link is-link" href="faq.html" title="Short questions and answers on content creation and publishing with the decentralized web.">
+        <a class="link is-link" href="stack.html" title="This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language in an automated pipeline that genrates and moves assets to a decentralized network.">
          <span class="mr-2 translate-y-px">
           ←
          </span>
-         DWebsite FAQ
+         Stack
         </a>
        </div>
        <div class="level-right">
-        <a class="link is-link" href="clog2025.html" title="Brief notes capturing technical progress, challenges, solutions and events.">
-         Log 2025
+        <a class="link is-link" href="clog2024.html" title="Notes capturing technical progress, challenges, solutions and events in 2024.">
+         Log 2024
          <span class="ml-2 translate-y-px">
           →
          </span>
