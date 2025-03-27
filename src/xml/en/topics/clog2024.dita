@@ -1,150 +1,9 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
-<concept id="captains-log">
+<concept id="captains-log2024">
   <title>Captain's Log</title>
-  <shortdesc>Brief notes capturing technical progress, challenges, solutions and events.
+  <shortdesc>Notes capturing technical progress, challenges, solutions and events in 2024.
   </shortdesc>
   <conbody>
-<div id="year2025">
-  <dl>
-    <dlentry>
-      <dt>March 22-22nd, 2025</dt>
-      <dd>ATmosphere Conference 2025 on AT Protocol. 
-       <p>Paul Frazee</p>
-       <ul>
-
-        <li>publishing vs distribution </li>
-       <li> web now equals a desktop experience, mobile created distribution models owned by corporations pushing their chosen content to audiences.</li>
-        <li>blockchains is literally where the money went and they don't care at all about content.   Usability issues and honestly, they aren't for content. </li>
-        <li>"social networks on device literally give you a small view of the world"</li>
-       <li>not bound to a specific host for your content, can migrate freely and make those changes, important usability decision</li>
-       <li>scale requires aggregation from a wide range of content </li>
-      <li>portability with regard to hosting </li>
-       <li>content addressing </li>
-        
-       <li>AT proto lexicon was initially RDF based but Bluesky team didn't have enough time.</li>
-        
-      <li>PDS (Host) publish JSON records and manage keys</li>
-       <li>App View (Search) is distribution side and applies business model </li>
-    </ul>
-
-  </dd>
-    </dlentry>
- 
-    <dlentry>
-      <dt>Tues March 18, 2025</dt>
-      <dd>Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
-       Remove src path from sitemap.xml.
-      </dd>
-    </dlentry>
- 
- 
-   <dlentry>
-      <dt>Sat March 1, 2025</dt>
-      <dd>Tooled around with Ghost https://ghost.org/ and Grist.</dd>
-    </dlentry>
- 
-     <dlentry>
-      <dt>Friday Feb 28, 2025</dt>
-      <dd>AI Show and Tell and Learn</dd>
-      </dlentry>
- 
-<dlentry>
-    <dt>Tuesday Feb 25, 2025</dt>
-    <dd>Adding the Algolia search feature and minor bug fixing</dd>
-
-</dlentry>
- <dlentry>
-    <dt>Monday Feb 24, 2025</dt>
-    <dd>Blog post from ODI <xref scope="external" type="html" href="https://theodi.org/news-and-events/blog/if-deepseek-wants-to-be-a-real-disruptor-it-should-go-much-further-on-data-transparency/">If DeepSeek wants to be a real disruptor, it should go much further on data transparency
-     We need more transparency, from all model providers.</xref></dd>
-  </dlentry>
-  <dlentry>
-        <dt>Feb 15, 2025</dt>
-        <dd>Fixed a bug in the UI plugin, changed program parameters to use dashes, no underscores and you can optionally pass through a debug flag -d or -debug
-        </dd>
-      </dlentry>
-   <dlentry>
-
-        <dt>Feb 7, 2025</dt>
-        <dd>Switching to object oriented plugsin
-        </dd>
-      </dlentry>
-
-<dlentry>
-
-        <dt>Monday Jan 27, 2025</dt>
-        <dd>Calling Algolia via crawler.yml on push to prod.
-        </dd>
-      </dlentry>
-   <dlentry>
-        <dt>Sun Jan 26, 2025</dt>
-        <dd>
-           The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
-           It isn't the same use case as site search. 
-           Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
-           Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
-        </dd>
-      </dlentry>
-
-
-   <dlentry>
-        <dt>Wed Jan 22, 2025</dt>
-        <dd>
-         Want multi-level navbars so they are two levels deep. 
-         Python script to add more Bulma classnames and changed the build.properties file for the DOT.
-         
-
-        </dd>
-      </dlentry>
-     <dlentry>
-        <dt>Monday Jan 20, 2025</dt>
-        <dd>
-          Refactoring and cleanup activities. 
-          Decided to reorg site into nested structures, so updated DITA map to use collection-type.
-          Have to go back and reread the short descs to make sure that are descriptive enough for the Discover landing page.
-          Fixed up workflows for maintainability and so that the names in the gui match the yml.
-          Python cleanup.
-    </dd>
-      </dlentry>
-      
-     <dlentry>
-        <dt>Thursday Jan 16, 2025</dt>
-        <dd>
-          Used Python to look at image metadata and then used exiftool to set metadata in test images. 
-          Want to consider embedding metadata into image files in the pipeline vs delivering JSON file adjacent to the image.
-          Logically, the only thing that you could really embed would be a IPNS since you obviously can't create an image, get the CID and then embed that CID into the file.  
-          InterPlanetary Name System (IPNS) supports mutable pointers to IPFS nodes (immutable).
-          <xref href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" scope="external" format="html"/>
-        </dd>
-      </dlentry>
-      
-      <dlentry>
-        <dt>Sunday Jan 12, 2025</dt>
-        <dd>
-          <p>Here's a React live chat app from <xref href="https://github.com/feathercloud/chat" scope="external" format="html"/>
- .  
-                     You do need to provide your email so that you can be sent a sign-in code to the chat. 
-
-                     I was experimenting with publishing the app to IPFS (using Fleek) and added my own logo to the box, but the chat is the DWeb YVR chat group... so nerd alert :)  
-          </p>
-          <object outputclass="iframe" data="https://future-fall-deep.on-fleek.app" height="600px" width="600px">
-          </object>
-          <p>Worked on extending this chat at Dweb YVR event.  
-            I contributed "like" functionality by extending the React chat's Typescript.   Updated the Message data type with David Luecke/daffl to ensure that the handlers were propertly chained together.
-           Good chance I'll use FeatherCloud again since it just works.  Ditto for Automerge, as it took care of the merging and managing the data for the chat.             </p>
-        </dd>
-      </dlentry>
-      <dlentry>
-        <dt>Saturday Jan 11, 2025</dt>
-        <dd>
-          <p>DWeb YVR threw a weekend event at Z-Space with old and new Dweb folks.   
-          Friendly folks and Boris M even cooked brekkie.. super treat!   At least two other people travelled from the islands and everybody got to play around with Feathers Cloud and Automerge to build real-time apps without the Cloud.</p>
-        </dd>
-      </dlentry>
-   </dl>
-</div>
-
-<div id="year2024">
      <dl>
       <dlentry>
         <dt>Aug 15, 2024</dt>
@@ -410,6 +269,5 @@ It could also be easily extended to remap by class name.  For now, stick to elem
         </dd>
       </dlentry>
     </dl>
-   </div>
   </conbody>
 </concept>
