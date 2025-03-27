@@ -5,16 +5,16 @@
   <meta charset="utf-8"/>
   <meta content="(C) Copyright 2025" name="copyright"/>
   <meta content="DITA-OT" name="generator"/>
-  <meta content="Content Agent is an AI-based editing and content moderation assistant." name="description"/>
+  <meta content="Brief notes capturing technical progress, challenges, solutions and events." name="description"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="204AB1DCEC8BAEEF" name="algolia-site-verification"/>
   <title>
-   Content Agent
+   Captain's Log
   </title>
-  <link href="../../css/commonltr.css" rel="stylesheet" type="text/css"/>
-  <link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/commonltr.css" rel="stylesheet" type="text/css"/>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css"/>
  </head>
- <body class="container p-4" id="ai_demo">
+ <body class="container p-4" id="captains-log">
   <nav aria-label="main navigation" class="navbar" id="navbar-bulma" role="navigation">
    <div class="navbar-brand">
     <a aria-expanded="false" aria-label="menu" class="navbar-burger is-boxed" data-target="navbarMenu" role="button">
@@ -30,38 +30,38 @@
    </div>
    <div class="navbar-menu" id="navbarMenu">
     <div class="navbar-start">
-     <a class="navbar-item" href="../../index.html">
+     <a class="navbar-item" href="../index.html">
       Home
      </a>
-     <a class="navbar-item" href="../../topics/orange-heart.html">
+     <a class="navbar-item" href="../topics/orange-heart.html">
       Orange Heart Project
      </a>
-     <a class="navbar-item" href="../../topics/gallery.html">
+     <a class="navbar-item" href="../topics/gallery.html">
       Gallery
      </a>
      <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-item" href="../../topics/discover.html">
+      <a class="navbar-item" href="../topics/discover.html">
        Discover
       </a>
       <div class="navbar-dropdown is-hoverable">
-       <a class="navbar-item" href="../../topics/content-addressing.html">
+       <a class="navbar-item" href="../topics/content-addressing.html">
         Content Addressing
        </a>
-       <a class="navbar-item" href="../../topics/deploy.html">
+       <a class="navbar-item" href="../topics/deploy.html">
         Deploying
        </a>
-       <a class="navbar-item" href="../../topics/faq.html">
+       <a class="navbar-item" href="../topics/faq.html">
         DWebsite FAQ
        </a>
-       <a class="navbar-item" href="../../topics/stack.html">
+       <a class="navbar-item" href="../topics/stack.html">
         Stack
        </a>
        <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-item" href="../../topics/clog2024.html">
+        <a class="navbar-item" href="../topics/clog2024.html">
          Captain's Log
         </a>
         <div class="navbar-dropdown is-hoverable">
-         <a class="navbar-item" href="../../topics/clog2025.html">
+         <a class="navbar-item" href="../topics/clog2025.html">
           Captain's Log
          </a>
         </div>
@@ -69,27 +69,27 @@
       </div>
      </div>
      <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-item" href="../../topics/ai/ai.html">
+      <a class="navbar-item" href="../topics/ai/ai.html">
        AI
       </a>
       <div class="navbar-dropdown is-hoverable">
-       <a class="navbar-item" href="../../topics/ai/ai-agent-demo.html">
+       <a class="navbar-item" href="../topics/ai/ai-agent-demo.html">
         Content Agent
        </a>
-       <a class="navbar-item" href="../../topics/ai/ai-usage.html">
+       <a class="navbar-item" href="../topics/ai/ai-usage.html">
         AI Usage
        </a>
-       <a class="navbar-item" href="../../topics/ai/prompt-examples.html">
+       <a class="navbar-item" href="../topics/ai/prompt-examples.html">
         Prompt Examples
        </a>
       </div>
      </div>
      <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-item" href="../../topics/about.html">
+      <a class="navbar-item" href="../topics/about.html">
        About
       </a>
       <div class="navbar-dropdown is-hoverable">
-       <a class="navbar-item" href="../../topics/bio.html">
+       <a class="navbar-item" href="../topics/bio.html">
         Bio
        </a>
       </div>
@@ -121,117 +121,185 @@
     </div>
    </div>
   </div>
-  <script src="../../js/navbar.js" type="text/javascript">
+  <script src="../js/navbar.js" type="text/javascript">
   </script>
   <main role="main">
    <article aria-labelledby="ariaid-title1" role="article">
     <h1 class="title topictitle1" id="ariaid-title1">
-     Content Agent
+     Captain's Log
     </h1>
     <div class="body conbody container">
      <p class="shortdesc">
-      Content Agent is an AI-based editing and content moderation assistant.
+      Brief notes capturing technical progress, challenges, solutions and events.
      </p>
-     <p class="p">
-      Generative AI is pre-trained to have a high level of language comprehension and to avoid harmful interactions.  Different AI's have different capabilities and
-it makes it challenging to deploy solutions if they are highly dependent on the host application.
-     </p>
-     <p class="p">
-      What if you need to ensure that you had to be able to ensure effective, professional, and consistent content?
-  Honestly, if I could, I would hire an editor.  They are worth their weight in gold.
-     </p>
-     <p class="p">
-      What if you needed to score and rate your content and track its politeness and professionalism?   
-Rather than assuming that any LLM has the correct training for this task, you can use an
-      <a class="xref is-link" href="https://huggingface.co/blog/smolagents#%F0%9F%A4%94-what-are-agents" rel="external noopener" target="_blank">
-       AI agent
-      </a>
-      to evaluate content using specialized and well-vetted tools.
-     </p>
-     <p class="p">
-      Intel recently released
-      <a class="xref is-link" href="https://huggingface.co/Intel/polite-guard" rel="external noopener" target="_blank">
-       Polite Guard
-      </a>
-      which is an open-source tool that classifies and scores English text.
-Given input text, Polite Guard is able to label the text as polite, somewhat polite, neutral, or impolite.
-     </p>
-     <p class="p">
-      Content Agent was created using the smolagents library.  It's capabilities were augmented by giving it access to the
-Polite Guard classification labels and scoring tool.
-     </p>
-     <div class="p">
-      <figure class="fig fignone">
-       <figcaption>
-        <span class="fig--title-label">
-         Figure 1.
-        </span>
-        Content Classifier Agent.
-        <span class="desc figdesc">
-         Hugging Face Spaces tile hosting the Content Agent app
-        </span>
-       </figcaption>
-       <br/>
-       <img alt="Content Classifier App" class="image" src="../../images/content_classifie.png"/>
-       <br/>
-      </figure>
-     </div>
-     <div class="note note note_note notification">
-      <span class="note__title">
-       Note:
-      </span>
-      <div class="note__body">
-       Content Agent is live at
-       <a class="xref is-link" href="https://huggingface.co/spaces/yetessam/ContentClassifier" rel="external noopener" target="_blank">
-        https://huggingface.co/spaces/yetessam/ContentClassifier
+     <dl class="dl">
+      <dt class="dt dlterm has-text-weight-semibold">
+       March 22-22nd, 2025
+      </dt>
+      <dd class="dd">
+       ATmosphere Conference 2025 on AT Protocol.
+       <p class="p">
+        Paul Frazee
+       </p>
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         publishing vs distribution
+        </li>
+        <li class="li list-item">
+         web now equals a desktop experience, mobile created distribution models owned by corporations pushing their chosen content to audiences.
+        </li>
+        <li class="li list-item">
+         blockchains is literally where the money went and they don't care at all about content.   Usability issues and honestly, they aren't for content.
+        </li>
+        <li class="li list-item">
+         "social networks on device literally give you a small view of the world"
+        </li>
+        <li class="li list-item">
+         not bound to a specific host for your content, can migrate freely and make those changes, important usability decision
+        </li>
+        <li class="li list-item">
+         scale requires aggregation from a wide range of content
+        </li>
+        <li class="li list-item">
+         portability with regard to hosting
+        </li>
+        <li class="li list-item">
+         content addressing
+        </li>
+        <li class="li list-item">
+         AT proto lexicon was initially RDF based but Bluesky team didn't have enough time.
+        </li>
+        <li class="li list-item">
+         PDS (Host) publish JSON records and manage keys
+        </li>
+        <li class="li list-item">
+         App View (Search) is distribution side and applies business model
+        </li>
+       </ul>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Tues March 18, 2025
+      </dt>
+      <dd class="dd">
+       Fiddling with Algolia record extraction.  Break up figure[id] into their own records as well as div[id]. 
+       Remove src path from sitemap.xml.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sat March 1, 2025
+      </dt>
+      <dd class="dd">
+       Tooled around with Ghost https://ghost.org/ and Grist.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Friday Feb 28, 2025
+      </dt>
+      <dd class="dd">
+       AI Show and Tell and Learn
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Tuesday Feb 25, 2025
+      </dt>
+      <dd class="dd">
+       Adding the Algolia search feature and minor bug fixing
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Feb 24, 2025
+      </dt>
+      <dd class="dd">
+       Blog post from ODI
+       <a class="xref is-link" href="https://theodi.org/news-and-events/blog/if-deepseek-wants-to-be-a-real-disruptor-it-should-go-much-further-on-data-transparency/" rel="external noopener" target="_blank">
+        If DeepSeek wants to be a real disruptor, it should go much further on data transparency
+     We need more transparency, from all model providers.
        </a>
-       .  Submit text to the chat agent and see how it evaluates the content.
-      </div>
-     </div>
-     <p class="p">
-      Content Agent has been prompted to operate using Thought-Act-Observe cycles.   It must set up tasks, think about problems, run tools, and make observations before providing an answer.
-This cuts down on hallucinations. 
-Content Agent has also been prompted to use Polite Guard rather than soley relying on its own reasoning.
-As a result, when the AI encounters content, it call the text classification function and gets back a label and score.
-     </p>
-     <div class="p">
-      <figure class="fig fignone">
-       <figcaption>
-        <span class="fig--title-label">
-         Figure 2.
-        </span>
-        Content Agent providing a final answer..
-        <span class="desc figdesc">
-        </span>
-       </figcaption>
-       <br/>
-       <img alt="Content Classifier Agent User interface provides a view into the process AI uses to come to its final answers." class="image" src="../../images/content_agent.png"/>
-       <br/>
-      </figure>
-     </div>
-     <p class="p">
-      Continued work is needed to ensure the agent always “listens” to the polite_guard tool and adjust its classification accordingly.    Content should be evaluated based on the quantitative score provided by Polite Guard rather than the model's own assessments. Even where the AI does take the Polite Guard scoring into account, there are instances where the Agent continues to inject its own perspective and decisions making into the process. As
-      <a class="xref is-link" href="prompt-examples.html#prompts__content-agent">
-       prompting
-      </a>
-      instructs it to improve text,  its language suggestions come from the model, not from the classification tool.
-     </p>
-     <p class="p">
-      Smolagents  is a lightweight Python library for setting up agents.   The code is available in the Files section and uses smolagents, Gradio for the user interface, calls in an LLM model, sets up prompts and passes the code agent the tool. See
-      <a class="xref is-link" href="https://huggingface.co/agents-course" rel="external noopener" target="_blank">
-       Agents Course
-      </a>
-      to learn how to create your first AI Agent.
-     </p>
-     <div class="note note note_note notification">
-      <span class="note__title">
-       Note:
-      </span>
-      <div class="note__body">
-       Determining whether or not content is polite or respectful to specific audiences is highly subjective and culturally biased.   
-A second acknowledgement is that technology has a tendency to codify and entrench existing biases under the guise of neutrality.
-      </div>
-     </div>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Feb 15, 2025
+      </dt>
+      <dd class="dd">
+       Fixed a bug in the UI plugin, changed program parameters to use dashes, no underscores and you can optionally pass through a debug flag -d or -debug
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Feb 7, 2025
+      </dt>
+      <dd class="dd">
+       Switching to object oriented plugsin
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Jan 27, 2025
+      </dt>
+      <dd class="dd">
+       Calling Algolia via crawler.yml on push to prod.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sun Jan 26, 2025
+      </dt>
+      <dd class="dd">
+       The Graph lets developers publish subgraphs of their part of the block chain which makes it searchable. 
+           It isn't the same use case as site search. 
+           Publishing a subgraph could still be a good exercise.  TBD. https://thegraph.com/docs/en/subgraphs/developing/introduction/
+           Looked at Meilisearch, but think I will stick with Algolia for now.  https://www.meilisearch.com/
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Wed Jan 22, 2025
+      </dt>
+      <dd class="dd">
+       Want multi-level navbars so they are two levels deep. 
+         Python script to add more Bulma classnames and changed the build.properties file for the DOT.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Monday Jan 20, 2025
+      </dt>
+      <dd class="dd">
+       Refactoring and cleanup activities. 
+          Decided to reorg site into nested structures, so updated DITA map to use collection-type.
+          Have to go back and reread the short descs to make sure that are descriptive enough for the Discover landing page.
+          Fixed up workflows for maintainability and so that the names in the gui match the yml.
+          Python cleanup.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Thursday Jan 16, 2025
+      </dt>
+      <dd class="dd">
+       Used Python to look at image metadata and then used exiftool to set metadata in test images. 
+          Want to consider embedding metadata into image files in the pipeline vs delivering JSON file adjacent to the image.
+          Logically, the only thing that you could really embed would be a IPNS since you obviously can't create an image, get the CID and then embed that CID into the file.  
+          InterPlanetary Name System (IPNS) supports mutable pointers to IPFS nodes (immutable).
+       <a class="xref is-link" href="https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs" rel="external noopener" target="_blank">
+        https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs
+       </a>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Sunday Jan 12, 2025
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        Here's a React live chat app from
+        <a class="xref is-link" href="https://github.com/feathercloud/chat" rel="external noopener" target="_blank">
+         https://github.com/feathercloud/chat
+        </a>
+        .  
+                     You do need to provide your email so that you can be sent a sign-in code to the chat. 
+
+                     I was experimenting with publishing the app to IPFS (using Fleek) and added my own logo to the box, but the chat is the DWeb YVR chat group... so nerd alert :)
+       </p>
+       <object data="https://future-fall-deep.on-fleek.app" height="600px" width="600px">
+       </object>
+       <p class="p">
+        Worked on extending this chat at Dweb YVR event.  
+            I contributed "like" functionality by extending the React chat's Typescript.   Updated the Message data type with David Luecke/daffl to ensure that the handlers were propertly chained together.
+           Good chance I'll use FeatherCloud again since it just works.  Ditto for Automerge, as it took care of the merging and managing the data for the chat.
+       </p>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       Saturday Jan 11, 2025
+      </dt>
+      <dd class="dd">
+       <p class="p">
+        DWeb YVR threw a weekend event at Z-Space with old and new Dweb folks.   
+          Friendly folks and Boris M even cooked brekkie.. super treat!   At least two other people travelled from the islands and everybody got to play around with Feathers Cloud and Automerge to build real-time apps without the Cloud.
+       </p>
+      </dd>
+     </dl>
     </div>
     <nav class="related-links" role="navigation">
      <div class="familylinks pt-5">
@@ -239,8 +307,8 @@ A second acknowledgement is that technology has a tendency to codify and entrenc
        <strong>
         Parent topic:
        </strong>
-       <a class="link is-link" href="ai.html" title="Generative AI and AI Agents">
-        AI
+       <a class="link is-link" href="clog2024.html" title="Notes capturing technical progress, challenges, solutions and events in 2024.">
+        Captain's Log
        </a>
       </div>
       <div class="level is-mobile pt-3 is-flex is-justify-content-space-between">
@@ -271,10 +339,10 @@ A second acknowledgement is that technology has a tendency to codify and entrenc
   <script crossorigin="anonymous" integrity="sha512-QWlXe/zpXfXKKHds/YEyrMtzcKNME8+pxry8swnOWgxg6VjwmnkeMOTqlRjNyKVoNKuMyPN5UN/kyZHWgcgUeg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.75.5/instantsearch.production.min.js">
   </script>
   <!-- Algolia and InstantSearch setup -->
-  <script src="../../js/search.js">
+  <script src="../js/search.js">
   </script>
   <!-- Dropdown functionality -->
-  <script src="../../js/algolia.js">
+  <script src="../js/algolia.js">
   </script>
   <!-- Initialize components once the DOM is ready -->
   <script>
