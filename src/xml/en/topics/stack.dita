@@ -2,11 +2,10 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="stack">
    <title>Stack</title>
-   <shortdesc>This site is built using the latest DITA Open Toolkit and the DITA 2.0 markup language in an automated pipeline that genrates and moves assets to a decentralized network.</shortdesc>
-   <conbody>
-  <p>
-   Standard OASIS DITA 2.0 maps and topics are used for content development and defining navigation.  Github Actions orchestrate the build processes.
-   The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5, Python is used to  add additional configurations including responsive Bulma CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the resulting content is store and pinned on IPFS. 
+   <shortdesc>A decentralized, automated content pipeline for building and deployed this static HTML5 website using the latest DITA 2.0 standard and the DITA Open Toolkit.</shortdesc>
+<conbody>
+  <p>Standard OASIS DITA 2.0 maps and topics are used for content development and defining navigation.  Github Actions orchestrate the build processes.
+   The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5, Python adds additional configurations including responsive CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the resulting content is store and pinned on IPFS. 
   </p>
 <p></p>
   <image href="../images/stack.svg"><alt>Static HTML 5 Site Content Development, Build and Deployment </alt></image>
