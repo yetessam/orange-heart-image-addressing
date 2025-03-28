@@ -12,10 +12,10 @@
 		<!--<topicref href="topics/addressing.dita" format="dita" type="concept"></topicref>-->
 		<topicref href="topics/content-addressing.dita" format="dita" type="concept"/>
 		<topicref href="topics/deploy.dita" format="dita" type="concept"/>
-		<topicref href="topics/faq.dita" format="dita" type="concept"/>
-                <topicref href="topics/stack.dita" format="dita" type="concept"/>
+		<topicref href="topics/faq.dita" format="dita" type="concept"/> 
 		<topicref href="topics/clog2025.dita" format="dita" type="concept"/>
-		<topicref href="topics/clog2024.dita" format="dita" type="concept"/>		
+		<topicref href="topics/clog2024.dita" format="dita" type="concept"/>	
+                 <topicref href="topics/stack.dita" format="dita" type="concept"/>
 	</topicref>
 	<mapref href="topics/ai/ai.ditamap" format="ditamap" type="concept" collection-type="sequence"/>
 	<topicref href="topics/about.dita" format="dita" type="concept" collection-type="sequence">
