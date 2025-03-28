@@ -39,4 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
         closeAllModals();
       }
     });
+
+    // Add double-click event for gcard elements to open image in new window
+    (document.querySelectorAll('.gcard') || []).forEach(($gcard) => {
+      //alert(`Found ${document.querySelectorAll('.gcard').length} gcard elements`); // Debug 1
+      
+      $gcard.addEventListener('click', () => {
+        // Find the image within the gcard element
+        const $img = $gcard.querySelector('img');
+        if ($img && $img.src) {
+          window.open($img.src, '_blank');
+        }
+      });
+    });
   });
