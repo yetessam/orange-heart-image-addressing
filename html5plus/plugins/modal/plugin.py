@@ -2,9 +2,12 @@ from ..plugin import Plugin
 from pathlib import Path
 from bs4 import BeautifulSoup
 
+from ...common.headoperations import add_script_tag 
 
 import logging
+import os
 import sys
+
 
 class ModalPlugin(Plugin):
     """
@@ -37,8 +40,16 @@ class ModalPlugin(Plugin):
         Returns:
             The processed HTML content.
         """
-        return self.modify_Modal(html_content)
-          
+        # Create a BeautifulSoup object
+        soup = BeautifulSoup(html_content, "html.parser")
+        comment = "Modal for Gallery"
+        js_path = os.path.join(HTMLP.root_relative, 'js', 'modal.js') 
+        script =  {"src": f"{js_path}"}
+        
+        soup =  add_script_tag(soup, script, comment)
+        soup = self.modify_Modal(str(soup))
+        
+        return str(soup)      
  
     def run(self):
         """This code once during the projects entire project flow."""
@@ -106,11 +117,12 @@ class ModalPlugin(Plugin):
         Gallery = soup.find( "*", class_='gallery')
         
         if Gallery:
-            self.make_modal(Gallery)  
+            pass 
+            #self.make_modal(Gallery)  
             #level_html = self.create_level_html(prevlink, nextlink)
             #Modal.append(BeautifulSoup(level_html, 'html.parser'))
         
-        return str(soup)
+        return soup
         
         
     def getHTMLSnippet(self, prev_uri, prev_text, next_uri, next_text):
