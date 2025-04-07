@@ -5,19 +5,36 @@
   </shortdesc>
   <conbody>
   <dl>
+
+    <dlentry>
+      <dt>April 7th,  2025</dt>
+      <dd>DITA 2.0 Technical Commitee and the DITA OT devs built support for &lt;include&gt;.   Trying it out. 
+      </dd>
+    </dlentry>
+    <dlentry>
+      <dt>March 28, 2025</dt>
+      <dd>Participated in AI hack day at Z-Space where there was a lot of experimentation.  https://dwebyvr.org/event-vancouver-hack-day-personal-ai/
+         My hack was to turn on caching in an AI Agent that's running on Hugging Face to get a personal AI running on my laptop. 
+         Several hours went with lots of housekeeping, downloading, installing and fiddling around to get everything sorta running locally-ish...
+         At one point, I had a local web server running an AI while the other version was running on HF.  But then I tried to make it run 100% locally and that's when 
+         which did not work, using a flag to get the code to run fully locally threw up a semaphore error, I had a memory leak somewhere that I really don't understand, my laptop literally
+could barely chug along... well whatever, hack days are supposed to be about playing around with stuff. great event with the DWeb YVR crew.  
+</dd>
+    </dlentry>
+
     <dlentry>
       <dt>March 22-22nd, 2025</dt>
       <dd>
        <ul>
         <li>Where is data physically stored?  Canada vs US?  Jurisdictions.   
         </li>
-        <li>App passcode functionality in bsky through Settings > Privacy & Security</li>
+        <li>App passcode functionality in bsky through Settings > Privacy &amp; Security</li>
         <li>google+ email addressing </li>
         <li>Ghost is email AND site </li>
         <li>having input into the algorithm is important for users</li> 
         <li>identity management</li>
      </dd>
-    </dlentry.
+    </dlentry>
      
     <dlentry>
       <dt>March 22-22nd, 2025</dt>
