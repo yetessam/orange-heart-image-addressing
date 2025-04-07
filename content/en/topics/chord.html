@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a description of the page.">
+    <meta name="keywords" content="HTML, SVG, JavaScript, D3, Visualization, Bubbles, Page, Data">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Diagram with Meta Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Chord Diagram from Meta Data Keywords</h1>
+    <div id="svg-container"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const width = 800;
+        const height = width;
+        const innerRadius = Math.min(width, height) * 0.5 - 90;
+        const outerRadius = innerRadius + 10;
+
+        // Extract keywords from meta tag
+        function getMetaKeywords() {
+            const metaTag = document.querySelector('meta[name="keywords"]');
+            return metaTag ? metaTag.getAttribute('content').split(',') : [];
+        }
+
+        // Parse keywords from the meta tag
+        const keywords = getMetaKeywords().map(word => word.trim());
+
+        // Generate links based on consecutive keywords
+        const data = [];
+        for (let i = 0; i < keywords.length - 1; i++) {
+            data.push({ source: keywords[i], target: keywords[i + 1], value: 1 });
+        }
+
+        // Compute a dense matrix from the weighted links in data
+        const names = d3.sort(d3.union(data.map(d => d.source), data.map(d => d.target)));
+        const index = new Map(names.map((name, i) => [name, i]));
+        const matrix = Array.from(index, () => new Array(names.length).fill(0));
+
+        // Populate the matrix with the data
+        for (const { source, target, value } of data) {
+            matrix[index.get(source)][index.get(target)] += value;
+        }
+
+        const chord = d3.chordDirected()
+            .padAngle(10 / innerRadius)
+            .sortSubgroups(d3.descending)
+            .sortChords(d3.descending);
+
+        const arc = d3.arc()
+            .innerRadius(innerRadius)
+            .outerRadius(outerRadius);
+
+        const ribbon = d3.ribbonArrow()
+            .radius(innerRadius - 1)
+            .padAngle(1 / innerRadius);
+
+        const colors = d3.quantize(d3.interpolateRainbow, names.length);
+
+        // Create SVG container
+        const svg = d3.create("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", [-width / 2, -height / 2, width, height]);
+
+        const chords = chord(matrix);
+
+        const group = svg.append("g")
+            .selectAll()
+            .data(chords.groups)
+            .join("g");
+
+        // Create the group arcs (outer rings)
+        group.append("path")
+            .attr("fill", d => colors[d.index])
+            .attr("d", arc);
+
+        // Add text labels for the group arcs
+        group.append("text")
+            .each(d => (d.angle = (d.startAngle + d.endAngle) / 2))
+            .attr("dy", "0.35em")
+            .attr("transform", d => `
+                rotate(${(d.angle * 180 / Math.PI - 90)})
+                translate(${outerRadius + 5})
+                ${d.angle > Math.PI ? "rotate(180)" : ""}
+            `)
+            .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
+            .text(d => names[d.index]);
+
+        group.append("title")
+            .text(d => `${names[d.index]}
+${d3.sum(chords, c => (c.source.index === d.index) * c.source.value)} outgoing →
+${d3.sum(chords, c => (c.target.index === d.index) * c.source.value)} incoming ←`);
+
+        // Add the ribbons (chords between groups)
+        svg.append("g")
+            .attr("fill-opacity", 0.75)
+            .selectAll()
+            .data(chords)
+            .join("path")
+            .style("mix-blend-mode", "multiply")
+            .attr("fill", d => colors[d.target.index])
+            .attr("d", ribbon)
+            .append("title")
+            .text(d => `${names[d.source.index]} → ${names[d.target.index]} ${d.source.value}`);
+
+        // Append the SVG to the DOM
+        document.getElementById('svg-container').appendChild(svg.node());
+    </script>
+
+</div>
+</body>
+</html>
