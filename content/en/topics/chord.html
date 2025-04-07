@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="This is a description of the page.">
-    <meta name="keywords" content="HTML, SVG, JavaScript, D3, Visualization, Bubbles, Page, Data">
-    <meta name="author" content="Your Name">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chord Diagram with Meta Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        svg {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-<div>
-    <h1>Chord Diagram from Meta Data Keywords</h1>
+<div id="chordsvg">
     <div id="svg-container"></div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -121,7 +98,4 @@ ${d3.sum(chords, c => (c.target.index === d.index) * c.source.value)} incoming â
         // Append the SVG to the DOM
         document.getElementById('svg-container').appendChild(svg.node());
     </script>
-
 </div>
-</body>
-</html>
