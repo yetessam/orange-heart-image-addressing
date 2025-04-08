@@ -6,6 +6,7 @@ All  content in this Orange Heart Project repository (https://github.com/yetessa
 
 The purpose of this repository is to provide version control support for
 
+- Orange Heart Framed Photos published on IPFS 
 - Content pipeline from Github to IPFS 
 - Latest DITA Open Toolkit  XML to HTML 5 publishing pipeline. 
 - DITA 2.0 source files
