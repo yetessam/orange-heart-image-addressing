@@ -2,7 +2,7 @@
 All  content in this Orange Heart Project repository (https://github.com/yetessam/orange-heart-image-addressing/) was developed an an online component for Decentralized Web for Creators program.    This online component adopts decentralized technology into a content publishing pipeline and shares findings.    
 
 
-#Description
+## Description
 
 The purpose of this repository is to provide version control support for
 
@@ -12,6 +12,6 @@ The purpose of this repository is to provide version control support for
 - Experimental HTML5 plus Python project as an DITA OT configuration post-processor
 
 
-#Licensing
+## Licensing
 
 Please see the LICENSE file for description of the license terms.
