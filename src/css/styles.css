@@ -1,3 +1,7 @@
+@import url("algolia.css"); /* Imported by <class 'html5plus.plugins.search.plugin.SearchPlugin'> */
+@import url("bulma.css"); /* Imported by <class 'html5plus.plugins.ui.plugin.UIPlugin'> */
+@import url("overrides_bulma.css"); /* Imported by <class 'html5plus.plugins.ui.plugin.UIPlugin'> */
+@import url("https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/reset-min.css"); /* Imported by <class 'html5plus.plugins.search.plugin.SearchPlugin'> */
 
 /*
  * Welcome to styles.css!

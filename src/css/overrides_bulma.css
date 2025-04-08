@@ -1,0 +1,82 @@
+
+:root {
+--bulma-radius: border-radius: 0.45rem; 
+--bulma-footer-padding: 3rem 1.5rem 3rem;
+   
+}
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(15em,1fr)); 
+   grid-gap: 5em
+
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery .figdesc {
+    order: 1;
+    border-top: 1px solid darkgray;
+    color: darkgray;
+    font-weight: normal;
+   
+}
+
+.fig--title-label {
+    order: 2;
+    display:none;
+}
+
+img {
+    border-radius: .9em; /* Equivalent to is-rounded */ 
+}
+
+
+
+.content .list , 
+.content ol, 
+.content ul {
+    margin-inline-start:auto;
+}
+
+.button { 
+    border-radius: var(--bulma-radius);
+    border-color: rgb(209, 217, 224);
+     }
+
+video {
+   
+   padding: 3rem !important;
+
+}
+td, td.stentry, .stentry, th {
+   
+   padding: 0.75rem !important;
+
+}
+
+ol.olchildlinks {
+    margin-left: 0em;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Ensures at least 2 cells per row */
+    gap: 16px; /* Adds spacing between grid items */
+    
+}
+
+
+li.olchildlink, .gcard {
+    list-style-type: none;
+    border-radius: 1vw;
+    word-wrap: break-word; /* Ensures text wraps within the cell */
+    border: 1px solid ; /* Optional: Adds a border for visual separation */
+    padding: 1em;
+}
+   
+
+@media screen and (min-width: 1024px) {
+  .navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
+    margin-inline-start: auto;
+  }
+}

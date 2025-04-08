@@ -20,3 +20,5 @@ venv/
 
 launch.json
 settings.json
+.vscode/launch.json
+*/__pycache__

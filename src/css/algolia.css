@@ -1,0 +1,37 @@
+
+
+/* Algolia Search CSS */
+
+#dropdown-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 2rem 0.3rem 0.3rem;
+}
+
+#dropdown-footer {
+  align-self: flex-end; /* Moves it to the right */
+  margin-top: 0.5em;
+}
+
+
+   .ais-Hits-list {
+    list-style-type: none;
+    padding: 0;
+
+    max-height: 300px;   /* Set the maximum height */
+    overflow-y: auto;    /* Enable vertical scrolling */
+    padding-right: 1rem; /* Add space for scrollbar */ 
+   }
+
+    .ais-Hits-item {
+      margin: 0.5rem;
+      padding: 0.5rem; 
+    }
+
+    /* Remove underline from links inside ais-Hits-item */
+    .ais-Hits-item a {
+      text-decoration: none !important;  /* Use !important to override any competing styles */
+  }
+
+  
+  
