@@ -5,7 +5,14 @@
   </shortdesc>
   <conbody>
   <dl>
-
+ <dlentry>
+      <dt>April 15th,  2025</dt>
+      <dd> 
+           https://www.ieee.org/content/dam/ieee-org/ieee/web/org/about/corporate/ieee-code-of-ethics.pdf
+           https://users.cs.jmu.edu/nortonml/cs345/ProfessionalAndEthicalDilemmasInSWEngineering.pdf 
+           
+      </dd>
+    </dlentry>
     <dlentry>
       <dt>April 7th,  2025</dt>
       <dd>DITA 2.0 Technical Commitee and the DITA OT devs built support for &lt;include&gt;.   Trying it out. 
