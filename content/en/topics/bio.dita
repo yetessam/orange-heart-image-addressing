@@ -77,6 +77,9 @@
   <conbody>
       <p>Yas Etessam (she/her) is a markup technologist.    She’s been coding since the 80’s and has expertise in digital content pipelines.</p>
         <p>Currently, Yas is experimenting with integrating decentralized technologies into a DITA content pipeline using the latest stable version of the DITA Open Toolkit.
-        Yas loves travel, art, music, and dancing. </p><foreign></foreign>
+        Yas loves travel, art, music, and dancing. </p>
+       <!-- Test DITA 2.0 include --> 
+      <include parse="text" scope="local" href="about_include.txt" format="txt"></include>
+      <include parse="xml" scope="local" href="about_include.html" format="html" encoding="UTF-8"></include>
     </conbody>
   </concept>
