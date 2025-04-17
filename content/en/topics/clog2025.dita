@@ -25,8 +25,38 @@
       <dd>DITA 2.0 Technical Commitee and the DITA OT devs built support for &lt;include&gt;.   Trying it out. 
       </dd>
     </dlentry>
+ <dlentry>
+      <dt>March 29th, 2025</dt>
+      <dd>Getting Content Agent to run on my machine with the cloud based inference was super easy:
+      <ul>
+      <li>No change to  inference end point. </li>
+      <li>Fiddled with local local_files_only=True.</li>
+      <li>>Clone repod, double-checked gitignore isn't going to expose secrets.  Copied over secrets.</li>
+      Used terminal to run      
+<codeblock>
+
+# Clone repository
+git clone https://huggingface.co/spaces/yetessam/ContentAgent
+cd ContentAgent
+
+# Verify Python 3.10.16
+python3.10 --version
+
+# Create and activate Python environment
+python3.10 -m venv venv
+
+source env/bin/activate
+
+# Install dependencies and run
+pip install -r requirements.txt
+
+# run  
+python app.py
+</codeblock>
+   </dd>
+    </dlentry>
     <dlentry>
-      <dt>March 28, 2025</dt>
+      <dt>March 29, 2025</dt>
       <dd>Participated in AI hack day at Z-Space where there was a lot of experimentation.  https://dwebyvr.org/event-vancouver-hack-day-personal-ai/
          My hack was to turn on caching in an AI Agent that's running on Hugging Face to get a personal AI running on my laptop. 
          Several hours went with lots of housekeeping, downloading, installing and fiddling around to get everything sorta running locally-ish...
