@@ -8,6 +8,18 @@
  <dlentry>
       <dt>April 16th,  2025</dt>
       <dd> 
+       Jim Pick's working on Hexcamp which is DNS based handling.   I added a DNS handle for a neighbourhood in Seattle.  
+    He's trying out direct publish to IPFS through this Github action 
+        https://github.com/hexcamp/hackmd-notes/actions/runs/14562732901
+
+He's going through  Storacha and has a different workflow for IPFS cluster.
+I should be verifiying that my CIDS are exactly the same in Fleek as running a publish through Kubo CLI. 
+I'm currently assuming that the CIDs will be the same.   
+   </dd>
+    </dlentry>
+ <dlentry>
+      <dt>April 16th,  2025</dt>
+      <dd> 
           Check out the Finch app 
           Dockerfile updates broke DITA OT Action so waiting for it to work itself out. 
       </dd>
