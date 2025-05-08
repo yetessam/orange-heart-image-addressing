@@ -27,7 +27,8 @@ jobs:
           ls -la
           
       - name: Build HTML5
-        uses: dita-ot/dita-ot-action@master
+        #uses: dita-ot/dita-ot-action@master workaround to  https://github.com/dita-ot/dita-ot-action/issues/11
+        uses: dita-ot/dita-ot-action@4.3
         with:
           build: |
             set -e
