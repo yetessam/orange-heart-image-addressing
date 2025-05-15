@@ -45,9 +45,12 @@ CIDs are used in systems IPFS,  Bluesky, and, GitHub, and are also compatible wi
     <section>
       <title>Resilient Retrieval and Content Portability</title>
       <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>
-      <p>Content assets are stored in multiple locations, with network protocols retrieving the closest one.   With decentralized models, assets are stored, duplicated and archived across platforms and locations using the same CID. 
-      The network topology of decentralized systems means that resources can be retrieved from any number of multiple nodes, rather than from a single web server.
-    </p>
+      <p>Content assets are stored in multiple locations.   An exact duplicate of each digital asset lives in multiple locations across the DWeb and on multiple devices.
+
+      This websiMy friend Jim has a copy of this website on his computer   When an asset is requested using a CID, network protocols retrieve it from the nearest available source.
+      
+
+      This decentralized network topology means that resources can be retrieved from any multiple nodes, rather than relying on a single or federated web server. </p>
   </section>
 
   <section>
