@@ -25,25 +25,26 @@ I'm currently assuming that the CIDs will be the same.
       </dd>
     </dlentry>
  <dlentry>
-      <dt>April 15th,  2025</dt>
+      <dt>April 15th, 2025</dt>
       <dd> 
            https://www.ieee.org/content/dam/ieee-org/ieee/web/org/about/corporate/ieee-code-of-ethics.pdf
            https://users.cs.jmu.edu/nortonml/cs345/ProfessionalAndEthicalDilemmasInSWEngineering.pdf 
-           
       </dd>
     </dlentry>
-    <dlentry>
+    
+<dlentry>
       <dt>April 7th,  2025</dt>
       <dd>DITA 2.0 Technical Commitee and the DITA OT devs built support for &lt;include&gt;.   Trying it out. 
       </dd>
-    </dlentry>
+  </dlentry>
  <dlentry>
       <dt>March 29th, 2025</dt>
       <dd>Getting Content Agent to run on my machine with the cloud based inference was super easy:
       <ul>
-      <li>No change to  inference end point. </li>
-      <li>Fiddled with local local_files_only=True.</li>
-      <li>>Clone repod, double-checked gitignore isn't going to expose secrets.  Copied over secrets.</li>
+        <li>No change to  inference end point. </li>
+        <li>Fiddled with local local_files_only=True.</li>
+        <li>>Clone repod, double-checked gitignore isn't going to expose secrets.  Copied over secrets.</li>
+         </ul>
       Used terminal to run      
 <codeblock>
 
@@ -89,6 +90,7 @@ could barely chug along... well whatever, hack days are supposed to be about pla
         <li>Ghost is email AND site </li>
         <li>having input into the algorithm is important for users</li> 
         <li>identity management</li>
+       </ul>
      </dd>
     </dlentry>
      
