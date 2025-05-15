@@ -30,7 +30,8 @@ CIDs are used in systems IPFS,  Bluesky, and, GitHub, and are also compatible wi
       CIDs are front-packed with <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
      followed by the  <codeph>SHA-256</codeph> hash: </p>
       <codeblock>content-type content-address</codeblock>
-      <p><codeph>SHA-256</codeph> is considered highly secure, but if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
+      <p>Today <codeph>SHA-256</codeph> is considered highly secure.   When that changes, the protocol has been designed to allow future implementations to update it to a more secure cryptographic function. 
+   
       </p>
 
     <!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
