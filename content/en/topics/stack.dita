@@ -2,9 +2,9 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="stack">
   <title>Stack</title>
-
   <prolog>
     <metadata>
+     <audience type="information architects"/>
       <keywords>
         <keyword>DITA 2.0</keyword>
         <keyword>static website</keyword>
@@ -15,7 +15,7 @@
         <keyword>Python automation</keyword>
         <keyword>Fleek hosting</keyword>
       </keywords>
-      <audience type="information architects"/>
+     
       <prodinfo>
         <prodname>Decentralized Publishing Stack</prodname>
       </prodinfo>
@@ -25,13 +25,12 @@
   <shortdesc>
     A decentralized, automated content pipeline for building and deploying this static HTML5 website using the latest DITA 2.0 standard and the DITA Open Toolkit.
   </shortdesc>
-
   <conbody>
     <ul>
-      <li>Standard OASIS DITA 2.0 maps and topics are used for content development and defining navigation.</li>
-      <li>GitHub Actions orchestrate the build processes.</li>
+      <li>OASIS DITA 2.0 defined content and navigation.</li>
+      <li>Build orchestrated through GitHub Actions.</li>
       <li>The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5 output.</li>
-      <li>Python applies additional configuration, including responsive CSS styling.</li>
+      <li>Python applies HTML plug configuration and responsive CSS.</li>
       <li>Hosting is provided by Fleek.</li>
       <li>URI availability is served through Fleek's gateway.</li>
       <li>The resulting content is stored and pinned on IPFS.</li>
