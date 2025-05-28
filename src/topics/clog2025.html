@@ -130,6 +130,112 @@
      </p>
      <dl class="dl">
       <dt class="dt dlterm has-text-weight-semibold">
+       April 16th,  2025
+      </dt>
+      <dd class="dd">
+       Jim Pick's working on Hexcamp which is DNS based handling.   I added a DNS handle for a neighbourhood in Seattle.  
+    He's trying out direct publish to IPFS through this Github action 
+        https://github.com/hexcamp/hackmd-notes/actions/runs/14562732901
+
+He's going through  Storacha and has a different workflow for IPFS cluster.
+I should be verifiying that my CIDS are exactly the same in Fleek as running a publish through Kubo CLI. 
+I'm currently assuming that the CIDs will be the same.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       April 16th,  2025
+      </dt>
+      <dd class="dd">
+       Check out the Finch app 
+          Dockerfile updates broke DITA OT Action so waiting for it to work itself out.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       April 15th, 2025
+      </dt>
+      <dd class="dd">
+       https://www.ieee.org/content/dam/ieee-org/ieee/web/org/about/corporate/ieee-code-of-ethics.pdf
+           https://users.cs.jmu.edu/nortonml/cs345/ProfessionalAndEthicalDilemmasInSWEngineering.pdf
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       April 7th,  2025
+      </dt>
+      <dd class="dd">
+       DITA 2.0 Technical Commitee and the DITA OT devs built support for &lt;include&gt;.   Trying it out.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       March 29th, 2025
+      </dt>
+      <dd class="dd">
+       Getting Content Agent to run on my machine with the cloud based inference was super easy:
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         No change to  inference end point.
+        </li>
+        <li class="li list-item">
+         Fiddled with local local_files_only=True.
+        </li>
+        <li class="li list-item">
+         &gt;Clone repod, double-checked gitignore isn't going to expose secrets.  Copied over secrets.
+        </li>
+       </ul>
+       Used terminal to run
+       <pre class="pre codeblock"><code>
+
+# Clone repository
+git clone https://huggingface.co/spaces/yetessam/ContentAgent
+cd ContentAgent
+
+# Verify Python 3.10.16
+python3.10 --version
+
+# Create and activate Python environment
+python3.10 -m venv venv
+
+source env/bin/activate
+
+# Install dependencies and run
+pip install -r requirements.txt
+
+# run  
+python app.py
+</code></pre>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       March 29, 2025
+      </dt>
+      <dd class="dd">
+       Participated in AI hack day at Z-Space where there was a lot of experimentation.  https://dwebyvr.org/event-vancouver-hack-day-personal-ai/
+         My hack was to turn on caching in an AI Agent that's running on Hugging Face to get a personal AI running on my laptop. 
+         Several hours went with lots of housekeeping, downloading, installing and fiddling around to get everything sorta running locally-ish...
+         At one point, I had a local web server running an AI while the other version was running on HF.  But then I tried to make it run 100% locally and that's when 
+         which did not work, using a flag to get the code to run fully locally threw up a semaphore error, I had a memory leak somewhere that I really don't understand, my laptop literally
+could barely chug along... well whatever, hack days are supposed to be about playing around with stuff. great event with the DWeb YVR crew.
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
+       March 22-22nd, 2025
+      </dt>
+      <dd class="dd">
+       <ul class="ul list is-hoverable">
+        <li class="li list-item">
+         Where is data physically stored?  Canada vs US?  Jurisdictions.
+        </li>
+        <li class="li list-item">
+         App passcode functionality in bsky through Settings &gt; Privacy &amp; Security
+        </li>
+        <li class="li list-item">
+         google+ email addressing
+        </li>
+        <li class="li list-item">
+         Ghost is email AND site
+        </li>
+        <li class="li list-item">
+         having input into the algorithm is important for users
+        </li>
+        <li class="li list-item">
+         identity management
+        </li>
+       </ul>
+      </dd>
+      <dt class="dt dlterm has-text-weight-semibold">
        March 22-22nd, 2025
       </dt>
       <dd class="dd">
