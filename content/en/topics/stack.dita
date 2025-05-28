@@ -2,6 +2,9 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="stack">
   <title>Stack</title>
+ <shortdesc>
+  Describes a decentralized and automated content pipeline that builds and deploys a static HTML5 website using DITA 2.0 and the DITA Open Toolkit.</shortdesc>
+ 
   <prolog>
     <metadata>
      <audience type="information architects"/>
@@ -22,8 +25,6 @@
     </metadata>
   </prolog>
 
-  <shortdesc>
-  Describes a decentralized and automated content pipeline that builds and deploys a static HTML5 website using DITA 2.0 and the DITA Open Toolkit.</shortdesc>
   <conbody>
     <p>Here's a brief description of the stack and workflow.</p>
     <ul>
