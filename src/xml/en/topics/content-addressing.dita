@@ -13,9 +13,9 @@
   <conbody>
     <section>
       <title>Introduction</title>
-      <p>Content addressing is a self-describing findability protocol that generates a unique address based on the content. 
-Any digital asset, such as a document, web page, post, image, web sites, video, audio, or app,  will generate a unique string when hashed cryptographically.
-CIDs provide an alternative addressing scheme alongside traditional methods.</p>
+      <p>Content addressing is a self-describing protocol that generates a unique identifier based on the content itself. 
+Any digital asset - such as a document, web page, post, image, web sites, video, audio, or app - produces a unique string when cryptographically hashed.
+CIDs offer an alternative addressing scheme in addition to traditional Web URIs.</p>
 
 <p>This  architecture is a core feature of decentralized technologies, enabling multiple, duplicate copies stored closer to  users  that can be independently verified without going through a central authority. 
 By using self-describing metaformats, it supports data portability, transparency and authenticity. 
@@ -30,7 +30,8 @@ CIDs are used in systems IPFS,  Bluesky, and, GitHub, and are also compatible wi
       CIDs are front-packed with <xref scope="external" type="html" href="https://multiformats.io/#multiformat-protocols">multiformats</xref>.
      followed by the  <codeph>SHA-256</codeph> hash: </p>
       <codeblock>content-type content-address</codeblock>
-      <p><codeph>SHA-256</codeph> is considered highly secure, but if that changes, due to quantum computing, it could be swapped out in the future with a different function.   
+      <p>Today <codeph>SHA-256</codeph> is considered highly secure.   When that changes, the protocol has been designed to allow future implementations to update it to a more secure cryptographic function. 
+   
       </p>
 
     <!--https://www.canada.ca/content/dam/pch/documents/services/download-order-charter-bill/canadian-charter-rights-freedoms-eng.pdf-->
@@ -45,9 +46,8 @@ CIDs are used in systems IPFS,  Bluesky, and, GitHub, and are also compatible wi
     <section>
       <title>Resilient Retrieval and Content Portability</title>
       <video outputclass="is-pulled-right" href="../images/node_networks.mp4" width="20em" format="video/mp4" autoplay="true" controls="true" muted="true" scope="local" loop="true"></video>
-      <p>Content assets are stored in multiple locations, with network protocols retrieving the closest one.   With decentralized models, assets are stored, duplicated and archived across platforms and locations using the same CID. 
-      The network topology of decentralized systems means that resources can be retrieved from any number of multiple nodes, rather than from a single web server.
-    </p>
+      <p>Content assets are stored in multiple locations.   An exact duplicate of each digital asset lives in multiple locations across the DWeb and on multiple devices.  When an asset is requested using a CID, network protocols retrieve it from the nearest available source.
+      This decentralized network topology means that resources can be retrieved from any multiple nodes, rather than relying on a single or federated web server. </p>
   </section>
 
   <section>

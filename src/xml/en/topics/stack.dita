@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="stack">
-   <title>Stack</title>
-   <shortdesc>A decentralized, automated content pipeline for building and deployed this static HTML5 website using the latest DITA 2.0 standard and the DITA Open Toolkit.</shortdesc>
-<conbody>
-  <p>Standard OASIS DITA 2.0 maps and topics are used for content development and defining navigation.  Github Actions orchestrate the build processes.
-   The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5, Python adds additional configurations including responsive CSS.  Hosting is provided by Fleek, URI availability is served up through Fleek's gateway and the resulting content is store and pinned on IPFS. 
-  </p>
-<p></p>
-  <image href="../images/stack.svg"><alt>Static HTML 5 Site Content Development, Build and Deployment </alt></image>
+  <title>Stack</title>
+ <shortdesc>
+  Describes a decentralized and automated content pipeline that builds and deploys a static HTML5 website using DITA 2.0 and the DITA Open Toolkit.</shortdesc>
+ 
+  <prolog>
+    <metadata>
+     <audience type="information architects"/>
+      <keywords>
+        <keyword>DITA 2.0</keyword>
+        <keyword>static website</keyword>
+        <keyword>IPFS</keyword>
+        <keyword>HTML5</keyword>
+        <keyword>DITA Open Toolkit</keyword>
+        <keyword>GitHub Actions</keyword>
+        <keyword>Python automation</keyword>
+        <keyword>Fleek hosting</keyword>
+      </keywords>
+     
+      <prodinfo>
+        <prodname>Decentralized Publishing Stack</prodname>
+      </prodinfo>
+    </metadata>
+  </prolog>
 
-</conbody>
+  <conbody>
+    <p>Here's a brief description of the stack and workflow.</p>
+    <ul>
+      <li>OASIS DITA 2.0 defined content and navigation.</li>
+      <li>Build orchestrated through GitHub Actions.</li>
+      <li>Ltest version of the DITA Open Toolkit generates HTML5.</li>
+      <li>Python applies HTMLplus plugin and responsive CSS.</li>
+      <li>Merge actions results in a Fleek pull.  </li>
+      <li>URI availability is served through Fleek's gateway.</li>
+      <li>Resulting content is stored and pinned on IPFS.</li>
+    </ul>
+
+    <image href="../images/stack.svg">
+      <alt>Static HTML5 Site Content Development, Build and Deployment</alt>
+    </image>
+  </conbody>
 </concept>
