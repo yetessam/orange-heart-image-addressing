@@ -1,7 +1,7 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA 2.0 Concept//EN" "concept.dtd">
 <concept id="bio">
   <title>Bio</title>
-  <shortdesc>Biography
+  <shortdesc>Yas Etessam is a content technologist and information architect focused on building excellent content experiences. 
   </shortdesc>
   <prolog>
     <metadata>
@@ -75,11 +75,12 @@
     </metadata>
   </prolog>
   <conbody>
-      <p>Yas Etessam (she/her) is a markup technologist.    She’s been coding since the 80’s and has expertise in digital content pipelines.</p>
-        <p>Currently, Yas is experimenting with integrating decentralized technologies into a DITA content pipeline using the latest stable version of the DITA Open Toolkit.
-        Yas loves travel, art, music, and dancing. </p>
-       <!-- Test DITA 2.0 include --> 
+      <p>Hi!</p>
+      <p>I learned to code in the 80’s and have years of expertise in digital content pipelines.</p>
+      <p>Currently, I'm experimenting with integrating decentralized technologies into a DITA 2.0 content pipeline. 
+        I've been spending time on Vancouver Island, enjoying nature, art, music, and the occasional daytime dance club. </p>
+       <!-- Test DITA 2.0 include 
       <include parse="text" scope="local" href="about_include.txt" format="txt"></include>
-      <include parse="xml" scope="local" href="about_include.html" format="html" encoding="UTF-8"></include>
+      <include parse="xml" scope="local" href="about_include.html" format="html" encoding="UTF-8"></include> -->
     </conbody>
   </concept>
