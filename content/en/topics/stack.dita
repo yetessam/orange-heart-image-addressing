@@ -23,17 +23,17 @@
   </prolog>
 
   <shortdesc>
-    A decentralized, automated content pipeline for building and deploying this static HTML5 website using the latest DITA 2.0 standard and the DITA Open Toolkit.
-  </shortdesc>
+  Describes a decentralized and automated content pipeline that builds and deploys a static HTML5 website using DITA 2.0 and the DITA Open Toolkit.</shortdesc>
   <conbody>
+    <p>Here's a brief description of the stack and workflow.</p>
     <ul>
       <li>OASIS DITA 2.0 defined content and navigation.</li>
       <li>Build orchestrated through GitHub Actions.</li>
-      <li>The latest stable version of the DITA Open Toolkit is auto-deployed and generates generic HTML5 output.</li>
-      <li>Python applies HTML plug configuration and responsive CSS.</li>
-      <li>Hosting is provided by Fleek.</li>
+      <li>Ltest version of the DITA Open Toolkit generates HTML5.</li>
+      <li>Python applies HTMLplus plugin and responsive CSS.</li>
+      <li>Merge actions results in a Fleek pull.  </li>
       <li>URI availability is served through Fleek's gateway.</li>
-      <li>The resulting content is stored and pinned on IPFS.</li>
+      <li>Resulting content is stored and pinned on IPFS.</li>
     </ul>
 
     <image href="../images/stack.svg">
